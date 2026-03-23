@@ -31,10 +31,10 @@ export default function Home() {
           }}
         />
         <div className="max-w-5xl mx-auto relative">
-          <p className="text-primary text-sm font-semibold uppercase tracking-widest mb-4">Private Membership</p>
+          <p className="text-white/60 text-sm font-semibold uppercase tracking-widest mb-4">Private Membership</p>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 max-w-4xl text-white">
             Stop Operating Without Leverage. Access DSO-Level Pricing —{" "}
-            <span className="text-primary">Without Giving Up Control</span>
+            <span className="text-white underline decoration-white/30 underline-offset-4">Without Giving Up Control</span>
           </h1>
           <p className="text-xl text-white/80 mb-10 max-w-2xl leading-relaxed">
             Strengthen margins, increase EBITDA, and scale on your terms.
