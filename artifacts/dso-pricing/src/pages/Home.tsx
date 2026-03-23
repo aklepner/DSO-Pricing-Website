@@ -1,7 +1,7 @@
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { CheckCircle2, Coins, Handshake, Network, ArrowRight, ShieldCheck, BarChart3, Lightbulb } from "lucide-react";
+import { CheckCircle2, Wallet, Handshake, Network, ArrowRight, ShieldCheck, BarChart3, Lightbulb } from "lucide-react";
 import dentalImg from "@assets/dental-assistant-taking-notes-on-clipboard-in-dent-2026-03-19-_1774233635017.JPG";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -66,7 +66,7 @@ export default function Home() {
             </div>
             <div className="space-y-4">
               {[
-                { label: "DSO-level buying power across key services", icon: Coins },
+                { label: "DSO-level buying power across key services", icon: Wallet },
                 { label: "Access to curated partners aligned with growth and profitability", icon: Handshake },
                 { label: "Direct connection to founders and experts who've scaled real practices", icon: Network },
               ].map((item, i) => (
