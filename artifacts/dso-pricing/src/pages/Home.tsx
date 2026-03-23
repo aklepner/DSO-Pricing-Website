@@ -30,7 +30,7 @@ export default function Home() {
             background: "linear-gradient(to right, hsl(220 80% 10% / 0.95) 0%, hsl(214 85% 20% / 0.80) 45%, hsl(210 70% 30% / 0.40) 75%, hsl(210 60% 35% / 0.15) 100%)",
           }}
         />
-        <div className="max-w-5xl mx-auto relative">
+        <div className="max-w-5xl mx-auto relative" style={{ textShadow: "0 2px 12px rgba(0,0,0,0.6)" }}>
           <p className="text-primary text-sm font-semibold uppercase tracking-widest mb-4">Private Membership</p>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 max-w-4xl text-white">
             Stop Operating Without Leverage. Access DSO-Level Pricing —{" "}
