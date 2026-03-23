@@ -223,7 +223,7 @@ export default function Home() {
         <div className="max-w-3xl mx-auto">
           <p className="text-primary text-base font-semibold uppercase tracking-widest mb-3 text-center">How It Works</p>
           <h2 className="text-3xl font-bold mb-12 text-foreground text-center">Simple. Strategic. Immediate.</h2>
-          <div className="space-y-6 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-primary/20 before:to-transparent">
+          <div className="space-y-6">
             {[
               "Join the membership",
               "Unlock DSO-level pricing and curated partners",
