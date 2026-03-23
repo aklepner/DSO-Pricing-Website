@@ -255,6 +255,26 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Price Card */}
+      <section className="py-24 px-6 bg-background relative">
+        <div className="absolute top-0 left-0 right-0 h-32 bg-secondary" />
+        <div className="max-w-lg mx-auto relative z-10">
+          <Card className="p-12 text-center border-primary/20 shadow-2xl bg-white relative overflow-hidden" data-testid="card-price-home">
+            <div className="absolute top-0 left-0 right-0 h-2 bg-gradient-to-r from-primary to-primary/60" />
+            <p className="text-base font-semibold uppercase tracking-widest text-primary mb-4">Monthly Membership</p>
+            <div className="flex items-start justify-center gap-1 mb-3">
+              <span className="text-2xl font-bold text-foreground mt-2">$</span>
+              <span className="text-7xl font-bold text-foreground leading-none tracking-tight">399</span>
+              <span className="text-xl text-muted-foreground mt-6">/mo</span>
+            </div>
+            <p className="text-muted-foreground text-base mb-10">No contracts. Cancel anytime.</p>
+            <Button asChild size="lg" className="w-full h-14 text-lg bg-primary text-primary-foreground hover:bg-primary/90 shadow-md" data-testid="button-join-price-home">
+              <Link href="/contact">Join DSO Pricing Now <ArrowRight className="ml-2 w-5 h-5" /></Link>
+            </Button>
+          </Card>
+        </div>
+      </section>
+
       {/* Final CTA */}
       <section className="py-24 px-6 bg-primary">
         <div className="max-w-3xl mx-auto text-center">
