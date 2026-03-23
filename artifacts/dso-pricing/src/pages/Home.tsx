@@ -177,6 +177,13 @@ export default function Home() {
               </div>
             </div>
           </div>
+          <div className="mt-12 text-center">
+            <Link href="/built-different">
+              <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white text-base px-8">
+                See What Makes Us Different <ArrowRight className="ml-2 w-4 h-4" />
+              </Button>
+            </Link>
+          </div>
         </div>
       </section>
 
