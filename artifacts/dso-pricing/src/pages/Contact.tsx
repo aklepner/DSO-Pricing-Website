@@ -72,7 +72,7 @@ export default function Contact() {
         <div className="max-w-5xl mx-auto">
           <div className="grid md:grid-cols-2 gap-16 items-start">
             <div>
-              <p className="text-primary text-sm font-semibold uppercase tracking-widest mb-3">Concierge Team</p>
+              <p className="text-primary text-base font-semibold uppercase tracking-widest mb-3">Concierge Team</p>
               <h2 className="text-3xl font-bold mb-6 text-foreground">Talk to Our Concierge Team</h2>
               <p className="text-muted-foreground mb-8 text-lg leading-relaxed">Have a question about:</p>
               <div className="space-y-4 mb-10">
@@ -119,7 +119,7 @@ export default function Contact() {
                         name="name"
                         render={({ field }) => (
                           <FormItem>
-                            <FormLabel className="text-foreground font-medium">Name</FormLabel>
+                            <FormLabel className="text-foreground font-medium text-base">Name</FormLabel>
                             <FormControl>
                               <Input className="h-12 border-border focus-visible:ring-primary" placeholder="Your full name" data-testid="input-name" {...field} />
                             </FormControl>
@@ -132,7 +132,7 @@ export default function Contact() {
                         name="email"
                         render={({ field }) => (
                           <FormItem>
-                            <FormLabel className="text-foreground font-medium">Email</FormLabel>
+                            <FormLabel className="text-foreground font-medium text-base">Email</FormLabel>
                             <FormControl>
                               <Input className="h-12 border-border focus-visible:ring-primary" type="email" placeholder="you@practice.com" data-testid="input-email" {...field} />
                             </FormControl>
@@ -145,7 +145,7 @@ export default function Contact() {
                         name="practiceName"
                         render={({ field }) => (
                           <FormItem>
-                            <FormLabel className="text-foreground font-medium">Practice Name</FormLabel>
+                            <FormLabel className="text-foreground font-medium text-base">Practice Name</FormLabel>
                             <FormControl>
                               <Input className="h-12 border-border focus-visible:ring-primary" placeholder="Your practice name" data-testid="input-practice" {...field} />
                             </FormControl>
@@ -158,7 +158,7 @@ export default function Contact() {
                         name="revenueRange"
                         render={({ field }) => (
                           <FormItem>
-                            <FormLabel className="text-foreground font-medium">Revenue Range</FormLabel>
+                            <FormLabel className="text-foreground font-medium text-base">Revenue Range</FormLabel>
                             <Select onValueChange={field.onChange} defaultValue={field.value}>
                               <FormControl>
                                 <SelectTrigger className="h-12 border-border focus:ring-primary" data-testid="select-revenue">
@@ -180,7 +180,7 @@ export default function Contact() {
                         name="message"
                         render={({ field }) => (
                           <FormItem>
-                            <FormLabel className="text-foreground font-medium">What can we help you with?</FormLabel>
+                            <FormLabel className="text-foreground font-medium text-base">What can we help you with?</FormLabel>
                             <FormControl>
                               <Textarea
                                 placeholder="Tell us about your practice and what you're looking to achieve..."
@@ -210,7 +210,7 @@ export default function Contact() {
       <section className="py-24 px-6 bg-secondary text-white relative">
         <div className="absolute inset-0 bg-gradient-to-t from-secondary to-secondary/90 pointer-events-none" />
         <div className="max-w-3xl mx-auto text-center relative z-10">
-          <p className="text-primary text-sm font-semibold uppercase tracking-widest mb-4">Who We Work Best With</p>
+          <p className="text-primary text-base font-semibold uppercase tracking-widest mb-4">Who We Work Best With</p>
           <h2 className="text-3xl md:text-4xl font-bold mb-12 text-white">Built for growth-focused operators.</h2>
           <div className="space-y-6 mb-12 text-left max-w-xl mx-auto bg-white/5 p-8 rounded-2xl backdrop-blur-sm border border-white/10">
             {[
@@ -238,7 +238,7 @@ export default function Contact() {
       {/* Direct Contact */}
       <section className="py-20 px-6 bg-muted">
         <div className="max-w-3xl mx-auto text-center">
-          <p className="text-primary text-sm font-semibold uppercase tracking-widest mb-4">Prefer to reach out directly?</p>
+          <p className="text-primary text-base font-semibold uppercase tracking-widest mb-4">Prefer to reach out directly?</p>
           <div className="flex items-center justify-center gap-3 mt-6 p-6 bg-white rounded-xl border border-border shadow-sm max-w-md mx-auto">
             <Mail className="w-6 h-6 text-primary" />
             <a href="mailto:hello@dsopricing.com" className="text-xl font-bold text-foreground hover:text-primary transition-colors" data-testid="link-email-direct">

@@ -10,13 +10,13 @@ export default function Footer() {
               <span className="text-primary font-bold text-xl tracking-tight">DSO</span>
               <span className="text-white font-light text-xl tracking-tight">Pricing</span>
             </div>
-            <p className="text-sm leading-relaxed text-white/60">
+            <p className="text-base leading-relaxed text-white/60">
               A growth leverage platform for dental practices. Built to protect margins and scale smarter.
             </p>
           </div>
           <div>
-            <p className="text-white/90 font-semibold text-sm mb-4 uppercase tracking-wider">Navigation</p>
-            <ul className="space-y-2 text-sm">
+            <p className="text-white/90 font-semibold text-base mb-4 uppercase tracking-wider">Navigation</p>
+            <ul className="space-y-2 text-base">
               {[
                 { href: "/", label: "Home" },
                 { href: "/built-different", label: "Built Different" },
@@ -32,16 +32,16 @@ export default function Footer() {
             </ul>
           </div>
           <div>
-            <p className="text-white/90 font-semibold text-sm mb-4 uppercase tracking-wider">Contact</p>
-            <p className="text-sm">
+            <p className="text-white/90 font-semibold text-base mb-4 uppercase tracking-wider">Contact</p>
+            <p className="text-base">
               <a href="mailto:hello@dsopricing.com" className="hover:text-primary transition-colors" data-testid="footer-email">
                 hello@dsopricing.com
               </a>
             </p>
-            <p className="text-sm mt-1 text-white/50">Response within 1–2 business days</p>
+            <p className="text-base mt-1 text-white/50">Response within 1–2 business days</p>
           </div>
         </div>
-        <div className="border-t border-white/10 pt-6 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-white/40">
+        <div className="border-t border-white/10 pt-6 flex flex-col md:flex-row items-center justify-between gap-4 text-base text-white/40">
           <p>&copy; {new Date().getFullYear()} DSO Pricing. All rights reserved.</p>
           <p>Build a Stronger, More Scalable Dental Business — On Your Terms.</p>
         </div>

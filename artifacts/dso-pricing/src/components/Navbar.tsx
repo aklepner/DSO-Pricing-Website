@@ -28,7 +28,7 @@ export default function Navbar() {
               key={link.href}
               href={link.href}
               data-testid={`link-nav-${link.label.toLowerCase().replace(" ", "-")}`}
-              className={`px-4 py-2 text-sm font-medium rounded-md transition-colors ${
+              className={`px-4 py-2 text-base font-medium rounded-md transition-colors ${
                 location === link.href
                   ? "text-primary bg-primary/5"
                   : "text-secondary/70 hover:text-primary hover:bg-primary/5"
@@ -66,7 +66,7 @@ export default function Navbar() {
               href={link.href}
               onClick={() => setOpen(false)}
               data-testid={`link-mobile-${link.label.toLowerCase().replace(" ", "-")}`}
-              className={`px-4 py-2 text-sm font-medium rounded-md ${
+              className={`px-4 py-2 text-base font-medium rounded-md ${
                 location === link.href
                   ? "text-primary bg-primary/10"
                   : "text-secondary/70 hover:text-primary"

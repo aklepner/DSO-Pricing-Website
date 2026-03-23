@@ -31,7 +31,7 @@ export default function Home() {
           }}
         />
         <div className="max-w-5xl mx-auto relative" style={{ textShadow: "0 2px 12px rgba(0,0,0,0.6)" }}>
-          <p className="text-sm font-semibold uppercase tracking-widest mb-4" style={{ color: "#f59e0b" }}>Private Membership</p>
+          <p className="text-base font-semibold uppercase tracking-widest mb-4" style={{ color: "#f59e0b" }}>Private Membership</p>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 max-w-4xl text-white">
             Stop Operating Without Leverage. Access DSO-Level Pricing —{" "}
             <span style={{ color: "#f59e0b" }}>Without Giving Up Control</span>
@@ -55,7 +55,7 @@ export default function Home() {
         <div className="max-w-5xl mx-auto">
           <div className="grid md:grid-cols-2 gap-14 items-center">
             <div>
-              <p className="text-primary text-sm font-semibold uppercase tracking-widest mb-3">What It Is</p>
+              <p className="text-primary text-base font-semibold uppercase tracking-widest mb-3">What It Is</p>
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
                 DSO Pricing is a private membership built for growth-focused dental practices and emerging groups.
               </h2>
@@ -106,7 +106,7 @@ export default function Home() {
         <div className="max-w-5xl mx-auto relative">
           <div className="grid md:grid-cols-2 gap-14 items-start">
             <div>
-              <p className="text-primary text-sm font-semibold uppercase tracking-widest mb-3">Not Just Pricing</p>
+              <p className="text-primary text-base font-semibold uppercase tracking-widest mb-3">Not Just Pricing</p>
               <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
                 Inside DSO Pricing, this isn't about theory.
               </h2>
@@ -137,7 +137,7 @@ export default function Home() {
         <div className="max-w-5xl mx-auto">
           <div className="grid md:grid-cols-2 gap-16">
             <div>
-              <p className="text-primary text-sm font-semibold uppercase tracking-widest mb-3">Built Different</p>
+              <p className="text-primary text-base font-semibold uppercase tracking-widest mb-3">Built Different</p>
               <h2 className="text-3xl font-bold mb-8 text-foreground">You won't get:</h2>
               <div className="space-y-4">
                 {[
@@ -147,7 +147,7 @@ export default function Home() {
                 ].map((item, i) => (
                   <div key={i} className="flex items-center gap-4 text-muted-foreground" data-testid={`item-wont-${i}`}>
                     <div className="w-8 h-8 rounded-full bg-destructive/10 flex items-center justify-center shrink-0">
-                      <span className="text-destructive font-bold text-sm">✕</span>
+                      <span className="text-destructive font-bold text-base">✕</span>
                     </div>
                     <p className="text-lg">{item}</p>
                   </div>
@@ -180,7 +180,7 @@ export default function Home() {
         <div className="max-w-5xl mx-auto">
           <div className="grid md:grid-cols-2 gap-16 items-start">
             <div>
-              <p className="text-primary text-sm font-semibold uppercase tracking-widest mb-3">Who This Is For</p>
+              <p className="text-primary text-base font-semibold uppercase tracking-widest mb-3">Who This Is For</p>
               <h2 className="text-3xl font-bold mb-8 text-foreground">Built for practices ready to scale with intention.</h2>
               <div className="space-y-4">
                 {[
@@ -197,7 +197,7 @@ export default function Home() {
                 ))}
               </div>
               <div className="mt-8 p-6 bg-white rounded-xl border border-primary/10 shadow-sm">
-                <p className="text-sm text-foreground/80 italic leading-relaxed">
+                <p className="text-base text-foreground/80 italic leading-relaxed">
                   Most members see measurable margin improvement within the first 60–90 days. Even small improvements (1–3%) can translate into $50K–$150K+ annually depending on practice size.
                 </p>
               </div>
@@ -205,7 +205,7 @@ export default function Home() {
 
             {/* How It Works */}
             <div>
-              <p className="text-primary text-sm font-semibold uppercase tracking-widest mb-3">How It Works</p>
+              <p className="text-primary text-base font-semibold uppercase tracking-widest mb-3">How It Works</p>
               <h2 className="text-3xl font-bold mb-8 text-foreground">Simple. Strategic. Immediate.</h2>
               <div className="space-y-6 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-primary/20 before:to-transparent">
                 {[
@@ -231,7 +231,7 @@ export default function Home() {
       <section className="py-24 px-6 bg-secondary text-white relative">
         <div className="absolute inset-0 bg-gradient-to-br from-secondary to-secondary/95 pointer-events-none" />
         <div className="max-w-3xl mx-auto text-center relative z-10">
-          <p className="text-primary text-sm font-semibold uppercase tracking-widest mb-3">Let's Do Some Math</p>
+          <p className="text-primary text-base font-semibold uppercase tracking-widest mb-3">Let's Do Some Math</p>
           <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white">Our members invest: $399/month</h2>
           <p className="text-white/80 mb-10 text-lg md:text-xl">
             Most practices see meaningful margin improvement within the first 60 days of working with the right partners.

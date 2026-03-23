@@ -44,7 +44,7 @@ export default function BuiltDifferent() {
       {/* Why This Exists */}
       <section className="py-24 px-6 bg-background">
         <div className="max-w-4xl mx-auto">
-          <p className="text-primary text-sm font-semibold uppercase tracking-widest mb-3 text-center md:text-left">Why This Exists</p>
+          <p className="text-primary text-base font-semibold uppercase tracking-widest mb-3 text-center md:text-left">Why This Exists</p>
           <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center md:text-left text-foreground">Most practices are pushed into two paths:</h2>
           <div className="grid md:grid-cols-2 gap-8 mb-12">
             <Card className="p-8 border-destructive/20 shadow-sm" data-testid="card-path-1">
@@ -75,7 +75,7 @@ export default function BuiltDifferent() {
       {/* Growth Comparison */}
       <section className="py-24 px-6 bg-muted">
         <div className="max-w-5xl mx-auto">
-          <p className="text-primary text-sm font-semibold uppercase tracking-widest mb-3 text-center">The Choice</p>
+          <p className="text-primary text-base font-semibold uppercase tracking-widest mb-3 text-center">The Choice</p>
           <h2 className="text-3xl md:text-4xl font-bold mb-16 text-center text-foreground">Which Growth Path Are You Building?</h2>
           <div className="grid md:grid-cols-2 gap-8">
             <Card className="p-10 border-destructive/20 bg-white shadow-md relative overflow-hidden" data-testid="card-fragile">
@@ -122,7 +122,7 @@ export default function BuiltDifferent() {
         <div className="max-w-5xl mx-auto relative z-10">
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <div>
-              <p className="text-primary text-sm font-semibold uppercase tracking-widest mb-3">Better Partners. Better Decisions.</p>
+              <p className="text-primary text-base font-semibold uppercase tracking-widest mb-3">Better Partners. Better Decisions.</p>
               <h2 className="text-3xl md:text-5xl font-bold mb-8 text-white">
                 Most platforms give you more options. We don't.
               </h2>
@@ -158,7 +158,7 @@ export default function BuiltDifferent() {
         <div className="max-w-5xl mx-auto">
           <div className="grid md:grid-cols-2 gap-16 items-start">
             <div>
-              <p className="text-primary text-sm font-semibold uppercase tracking-widest mb-3">Built for Real-World Growth</p>
+              <p className="text-primary text-base font-semibold uppercase tracking-widest mb-3">Built for Real-World Growth</p>
               <h2 className="text-3xl font-bold mb-8 text-foreground">The environment is changing:</h2>
               <div className="space-y-4 mb-10">
                 {[
@@ -205,7 +205,7 @@ export default function BuiltDifferent() {
         <div className="max-w-5xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12">
             <Card className="p-10 border-primary/20 shadow-md bg-white">
-              <p className="text-primary text-sm font-semibold uppercase tracking-widest mb-3">Who This Is For</p>
+              <p className="text-primary text-base font-semibold uppercase tracking-widest mb-3">Who This Is For</p>
               <h2 className="text-2xl font-bold mb-8 text-foreground">This is for practices that:</h2>
               <div className="space-y-5">
                 {[
