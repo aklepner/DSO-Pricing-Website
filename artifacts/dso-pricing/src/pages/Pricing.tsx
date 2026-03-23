@@ -12,7 +12,7 @@ export default function Pricing() {
       <Navbar />
 
       {/* Hero */}
-      <section className="pt-32 pb-24 px-6 text-white relative overflow-hidden">
+      <section className="pt-32 pb-48 px-6 text-white relative overflow-hidden">
         <div
           className="absolute inset-0"
           style={{
@@ -41,8 +41,8 @@ export default function Pricing() {
       </section>
 
       {/* Price Card */}
-      <section className="py-24 px-6 bg-background relative">
-        <div className="max-w-lg mx-auto relative z-10">
+      <section className="-mt-24 py-24 px-6 bg-transparent relative z-10">
+        <div className="max-w-lg mx-auto">
           <Card className="p-12 text-center border-primary/20 shadow-2xl bg-white relative overflow-hidden" data-testid="card-price">
             <div className="absolute top-0 left-0 right-0 h-2 bg-gradient-to-r from-primary to-primary/60" />
             <p className="text-base font-semibold uppercase tracking-widest text-primary mb-4">Monthly Membership</p>
