@@ -19,7 +19,7 @@ export default function Home() {
           style={{
             backgroundImage: `url(${heroBg})`,
             backgroundSize: "cover",
-            backgroundPosition: "center center",
+            backgroundPosition: "65% 30%",
             backgroundRepeat: "no-repeat",
           }}
         />
