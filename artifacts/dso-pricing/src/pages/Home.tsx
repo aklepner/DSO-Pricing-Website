@@ -1,7 +1,7 @@
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { CheckCircle2, TrendingUp, Users, Shield, ArrowRight } from "lucide-react";
+import { CheckCircle2, TrendingUp, Users, Shield, ArrowRight, ShieldCheck, BarChart3, Layers } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import heroBg from "@assets/0e852b13-c2dc-4c82-a936-fce6ff181f98-2026-03-231_1774229359198.jpeg";
@@ -87,13 +87,15 @@ export default function Home() {
           <h2 className="text-2xl md:text-3xl font-bold mb-10 text-foreground">So you can:</h2>
           <div className="grid md:grid-cols-3 gap-6">
             {[
-              "Protect and strengthen your margins",
-              "Make smarter, more confident decisions",
-              "Build a practice that scales with structure",
-            ].map((item, i) => (
+              { label: "Protect and strengthen your margins", Icon: ShieldCheck },
+              { label: "Make smarter, more confident decisions", Icon: BarChart3 },
+              { label: "Build a practice that scales with structure", Icon: Layers },
+            ].map(({ label, Icon }, i) => (
               <Card key={i} className="p-8 text-center border-primary/10 shadow-sm bg-background flex flex-col items-center" data-testid={`card-outcome-${i}`}>
-                <CheckCircle2 className="w-8 h-8 text-primary mb-4" />
-                <p className="font-semibold text-lg text-foreground">{item}</p>
+                <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mb-4">
+                  <Icon className="w-7 h-7 text-primary" />
+                </div>
+                <p className="font-semibold text-lg text-foreground">{label}</p>
               </Card>
             ))}
           </div>
