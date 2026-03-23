@@ -4,6 +4,7 @@ import { Card } from "@/components/ui/card";
 import { CheckCircle2, ArrowRight } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import heroBg from "@assets/couple-smiling-at-receptionist-in-dental-clinic-2026-01-09-10-_1774230786587.jpg";
 
 export default function Pricing() {
   return (
@@ -11,10 +12,24 @@ export default function Pricing() {
       <Navbar />
 
       {/* Hero */}
-      <section className="pt-32 pb-24 px-6 bg-secondary text-white relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-secondary via-secondary to-primary/20 pointer-events-none" />
-        <div className="max-w-3xl mx-auto text-center relative z-10">
-          <p className="text-sm font-semibold uppercase tracking-widest mb-4" style={{ color: "#f59e0b" }}>Membership</p>
+      <section className="pt-32 pb-24 px-6 text-white relative overflow-hidden">
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage: `url(${heroBg})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center 35%",
+            backgroundRepeat: "no-repeat",
+          }}
+        />
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            background: "linear-gradient(to right, hsl(220 80% 10% / 0.95) 0%, hsl(214 85% 20% / 0.82) 45%, hsl(210 70% 30% / 0.50) 75%, hsl(210 60% 35% / 0.20) 100%)",
+          }}
+        />
+        <div className="max-w-3xl mx-auto text-center relative z-10" style={{ textShadow: "0 2px 12px rgba(0,0,0,0.6)" }}>
+          <p className="text-base font-semibold uppercase tracking-widest mb-4" style={{ color: "#f59e0b" }}>Membership</p>
           <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-6 text-white">
             DSO-Level Pricing{" "}
             <span style={{ color: "#f59e0b" }}>Without Giving Up Control</span>
