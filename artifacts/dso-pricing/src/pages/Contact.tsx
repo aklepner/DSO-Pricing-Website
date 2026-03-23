@@ -57,7 +57,7 @@ export default function Contact() {
       <section className="pt-32 pb-24 px-6 bg-secondary text-white relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-secondary via-secondary to-primary/20 pointer-events-none" />
         <div className="max-w-3xl mx-auto text-center relative z-10">
-          <p className="text-primary text-sm font-semibold uppercase tracking-widest mb-4">Contact</p>
+          <p className="text-sm font-semibold uppercase tracking-widest mb-4" style={{ color: "#f59e0b" }}>Contact</p>
           <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-6 text-white">
             Let's Connect.
           </h1>

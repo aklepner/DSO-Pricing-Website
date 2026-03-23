@@ -30,10 +30,10 @@ export default function BuiltDifferent() {
       <section className="pt-32 pb-24 px-6 bg-secondary text-white relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-secondary via-secondary to-primary/20 pointer-events-none" />
         <div className="max-w-4xl mx-auto relative">
-          <p className="text-primary text-sm font-semibold uppercase tracking-widest mb-4">Built Different</p>
+          <p className="text-sm font-semibold uppercase tracking-widest mb-4" style={{ color: "#f59e0b" }}>Built Different</p>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 text-white">
             Built for Practices That Want to Scale —{" "}
-            <span className="text-primary">Without Losing Their Margins</span>
+            <span style={{ color: "#f59e0b" }}>Without Losing Their Margins</span>
           </h1>
           <p className="text-xl text-white/80 max-w-2xl leading-relaxed">
             Most growth paths trade profit for growth. We help you grow and keep more of what you earn.
@@ -66,7 +66,7 @@ export default function BuiltDifferent() {
             <p className="text-2xl font-bold mb-4 text-foreground">Neither builds a strong, valuable business.</p>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               DSO Pricing was built for practices that want a third path:{" "}
-              <strong className="text-primary font-semibold">Profitable, structured growth.</strong>
+              <strong className="font-semibold" style={{ color: "#f59e0b" }}>Profitable, structured growth.</strong>
             </p>
           </div>
         </div>

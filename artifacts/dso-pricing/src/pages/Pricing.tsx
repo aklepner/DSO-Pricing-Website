@@ -14,10 +14,10 @@ export default function Pricing() {
       <section className="pt-32 pb-24 px-6 bg-secondary text-white relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-secondary via-secondary to-primary/20 pointer-events-none" />
         <div className="max-w-3xl mx-auto text-center relative z-10">
-          <p className="text-primary text-sm font-semibold uppercase tracking-widest mb-4">Membership</p>
+          <p className="text-sm font-semibold uppercase tracking-widest mb-4" style={{ color: "#f59e0b" }}>Membership</p>
           <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-6 text-white">
             DSO-Level Pricing{" "}
-            <span className="text-primary">Without Giving Up Control</span>
+            <span style={{ color: "#f59e0b" }}>Without Giving Up Control</span>
           </h1>
           <p className="text-xl text-white/80 leading-relaxed max-w-2xl mx-auto">
             Get better pricing, better partners, and better margins immediately.
@@ -89,7 +89,7 @@ export default function Pricing() {
               </div>
               <div className="text-center md:text-right w-full md:w-auto">
                 <p className="text-white/70 text-sm mb-2 uppercase tracking-wider font-medium">Potential return</p>
-                <p className="text-4xl font-bold text-primary mb-1">$80,000<span className="text-xl text-primary/70 font-normal">/yr</span></p>
+                <p className="text-4xl font-bold mb-1" style={{ color: "#f59e0b" }}>$80,000<span className="text-xl font-normal" style={{ color: "#f59e0b99" }}>/yr</span></p>
                 <p className="text-white/50 text-base">2% margin improvement</p>
               </div>
             </div>
