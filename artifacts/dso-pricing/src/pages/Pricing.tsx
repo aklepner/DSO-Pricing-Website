@@ -12,52 +12,56 @@ export default function Pricing() {
 
       {/* Hero */}
       <section className="pt-32 pb-24 px-6 bg-secondary text-white relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-secondary via-secondary to-primary/10 pointer-events-none" />
-        <div className="max-w-3xl mx-auto text-center relative">
+        <div className="absolute inset-0 bg-gradient-to-br from-secondary via-secondary to-primary/20 pointer-events-none" />
+        <div className="max-w-3xl mx-auto text-center relative z-10">
           <p className="text-primary text-sm font-semibold uppercase tracking-widest mb-4">Membership</p>
-          <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-6">
+          <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-6 text-white">
             DSO-Level Pricing{" "}
             <span className="text-primary">Without Giving Up Control</span>
           </h1>
-          <p className="text-xl text-white/70 leading-relaxed">
+          <p className="text-xl text-white/80 leading-relaxed max-w-2xl mx-auto">
             Get better pricing, better partners, and better margins immediately.
           </p>
         </div>
       </section>
 
       {/* Price Card */}
-      <section className="py-20 px-6 bg-background">
-        <div className="max-w-lg mx-auto">
-          <Card className="p-10 text-center border-primary/30 shadow-xl" data-testid="card-price">
-            <p className="text-sm font-semibold uppercase tracking-widest text-muted-foreground mb-3">Monthly Membership</p>
-            <div className="flex items-start justify-center gap-1 mb-2">
+      <section className="py-24 px-6 bg-background relative">
+        <div className="absolute top-0 left-0 right-0 h-32 bg-secondary" />
+        <div className="max-w-lg mx-auto relative z-10">
+          <Card className="p-12 text-center border-primary/20 shadow-2xl bg-white relative overflow-hidden" data-testid="card-price">
+            <div className="absolute top-0 left-0 right-0 h-2 bg-gradient-to-r from-primary to-primary/60" />
+            <p className="text-sm font-semibold uppercase tracking-widest text-primary mb-4">Monthly Membership</p>
+            <div className="flex items-start justify-center gap-1 mb-3">
               <span className="text-2xl font-bold text-foreground mt-2">$</span>
-              <span className="text-7xl font-bold text-foreground leading-none">399</span>
-              <span className="text-xl text-muted-foreground mt-4">/mo</span>
+              <span className="text-7xl font-bold text-foreground leading-none tracking-tight">399</span>
+              <span className="text-xl text-muted-foreground mt-6">/mo</span>
             </div>
-            <p className="text-muted-foreground text-sm mb-8">No contracts. Cancel anytime.</p>
-            <Button asChild size="lg" className="w-full" data-testid="button-join-price">
-              <Link href="/contact">Join DSO Pricing Now <ArrowRight className="ml-2 w-4 h-4" /></Link>
+            <p className="text-muted-foreground text-base mb-10">No contracts. Cancel anytime.</p>
+            <Button asChild size="lg" className="w-full h-14 text-lg bg-primary text-primary-foreground hover:bg-primary/90 shadow-md" data-testid="button-join-price">
+              <Link href="/contact">Join DSO Pricing Now <ArrowRight className="ml-2 w-5 h-5" /></Link>
             </Button>
           </Card>
         </div>
       </section>
 
       {/* What You Get */}
-      <section className="py-20 px-6 bg-muted/40">
-        <div className="max-w-4xl mx-auto">
+      <section className="py-24 px-6 bg-muted">
+        <div className="max-w-5xl mx-auto">
           <p className="text-primary text-sm font-semibold uppercase tracking-widest mb-3 text-center">What You Get</p>
-          <h2 className="text-3xl font-bold mb-10 text-center">Inside DSO Pricing, you get:</h2>
-          <div className="grid md:grid-cols-2 gap-5">
+          <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center text-foreground">Inside DSO Pricing, you get:</h2>
+          <div className="grid md:grid-cols-2 gap-6">
             {[
               "Preferred pricing (10%+ savings) across vetted vendors",
               "Reduced or waived setup fees with select partners",
               "Exclusive offers not available publicly",
               "Direct access to operators and experts",
             ].map((item, i) => (
-              <Card key={i} className="p-5 flex items-start gap-4" data-testid={`card-get-${i}`}>
-                <CheckCircle2 className="w-5 h-5 text-primary mt-0.5 shrink-0" />
-                <p className="font-medium text-foreground">{item}</p>
+              <Card key={i} className="p-8 flex items-start gap-5 border-border shadow-sm bg-white" data-testid={`card-get-${i}`}>
+                <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+                  <CheckCircle2 className="w-6 h-6 text-primary" />
+                </div>
+                <p className="font-medium text-lg text-foreground pt-1">{item}</p>
               </Card>
             ))}
           </div>
@@ -65,28 +69,31 @@ export default function Pricing() {
       </section>
 
       {/* The Math */}
-      <section className="py-20 px-6 bg-secondary text-white">
-        <div className="max-w-3xl mx-auto">
+      <section className="py-24 px-6 bg-secondary text-white relative">
+        <div className="absolute inset-0 bg-gradient-to-bl from-secondary to-secondary/90 pointer-events-none" />
+        <div className="max-w-4xl mx-auto relative z-10">
           <p className="text-primary text-sm font-semibold uppercase tracking-widest mb-3 text-center">The Math</p>
-          <h2 className="text-3xl font-bold mb-3 text-center">If your practice collects $4M:</h2>
-          <p className="text-white/60 text-center mb-10">
-            A 2% margin improvement = $80,000/year
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center text-white">If your practice collects $4M:</h2>
+          <p className="text-white/80 text-center mb-12 text-xl">
+            A 2% margin improvement = <span className="text-white font-bold">$80,000/year</span>
           </p>
-          <Card className="bg-white/5 border-white/10 p-8 mb-4" data-testid="card-math-detail">
-            <div className="flex items-center justify-between mb-6 pb-6 border-b border-white/10">
-              <div>
-                <p className="text-white/60 text-sm mb-1">Your investment</p>
-                <p className="text-2xl font-bold">$399/month</p>
-                <p className="text-white/50 text-sm">= $4,788/year</p>
+          <Card className="bg-white/10 backdrop-blur-md border-white/20 p-10 mb-8 shadow-xl" data-testid="card-math-detail">
+            <div className="flex flex-col md:flex-row items-center justify-between mb-8 pb-8 border-b border-white/10 gap-8">
+              <div className="text-center md:text-left w-full md:w-auto">
+                <p className="text-white/70 text-sm mb-2 uppercase tracking-wider font-medium">Your investment</p>
+                <p className="text-4xl font-bold text-white mb-1">$399<span className="text-xl text-white/70 font-normal">/mo</span></p>
+                <p className="text-white/50 text-base">= $4,788/year</p>
               </div>
-              <div className="text-4xl text-white/20 font-bold">vs</div>
-              <div className="text-right">
-                <p className="text-white/60 text-sm mb-1">Potential return</p>
-                <p className="text-2xl font-bold text-primary">$80,000/year</p>
-                <p className="text-white/50 text-sm">2% margin improvement</p>
+              <div className="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center shrink-0">
+                <span className="text-lg text-white/40 font-bold uppercase tracking-widest">VS</span>
+              </div>
+              <div className="text-center md:text-right w-full md:w-auto">
+                <p className="text-white/70 text-sm mb-2 uppercase tracking-wider font-medium">Potential return</p>
+                <p className="text-4xl font-bold text-primary mb-1">$80,000<span className="text-xl text-primary/70 font-normal">/yr</span></p>
+                <p className="text-white/50 text-base">2% margin improvement</p>
               </div>
             </div>
-            <p className="text-center text-lg font-bold">
+            <p className="text-center text-2xl font-bold text-white">
               Would you trade $4,788 to make an extra $80,000?
             </p>
           </Card>
@@ -94,23 +101,27 @@ export default function Pricing() {
       </section>
 
       {/* How It Works */}
-      <section className="py-20 px-6 bg-background">
+      <section className="py-24 px-6 bg-background">
         <div className="max-w-4xl mx-auto">
           <p className="text-primary text-sm font-semibold uppercase tracking-widest mb-3 text-center">How It Works</p>
-          <h2 className="text-3xl font-bold mb-3 text-center">Simple. Fast. Immediate.</h2>
-          <p className="text-muted-foreground text-center mb-12">Four steps to stronger margins.</p>
-          <div className="grid md:grid-cols-2 gap-6">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center text-foreground">Simple. Fast. Immediate.</h2>
+          <p className="text-muted-foreground text-center mb-16 text-lg">Four steps to stronger margins.</p>
+          <div className="grid md:grid-cols-2 gap-8 relative">
+            <div className="hidden md:block absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-primary/5 rounded-full z-0" />
             {[
-              { step: 1, title: "Join the membership" },
-              { step: 2, title: "Unlock preferred vendor pricing" },
-              { step: 3, title: "Work with the right partners" },
-              { step: 4, title: "Increase margins and reinvest into growth" },
-            ].map(({ step, title }) => (
-              <Card key={step} className="p-6 flex items-start gap-5" data-testid={`card-step-${step}`}>
-                <div className="w-10 h-10 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-sm font-bold shrink-0">
+              { step: 1, title: "Join the membership", desc: "Sign up in minutes." },
+              { step: 2, title: "Unlock preferred pricing", desc: "Access the partner portal." },
+              { step: 3, title: "Work with the right partners", desc: "Connect directly with vetted experts." },
+              { step: 4, title: "Increase margins", desc: "Reinvest into profitable growth." },
+            ].map(({ step, title, desc }) => (
+              <Card key={step} className="p-8 flex items-start gap-6 border-border shadow-sm hover:shadow-md transition-shadow bg-white z-10" data-testid={`card-step-${step}`}>
+                <div className="w-12 h-12 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-xl font-bold shrink-0 shadow-sm">
                   {step}
                 </div>
-                <p className="font-semibold pt-2">{title}</p>
+                <div>
+                  <p className="font-bold text-xl text-foreground mb-1">{title}</p>
+                  <p className="text-muted-foreground">{desc}</p>
+                </div>
               </Card>
             ))}
           </div>
@@ -118,39 +129,41 @@ export default function Pricing() {
       </section>
 
       {/* Who This Is For */}
-      <section className="py-20 px-6 bg-muted/40">
+      <section className="py-24 px-6 bg-muted">
         <div className="max-w-3xl mx-auto text-center">
           <p className="text-primary text-sm font-semibold uppercase tracking-widest mb-3">Who This Is For</p>
-          <h2 className="text-3xl font-bold mb-10">Built for growth-focused operators.</h2>
-          <div className="flex flex-col gap-4 items-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-12 text-foreground">Built for growth-focused operators.</h2>
+          <div className="flex flex-col gap-6 items-center">
             {[
               "$1M+ practices",
               "Owners focused on profitability",
               "Practices and emerging groups actively growing or scaling",
             ].map((item, i) => (
-              <div key={i} className="flex items-center gap-3 text-lg" data-testid={`item-whofor-${i}`}>
-                <CheckCircle2 className="w-5 h-5 text-primary shrink-0" />
-                <p className="font-medium">{item}</p>
-              </div>
+              <Card key={i} className="w-full max-w-lg p-6 flex items-center gap-4 bg-white border-primary/10 shadow-sm" data-testid={`item-whofor-${i}`}>
+                <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+                  <CheckCircle2 className="w-5 h-5 text-primary" />
+                </div>
+                <p className="font-semibold text-lg text-foreground">{item}</p>
+              </Card>
             ))}
           </div>
         </div>
       </section>
 
       {/* Final CTA */}
-      <section className="py-20 px-6 bg-primary">
+      <section className="py-24 px-6 bg-primary">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-primary-foreground mb-4">
+          <h2 className="text-3xl md:text-5xl font-bold text-primary-foreground mb-8">
             Start Keeping More of What You Earn
           </h2>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
-            <Button asChild size="lg" variant="secondary" data-testid="button-join-final">
-              <Link href="/contact">Join DSO Pricing Now <ArrowRight className="ml-2 w-4 h-4" /></Link>
+            <Button asChild size="lg" className="bg-secondary text-secondary-foreground hover:bg-secondary/90 text-lg px-8 h-14" data-testid="button-join-final">
+              <Link href="/contact">Join DSO Pricing Now <ArrowRight className="ml-2 w-5 h-5" /></Link>
             </Button>
           </div>
-          <p className="mt-6 text-primary-foreground/60 text-sm">
+          <p className="mt-8 text-primary-foreground/80 text-base">
             Not sure if it's a fit?{" "}
-            <Link href="/contact" className="underline underline-offset-2 hover:text-primary-foreground transition-colors" data-testid="link-book-secondary">
+            <Link href="/contact" className="font-medium underline underline-offset-4 hover:text-primary-foreground transition-colors" data-testid="link-book-secondary">
               Book a Growth Accelerator Call
             </Link>
           </p>
