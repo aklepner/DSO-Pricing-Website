@@ -12,7 +12,7 @@ import { CheckCircle2, Mail, ArrowRight } from "lucide-react";
 import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import heroBg from "@assets/b052de90-cf8e-480a-a79c-ea4bf1336fda-2026-03-23_1774231484912.png";
+import heroBg from "@assets/dentistright_1774231827951.png";
 
 const contactSchema = z.object({
   name: z.string().min(2, "Name is required"),
@@ -61,7 +61,7 @@ export default function Contact() {
           style={{
             backgroundImage: `url(${heroBg})`,
             backgroundSize: "cover",
-            backgroundPosition: "60% 25%",
+            backgroundPosition: "70% center",
             backgroundRepeat: "no-repeat",
           }}
         />
