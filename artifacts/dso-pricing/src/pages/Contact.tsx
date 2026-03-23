@@ -12,6 +12,7 @@ import { CheckCircle2, Mail, ArrowRight } from "lucide-react";
 import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import heroBg from "@assets/b052de90-cf8e-480a-a79c-ea4bf1336fda-2026-03-23_1774231484912.png";
 
 const contactSchema = z.object({
   name: z.string().min(2, "Name is required"),
@@ -54,10 +55,24 @@ export default function Contact() {
       <Navbar />
 
       {/* Hero */}
-      <section className="pt-32 pb-24 px-6 bg-secondary text-white relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-secondary via-secondary to-primary/20 pointer-events-none" />
-        <div className="max-w-3xl mx-auto text-center relative z-10">
-          <p className="text-sm font-semibold uppercase tracking-widest mb-4" style={{ color: "#f59e0b" }}>Contact</p>
+      <section className="pt-32 pb-24 px-6 text-white relative overflow-hidden">
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage: `url(${heroBg})`,
+            backgroundSize: "cover",
+            backgroundPosition: "60% 25%",
+            backgroundRepeat: "no-repeat",
+          }}
+        />
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            background: "linear-gradient(to right, hsl(220 80% 10% / 0.95) 0%, hsl(214 85% 20% / 0.80) 45%, hsl(210 70% 30% / 0.40) 75%, hsl(210 60% 35% / 0.15) 100%)",
+          }}
+        />
+        <div className="max-w-3xl mx-auto text-center relative z-10" style={{ textShadow: "0 2px 12px rgba(0,0,0,0.6)" }}>
+          <p className="text-base font-semibold uppercase tracking-widest mb-4" style={{ color: "#f59e0b" }}>Contact</p>
           <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-6 text-white">
             Let's Connect.
           </h1>
