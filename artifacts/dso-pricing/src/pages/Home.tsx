@@ -4,6 +4,7 @@ import { Card } from "@/components/ui/card";
 import { CheckCircle2, TrendingUp, Users, Shield, ArrowRight } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import heroBg from "@assets/dentist-with-patient-in-the-dental-office-2026-01-09-00-32-38-_1774228985291.jpg";
 
 export default function Home() {
   return (
@@ -11,8 +12,24 @@ export default function Home() {
       <Navbar />
 
       {/* Hero */}
-      <section className="pt-32 pb-24 px-6 bg-secondary text-white relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-secondary via-secondary to-primary/20 pointer-events-none" />
+      <section className="pt-32 pb-24 px-6 text-white relative overflow-hidden">
+        {/* Dental office photo background */}
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage: `url(${heroBg})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center center",
+            backgroundRepeat: "no-repeat",
+          }}
+        />
+        {/* Blue monochromatic tint overlay */}
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            background: "linear-gradient(135deg, hsl(214 60% 14% / 0.88) 0%, hsl(210 75% 28% / 0.72) 50%, hsl(214 60% 14% / 0.88) 100%)",
+          }}
+        />
         <div className="max-w-5xl mx-auto relative">
           <p className="text-primary text-sm font-semibold uppercase tracking-widest mb-4">Private Membership</p>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 max-w-4xl text-white">
