@@ -139,7 +139,7 @@ export default function Home() {
       <section className="py-20 px-6 bg-background">
         <div className="max-w-5xl mx-auto">
           <div className="mb-14 text-center">
-            <p className="text-primary font-extrabold uppercase tracking-widest" style={{ fontSize: "clamp(2.5rem, 8vw, 6rem)", letterSpacing: "0.15em", lineHeight: 1 }}>Built Different</p>
+            <p className="text-primary font-extrabold uppercase" style={{ fontSize: "clamp(2.5rem, 8vw, 6rem)", letterSpacing: "0.04em", lineHeight: 1, whiteSpace: "nowrap" }}>Built Different</p>
           </div>
           <div className="grid md:grid-cols-2 gap-16">
             <div>
