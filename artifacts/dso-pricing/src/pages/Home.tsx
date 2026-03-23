@@ -31,10 +31,10 @@ export default function Home() {
           }}
         />
         <div className="max-w-5xl mx-auto relative" style={{ textShadow: "0 2px 12px rgba(0,0,0,0.6)" }}>
-          <p className="text-primary text-sm font-semibold uppercase tracking-widest mb-4">Private Membership</p>
+          <p className="text-sm font-semibold uppercase tracking-widest mb-4" style={{ color: "#f59e0b" }}>Private Membership</p>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 max-w-4xl text-white">
             Stop Operating Without Leverage. Access DSO-Level Pricing —{" "}
-            <span className="text-primary">Without Giving Up Control</span>
+            <span style={{ color: "#f59e0b" }}>Without Giving Up Control</span>
           </h1>
           <p className="text-xl text-white/80 mb-10 max-w-2xl leading-relaxed">
             Strengthen margins, increase EBITDA, and scale on your terms.
