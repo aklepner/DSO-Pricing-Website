@@ -41,7 +41,7 @@ export default function Pricing() {
       </section>
 
       {/* Price Card */}
-      <section className="py-24 px-6 bg-transparent relative z-10" style={{ marginTop: "-150px" }}>
+      <section className="py-24 px-6 bg-transparent relative z-10" style={{ marginTop: "-250px" }}>
         <div className="max-w-lg mx-auto">
           <Card className="p-12 text-center border-primary/20 shadow-2xl bg-white relative overflow-hidden" data-testid="card-price">
             <div className="absolute top-0 left-0 right-0 h-2 bg-gradient-to-r from-primary to-primary/60" />
