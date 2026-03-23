@@ -1,7 +1,7 @@
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { CheckCircle2, TrendingUp, Users, Shield, ArrowRight, ShieldCheck, BarChart3, Layers } from "lucide-react";
+import { CheckCircle2, TrendingUp, Users, Shield, ArrowRight, ShieldCheck, BarChart3, Lightbulb } from "lucide-react";
 import dentalImg from "@assets/dental-assistant-taking-notes-on-clipboard-in-dent-2026-03-19-_1774233635017.JPG";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -89,8 +89,8 @@ export default function Home() {
           <div className="grid md:grid-cols-3 gap-6">
             {[
               { label: "Protect and strengthen your margins", Icon: ShieldCheck },
-              { label: "Make smarter, more confident decisions", Icon: BarChart3 },
-              { label: "Build a practice that scales with structure", Icon: Layers },
+              { label: "Make smarter, more confident decisions", Icon: Lightbulb },
+              { label: "Build a practice that scales with structure", Icon: BarChart3 },
             ].map(({ label, Icon }, i) => (
               <Card key={i} className="p-8 text-center border-primary/10 shadow-sm bg-background flex flex-col items-center" data-testid={`card-outcome-${i}`}>
                 <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mb-4">
