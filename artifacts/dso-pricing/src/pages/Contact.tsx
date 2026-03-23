@@ -61,7 +61,7 @@ export default function Contact() {
           style={{
             backgroundImage: `url(${heroBg})`,
             backgroundSize: "cover",
-            backgroundPosition: "70% center",
+            backgroundPosition: "top center",
             backgroundRepeat: "no-repeat",
           }}
         />
