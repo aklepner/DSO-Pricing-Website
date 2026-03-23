@@ -136,7 +136,7 @@ export default function Home() {
       </section>
 
       {/* Built Different */}
-      <section className="py-20 px-6 bg-background">
+      <section className="pb-20 pt-0 px-6 bg-background">
         <div className="max-w-5xl mx-auto">
           <div className="mb-14 text-center">
             <p className="text-primary font-extrabold uppercase" style={{ fontSize: "clamp(2.5rem, 8vw, 6rem)", letterSpacing: "0.04em", lineHeight: 1, whiteSpace: "nowrap" }}>Built Different</p>
