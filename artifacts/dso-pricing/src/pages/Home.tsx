@@ -138,9 +138,11 @@ export default function Home() {
       {/* Built Different */}
       <section className="py-20 px-6 bg-background">
         <div className="max-w-5xl mx-auto">
+          <div className="mb-14 text-center">
+            <p className="text-primary font-extrabold uppercase tracking-widest" style={{ fontSize: "clamp(2.5rem, 8vw, 6rem)", letterSpacing: "0.15em", lineHeight: 1 }}>Built Different</p>
+          </div>
           <div className="grid md:grid-cols-2 gap-16">
             <div>
-              <p className="text-primary text-base font-semibold uppercase tracking-widest mb-3">Built Different</p>
               <h2 className="text-3xl font-bold mb-8 text-foreground">You won't get:</h2>
               <div className="space-y-4">
                 {[
@@ -158,7 +160,7 @@ export default function Home() {
               </div>
             </div>
             <div>
-              <h2 className="text-3xl font-bold mb-8 mt-8 md:mt-0 md:pt-8 text-foreground">Instead, you'll get:</h2>
+              <h2 className="text-3xl font-bold mb-8 text-foreground">Instead, you'll get:</h2>
               <div className="space-y-4">
                 {[
                   "Curated, high-impact partners only",
