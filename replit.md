@@ -16,6 +16,18 @@ pnpm workspace monorepo using TypeScript. Each package manages its own dependenc
 - **API codegen**: Orval (from OpenAPI spec)
 - **Build**: esbuild (CJS bundle)
 
+## Artifacts
+
+### `artifacts/dso-pricing` (`@workspace/dso-pricing`)
+
+DSO Pricing marketing website — a multi-page React + Vite app with the following pages:
+- **Home** — Hero, What DSO Pricing Is, Not Just Pricing, Built Different, Who It's For, The Math, Final CTA
+- **Built Different** — Why This Exists, Growth Comparison (Fragile vs Scalable), Better Partners, Real-World Growth, Who This Is For, CTA
+- **Pricing** — Hero, $399/mo price card, What You Get, The Math, How It Works, Who This Is For, CTA
+- **Contact** — Hero, Contact Form (Name/Email/Practice Name/Revenue Range/Message), Book a Call, Alignment Section, Direct Contact
+
+Theme: Dark navy (`#1b222e`) with amber/gold primary accent. Professional, confident, strategic tone.
+
 ## Structure
 
 ```text
