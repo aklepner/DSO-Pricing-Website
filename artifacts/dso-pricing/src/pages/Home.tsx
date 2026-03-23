@@ -2,6 +2,7 @@ import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { CheckCircle2, TrendingUp, Users, Shield, ArrowRight, ShieldCheck, BarChart3, Layers } from "lucide-react";
+import dentalImg from "@assets/dental-assistant-taking-notes-on-clipboard-in-dent-2026-03-19-_1774233635017.JPG";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import heroBg from "@assets/0e852b13-c2dc-4c82-a936-fce6ff181f98-2026-03-231_1774229359198.jpeg";
@@ -179,8 +180,8 @@ export default function Home() {
 
       {/* Who This Is For */}
       <section className="py-24 px-6 bg-muted">
-        <div className="max-w-5xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-16 items-start">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-10 items-center">
             <div>
               <p className="text-primary text-base font-semibold uppercase tracking-widest mb-3">Who This Is For</p>
               <h2 className="text-3xl font-bold mb-8 text-foreground">Built for practices ready to scale with intention.</h2>
@@ -203,6 +204,16 @@ export default function Home() {
                   Most members see measurable margin improvement within the first 60–90 days. Even small improvements (1–3%) can translate into $50K–$150K+ annually depending on practice size.
                 </p>
               </div>
+            </div>
+
+            {/* Center image */}
+            <div className="flex justify-center">
+              <img
+                src={dentalImg}
+                alt="Dental professional reviewing notes"
+                className="rounded-2xl shadow-xl object-cover w-full"
+                style={{ maxHeight: "560px", objectPosition: "top center" }}
+              />
             </div>
 
             {/* How It Works */}
