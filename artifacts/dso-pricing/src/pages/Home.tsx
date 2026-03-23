@@ -27,7 +27,7 @@ export default function Home() {
         <div
           className="absolute inset-0 pointer-events-none"
           style={{
-            background: "linear-gradient(135deg, hsl(214 60% 14% / 0.88) 0%, hsl(210 75% 28% / 0.72) 50%, hsl(214 60% 14% / 0.88) 100%)",
+            background: "linear-gradient(135deg, hsl(220 80% 10% / 0.93) 0%, hsl(214 85% 22% / 0.85) 50%, hsl(220 80% 10% / 0.93) 100%)",
           }}
         />
         <div className="max-w-5xl mx-auto relative">
