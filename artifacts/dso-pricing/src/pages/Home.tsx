@@ -33,7 +33,7 @@ export default function Home() {
         />
         <div className="max-w-5xl mx-auto relative" style={{ textShadow: "0 2px 12px rgba(0,0,0,0.6)" }}>
           <p className="text-base font-semibold uppercase tracking-widest mb-4" style={{ color: "#f59e0b" }}>Private Membership</p>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 max-w-4xl text-white">
+          <h1 className="text-4xl md:text-5xl lg:text-5xl font-bold leading-tight mb-6 max-w-5xl text-white">
             Stop Operating Without Leverage. Access DSO-Level Pricing —{" "}
             <span style={{ color: "#f59e0b" }}>Without Giving Up Control</span>
           </h1>
