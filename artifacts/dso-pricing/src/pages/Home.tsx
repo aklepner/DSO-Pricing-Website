@@ -257,7 +257,6 @@ export default function Home() {
 
       {/* Price Card */}
       <section className="py-24 px-6 bg-background relative">
-        <div className="absolute top-0 left-0 right-0 h-32 bg-secondary" />
         <div className="max-w-lg mx-auto relative z-10">
           <Card className="p-12 text-center border-primary/20 shadow-2xl bg-white relative overflow-hidden" data-testid="card-price-home">
             <div className="absolute top-0 left-0 right-0 h-2 bg-gradient-to-r from-primary to-primary/60" />
