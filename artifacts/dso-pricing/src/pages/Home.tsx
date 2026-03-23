@@ -181,7 +181,7 @@ export default function Home() {
       {/* Who This Is For */}
       <section className="py-24 px-6 bg-muted">
         <div className="max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-3 gap-10 items-center">
+          <div className="grid md:grid-cols-2 gap-16 items-center">
             <div>
               <p className="text-primary text-base font-semibold uppercase tracking-widest mb-3">Who This Is For</p>
               <h2 className="text-3xl font-bold mb-8 text-foreground">Built for practices ready to scale with intention.</h2>
@@ -206,36 +206,37 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Center image */}
-            <div className="flex justify-center">
+            <div>
               <img
                 src={dentalImg}
                 alt="Dental professional reviewing notes"
                 className="rounded-2xl shadow-xl object-cover w-full"
-                style={{ maxHeight: "560px", objectPosition: "top center" }}
+                style={{ maxHeight: "600px", objectPosition: "top center" }}
               />
             </div>
+          </div>
+        </div>
+      </section>
 
-            {/* How It Works */}
-            <div>
-              <p className="text-primary text-base font-semibold uppercase tracking-widest mb-3">How It Works</p>
-              <h2 className="text-3xl font-bold mb-8 text-foreground">Simple. Strategic. Immediate.</h2>
-              <div className="space-y-6 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-primary/20 before:to-transparent">
-                {[
-                  "Join the membership",
-                  "Unlock DSO-level pricing and curated partners",
-                  "Implement with guidance from experienced founders and experts",
-                  "Strengthen margins as you scale",
-                ].map((step, i) => (
-                  <div key={i} className="flex items-center gap-6 relative z-10" data-testid={`step-how-${i}`}>
-                    <div className="w-10 h-10 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-lg font-bold shrink-0 shadow-md">
-                      {i + 1}
-                    </div>
-                    <p className="font-medium text-lg text-foreground">{step}</p>
-                  </div>
-                ))}
+      {/* How It Works */}
+      <section className="py-24 px-6 bg-background">
+        <div className="max-w-3xl mx-auto">
+          <p className="text-primary text-base font-semibold uppercase tracking-widest mb-3 text-center">How It Works</p>
+          <h2 className="text-3xl font-bold mb-12 text-foreground text-center">Simple. Strategic. Immediate.</h2>
+          <div className="space-y-6 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-primary/20 before:to-transparent">
+            {[
+              "Join the membership",
+              "Unlock DSO-level pricing and curated partners",
+              "Implement with guidance from experienced founders and experts",
+              "Strengthen margins as you scale",
+            ].map((step, i) => (
+              <div key={i} className="flex items-center gap-6 relative z-10" data-testid={`step-how-${i}`}>
+                <div className="w-10 h-10 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-lg font-bold shrink-0 shadow-md">
+                  {i + 1}
+                </div>
+                <p className="font-medium text-lg text-foreground">{step}</p>
               </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
