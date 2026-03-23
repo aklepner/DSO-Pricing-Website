@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link, useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+import logo from "@assets/DSO_Pricing_Logo_1774232568739.png";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -17,9 +18,8 @@ export default function Navbar() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-primary/10 shadow-sm">
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-        <Link href="/" className="flex items-center gap-2 group" data-testid="link-logo">
-          <span className="text-primary font-bold text-xl tracking-tight">DSO</span>
-          <span className="text-secondary font-light text-xl tracking-tight">Pricing</span>
+        <Link href="/" className="flex items-center" data-testid="link-logo">
+          <img src={logo} alt="DSO Pricing" className="h-9 w-auto" />
         </Link>
 
         <nav className="hidden md:flex items-center gap-1" data-testid="nav-desktop">
