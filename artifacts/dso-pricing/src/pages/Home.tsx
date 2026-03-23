@@ -4,7 +4,7 @@ import { Card } from "@/components/ui/card";
 import { CheckCircle2, TrendingUp, Users, Shield, ArrowRight } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import heroBg from "@assets/dentist-with-patient-in-the-dental-office-2026-01-09-00-32-38-_1774228985291.jpg";
+import heroBg from "@assets/0e852b13-c2dc-4c82-a936-fce6ff181f98-2026-03-231_1774229359198.jpeg";
 
 export default function Home() {
   return (
