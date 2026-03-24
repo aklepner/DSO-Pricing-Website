@@ -16,10 +16,10 @@ export default function Navbar() {
   const [location] = useLocation();
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-primary/10 shadow-sm">
+    <header className="fixed top-0 left-0 right-0 z-50 border-b border-white/10" style={{ backgroundColor: "#0f1628" }}>
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
         <Link href="/" className="flex items-center" data-testid="link-logo">
-          <img src={logo} alt="DSO Pricing" className="h-9 w-auto" />
+          <img src={logo} alt="DSO Pricing" className="h-9 w-auto" style={{ filter: "brightness(0) invert(1)" }} />
         </Link>
 
         <nav className="hidden md:flex items-center gap-1" data-testid="nav-desktop">
@@ -28,10 +28,10 @@ export default function Navbar() {
               key={link.href}
               href={link.href}
               data-testid={`link-nav-${link.label.toLowerCase().replace(" ", "-")}`}
-              className={`px-4 py-2 text-base font-medium rounded-md transition-colors ${
+              className={`px-4 py-2 text-sm font-medium rounded-md transition-colors ${
                 location === link.href
-                  ? "text-primary bg-primary/5"
-                  : "text-secondary/70 hover:text-primary hover:bg-primary/5"
+                  ? "text-white bg-white/10"
+                  : "text-white/70 hover:text-white hover:bg-white/10"
               }`}
             >
               {link.label}
@@ -40,16 +40,16 @@ export default function Navbar() {
         </nav>
 
         <div className="hidden md:flex items-center gap-3">
-          <Button asChild size="sm" variant="outline" className="border-primary/20 text-primary hover:bg-primary/5 bg-transparent">
+          <Button asChild size="sm" variant="outline" className="border-white/20 text-white hover:bg-white/10 bg-transparent">
             <Link href="/contact" data-testid="button-book-call">Book a Call</Link>
           </Button>
-          <Button asChild size="sm" className="bg-primary text-primary-foreground hover:bg-primary/90">
+          <Button asChild size="sm" className="text-white font-semibold" style={{ backgroundColor: "#ea580c" }}>
             <Link href="/pricing" data-testid="button-join-nav">Join DSO Pricing</Link>
           </Button>
         </div>
 
         <button
-          className="md:hidden text-secondary p-2"
+          className="md:hidden text-white p-2"
           onClick={() => setOpen(!open)}
           data-testid="button-mobile-menu"
           aria-label="Toggle menu"
@@ -59,7 +59,7 @@ export default function Navbar() {
       </div>
 
       {open && (
-        <div className="md:hidden bg-white border-t border-border px-6 py-4 flex flex-col gap-2 shadow-lg" data-testid="nav-mobile">
+        <div className="md:hidden border-t border-white/10 px-6 py-4 flex flex-col gap-2 shadow-lg" style={{ backgroundColor: "#0f1628" }} data-testid="nav-mobile">
           {navLinks.map((link) => (
             <Link
               key={link.href}
@@ -68,18 +68,18 @@ export default function Navbar() {
               data-testid={`link-mobile-${link.label.toLowerCase().replace(" ", "-")}`}
               className={`px-4 py-2 text-base font-medium rounded-md ${
                 location === link.href
-                  ? "text-primary bg-primary/10"
-                  : "text-secondary/70 hover:text-primary"
+                  ? "text-white bg-white/10"
+                  : "text-white/70 hover:text-white"
               }`}
             >
               {link.label}
             </Link>
           ))}
-          <div className="flex flex-col gap-2 mt-2 pt-2 border-t border-border">
-            <Button asChild variant="outline" size="sm" className="border-primary/20 text-primary bg-transparent w-full">
+          <div className="flex flex-col gap-2 mt-2 pt-2 border-t border-white/10">
+            <Button asChild variant="outline" size="sm" className="border-white/20 text-white bg-transparent w-full">
               <Link href="/contact" onClick={() => setOpen(false)} data-testid="button-mobile-book">Book a Call</Link>
             </Button>
-            <Button asChild size="sm" className="w-full bg-primary text-primary-foreground">
+            <Button asChild size="sm" className="w-full text-white font-semibold" style={{ backgroundColor: "#ea580c" }}>
               <Link href="/pricing" onClick={() => setOpen(false)} data-testid="button-mobile-join">Join DSO Pricing</Link>
             </Button>
           </div>

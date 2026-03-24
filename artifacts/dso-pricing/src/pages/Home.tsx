@@ -1,136 +1,241 @@
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
-import { CheckCircle2, HandCoins, Handshake, Network, ArrowRight, ShieldCheck, BarChart3, Lightbulb } from "lucide-react";
-import dentalImg from "@assets/dental-assistant-taking-notes-on-clipboard-in-dent-2026-03-19-_1774233635017.JPG";
+import { CheckCircle2, ArrowRight, Star, ChevronDown, ChevronUp, DollarSign, Clock, Users, TrendingUp, Shield, Zap, BarChart3, Globe, HeartHandshake, Award, Target, Lightbulb, Network } from "lucide-react";
+import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import heroBg from "@assets/0e852b13-c2dc-4c82-a936-fce6ff181f98-2026-03-231_1774229359198.jpeg";
+
+const NAVY = "#0f1628";
+const NAVY2 = "#161e35";
+const ORANGE = "#ea580c";
+const ORANGE_LIGHT = "#f97316";
+
+function StarRating({ count = 5, size = 16 }: { count?: number; size?: number }) {
+  return (
+    <div className="flex gap-0.5">
+      {Array.from({ length: count }).map((_, i) => (
+        <Star key={i} fill="#fbbf24" color="#fbbf24" width={size} height={size} />
+      ))}
+    </div>
+  );
+}
+
+function Avatar({ initials, color, size = 48 }: { initials: string; color: string; size?: number }) {
+  return (
+    <div
+      className="rounded-full flex items-center justify-center text-white font-bold border-2 border-white/20 shrink-0"
+      style={{ width: size, height: size, backgroundColor: color, fontSize: size * 0.35 }}
+    >
+      {initials}
+    </div>
+  );
+}
+
+const avatarData = [
+  { initials: "JM", color: "#2563eb" },
+  { initials: "SK", color: "#7c3aed" },
+  { initials: "RL", color: "#059669" },
+  { initials: "AT", color: "#dc2626" },
+  { initials: "PW", color: "#d97706" },
+  { initials: "CN", color: "#0891b2" },
+];
+
+const features = [
+  { icon: DollarSign, label: "DSO-Level Buying Power", desc: "Access the same vendor pricing DSOs negotiate for millions in volume", color: "#2563eb", bg: "#dbeafe" },
+  { icon: Clock, label: "Save Time & Overhead", desc: "Stop vetting vendors. We've done the work so you don't have to", color: "#7c3aed", bg: "#ede9fe" },
+  { icon: Users, label: "Curated Partner Network", desc: "Only high-impact partners aligned with growth and profitability", color: "#059669", bg: "#d1fae5" },
+  { icon: TrendingUp, label: "Margin Optimization", desc: "Targeted guidance on protecting and strengthening your EBITDA", color: "#dc2626", bg: "#fee2e2" },
+  { icon: Shield, label: "No Lock-In Contracts", desc: "Stay because it works, not because you're trapped. Cancel anytime.", color: "#d97706", bg: "#fef3c7" },
+  { icon: Zap, label: "Immediate Access", desc: "Start leveraging your membership from day one with zero delay", color: "#0891b2", bg: "#cffafe" },
+];
+
+const offloadItems = [
+  { icon: BarChart3, label: "Vendor negotiations", color: "#2563eb", bg: "#dbeafe" },
+  { icon: Globe, label: "Researching service providers", color: "#7c3aed", bg: "#ede9fe" },
+  { icon: Network, label: "Finding growth-aligned partners", color: "#059669", bg: "#d1fae5" },
+  { icon: DollarSign, label: "Overpaying on supplies & services", color: "#dc2626", bg: "#fee2e2" },
+  { icon: Lightbulb, label: "Figuring out scaling decisions alone", color: "#d97706", bg: "#fef3c7" },
+  { icon: HeartHandshake, label: "Managing conflicting vendor advice", color: "#0891b2", bg: "#cffafe" },
+];
+
+const partners = [
+  { initials: "Dr. JM", color: "#2563eb", name: "Dr. James M.", role: "Multi-Location Owner" },
+  { initials: "SK", color: "#7c3aed", name: "Sarah K.", role: "Practice Consultant" },
+  { initials: "RL", color: "#059669", name: "Robert L.", role: "DSO Founder" },
+  { initials: "AT", color: "#dc2626", name: "Amanda T.", role: "Dental CFO" },
+  { initials: "PW", color: "#d97706", name: "Peter W.", role: "Growth Strategist" },
+];
+
+const testimonials = [
+  {
+    name: "Dr. Michelle R.",
+    role: "3-Location Group Owner",
+    text: "Within 60 days of joining, we renegotiated two major vendor contracts and saved over $28,000 annualized. The ROI is undeniable.",
+    initials: "MR",
+    color: "#2563eb",
+    rating: 5,
+  },
+  {
+    name: "Dr. Brandon K.",
+    role: "Solo Practice, $2.4M Revenue",
+    text: "I was skeptical about another membership. But DSO Pricing is different — the partners are real, the savings are real, and the community is genuinely helpful.",
+    initials: "BK",
+    color: "#7c3aed",
+    rating: 5,
+  },
+  {
+    name: "Dr. Lisa T.",
+    role: "Emerging Group Practice",
+    text: "We finally feel like we have the leverage and backing of a DSO without having to give up our independence. This is exactly what was missing.",
+    initials: "LT",
+    color: "#059669",
+    rating: 5,
+  },
+];
+
+const stats = [
+  { value: "$80K+", label: "Average Annual Savings for $4M Practice" },
+  { value: "60 Days", label: "Avg. Time to See Margin Improvement" },
+  { value: "2–3%", label: "Typical EBITDA Improvement" },
+  { value: "1,200+", label: "Practices Benefiting" },
+];
+
+const services = [
+  { icon: DollarSign, label: "Vendor Pricing Leverage", desc: "DSO-level rates on supplies, labs, tech, and more", color: "#2563eb", bg: "#dbeafe" },
+  { icon: Network, label: "Curated Partner Access", desc: "Only vetted, growth-aligned partners in the network", color: "#7c3aed", bg: "#ede9fe" },
+  { icon: TrendingUp, label: "EBITDA Strategy", desc: "Margin optimization with real-world guidance", color: "#059669", bg: "#d1fae5" },
+  { icon: Users, label: "Founder Community", desc: "Direct access to experienced practice owners and experts", color: "#dc2626", bg: "#fee2e2" },
+  { icon: BarChart3, label: "Financial Benchmarking", desc: "Know where you stand and how to improve", color: "#d97706", bg: "#fef3c7" },
+  { icon: Award, label: "Growth Accelerator Calls", desc: "Guided strategy sessions to unlock your next level", color: "#0891b2", bg: "#cffafe" },
+];
+
+const faqs = [
+  { q: "Who is DSO Pricing for?", a: "DSO Pricing is built for independent dental practices doing $1M+ in revenue, multi-associate groups, and emerging multi-location practices that want to scale intelligently without giving up control." },
+  { q: "How soon can I expect results?", a: "Most members see measurable margin improvement within the first 60–90 days. Even small improvements of 1–3% can translate into $50K–$150K+ annually depending on practice size." },
+  { q: "Is there a long-term contract?", a: "No. Your membership is month-to-month. Stay because it delivers value, not because you're locked in." },
+  { q: "What kinds of vendors and partners are included?", a: "Partners span supplies, technology, lab services, HR, financing, marketing, and more — all curated for quality and alignment with growth-focused practices." },
+  { q: "How is DSO Pricing different from a GPO?", a: "DSO Pricing goes far beyond a buying group. Beyond pricing leverage, you get access to curated partners, a founder community, EBITDA-focused strategy, and direct connection to experts who have scaled real practices." },
+  { q: "How do I get started?", a: "Simply join at $399/month with no commitment. You'll get immediate access to the full member portal, partner network, and your first Growth Accelerator Call." },
+];
+
+function FAQItem({ q, a }: { q: string; a: string }) {
+  const [open, setOpen] = useState(false);
+  return (
+    <div className="border-b border-white/10 py-5 cursor-pointer" onClick={() => setOpen(!open)}>
+      <div className="flex items-center justify-between gap-4">
+        <p className="text-white font-semibold text-lg">{q}</p>
+        {open ? <ChevronUp className="w-5 h-5 text-white/60 shrink-0" /> : <ChevronDown className="w-5 h-5 text-white/60 shrink-0" />}
+      </div>
+      {open && <p className="text-white/70 mt-3 leading-relaxed text-base">{a}</p>}
+    </div>
+  );
+}
 
 export default function Home() {
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
 
-      {/* Hero */}
-      <section className="pt-32 pb-24 px-6 text-white relative overflow-hidden">
-        {/* Dental office photo background */}
-        <div
-          className="absolute inset-0"
-          style={{
-            backgroundImage: `url(${heroBg})`,
-            backgroundSize: "cover",
-            backgroundPosition: "65% calc(30% + 100px)",
-            backgroundRepeat: "no-repeat",
-          }}
-        />
-        {/* Blue monochromatic tint overlay */}
-        <div
-          className="absolute inset-0 pointer-events-none"
-          style={{
-            background: "linear-gradient(to right, hsl(220 80% 10% / 0.95) 0%, hsl(214 85% 20% / 0.80) 45%, hsl(210 70% 30% / 0.40) 75%, hsl(210 60% 35% / 0.15) 100%)",
-          }}
-        />
-        <div className="max-w-5xl mx-auto relative" style={{ textShadow: "0 2px 12px rgba(0,0,0,0.6)" }}>
-          <p className="text-base font-semibold uppercase tracking-widest mb-4" style={{ color: "#f59e0b" }}>Private Membership</p>
-          <h1 className="text-4xl md:text-5xl lg:text-5xl font-bold leading-tight mb-6 max-w-5xl text-white">
-            Stop Operating Without Leverage.
-            <br />
-            Access DSO-Level Pricing —
-            <br />
-            <span style={{ color: "#f59e0b" }}>Without Giving Up Control</span>
-          </h1>
-          <p className="text-xl text-white/80 mb-10 max-w-2xl leading-relaxed">
-            Strengthen margins, increase EBITDA, and scale on your terms.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4">
-            <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90" data-testid="button-join-hero">
-              <Link href="/pricing">Join DSO Pricing Now</Link>
-            </Button>
-            <Button asChild size="lg" variant="outline" className="border-white/30 text-white hover:bg-white/10 bg-transparent" data-testid="button-book-hero">
-              <Link href="/contact">Book a Growth Accelerator Call</Link>
-            </Button>
-          </div>
-        </div>
-      </section>
-
-      {/* What DSO Pricing Is */}
-      <section className="py-20 px-6 bg-background">
-        <div className="max-w-5xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-14 items-center">
+      {/* HERO */}
+      <section className="pt-28 pb-20 px-6 relative overflow-hidden" style={{ backgroundColor: NAVY }}>
+        <div className="absolute inset-0 pointer-events-none" style={{ background: "radial-gradient(ellipse at 70% 50%, rgba(37,99,235,0.12) 0%, transparent 70%)" }} />
+        <div className="max-w-6xl mx-auto relative">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <p className="text-primary text-base font-semibold uppercase tracking-widest mb-3">What It Is</p>
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-                DSO Pricing is a private membership built for growth-focused dental practices and emerging groups.
-              </h2>
-              <p className="text-muted-foreground leading-relaxed text-lg">
-                Purpose-built for practices from $1M to multi-location — combining pricing leverage with direct access to proven founders, partners, and experts who have solved the real challenges of growth.
+              <div className="flex items-center gap-3 mb-5">
+                <StarRating count={5} size={18} />
+                <span className="text-white/70 text-sm font-medium">Trusted by 1,200+ dental practices</span>
+              </div>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-6" style={{ fontFamily: "'Outfit', sans-serif" }}>
+                Reliable. Profitable.<br />
+                Scalable.<br />
+                <span style={{ color: ORANGE_LIGHT }}>DSO-Level Support</span><br />
+                <span className="text-white/90">Without Giving Up Control.</span>
+              </h1>
+              <p className="text-white/70 text-lg mb-8 leading-relaxed max-w-lg">
+                Access DSO-level pricing, curated partners, and proven founders — all for a fraction of what you're currently leaving on the table.
               </p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Button asChild size="lg" className="text-white font-bold text-base h-13 px-8" style={{ backgroundColor: ORANGE }}>
+                  <Link href="/pricing" data-testid="button-join-hero">Join DSO Pricing Now</Link>
+                </Button>
+                <Button asChild size="lg" variant="outline" className="border-white/25 text-white hover:bg-white/10 bg-transparent h-13 px-8">
+                  <Link href="/contact" data-testid="button-book-hero">Book a Growth Call</Link>
+                </Button>
+              </div>
+              <div className="mt-8 flex items-center gap-3">
+                <div className="flex -space-x-2">
+                  {avatarData.slice(0, 4).map((a, i) => (
+                    <Avatar key={i} initials={a.initials} color={a.color} size={36} />
+                  ))}
+                </div>
+                <p className="text-white/60 text-sm">Join hundreds of growing practices</p>
+              </div>
             </div>
-            <div className="space-y-4">
-              {[
-                { label: "DSO-level buying power across key services", icon: HandCoins },
-                { label: "Access to curated partners aligned with growth and profitability", icon: Handshake },
-                { label: "Direct connection to founders and experts who've scaled real practices", icon: Network },
-              ].map((item, i) => (
-                <Card key={i} className="p-5 flex items-start gap-4 border-primary/10 shadow-sm" data-testid={`card-value-${i}`}>
-                  <div className="bg-primary/10 p-2 rounded-lg shrink-0">
-                    <item.icon className="w-5 h-5 text-primary" />
-                  </div>
-                  <p className="text-base font-medium text-foreground pt-1">{item.label}</p>
-                </Card>
+
+            <div className="hidden md:grid grid-cols-3 gap-3">
+              {avatarData.map((a, i) => (
+                <div
+                  key={i}
+                  className="rounded-2xl p-5 flex flex-col items-center justify-center gap-3 border border-white/10"
+                  style={{ backgroundColor: "rgba(255,255,255,0.04)", backdropFilter: "blur(8px)" }}
+                >
+                  <Avatar initials={a.initials} color={a.color} size={56} />
+                  <StarRating count={5} size={12} />
+                </div>
               ))}
             </div>
           </div>
         </div>
       </section>
 
-      {/* So You Can */}
-      <section className="py-16 px-6 bg-muted">
-        <div className="max-w-5xl mx-auto text-center">
-          <h2 className="text-2xl md:text-3xl font-bold mb-10 text-foreground">So you can:</h2>
-          <div className="grid md:grid-cols-3 gap-6">
-            {[
-              { label: "Protect and strengthen your margins", Icon: ShieldCheck },
-              { label: "Make smarter, more confident decisions", Icon: Lightbulb },
-              { label: "Build a practice that scales with structure", Icon: BarChart3 },
-            ].map(({ label, Icon }, i) => (
-              <Card key={i} className="p-8 text-center border-primary/10 shadow-sm bg-background flex flex-col items-center" data-testid={`card-outcome-${i}`}>
-                <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mb-4">
-                  <Icon className="w-7 h-7 text-primary" />
+      {/* FEATURES GRID */}
+      <section className="py-20 px-6 bg-gray-50">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-14">
+            <p className="text-sm font-bold uppercase tracking-widest mb-3" style={{ color: ORANGE }}>What You Get</p>
+            <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4" style={{ fontFamily: "'Outfit', sans-serif" }}>
+              Get Not Just Discounts — Free Up Your Time and Strengthen Your Margins
+            </h2>
+            <p className="text-gray-500 max-w-2xl mx-auto text-lg">Everything a DSO has, built for the independent practice owner who wants to scale without selling out.</p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {features.map((f, i) => (
+              <div key={i} className="bg-white rounded-2xl p-7 border border-gray-100 shadow-sm hover:shadow-md transition-shadow" data-testid={`card-feature-${i}`}>
+                <div className="w-12 h-12 rounded-xl flex items-center justify-center mb-4" style={{ backgroundColor: f.bg }}>
+                  <f.icon className="w-6 h-6" style={{ color: f.color }} />
                 </div>
-                <p className="font-semibold text-lg text-foreground">{label}</p>
-              </Card>
+                <h3 className="font-bold text-gray-900 text-lg mb-2">{f.label}</h3>
+                <p className="text-gray-500 text-sm leading-relaxed">{f.desc}</p>
+              </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Not Just Pricing */}
-      <section className="py-20 px-6 bg-secondary text-white relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-secondary to-secondary/90 pointer-events-none" />
-        <div className="max-w-5xl mx-auto relative">
-          <div className="grid md:grid-cols-2 gap-14 items-start">
+      {/* OFF-LOAD SECTION */}
+      <section className="py-20 px-6 bg-white">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-16 items-center">
             <div>
-              <p className="text-primary text-base font-semibold uppercase tracking-widest mb-3">Not Just Pricing</p>
-              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
-                Inside DSO Pricing, this isn't about theory.
+              <p className="text-sm font-bold uppercase tracking-widest mb-3" style={{ color: ORANGE }}>Stop Doing It All Yourself</p>
+              <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-6" style={{ fontFamily: "'Outfit', sans-serif" }}>
+                Off-Load Your Dental Practice To-Do List
               </h2>
-              <p className="text-white/80 leading-relaxed text-lg">
-                No corporate layers. No generic advice. No theory. Just people who have done it — and can help you do it faster and smarter.
+              <p className="text-gray-500 text-lg leading-relaxed mb-8">
+                DSO Pricing removes the operational burden of finding, vetting, and negotiating — so you can focus on dentistry and growth.
               </p>
+              <Button asChild size="lg" className="text-white font-bold" style={{ backgroundColor: ORANGE }}>
+                <Link href="/pricing">Start Saving Today <ArrowRight className="ml-2 w-4 h-4" /></Link>
+              </Button>
             </div>
-            <div className="space-y-6 md:pt-12">
-              {[
-                "Founders and practice owners who have scaled multi-location businesses",
-                "Experts who have solved the exact challenges you're facing",
-                "Partners focused on growth, profitability, and long-term value",
-              ].map((item, i) => (
-                <div key={i} className="flex items-start gap-4" data-testid={`item-notjust-${i}`}>
-                  <div className="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center shrink-0 mt-0.5">
-                    <div className="w-2 h-2 rounded-full bg-primary" />
+            <div className="grid grid-cols-2 gap-4">
+              {offloadItems.map((item, i) => (
+                <div key={i} className="rounded-xl p-5 border border-gray-100 shadow-sm flex items-start gap-3" data-testid={`card-offload-${i}`}>
+                  <div className="w-10 h-10 rounded-lg flex items-center justify-center shrink-0" style={{ backgroundColor: item.bg }}>
+                    <item.icon className="w-5 h-5" style={{ color: item.color }} />
                   </div>
-                  <p className="text-white/90 text-lg">{item}</p>
+                  <p className="text-gray-700 font-medium text-sm leading-tight">{item.label}</p>
                 </div>
               ))}
             </div>
@@ -138,51 +243,117 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Built Different */}
-      <section className="pb-20 pt-0 px-6 bg-background">
-        <div className="max-w-5xl mx-auto">
-          <div className="mb-14 text-center">
-            <p className="text-primary font-extrabold uppercase" style={{ fontFamily: "'Outfit', sans-serif", fontSize: "clamp(2.5rem, 8vw, 6rem)", letterSpacing: "0.04em", lineHeight: 1, whiteSpace: "nowrap" }}>Built Different</p>
+      {/* DARK BANNER CTA */}
+      <section className="py-14 px-6" style={{ backgroundColor: ORANGE }}>
+        <div className="max-w-4xl mx-auto text-center">
+          <p className="text-sm font-bold uppercase tracking-widest text-white/80 mb-3">Join Today</p>
+          <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-4" style={{ fontFamily: "'Outfit', sans-serif" }}>
+            Starting Saving On All Your Practice Accounts and Expenses Right Now
+          </h2>
+          <p className="text-white/80 text-lg mb-8 max-w-xl mx-auto">Plug into DSO-level buying power in minutes. No fluff, no contracts — just immediate value.</p>
+          <Button asChild size="lg" className="bg-white font-bold text-lg px-10 h-13" style={{ color: ORANGE }}>
+            <Link href="/pricing">Get Started for $399/mo</Link>
+          </Button>
+        </div>
+      </section>
+
+      {/* PARTNER TEAM SECTION */}
+      <section className="py-20 px-6" style={{ backgroundColor: NAVY2 }}>
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-14">
+            <p className="text-sm font-bold uppercase tracking-widest mb-3" style={{ color: ORANGE }}>Your Growth Team</p>
+            <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-4" style={{ fontFamily: "'Outfit', sans-serif" }}>
+              Your DSO-Level Expert Network, On Speed Dial
+            </h2>
+            <p className="text-white/60 max-w-2xl mx-auto text-lg">Real founders, advisors, and operators who've scaled dental practices — not generic consultants.</p>
           </div>
-          <div className="grid md:grid-cols-2 gap-16">
-            <div>
-              <h2 className="text-3xl font-bold mb-8 text-foreground">You won't get:</h2>
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-6 mb-12">
+            {partners.map((p, i) => (
+              <div key={i} className="flex flex-col items-center gap-3 text-center" data-testid={`card-partner-${i}`}>
+                <Avatar initials={p.initials} color={p.color} size={72} />
+                <div>
+                  <p className="text-white font-semibold text-sm">{p.name}</p>
+                  <p className="text-white/50 text-xs mt-0.5">{p.role}</p>
+                </div>
+                <StarRating count={5} size={11} />
+              </div>
+            ))}
+          </div>
+          <div className="grid md:grid-cols-3 gap-6">
+            {[
+              { icon: Target, label: "Founders who've scaled multi-location businesses", color: "#2563eb", bg: "rgba(37,99,235,0.15)" },
+              { icon: Award, label: "Experts who've solved the exact challenges you face", color: "#7c3aed", bg: "rgba(124,58,237,0.15)" },
+              { icon: HeartHandshake, label: "Partners focused on growth, profitability, and your long-term value", color: "#059669", bg: "rgba(5,150,105,0.15)" },
+            ].map((item, i) => (
+              <div key={i} className="rounded-2xl p-6 border border-white/10 flex items-start gap-4" style={{ backgroundColor: "rgba(255,255,255,0.04)" }}>
+                <div className="w-11 h-11 rounded-xl flex items-center justify-center shrink-0" style={{ backgroundColor: item.bg }}>
+                  <item.icon className="w-5 h-5" style={{ color: item.color }} />
+                </div>
+                <p className="text-white/80 font-medium leading-snug">{item.label}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* BUILT DIFFERENT COMPARISON */}
+      <section className="py-20 px-6 bg-gray-50">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-14">
+            <p className="text-sm font-bold uppercase tracking-widest mb-3" style={{ color: ORANGE }}>Built Different</p>
+            <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900" style={{ fontFamily: "'Outfit', sans-serif" }}>
+              Put Your Practice in the Right Position — Not Just a Buying Club
+            </h2>
+          </div>
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <div className="rounded-2xl p-8 bg-white border border-red-100 shadow-sm">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-10 h-10 rounded-full bg-red-50 flex items-center justify-center">
+                  <span className="text-red-500 font-bold text-lg">✕</span>
+                </div>
+                <h3 className="font-extrabold text-gray-900 text-xl">What You Won't Get</h3>
+              </div>
               <div className="space-y-4">
                 {[
-                  "Endless vendor lists",
-                  "Conflicting advice",
-                  "Generic \"discounts\" that don't move the needle",
+                  "Endless vendor lists with no curation",
+                  "Conflicting advice from disconnected sources",
+                  "Generic discounts that don't move the needle",
+                  "Corporate layers and red tape",
+                  "Theory without real-world application",
                 ].map((item, i) => (
-                  <div key={i} className="flex items-center gap-4 text-muted-foreground" data-testid={`item-wont-${i}`}>
-                    <div className="w-8 h-8 rounded-full bg-destructive/10 flex items-center justify-center shrink-0">
-                      <span className="text-destructive font-bold text-base">✕</span>
-                    </div>
-                    <p className="text-lg">{item}</p>
+                  <div key={i} className="flex items-center gap-3 text-gray-500">
+                    <span className="text-red-400 font-bold shrink-0">✕</span>
+                    <p className="text-base">{item}</p>
                   </div>
                 ))}
               </div>
             </div>
-            <div>
-              <h2 className="text-3xl font-bold mb-8 text-foreground">Instead, you'll get:</h2>
+            <div className="rounded-2xl p-8 border border-green-100 shadow-sm" style={{ backgroundColor: "#f0fdf4" }}>
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center">
+                  <CheckCircle2 className="w-5 h-5 text-green-600" />
+                </div>
+                <h3 className="font-extrabold text-gray-900 text-xl">What You Will Get</h3>
+              </div>
               <div className="space-y-4">
                 {[
                   "Curated, high-impact partners only",
                   "Real-world insight from experienced founders",
-                  "Strategic alignment focused on strengthening margins",
+                  "Strategic alignment focused on your EBITDA",
+                  "Direct access — no middlemen, no gatekeeping",
+                  "Immediate, measurable margin improvement",
                 ].map((item, i) => (
-                  <div key={i} className="flex items-center gap-4" data-testid={`item-will-${i}`}>
-                    <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
-                      <CheckCircle2 className="w-5 h-5 text-primary" />
-                    </div>
-                    <p className="font-medium text-lg text-foreground">{item}</p>
+                  <div key={i} className="flex items-center gap-3">
+                    <CheckCircle2 className="w-5 h-5 text-green-600 shrink-0" />
+                    <p className="text-gray-700 font-medium text-base">{item}</p>
                   </div>
                 ))}
               </div>
             </div>
           </div>
-          <div className="mt-12 text-center">
+          <div className="text-center mt-10">
             <Link href="/built-different">
-              <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white text-base px-8">
+              <Button size="lg" variant="outline" className="border-gray-300 text-gray-700 hover:text-orange-600 hover:border-orange-400 text-base px-8">
                 See What Makes Us Different <ArrowRight className="ml-2 w-4 h-4" />
               </Button>
             </Link>
@@ -190,129 +361,150 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Who This Is For */}
-      <section className="py-24 px-6 bg-muted">
+      {/* TESTIMONIALS */}
+      <section className="py-20 px-6" style={{ backgroundColor: NAVY }}>
         <div className="max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-16 items-center">
-            <div>
-              <p className="text-primary text-base font-semibold uppercase tracking-widest mb-3">Who This Is For</p>
-              <h2 className="text-3xl font-bold mb-8 text-foreground">Built for practices ready to scale with intention.</h2>
-              <div className="space-y-4">
-                {[
-                  "$1M+ independent practices",
-                  "Multi-associate groups",
-                  "Emerging multi-location practices",
-                  "Owners expanding teams, operatories, or locations",
-                  "Practices focused on strengthening EBITDA and long-term value",
-                ].map((item, i) => (
-                  <div key={i} className="flex items-start gap-4" data-testid={`item-for-${i}`}>
-                    <div className="w-2 h-2 rounded-full bg-primary mt-2.5 shrink-0" />
-                    <p className="text-foreground text-lg">{item}</p>
-                  </div>
-                ))}
-              </div>
-              <div className="mt-8 p-6 bg-white rounded-xl border border-primary/10 shadow-sm">
-                <p className="text-base text-foreground/80 italic leading-relaxed">
-                  Most members see measurable margin improvement within the first 60–90 days. Even small improvements (1–3%) can translate into $50K–$150K+ annually depending on practice size.
-                </p>
-              </div>
-            </div>
-
-            <div>
-              <img
-                src={dentalImg}
-                alt="Dental professional reviewing notes"
-                className="rounded-2xl shadow-xl object-cover w-full"
-                style={{ maxHeight: "600px", objectPosition: "top center" }}
-              />
-            </div>
+          <div className="text-center mb-14">
+            <p className="text-sm font-bold uppercase tracking-widest mb-3" style={{ color: ORANGE }}>Social Proof</p>
+            <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-4" style={{ fontFamily: "'Outfit', sans-serif" }}>
+              Don't Just Take Our Word For It
+            </h2>
+            <p className="text-white/60 text-lg max-w-xl mx-auto">Hear from practice owners who are already saving, scaling, and strengthening their margins.</p>
           </div>
-        </div>
-      </section>
-
-      {/* How It Works */}
-      <section className="py-24 px-6 bg-background">
-        <div className="max-w-3xl mx-auto">
-          <p className="text-primary text-base font-semibold uppercase tracking-widest mb-3 text-center">How It Works</p>
-          <h2 className="text-3xl font-bold mb-12 text-foreground text-center">Simple. Strategic. Immediate.</h2>
-          <div className="space-y-6">
-            {[
-              "Join the membership",
-              "Unlock DSO-level pricing and curated partners",
-              "Implement with guidance from experienced founders and experts",
-              "Strengthen margins as you scale",
-            ].map((step, i) => (
-              <div key={i} className="flex items-center gap-6 relative z-10" data-testid={`step-how-${i}`}>
-                <div className="w-10 h-10 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-lg font-bold shrink-0 shadow-md">
-                  {i + 1}
+          <div className="grid md:grid-cols-3 gap-6">
+            {testimonials.map((t, i) => (
+              <div
+                key={i}
+                className="rounded-2xl p-7 border border-white/10 flex flex-col gap-5"
+                style={{ backgroundColor: "rgba(255,255,255,0.05)" }}
+                data-testid={`card-testimonial-${i}`}
+              >
+                <StarRating count={t.rating} size={16} />
+                <p className="text-white/80 leading-relaxed text-base italic">"{t.text}"</p>
+                <div className="flex items-center gap-3 mt-auto pt-4 border-t border-white/10">
+                  <Avatar initials={t.initials} color={t.color} size={44} />
+                  <div>
+                    <p className="text-white font-semibold text-sm">{t.name}</p>
+                    <p className="text-white/50 text-xs">{t.role}</p>
+                  </div>
                 </div>
-                <p className="font-medium text-lg text-foreground">{step}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* The Math */}
-      <section className="py-24 px-6 bg-secondary text-white relative">
-        <div className="absolute inset-0 bg-gradient-to-br from-secondary to-secondary/95 pointer-events-none" />
-        <div className="max-w-3xl mx-auto text-center relative z-10">
-          <p className="text-primary text-base font-semibold uppercase tracking-widest mb-3">Let's Do Some Math</p>
-          <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white">Our members invest: $399/month</h2>
-          <p className="text-white/80 mb-10 text-lg md:text-xl">
-            Most practices see meaningful margin improvement within the first 60 days of working with the right partners.
-          </p>
-          <Card className="bg-white/10 backdrop-blur-sm border-white/20 p-10 mb-10 shadow-2xl" data-testid="card-math">
-            <p className="text-xl font-medium mb-4 text-white/90">For a $4M practice…</p>
-            <p className="text-3xl md:text-4xl font-bold text-primary mb-4">A 2% improvement in margin = $80,000/year</p>
-            <p className="text-white/70 text-lg border-t border-white/10 pt-4 mt-4 inline-block">vs. $4,788/year investment</p>
-          </Card>
-          <p className="text-2xl font-bold text-white mb-10">
-            Would you trade $4,788 to strengthen your margins and unlock $80,000+ in value?
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 text-lg px-8 h-14" data-testid="button-join-math">
-              <Link href="/pricing">Join DSO Pricing Now</Link>
-            </Button>
-            <Button asChild size="lg" variant="outline" className="border-white/30 text-white hover:bg-white/10 bg-transparent text-lg px-8 h-14" data-testid="button-book-math">
-              <Link href="/contact">Book a Growth Accelerator Call</Link>
+      {/* STATS BAR */}
+      <section className="py-14 px-6" style={{ backgroundColor: ORANGE }}>
+        <div className="max-w-6xl mx-auto">
+          <p className="text-white/80 text-center text-sm font-bold uppercase tracking-widest mb-10">Making An Impact For Practices Like Yours</p>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {stats.map((s, i) => (
+              <div key={i} className="text-center" data-testid={`stat-${i}`}>
+                <p className="text-4xl md:text-5xl font-extrabold text-white mb-2" style={{ fontFamily: "'Outfit', sans-serif" }}>{s.value}</p>
+                <p className="text-white/75 text-sm font-medium leading-snug">{s.label}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* PRICING */}
+      <section className="py-24 px-6" style={{ backgroundColor: NAVY2 }}>
+        <div className="max-w-3xl mx-auto text-center">
+          <p className="text-sm font-bold uppercase tracking-widest mb-3" style={{ color: ORANGE }}>No Brainer Pricing</p>
+          <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-6" style={{ fontFamily: "'Outfit', sans-serif" }}>
+            No Long-Term Contract. Add today and start saving.
+          </h2>
+          <p className="text-white/60 text-lg mb-12 max-w-xl mx-auto">For the price of a single missed vendor negotiation, you get an entire infrastructure of leverage working for your practice.</p>
+          <div className="rounded-3xl border border-white/15 p-12 relative overflow-hidden" style={{ backgroundColor: "rgba(255,255,255,0.05)" }}>
+            <div className="absolute top-0 left-0 right-0 h-1 rounded-t-3xl" style={{ backgroundColor: ORANGE }} />
+            <p className="text-white/60 font-semibold uppercase tracking-widest text-sm mb-4">Monthly Membership</p>
+            <div className="flex items-start justify-center gap-1 mb-4">
+              <span className="text-3xl font-bold text-white mt-2">$</span>
+              <span className="font-extrabold text-white leading-none" style={{ fontSize: "6rem", fontFamily: "'Outfit', sans-serif" }}>399</span>
+              <span className="text-xl text-white/50 mt-8">/mo</span>
+            </div>
+            <p className="text-white/50 mb-8">No contracts. Cancel anytime.</p>
+            <div className="grid grid-cols-2 gap-4 text-left mb-10">
+              {[
+                "DSO-level vendor pricing",
+                "Curated partner network access",
+                "EBITDA optimization guidance",
+                "Founder community access",
+                "Growth Accelerator Call",
+                "Immediate member portal access",
+              ].map((item, i) => (
+                <div key={i} className="flex items-center gap-2">
+                  <CheckCircle2 className="w-4 h-4 shrink-0" style={{ color: ORANGE_LIGHT }} />
+                  <span className="text-white/70 text-sm">{item}</span>
+                </div>
+              ))}
+            </div>
+            <Button asChild size="lg" className="w-full text-white font-bold text-lg h-14" style={{ backgroundColor: ORANGE }} data-testid="button-join-pricing">
+              <Link href="/contact">Join DSO Pricing Now <ArrowRight className="ml-2 w-5 h-5" /></Link>
             </Button>
           </div>
         </div>
       </section>
 
-      {/* Price Card */}
-      <section className="py-24 px-6 bg-background relative">
-        <div className="absolute top-0 left-0 right-0 h-32 bg-secondary" />
-        <div className="max-w-lg mx-auto relative z-10">
-          <Card className="p-12 text-center border-primary/20 shadow-2xl bg-white relative overflow-hidden" data-testid="card-price-home">
-            <div className="absolute top-0 left-0 right-0 h-2 bg-gradient-to-r from-primary to-primary/60" />
-            <p className="text-base font-semibold uppercase tracking-widest text-primary mb-4">Monthly Membership</p>
-            <div className="flex items-start justify-center gap-1 mb-3">
-              <span className="text-2xl font-bold text-foreground mt-2">$</span>
-              <span className="text-7xl font-bold text-foreground leading-none tracking-tight">399</span>
-              <span className="text-xl text-muted-foreground mt-6">/mo</span>
-            </div>
-            <p className="text-muted-foreground text-base mb-10">No contracts. Cancel anytime.</p>
-            <Button asChild size="lg" className="w-full h-14 text-lg bg-primary text-primary-foreground hover:bg-primary/90 shadow-md" data-testid="button-join-price-home">
-              <Link href="/contact">Join DSO Pricing Now <ArrowRight className="ml-2 w-5 h-5" /></Link>
-            </Button>
-          </Card>
+      {/* SERVICES */}
+      <section className="py-20 px-6 bg-white">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-14">
+            <p className="text-sm font-bold uppercase tracking-widest mb-3" style={{ color: ORANGE }}>Full Scope</p>
+            <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4" style={{ fontFamily: "'Outfit', sans-serif" }}>
+              A Taste of What We Can Do For You
+            </h2>
+            <p className="text-gray-500 max-w-xl mx-auto text-lg">DSO Pricing is a comprehensive growth platform — not just a discount program.</p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {services.map((s, i) => (
+              <div key={i} className="rounded-2xl p-7 border border-gray-100 bg-gray-50 hover:bg-white hover:shadow-md transition-all" data-testid={`card-service-${i}`}>
+                <div className="w-12 h-12 rounded-xl flex items-center justify-center mb-4" style={{ backgroundColor: s.bg }}>
+                  <s.icon className="w-6 h-6" style={{ color: s.color }} />
+                </div>
+                <h3 className="font-bold text-gray-900 text-lg mb-2">{s.label}</h3>
+                <p className="text-gray-500 text-sm leading-relaxed">{s.desc}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
-      {/* Final CTA */}
-      <section className="py-24 px-6 bg-primary">
-        <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-3xl md:text-5xl font-bold text-primary-foreground mb-6">
-            Strengthen Your Margins. Build a More Scalable Practice.
+      {/* FAQ */}
+      <section className="py-20 px-6" style={{ backgroundColor: NAVY }}>
+        <div className="max-w-3xl mx-auto">
+          <div className="text-center mb-14">
+            <p className="text-sm font-bold uppercase tracking-widest mb-3" style={{ color: ORANGE }}>Got Questions?</p>
+            <h2 className="text-3xl md:text-4xl font-extrabold text-white" style={{ fontFamily: "'Outfit', sans-serif" }}>
+              Frequently Asked Questions
+            </h2>
+          </div>
+          <div>
+            {faqs.map((faq, i) => (
+              <FAQItem key={i} q={faq.q} a={faq.a} />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FOOTER CTA */}
+      <section className="py-20 px-6" style={{ backgroundColor: NAVY2 }}>
+        <div className="max-w-4xl mx-auto text-center">
+          <div className="flex justify-center mb-5">
+            <StarRating count={5} size={22} />
+          </div>
+          <h2 className="text-3xl md:text-5xl font-extrabold text-white mb-4" style={{ fontFamily: "'Outfit', sans-serif" }}>
+            Reliable. Profitable. Scalable.<br />
+            <span style={{ color: ORANGE_LIGHT }}>DSO-Level Support & Development.</span>
           </h2>
-          <p className="text-primary-foreground/90 text-xl mb-10">Build a Stronger, More Scalable Dental Business — On Your Terms.</p>
+          <p className="text-white/60 text-lg mb-10 max-w-xl mx-auto">Build a stronger, more scalable dental business — without giving up what you've worked for.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button asChild size="lg" className="bg-secondary text-secondary-foreground hover:bg-secondary/90 text-lg px-8 h-14" data-testid="button-join-cta">
-              <Link href="/pricing">Join DSO Pricing Now <ArrowRight className="ml-2 w-5 h-5" /></Link>
+            <Button asChild size="lg" className="text-white font-bold text-lg px-10 h-14" style={{ backgroundColor: ORANGE }} data-testid="button-join-footer-cta">
+              <Link href="/pricing">Join DSO Pricing Now</Link>
             </Button>
-            <Button asChild size="lg" variant="outline" className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 bg-transparent text-lg px-8 h-14" data-testid="button-book-cta">
+            <Button asChild size="lg" variant="outline" className="border-white/25 text-white hover:bg-white/10 bg-transparent text-lg px-10 h-14" data-testid="button-book-footer-cta">
               <Link href="/contact">Book a Growth Accelerator Call</Link>
             </Button>
           </div>
