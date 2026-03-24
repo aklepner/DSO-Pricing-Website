@@ -476,6 +476,26 @@ export default function Home() {
         </div>
       </section>
 
+      {/* STATS BAR */}
+      <section className="py-14 px-6" style={{ backgroundColor: ORANGE }}>
+        <div className="max-w-6xl mx-auto">
+          <p className="text-white/80 text-center text-sm font-bold uppercase tracking-widest mb-10">Making An Impact For Practices Like Yours</p>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {[
+              { value: "$80K+", label: "Average Annual Savings for $4M Practice" },
+              { value: "60 Days", label: "Avg. Time to See Margin Improvement" },
+              { value: "2–3%", label: "Typical EBITDA Improvement" },
+              { value: "1,200+", label: "Practices Benefiting" },
+            ].map((s, i) => (
+              <div key={i} className="text-center">
+                <p className="text-4xl md:text-5xl font-extrabold text-white mb-2" style={{ fontFamily: "'Outfit', sans-serif" }}>{s.value}</p>
+                <p className="text-white/75 text-sm font-medium leading-snug">{s.label}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* TESTIMONIALS */}
       <section className="py-20 px-6" style={{ backgroundColor: NAVY }}>
         <div className="max-w-6xl mx-auto">
