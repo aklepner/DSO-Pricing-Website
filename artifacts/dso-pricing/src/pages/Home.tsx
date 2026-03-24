@@ -114,6 +114,18 @@ export default function Home() {
         <div className="absolute inset-0 pointer-events-none" style={{ background: "radial-gradient(ellipse at 70% 50%, rgba(37,99,235,0.12) 0%, transparent 70%)" }} />
         <div className="max-w-6xl mx-auto relative">
           <div className="grid md:grid-cols-3 gap-12 items-stretch">
+            <div className="hidden md:flex self-stretch">
+              <video
+                src={`${import.meta.env.BASE_URL}hero-video.mp4`}
+                autoPlay
+                muted
+                loop
+                playsInline
+                className="w-full object-cover"
+                style={{ borderRadius: "1.5rem", maxHeight: "100%" }}
+              />
+            </div>
+
             <div className="md:col-span-2">
               <div className="flex items-center gap-3 mb-5">
                 <StarRating count={5} size={18} />
@@ -145,18 +157,6 @@ export default function Home() {
                 </div>
                 <p className="text-white/60 text-sm">Join hundreds of growing practices</p>
               </div>
-            </div>
-
-            <div className="hidden md:flex self-stretch">
-              <video
-                src={`${import.meta.env.BASE_URL}hero-video.mp4`}
-                autoPlay
-                muted
-                loop
-                playsInline
-                className="w-full object-cover"
-                style={{ borderRadius: "1.5rem", maxHeight: "100%" }}
-              />
             </div>
           </div>
         </div>
