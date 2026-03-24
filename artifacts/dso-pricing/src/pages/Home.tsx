@@ -147,17 +147,16 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="hidden md:grid grid-cols-3 gap-3">
-              {avatarData.map((a, i) => (
-                <div
-                  key={i}
-                  className="rounded-2xl p-5 flex flex-col items-center justify-center gap-3 border border-white/10"
-                  style={{ backgroundColor: "rgba(255,255,255,0.04)", backdropFilter: "blur(8px)" }}
-                >
-                  <Avatar initials={a.initials} color={a.color} size={56} />
-                  <StarRating count={5} size={12} />
-                </div>
-              ))}
+            <div className="hidden md:block">
+              <video
+                src={`${import.meta.env.BASE_URL}hero-video.mp4`}
+                autoPlay
+                muted
+                loop
+                playsInline
+                className="w-full h-full object-cover"
+                style={{ borderRadius: "1.5rem" }}
+              />
             </div>
           </div>
         </div>
