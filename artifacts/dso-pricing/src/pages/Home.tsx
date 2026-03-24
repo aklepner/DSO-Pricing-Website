@@ -147,7 +147,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="hidden md:block">
+            <div className="hidden md:block overflow-hidden" style={{ maxHeight: "40vh", borderRadius: "1.5rem" }}>
               <video
                 src={`${import.meta.env.BASE_URL}hero-video.mp4`}
                 autoPlay
@@ -155,7 +155,6 @@ export default function Home() {
                 loop
                 playsInline
                 className="w-full h-full object-cover"
-                style={{ borderRadius: "1.5rem" }}
               />
             </div>
           </div>
