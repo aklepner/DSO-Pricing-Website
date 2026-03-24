@@ -113,7 +113,7 @@ export default function Home() {
       <section className="pt-28 pb-20 px-6 relative overflow-hidden" style={{ backgroundColor: NAVY }}>
         <div className="absolute inset-0 pointer-events-none" style={{ background: "radial-gradient(ellipse at 70% 50%, rgba(37,99,235,0.12) 0%, transparent 70%)" }} />
         <div className="max-w-6xl mx-auto relative">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="grid md:grid-cols-[2fr_1fr] gap-12 items-center">
             <div>
               <div className="flex items-center gap-3 mb-5">
                 <StarRating count={5} size={18} />
@@ -147,14 +147,15 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="hidden md:block overflow-hidden" style={{ maxHeight: "40vh", borderRadius: "1.5rem" }}>
+            <div className="hidden md:block">
               <video
                 src={`${import.meta.env.BASE_URL}hero-video.mp4`}
                 autoPlay
                 muted
                 loop
                 playsInline
-                className="w-full h-full object-cover"
+                className="w-full h-auto"
+                style={{ borderRadius: "1.5rem" }}
               />
             </div>
           </div>
