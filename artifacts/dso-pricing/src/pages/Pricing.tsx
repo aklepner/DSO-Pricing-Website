@@ -1,186 +1,219 @@
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
-import { CheckCircle2, ArrowRight } from "lucide-react";
+import { CheckCircle2, ArrowRight, Star, DollarSign, Users, Network, BarChart3, Award, HeartHandshake } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import heroBg from "@assets/couple-smiling-at-receptionist-in-dental-clinic-2026-01-09-10-_1774230786587.jpg";
+
+const NAVY = "#0f1628";
+const NAVY2 = "#161e35";
+const ORANGE = "#ea580c";
+const ORANGE_LIGHT = "#f97316";
+
+function StarRating({ count = 5, size = 16 }: { count?: number; size?: number }) {
+  return (
+    <div className="flex gap-0.5">
+      {Array.from({ length: count }).map((_, i) => (
+        <Star key={i} fill="#fbbf24" color="#fbbf24" width={size} height={size} />
+      ))}
+    </div>
+  );
+}
+
+const included = [
+  { icon: DollarSign, label: "DSO-level vendor pricing", desc: "10%+ savings across supplies, labs, tech, and more", color: "#2563eb", bg: "#dbeafe" },
+  { icon: Network, label: "Curated partner network", desc: "Vetted partners aligned with growth and margin improvement", color: "#7c3aed", bg: "#ede9fe" },
+  { icon: BarChart3, label: "EBITDA optimization guidance", desc: "Margin-focused strategy from founders who've done it", color: "#059669", bg: "#d1fae5" },
+  { icon: Users, label: "Founder & expert community", desc: "Direct access to experienced operators — no middlemen", color: "#dc2626", bg: "#fee2e2" },
+  { icon: Award, label: "Growth Accelerator Call", desc: "A guided strategy session to unlock your next move", color: "#d97706", bg: "#fef3c7" },
+  { icon: HeartHandshake, label: "Reduced & waived setup fees", desc: "Exclusive offers not available anywhere publicly", color: "#0891b2", bg: "#cffafe" },
+];
+
+const steps = [
+  { step: 1, title: "Join the membership", desc: "Sign up in minutes. No lengthy onboarding, no contracts." },
+  { step: 2, title: "Access preferred pricing", desc: "Unlock the partner portal and DSO-level vendor rates instantly." },
+  { step: 3, title: "Connect with vetted experts", desc: "Book calls, ask questions, and get real guidance." },
+  { step: 4, title: "Strengthen your margins", desc: "Reinvest savings into profitable, structured growth." },
+];
+
+const audiences = [
+  "$1M+ independent practices ready to scale",
+  "Owners focused on profitability, not just revenue",
+  "Multi-associate and emerging multi-location groups",
+  "Practices building long-term, transferable value",
+];
 
 export default function Pricing() {
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
 
-      {/* Hero */}
-      <section className="pt-32 pb-48 px-6 text-white relative overflow-hidden">
-        <div
-          className="absolute inset-0"
-          style={{
-            backgroundImage: `url(${heroBg})`,
-            backgroundSize: "cover",
-            backgroundPosition: "center 35%",
-            backgroundRepeat: "no-repeat",
-          }}
-        />
-        <div
-          className="absolute inset-0 pointer-events-none"
-          style={{
-            background: "linear-gradient(to right, hsl(220 80% 10% / 0.95) 0%, hsl(214 85% 20% / 0.82) 45%, hsl(210 70% 30% / 0.50) 75%, hsl(210 60% 35% / 0.20) 100%)",
-          }}
-        />
-        <div className="max-w-3xl mx-auto text-center relative z-10" style={{ textShadow: "0 2px 12px rgba(0,0,0,0.6)" }}>
-          <p className="text-base font-semibold uppercase tracking-widest mb-4" style={{ color: "#f59e0b" }}>Membership</p>
-          <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-6 text-white">
-            DSO-Level Pricing{" "}
-            <span style={{ color: "#f59e0b" }}>Without Giving Up Control</span>
+      {/* HERO */}
+      <section className="pt-28 pb-20 px-6 relative overflow-hidden" style={{ backgroundColor: NAVY }}>
+        <div className="absolute inset-0 pointer-events-none" style={{ background: "radial-gradient(ellipse at 30% 50%, rgba(234,88,12,0.08) 0%, transparent 70%)" }} />
+        <div className="max-w-4xl mx-auto text-center relative">
+          <div className="flex justify-center mb-5">
+            <StarRating count={5} size={20} />
+          </div>
+          <p className="text-sm font-bold uppercase tracking-widest mb-4" style={{ color: ORANGE }}>Membership</p>
+          <h1 className="text-4xl md:text-6xl font-extrabold text-white leading-tight mb-6" style={{ fontFamily: "'Outfit', sans-serif" }}>
+            DSO-Level Pricing —{" "}
+            <span style={{ color: ORANGE_LIGHT }}>Without Giving Up Control</span>
           </h1>
-          <p className="text-xl text-white/80 leading-relaxed max-w-2xl mx-auto">
-            Get better pricing, better partners, and better margins immediately.
+          <p className="text-white/70 text-xl leading-relaxed max-w-2xl mx-auto mb-10">
+            Get better pricing, better partners, and better margins — immediately, for $399/month.
           </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button asChild size="lg" className="text-white font-bold text-base h-13 px-10" style={{ backgroundColor: ORANGE }}>
+              <Link href="/contact" data-testid="button-join-hero">Join DSO Pricing Now</Link>
+            </Button>
+            <Button asChild size="lg" variant="outline" className="border-white/25 text-white hover:bg-white/10 bg-transparent h-13 px-10">
+              <Link href="/contact">Book a Growth Call</Link>
+            </Button>
+          </div>
         </div>
       </section>
 
-      {/* Price Card */}
-      <section className="py-24 px-6 bg-transparent relative z-10" style={{ marginTop: "-250px" }}>
-        <div className="max-w-lg mx-auto">
-          <Card className="p-12 text-center border-primary/20 shadow-2xl bg-white relative overflow-hidden" data-testid="card-price">
-            <div className="absolute top-0 left-0 right-0 h-2 bg-gradient-to-r from-primary to-primary/60" />
-            <p className="text-base font-semibold uppercase tracking-widest text-primary mb-4">Monthly Membership</p>
-            <div className="flex items-start justify-center gap-1 mb-3">
-              <span className="text-2xl font-bold text-foreground mt-2">$</span>
-              <span className="text-7xl font-bold text-foreground leading-none tracking-tight">399</span>
-              <span className="text-xl text-muted-foreground mt-6">/mo</span>
+      {/* PRICE CARD */}
+      <section className="py-20 px-6" style={{ backgroundColor: NAVY2 }}>
+        <div className="max-w-xl mx-auto">
+          <div className="rounded-3xl border border-white/15 p-12 relative overflow-hidden text-center" style={{ backgroundColor: "rgba(255,255,255,0.05)" }}>
+            <div className="absolute top-0 left-0 right-0 h-1 rounded-t-3xl" style={{ backgroundColor: ORANGE }} />
+            <p className="text-white/60 font-semibold uppercase tracking-widest text-sm mb-4">Monthly Membership</p>
+            <div className="flex items-start justify-center gap-1 mb-4">
+              <span className="text-3xl font-bold text-white mt-3">$</span>
+              <span className="font-extrabold text-white leading-none" style={{ fontSize: "6rem", fontFamily: "'Outfit', sans-serif" }}>399</span>
+              <span className="text-xl text-white/50 mt-9">/mo</span>
             </div>
-            <p className="text-muted-foreground text-base mb-10">No contracts. Cancel anytime.</p>
-            <Button asChild size="lg" className="w-full h-14 text-lg bg-primary text-primary-foreground hover:bg-primary/90 shadow-md" data-testid="button-join-price">
+            <p className="text-white/50 mb-8 text-base">No contracts. Cancel anytime.</p>
+            <Button asChild size="lg" className="w-full text-white font-bold text-lg h-14" style={{ backgroundColor: ORANGE }} data-testid="button-join-price">
               <Link href="/contact">Join DSO Pricing Now <ArrowRight className="ml-2 w-5 h-5" /></Link>
             </Button>
-          </Card>
+          </div>
         </div>
       </section>
 
-      {/* What You Get */}
-      <section className="py-24 px-6 bg-muted">
-        <div className="max-w-5xl mx-auto">
-          <p className="text-primary text-base font-semibold uppercase tracking-widest mb-3 text-center">What You Get</p>
-          <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center text-foreground">Inside DSO Pricing, you get:</h2>
-          <div className="grid md:grid-cols-2 gap-6">
-            {[
-              "Preferred pricing (10%+ savings) across vetted vendors",
-              "Reduced or waived setup fees with select partners",
-              "Exclusive offers not available publicly",
-              "Direct access to operators and experts",
-            ].map((item, i) => (
-              <Card key={i} className="p-8 flex items-start gap-5 border-border shadow-sm bg-white" data-testid={`card-get-${i}`}>
-                <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
-                  <CheckCircle2 className="w-6 h-6 text-primary" />
+      {/* WHAT YOU GET */}
+      <section className="py-20 px-6 bg-gray-50">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-14">
+            <p className="text-sm font-bold uppercase tracking-widest mb-3" style={{ color: ORANGE }}>What You Get</p>
+            <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4" style={{ fontFamily: "'Outfit', sans-serif" }}>
+              Inside DSO Pricing, You Get:
+            </h2>
+            <p className="text-gray-500 max-w-xl mx-auto text-lg">Every feature built to strengthen your margins and accelerate profitable growth.</p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {included.map((item, i) => (
+              <div key={i} className="bg-white rounded-2xl p-7 border border-gray-100 shadow-sm hover:shadow-md transition-shadow" data-testid={`card-get-${i}`}>
+                <div className="w-12 h-12 rounded-xl flex items-center justify-center mb-4" style={{ backgroundColor: item.bg }}>
+                  <item.icon className="w-6 h-6" style={{ color: item.color }} />
                 </div>
-                <p className="font-medium text-lg text-foreground pt-1">{item}</p>
-              </Card>
+                <h3 className="font-bold text-gray-900 text-lg mb-2">{item.label}</h3>
+                <p className="text-gray-500 text-sm leading-relaxed">{item.desc}</p>
+              </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* The Math */}
-      <section className="py-24 px-6 bg-secondary text-white relative">
-        <div className="absolute inset-0 bg-gradient-to-bl from-secondary to-secondary/90 pointer-events-none" />
-        <div className="max-w-4xl mx-auto relative z-10">
-          <p className="text-primary text-base font-semibold uppercase tracking-widest mb-3 text-center">The Math</p>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center text-white">If your practice collects $4M:</h2>
-          <p className="text-white/80 text-center mb-12 text-xl">
-            A 2% margin improvement = <span className="text-white font-bold">$80,000/year</span>
-          </p>
-          <Card className="bg-white/10 backdrop-blur-md border-white/20 p-10 mb-8 shadow-xl" data-testid="card-math-detail">
-            <div className="flex flex-col md:flex-row items-center justify-between mb-8 pb-8 border-b border-white/10 gap-8">
-              <div className="text-center md:text-left w-full md:w-auto">
-                <p className="text-white/70 text-base mb-2 uppercase tracking-wider font-medium">Your investment</p>
-                <p className="text-4xl font-bold text-white mb-1">$399<span className="text-xl text-white/70 font-normal">/mo</span></p>
-                <p className="text-white/50 text-base">= $4,788/year</p>
+      {/* THE MATH */}
+      <section className="py-20 px-6" style={{ backgroundColor: NAVY }}>
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-14">
+            <p className="text-sm font-bold uppercase tracking-widest mb-3" style={{ color: ORANGE }}>The Math</p>
+            <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-4" style={{ fontFamily: "'Outfit', sans-serif" }}>
+              If Your Practice Collects $4M:
+            </h2>
+            <p className="text-white/60 text-xl">A 2% margin improvement = <span className="text-white font-bold">$80,000/year</span></p>
+          </div>
+
+          <div className="rounded-2xl border border-white/15 p-10 mb-8" style={{ backgroundColor: "rgba(255,255,255,0.05)" }} data-testid="card-math-detail">
+            <div className="flex flex-col md:flex-row items-center justify-between gap-8 pb-8 border-b border-white/10 mb-8">
+              <div className="text-center">
+                <p className="text-white/50 text-sm uppercase tracking-wider font-medium mb-2">Your Investment</p>
+                <p className="text-5xl font-extrabold text-white mb-1" style={{ fontFamily: "'Outfit', sans-serif" }}>$399<span className="text-2xl text-white/50 font-normal">/mo</span></p>
+                <p className="text-white/40 text-sm">= $4,788/year</p>
               </div>
-              <div className="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center shrink-0">
-                <span className="text-lg text-white/40 font-bold uppercase tracking-widest">VS</span>
+              <div className="w-12 h-12 rounded-full flex items-center justify-center border border-white/15" style={{ backgroundColor: "rgba(255,255,255,0.05)" }}>
+                <span className="text-white/40 font-bold text-sm">VS</span>
               </div>
-              <div className="text-center md:text-right w-full md:w-auto">
-                <p className="text-white/70 text-base mb-2 uppercase tracking-wider font-medium">Potential return</p>
-                <p className="text-4xl font-bold mb-1" style={{ color: "#f59e0b" }}>$80,000<span className="text-xl font-normal" style={{ color: "#f59e0b99" }}>/yr</span></p>
-                <p className="text-white/50 text-base">2% margin improvement</p>
+              <div className="text-center">
+                <p className="text-white/50 text-sm uppercase tracking-wider font-medium mb-2">Potential Return</p>
+                <p className="text-5xl font-extrabold mb-1" style={{ fontFamily: "'Outfit', sans-serif", color: ORANGE_LIGHT }}>$80K<span className="text-2xl font-normal" style={{ color: "#f9731660" }}>/yr</span></p>
+                <p className="text-white/40 text-sm">2% margin improvement</p>
               </div>
             </div>
-            <p className="text-center text-2xl font-bold text-white">
-              Would you trade $4,788 to make an extra $80,000?
-            </p>
-          </Card>
+            <p className="text-center text-2xl font-bold text-white">Would you trade $4,788 to make an extra $80,000?</p>
+          </div>
+
+          <div className="text-center">
+            <Button asChild size="lg" className="text-white font-bold text-lg px-10 h-14" style={{ backgroundColor: ORANGE }} data-testid="button-join-math">
+              <Link href="/contact">Yes — Join DSO Pricing Now <ArrowRight className="ml-2 w-5 h-5" /></Link>
+            </Button>
+          </div>
         </div>
       </section>
 
-      {/* How It Works */}
-      <section className="py-24 px-6 bg-background">
+      {/* HOW IT WORKS */}
+      <section className="py-20 px-6 bg-white">
         <div className="max-w-4xl mx-auto">
-          <p className="text-primary text-base font-semibold uppercase tracking-widest mb-3 text-center">How It Works</p>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center text-foreground">Simple. Fast. Immediate.</h2>
-          <p className="text-muted-foreground text-center mb-16 text-lg">Four steps to stronger margins.</p>
-          <div className="grid md:grid-cols-2 gap-8 relative">
-            <div className="hidden md:block absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-primary/5 rounded-full z-0" />
-            {[
-              { step: 1, title: "Join the membership", desc: "Sign up in minutes." },
-              { step: 2, title: "Unlock preferred pricing", desc: "Access the partner portal." },
-              { step: 3, title: "Work with the right partners", desc: "Connect directly with vetted experts." },
-              { step: 4, title: "Increase margins", desc: "Reinvest into profitable growth." },
-            ].map(({ step, title, desc }) => (
-              <Card key={step} className="p-8 flex items-start gap-6 border-border shadow-sm hover:shadow-md transition-shadow bg-white z-10" data-testid={`card-step-${step}`}>
-                <div className="w-12 h-12 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-xl font-bold shrink-0 shadow-sm">
+          <div className="text-center mb-14">
+            <p className="text-sm font-bold uppercase tracking-widest mb-3" style={{ color: ORANGE }}>How It Works</p>
+            <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4" style={{ fontFamily: "'Outfit', sans-serif" }}>Simple. Fast. Immediate.</h2>
+            <p className="text-gray-500 text-lg">Four steps to stronger margins.</p>
+          </div>
+          <div className="grid md:grid-cols-2 gap-6">
+            {steps.map(({ step, title, desc }) => (
+              <div key={step} className="rounded-2xl p-7 border border-gray-100 bg-gray-50 flex items-start gap-5" data-testid={`card-step-${step}`}>
+                <div className="w-12 h-12 rounded-full text-white flex items-center justify-center text-xl font-extrabold shrink-0" style={{ backgroundColor: ORANGE, fontFamily: "'Outfit', sans-serif" }}>
                   {step}
                 </div>
                 <div>
-                  <p className="font-bold text-xl text-foreground mb-1">{title}</p>
-                  <p className="text-muted-foreground">{desc}</p>
+                  <p className="font-bold text-xl text-gray-900 mb-1">{title}</p>
+                  <p className="text-gray-500 text-sm leading-relaxed">{desc}</p>
                 </div>
-              </Card>
+              </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Who This Is For */}
-      <section className="py-24 px-6 bg-muted">
+      {/* WHO THIS IS FOR */}
+      <section className="py-20 px-6" style={{ backgroundColor: NAVY2 }}>
         <div className="max-w-3xl mx-auto text-center">
-          <p className="text-primary text-base font-semibold uppercase tracking-widest mb-3">Who This Is For</p>
-          <h2 className="text-3xl md:text-4xl font-bold mb-12 text-foreground">Built for growth-focused operators.</h2>
-          <div className="flex flex-col gap-6 items-center">
-            {[
-              "$1M+ practices",
-              "Owners focused on profitability",
-              "Practices and emerging groups actively growing or scaling",
-            ].map((item, i) => (
-              <Card key={i} className="w-full max-w-lg p-6 flex items-center gap-4 bg-white border-primary/10 shadow-sm" data-testid={`item-whofor-${i}`}>
-                <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
-                  <CheckCircle2 className="w-5 h-5 text-primary" />
-                </div>
-                <p className="font-semibold text-lg text-foreground">{item}</p>
-              </Card>
+          <p className="text-sm font-bold uppercase tracking-widest mb-3" style={{ color: ORANGE }}>Who This Is For</p>
+          <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-12" style={{ fontFamily: "'Outfit', sans-serif" }}>
+            Built for Growth-Focused Operators
+          </h2>
+          <div className="space-y-4 text-left">
+            {audiences.map((item, i) => (
+              <div key={i} className="flex items-center gap-4 rounded-xl p-5 border border-white/10" style={{ backgroundColor: "rgba(255,255,255,0.05)" }} data-testid={`item-whofor-${i}`}>
+                <CheckCircle2 className="w-5 h-5 shrink-0" style={{ color: ORANGE_LIGHT }} />
+                <p className="text-white/90 font-medium text-lg">{item}</p>
+              </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Final CTA */}
-      <section className="py-24 px-6 bg-primary">
+      {/* FINAL CTA */}
+      <section className="py-20 px-6" style={{ backgroundColor: ORANGE }}>
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-3xl md:text-5xl font-bold text-primary-foreground mb-8">
+          <div className="flex justify-center mb-5">
+            <StarRating count={5} size={22} />
+          </div>
+          <h2 className="text-3xl md:text-5xl font-extrabold text-white mb-6" style={{ fontFamily: "'Outfit', sans-serif" }}>
             Start Keeping More of What You Earn
           </h2>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
-            <Button asChild size="lg" className="bg-secondary text-secondary-foreground hover:bg-secondary/90 text-lg px-8 h-14" data-testid="button-join-final">
+          <p className="text-white/80 text-lg mb-10 max-w-xl mx-auto">No contracts, no fluff — just DSO-level leverage for your independent practice.</p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button asChild size="lg" className="bg-white font-bold text-lg px-10 h-14" style={{ color: ORANGE }} data-testid="button-join-final">
               <Link href="/contact">Join DSO Pricing Now <ArrowRight className="ml-2 w-5 h-5" /></Link>
             </Button>
+            <Button asChild size="lg" variant="outline" className="border-white/40 text-white hover:bg-white/15 bg-transparent text-lg px-10 h-14">
+              <Link href="/contact">Book a Growth Accelerator Call</Link>
+            </Button>
           </div>
-          <p className="mt-8 text-primary-foreground/80 text-base">
-            Not sure if it's a fit?{" "}
-            <Link href="/contact" className="font-medium underline underline-offset-4 hover:text-primary-foreground transition-colors" data-testid="link-book-secondary">
-              Book a Growth Accelerator Call
-            </Link>
-          </p>
         </div>
       </section>
 
