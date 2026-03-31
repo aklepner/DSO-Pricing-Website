@@ -134,7 +134,7 @@ export default function Home() {
       <Navbar />
 
       {/* HERO */}
-      <section className="pt-28 pb-0 px-6 relative overflow-hidden" style={{ backgroundColor: NAVY }}>
+      <section className="pt-32 pb-0 px-6 relative overflow-hidden" style={{ backgroundColor: NAVY }}>
         <div className="max-w-6xl mx-auto relative">
           <div className="grid md:grid-cols-[2fr_1fr] gap-12 items-center pb-16">
             <div>

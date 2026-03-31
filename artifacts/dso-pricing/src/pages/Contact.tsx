@@ -51,7 +51,7 @@ export default function Contact() {
       <Navbar />
 
       {/* HERO */}
-      <section className="pt-28 pb-20 px-6 relative overflow-hidden" style={{ backgroundColor: NAVY }}>
+      <section className="pt-32 pb-20 px-6 relative overflow-hidden" style={{ backgroundColor: NAVY }}>
         <div className="absolute inset-0 pointer-events-none" style={{ background: "radial-gradient(ellipse at 70% 40%, rgba(221,4,42,0.10) 0%, transparent 60%)" }} />
         <div className="max-w-4xl mx-auto text-center relative">
           <p className="text-sm font-bold uppercase tracking-widest mb-4" style={{ color: ORANGE }}>Contact</p>
