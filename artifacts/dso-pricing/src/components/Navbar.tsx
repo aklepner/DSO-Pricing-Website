@@ -16,7 +16,7 @@ export default function Navbar() {
   const [location] = useLocation();
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 border-b border-white/10" style={{ backgroundColor: "#0F0F0F" }}>
+    <header className="fixed top-0 left-0 right-0 z-50" style={{ backgroundColor: "#0F0F0F", borderBottom: "2px solid #DD042A" }}>
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
         <Link href="/" className="flex items-center" data-testid="link-logo">
           <img src={logo} alt="DSO Pricing" className="h-9 w-auto" style={{ filter: "brightness(0) invert(1)" }} />
