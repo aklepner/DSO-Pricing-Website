@@ -31,15 +31,6 @@ function Avatar({ initials, color, size = 48 }: { initials: string; color: strin
   );
 }
 
-const avatarData = [
-  { initials: "JM", color: "#2563eb" },
-  { initials: "SK", color: "#7c3aed" },
-  { initials: "RL", color: "#059669" },
-  { initials: "AT", color: "#dc2626" },
-  { initials: "PW", color: "#d97706" },
-  { initials: "CN", color: "#0891b2" },
-];
-
 const testimonials = [
   {
     name: "Dr. Michelle R.",
@@ -134,68 +125,52 @@ export default function Home() {
       <Navbar />
 
       {/* HERO */}
-      <section className="pt-32 pb-0 px-6 relative overflow-hidden" style={{ backgroundColor: NAVY }}>
-        <div className="max-w-6xl mx-auto relative">
-          <div className="grid md:grid-cols-[2fr_1fr] gap-12 items-center pb-16">
-            <div>
-              <div className="flex items-center gap-3 mb-6">
-                <StarRating count={5} size={18} />
-                <span className="text-white/60 text-sm font-medium">Trusted by growing practices nationwide</span>
-              </div>
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-white leading-[1.05] mb-6 uppercase" style={{ fontFamily: "'Outfit', sans-serif", letterSpacing: "-0.02em" }}>
-                Build Your Practice<br />
-                With Dentistry's<br />
-                <span style={{ color: ORANGE }}>Smarter Partners.</span>
-              </h1>
-              <p className="text-white/65 text-lg mb-8 leading-relaxed max-w-lg">
-                DSO Pricing gives independent practices the pricing power, partners, and strategic leverage of a large group — without giving up control.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Button asChild size="lg" className="text-white font-bold text-base uppercase tracking-wide h-14 px-8" style={{ backgroundColor: ORANGE }}>
-                  <Link href="/pricing" data-testid="button-join-hero">Join DSO Pricing Now</Link>
-                </Button>
-                <Button asChild size="lg" variant="outline" className="border-white/25 text-white hover:bg-white/10 bg-transparent h-14 px-8 font-semibold">
-                  <Link href="/contact" data-testid="button-book-hero">Book a Concierge Call with Janelle</Link>
-                </Button>
-              </div>
-              <div className="mt-8 flex items-center gap-3">
-                <div className="flex -space-x-2">
-                  {avatarData.slice(0, 4).map((a, i) => (
-                    <Avatar key={i} initials={a.initials} color={a.color} size={36} />
-                  ))}
-                </div>
-                <p className="text-white/50 text-sm">Join hundreds of growing practices</p>
-              </div>
-            </div>
-            <div className="hidden md:block">
-              <video
-                src={`${import.meta.env.BASE_URL}hero-video.mp4`}
-                autoPlay
-                muted
-                loop
-                playsInline
-                className="w-full h-auto"
-                style={{ borderRadius: "1.5rem" }}
-              />
-            </div>
-          </div>
+      <section
+        className="relative overflow-hidden"
+        style={{
+          backgroundImage: `url(${import.meta.env.BASE_URL}hero-bg.jpg)`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+        }}
+      >
+        {/* Dark overlay */}
+        <div className="absolute inset-0" style={{ backgroundColor: "rgba(10,10,10,0.78)" }} />
 
-          {/* TRUST BADGES */}
-          <div className="border-t border-white/10 grid grid-cols-3 divide-x divide-white/10">
-            {[
-              { icon: Award, label: "Driven by Values", sub: "Kindness. Integrity. Results." },
-              { icon: Shield, label: "Built for Dentists", sub: "By operators, for operators." },
-              { icon: Target, label: "Proven Results", sub: "$80K+ avg. annual savings." },
-            ].map((item, i) => (
-              <div key={i} className="flex items-center gap-4 px-6 py-6">
-                <item.icon className="w-8 h-8 shrink-0" style={{ color: ORANGE }} />
-                <div>
-                  <p className="text-white font-bold text-sm uppercase tracking-wide">{item.label}</p>
-                  <p className="text-white/45 text-xs mt-0.5">{item.sub}</p>
-                </div>
-              </div>
-            ))}
+        {/* Content */}
+        <div className="relative z-10 pt-48 pb-16 px-6 text-center max-w-5xl mx-auto">
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-white leading-[1.05] mb-6 uppercase" style={{ fontFamily: "'Outfit', sans-serif", letterSpacing: "-0.02em" }}>
+            Same Products.<br />Better Pricing.<br />
+            <span style={{ color: ORANGE }}>Smarter Partners.</span>
+          </h1>
+          <p className="text-white/70 text-xl leading-relaxed max-w-2xl mx-auto mb-10">
+            DSO Pricing gives independent practices the pricing power, partners, and strategic leverage of a large group — without giving up control.
+          </p>
+          <div className="flex flex-col items-center gap-3">
+            <Button asChild size="lg" className="text-white font-black text-sm uppercase tracking-widest h-14 px-12" style={{ backgroundColor: ORANGE }} data-testid="button-join-hero">
+              <Link href="/pricing">Join DSO Pricing Now</Link>
+            </Button>
+            <p className="text-white/45 text-sm italic">Book a Concierge Call with Janelle →{" "}
+              <Link href="/contact" className="underline underline-offset-2 hover:text-white/70 transition-colors" data-testid="button-book-hero">Schedule here</Link>
+            </p>
           </div>
+        </div>
+
+        {/* TRUST BADGES */}
+        <div className="relative z-10 border-t border-white/15 grid grid-cols-3 divide-x divide-white/15 max-w-full" style={{ backgroundColor: "rgba(0,0,0,0.55)" }}>
+          {[
+            { icon: Award, label: "Driven by Values", sub: "Kindness. Integrity. Results." },
+            { icon: Shield, label: "Built for Dentists", sub: "By operators, for operators." },
+            { icon: Target, label: "Proven Results", sub: "$80K+ avg. annual savings." },
+          ].map((item, i) => (
+            <div key={i} className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 px-6 py-7">
+              <item.icon className="w-8 h-8 shrink-0" style={{ color: ORANGE }} />
+              <div className="text-center sm:text-left">
+                <p className="text-white font-black text-xs uppercase tracking-widest">{item.label}</p>
+                <p className="text-white/45 text-xs mt-0.5">{item.sub}</p>
+              </div>
+            </div>
+          ))}
         </div>
       </section>
 
