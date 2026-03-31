@@ -5,10 +5,10 @@ import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
-const NAVY = "#0f1628";
-const NAVY2 = "#161e35";
-const ORANGE = "#ea580c";
-const ORANGE_LIGHT = "#f97316";
+const NAVY = "#0F0F0F";
+const NAVY2 = "#000000";
+const ORANGE = "#DD042A";
+const ORANGE_LIGHT = "#FF1A3D";
 
 function StarRating({ count = 5, size = 16 }: { count?: number; size?: number }) {
   return (

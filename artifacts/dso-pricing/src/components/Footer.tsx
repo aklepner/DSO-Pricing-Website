@@ -1,8 +1,8 @@
 import { Link } from "wouter";
 import logo from "@assets/DSO_Pricing_Logo_1774232568739.png";
 
-const NAVY = "#0f1628";
-const ORANGE = "#ea580c";
+const NAVY = "#0F0F0F";
+const ORANGE = "#DD042A";
 
 export default function Footer() {
   return (

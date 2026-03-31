@@ -16,7 +16,7 @@ export default function Navbar() {
   const [location] = useLocation();
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 border-b border-white/10" style={{ backgroundColor: "#0f1628" }}>
+    <header className="fixed top-0 left-0 right-0 z-50 border-b border-white/10" style={{ backgroundColor: "#0F0F0F" }}>
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
         <Link href="/" className="flex items-center" data-testid="link-logo">
           <img src={logo} alt="DSO Pricing" className="h-9 w-auto" style={{ filter: "brightness(0) invert(1)" }} />
@@ -43,7 +43,7 @@ export default function Navbar() {
           <Button asChild size="sm" variant="outline" className="border-white/20 text-white hover:bg-white/10 bg-transparent">
             <Link href="/contact" data-testid="button-book-call">Book a Call</Link>
           </Button>
-          <Button asChild size="sm" className="text-white font-semibold" style={{ backgroundColor: "#ea580c" }}>
+          <Button asChild size="sm" className="text-white font-semibold" style={{ backgroundColor: "#DD042A" }}>
             <Link href="/pricing" data-testid="button-join-nav">Join DSO Pricing</Link>
           </Button>
         </div>
@@ -59,7 +59,7 @@ export default function Navbar() {
       </div>
 
       {open && (
-        <div className="md:hidden border-t border-white/10 px-6 py-4 flex flex-col gap-2 shadow-lg" style={{ backgroundColor: "#0f1628" }} data-testid="nav-mobile">
+        <div className="md:hidden border-t border-white/10 px-6 py-4 flex flex-col gap-2 shadow-lg" style={{ backgroundColor: "#0F0F0F" }} data-testid="nav-mobile">
           {navLinks.map((link) => (
             <Link
               key={link.href}
@@ -79,7 +79,7 @@ export default function Navbar() {
             <Button asChild variant="outline" size="sm" className="border-white/20 text-white bg-transparent w-full">
               <Link href="/contact" onClick={() => setOpen(false)} data-testid="button-mobile-book">Book a Call</Link>
             </Button>
-            <Button asChild size="sm" className="w-full text-white font-semibold" style={{ backgroundColor: "#ea580c" }}>
+            <Button asChild size="sm" className="w-full text-white font-semibold" style={{ backgroundColor: "#DD042A" }}>
               <Link href="/pricing" onClick={() => setOpen(false)} data-testid="button-mobile-join">Join DSO Pricing</Link>
             </Button>
           </div>

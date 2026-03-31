@@ -4,10 +4,10 @@ import { CheckCircle2, X, TrendingUp, Shield, Target, Users, DollarSign, Zap, Ba
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
-const NAVY = "#0f1628";
-const NAVY2 = "#161e35";
-const ORANGE = "#ea580c";
-const ORANGE_LIGHT = "#f97316";
+const NAVY = "#0F0F0F";
+const NAVY2 = "#000000";
+const ORANGE = "#DD042A";
+const ORANGE_LIGHT = "#FF1A3D";
 
 const fragileItems = [
   "Growing revenue, shrinking margins",
@@ -73,7 +73,7 @@ export default function BuiltDifferent() {
               <p className="text-gray-600 text-lg">And get stuck.</p>
             </div>
           </div>
-          <div className="rounded-2xl p-10 text-center border border-orange-100" style={{ backgroundColor: "#fff7ed" }} data-testid="card-third-path">
+          <div className="rounded-2xl p-10 text-center border border-red-100" style={{ backgroundColor: "#fff0f3" }} data-testid="card-third-path">
             <p className="text-xl font-bold mb-3 text-gray-900">Both paths have risk.</p>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               We built DSO Pricing for operators who want{" "}
@@ -113,7 +113,7 @@ export default function BuiltDifferent() {
             <div className="rounded-2xl p-10 bg-white border border-green-100 shadow-md relative overflow-hidden" data-testid="card-scalable">
               <div className="absolute top-0 left-0 w-full h-1 rounded-t-2xl" style={{ backgroundColor: ORANGE }} />
               <div className="flex items-center gap-4 mb-8">
-                <div className="w-10 h-10 rounded-full flex items-center justify-center" style={{ backgroundColor: "#fff7ed" }}>
+                <div className="w-10 h-10 rounded-full flex items-center justify-center" style={{ backgroundColor: "#fff0f3" }}>
                   <CheckCircle2 className="w-5 h-5" style={{ color: ORANGE }} />
                 </div>
                 <h3 className="text-2xl font-extrabold text-gray-900">Scalable Growth</h3>
@@ -241,7 +241,7 @@ export default function BuiltDifferent() {
                   </div>
                 ))}
               </div>
-              <div className="mt-10 p-6 rounded-xl border" style={{ backgroundColor: "#fff7ed", borderColor: "#fed7aa" }}>
+              <div className="mt-10 p-6 rounded-xl border" style={{ backgroundColor: "#fff0f3", borderColor: "#fecdd3" }}>
                 <p className="text-gray-800 font-semibold leading-relaxed">
                   We don't just unlock pricing. We help you use it.
                 </p>

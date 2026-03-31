@@ -11,10 +11,10 @@ import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
-const NAVY = "#0f1628";
-const NAVY2 = "#161e35";
-const ORANGE = "#ea580c";
-const ORANGE_LIGHT = "#f97316";
+const NAVY = "#0F0F0F";
+const NAVY2 = "#000000";
+const ORANGE = "#DD042A";
+const ORANGE_LIGHT = "#FF1A3D";
 
 const contactSchema = z.object({
   name: z.string().min(2, "Name is required"),
@@ -52,7 +52,7 @@ export default function Contact() {
 
       {/* HERO */}
       <section className="pt-28 pb-20 px-6 relative overflow-hidden" style={{ backgroundColor: NAVY }}>
-        <div className="absolute inset-0 pointer-events-none" style={{ background: "radial-gradient(ellipse at 70% 40%, rgba(234,88,12,0.10) 0%, transparent 60%)" }} />
+        <div className="absolute inset-0 pointer-events-none" style={{ background: "radial-gradient(ellipse at 70% 40%, rgba(221,4,42,0.10) 0%, transparent 60%)" }} />
         <div className="max-w-4xl mx-auto text-center relative">
           <p className="text-sm font-bold uppercase tracking-widest mb-4" style={{ color: ORANGE }}>Contact</p>
           <h1 className="text-4xl md:text-6xl font-extrabold text-white leading-tight mb-6" style={{ fontFamily: "'Outfit', sans-serif" }}>
@@ -85,7 +85,7 @@ export default function Contact() {
               <p className="text-white/50 mb-10 text-base">We're here to help. Fill out the form and our team will get back to you shortly.</p>
 
               {/* Fast Path */}
-              <div className="rounded-2xl p-7 border" style={{ backgroundColor: "rgba(234,88,12,0.08)", borderColor: "rgba(234,88,12,0.25)" }} data-testid="card-fast-path">
+              <div className="rounded-2xl p-7 border" style={{ backgroundColor: "rgba(221,4,42,0.08)", borderColor: "rgba(221,4,42,0.25)" }} data-testid="card-fast-path">
                 <p className="font-extrabold text-white text-xl mb-2" style={{ fontFamily: "'Outfit', sans-serif" }}>Want clarity faster?</p>
                 <p className="text-white/60 text-sm mb-6 leading-relaxed">
                   If you're actively growing and want to understand how DSO Pricing fits your next stage:
@@ -102,7 +102,7 @@ export default function Contact() {
             <div>
               {submitted ? (
                 <div className="rounded-2xl p-12 text-center border border-white/10" style={{ backgroundColor: "rgba(255,255,255,0.05)" }} data-testid="card-success">
-                  <div className="w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6" style={{ backgroundColor: "rgba(234,88,12,0.15)" }}>
+                  <div className="w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6" style={{ backgroundColor: "rgba(221,4,42,0.15)" }}>
                     <CheckCircle2 className="w-10 h-10" style={{ color: ORANGE_LIGHT }} />
                   </div>
                   <h3 className="text-3xl font-extrabold mb-4 text-white" style={{ fontFamily: "'Outfit', sans-serif" }}>Inquiry Submitted</h3>
@@ -125,14 +125,14 @@ export default function Contact() {
                             <FormLabel className="text-white/70 font-medium text-sm">Name</FormLabel>
                             <FormControl>
                               <Input
-                                className="h-12 text-white placeholder:text-white/30 border-white/15 focus-visible:ring-orange-500"
+                                className="h-12 text-white placeholder:text-white/30 border-white/15 focus-visible:ring-red-500"
                                 style={{ backgroundColor: "rgba(255,255,255,0.07)" }}
                                 placeholder="Your full name"
                                 data-testid="input-name"
                                 {...field}
                               />
                             </FormControl>
-                            <FormMessage className="text-orange-400" />
+                            <FormMessage className="text-red-400" />
                           </FormItem>
                         )}
                       />
@@ -144,7 +144,7 @@ export default function Contact() {
                             <FormLabel className="text-white/70 font-medium text-sm">Email</FormLabel>
                             <FormControl>
                               <Input
-                                className="h-12 text-white placeholder:text-white/30 border-white/15 focus-visible:ring-orange-500"
+                                className="h-12 text-white placeholder:text-white/30 border-white/15 focus-visible:ring-red-500"
                                 style={{ backgroundColor: "rgba(255,255,255,0.07)" }}
                                 type="email"
                                 placeholder="you@practice.com"
@@ -152,7 +152,7 @@ export default function Contact() {
                                 {...field}
                               />
                             </FormControl>
-                            <FormMessage className="text-orange-400" />
+                            <FormMessage className="text-red-400" />
                           </FormItem>
                         )}
                       />
@@ -164,14 +164,14 @@ export default function Contact() {
                             <FormLabel className="text-white/70 font-medium text-sm">Practice Name</FormLabel>
                             <FormControl>
                               <Input
-                                className="h-12 text-white placeholder:text-white/30 border-white/15 focus-visible:ring-orange-500"
+                                className="h-12 text-white placeholder:text-white/30 border-white/15 focus-visible:ring-red-500"
                                 style={{ backgroundColor: "rgba(255,255,255,0.07)" }}
                                 placeholder="Your practice name"
                                 data-testid="input-practice"
                                 {...field}
                               />
                             </FormControl>
-                            <FormMessage className="text-orange-400" />
+                            <FormMessage className="text-red-400" />
                           </FormItem>
                         )}
                       />
@@ -183,7 +183,7 @@ export default function Contact() {
                             <FormLabel className="text-white/70 font-medium text-sm">Phone Number</FormLabel>
                             <FormControl>
                               <Input
-                                className="h-12 text-white placeholder:text-white/30 border-white/15 focus-visible:ring-orange-500"
+                                className="h-12 text-white placeholder:text-white/30 border-white/15 focus-visible:ring-red-500"
                                 style={{ backgroundColor: "rgba(255,255,255,0.07)" }}
                                 type="tel"
                                 placeholder="Your phone number"
@@ -191,7 +191,7 @@ export default function Contact() {
                                 {...field}
                               />
                             </FormControl>
-                            <FormMessage className="text-orange-400" />
+                            <FormMessage className="text-red-400" />
                           </FormItem>
                         )}
                       />
@@ -203,14 +203,14 @@ export default function Contact() {
                             <FormLabel className="text-white/70 font-medium text-sm">Number of Locations</FormLabel>
                             <FormControl>
                               <Input
-                                className="h-12 text-white placeholder:text-white/30 border-white/15 focus-visible:ring-orange-500"
+                                className="h-12 text-white placeholder:text-white/30 border-white/15 focus-visible:ring-red-500"
                                 style={{ backgroundColor: "rgba(255,255,255,0.07)" }}
                                 placeholder="e.g. 1, 2–3, 4+"
                                 data-testid="input-locations"
                                 {...field}
                               />
                             </FormControl>
-                            <FormMessage className="text-orange-400" />
+                            <FormMessage className="text-red-400" />
                           </FormItem>
                         )}
                       />
@@ -223,14 +223,14 @@ export default function Contact() {
                             <FormControl>
                               <Textarea
                                 placeholder="Tell us about your practice and what you're looking to achieve..."
-                                className="resize-none text-white placeholder:text-white/30 border-white/15 focus-visible:ring-orange-500 p-4"
+                                className="resize-none text-white placeholder:text-white/30 border-white/15 focus-visible:ring-red-500 p-4"
                                 style={{ backgroundColor: "rgba(255,255,255,0.07)" }}
                                 rows={4}
                                 data-testid="textarea-message"
                                 {...field}
                               />
                             </FormControl>
-                            <FormMessage className="text-orange-400" />
+                            <FormMessage className="text-red-400" />
                           </FormItem>
                         )}
                       />

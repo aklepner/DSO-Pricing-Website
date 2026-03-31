@@ -4,10 +4,10 @@ import { CheckCircle2, ArrowRight, Star, DollarSign, Users, Package, Network, He
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
-const NAVY = "#0f1628";
-const NAVY2 = "#161e35";
-const ORANGE = "#ea580c";
-const ORANGE_LIGHT = "#f97316";
+const NAVY = "#0F0F0F";
+const NAVY2 = "#000000";
+const ORANGE = "#DD042A";
+const ORANGE_LIGHT = "#FF1A3D";
 
 function StarRating({ count = 5, size = 16 }: { count?: number; size?: number }) {
   return (
@@ -40,7 +40,7 @@ export default function Pricing() {
 
       {/* HERO */}
       <section className="pt-28 pb-20 px-6 relative overflow-hidden" style={{ backgroundColor: NAVY }}>
-        <div className="absolute inset-0 pointer-events-none" style={{ background: "radial-gradient(ellipse at 30% 50%, rgba(234,88,12,0.08) 0%, transparent 70%)" }} />
+        <div className="absolute inset-0 pointer-events-none" style={{ background: "radial-gradient(ellipse at 30% 50%, rgba(221,4,42,0.08) 0%, transparent 70%)" }} />
         <div className="max-w-4xl mx-auto text-center relative">
           <div className="flex justify-center mb-5">
             <StarRating count={5} size={20} />
@@ -188,7 +188,7 @@ export default function Pricing() {
               </div>
               <div className="text-center">
                 <p className="text-white/50 text-sm uppercase tracking-wider font-medium mb-2">Potential Return</p>
-                <p className="text-5xl font-extrabold mb-1" style={{ fontFamily: "'Outfit', sans-serif", color: ORANGE_LIGHT }}>$80K<span className="text-2xl font-normal" style={{ color: "#f9731660" }}>/yr</span></p>
+                <p className="text-5xl font-extrabold mb-1" style={{ fontFamily: "'Outfit', sans-serif", color: ORANGE_LIGHT }}>$80K<span className="text-2xl font-normal" style={{ color: "#FF1A3D60" }}>/yr</span></p>
                 <p className="text-white/40 text-sm">2% improvement</p>
               </div>
             </div>
