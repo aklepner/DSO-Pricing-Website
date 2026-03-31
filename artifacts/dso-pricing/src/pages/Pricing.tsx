@@ -39,7 +39,7 @@ export default function Pricing() {
       <Navbar />
 
       {/* HERO */}
-      <section className="pt-32 pb-20 px-6 relative overflow-hidden" style={{ backgroundColor: NAVY }}>
+      <section className="pt-40 pb-20 px-6 relative overflow-hidden" style={{ backgroundColor: NAVY }}>
         <div className="max-w-6xl mx-auto text-center relative">
           <div className="flex justify-center mb-6">
             <StarRating count={5} size={20} />

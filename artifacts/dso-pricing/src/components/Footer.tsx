@@ -1,7 +1,7 @@
 import { Link } from "wouter";
 import logo from "@assets/image_1774973076070.png";
 
-const NAVY = "#0F0F0F";
+const NAVY = "#000000";
 const ORANGE = "#DD042A";
 
 export default function Footer() {
@@ -14,7 +14,7 @@ export default function Footer() {
               <img
                 src={logo}
                 alt="DSO Pricing"
-                className="h-9 w-auto"
+                className="h-20 w-auto"
                 
               />
             </div>

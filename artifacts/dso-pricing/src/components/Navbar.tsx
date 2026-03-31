@@ -22,7 +22,7 @@ export default function Navbar() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50" style={{ backgroundColor: "#0F0F0F", borderBottom: "2px solid #DD042A" }}>
       {/* DESKTOP */}
-      <div className="hidden md:grid max-w-6xl mx-auto px-6 h-20" style={{ gridTemplateColumns: "1fr auto 1fr" }}>
+      <div className="hidden md:grid max-w-6xl mx-auto px-6 h-28" style={{ gridTemplateColumns: "1fr auto 1fr" }}>
         {/* LEFT LINKS */}
         <nav className="flex items-center justify-end gap-8" data-testid="nav-left">
           {leftLinks.map((link) => (
@@ -40,7 +40,7 @@ export default function Navbar() {
 
         {/* CENTERED LOGO */}
         <Link href="/" className="flex items-center justify-center px-10" data-testid="link-logo">
-          <img src={logo} alt="DSO Pricing" className="h-12 w-auto"  />
+          <img src={logo} alt="DSO Pricing" className="h-24 w-auto"  />
         </Link>
 
         {/* RIGHT LINKS */}
@@ -60,9 +60,9 @@ export default function Navbar() {
       </div>
 
       {/* MOBILE */}
-      <div className="md:hidden flex items-center justify-between px-6 h-16">
+      <div className="md:hidden flex items-center justify-between px-6 h-20">
         <Link href="/" className="flex items-center" data-testid="link-logo-mobile">
-          <img src={logo} alt="DSO Pricing" className="h-8 w-auto"  />
+          <img src={logo} alt="DSO Pricing" className="h-16 w-auto"  />
         </Link>
         <button
           className="text-white p-2"
