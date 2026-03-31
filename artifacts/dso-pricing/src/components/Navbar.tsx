@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link, useLocation } from "wouter";
 import { Menu, X } from "lucide-react";
-import logo from "@assets/DSO_Pricing_Logo_1774232568739.png";
+import logo from "@assets/image_1774973076070.png";
 
 const leftLinks = [
   { href: "/", label: "Home" },
@@ -40,7 +40,7 @@ export default function Navbar() {
 
         {/* CENTERED LOGO */}
         <Link href="/" className="flex items-center justify-center px-10" data-testid="link-logo">
-          <img src={logo} alt="DSO Pricing" className="h-12 w-auto" style={{ filter: "brightness(0) invert(1)" }} />
+          <img src={logo} alt="DSO Pricing" className="h-12 w-auto"  />
         </Link>
 
         {/* RIGHT LINKS */}
@@ -62,7 +62,7 @@ export default function Navbar() {
       {/* MOBILE */}
       <div className="md:hidden flex items-center justify-between px-6 h-16">
         <Link href="/" className="flex items-center" data-testid="link-logo-mobile">
-          <img src={logo} alt="DSO Pricing" className="h-8 w-auto" style={{ filter: "brightness(0) invert(1)" }} />
+          <img src={logo} alt="DSO Pricing" className="h-8 w-auto"  />
         </Link>
         <button
           className="text-white p-2"

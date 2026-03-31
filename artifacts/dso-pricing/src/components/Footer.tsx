@@ -1,5 +1,5 @@
 import { Link } from "wouter";
-import logo from "@assets/DSO_Pricing_Logo_1774232568739.png";
+import logo from "@assets/image_1774973076070.png";
 
 const NAVY = "#0F0F0F";
 const ORANGE = "#DD042A";
@@ -15,7 +15,7 @@ export default function Footer() {
                 src={logo}
                 alt="DSO Pricing"
                 className="h-9 w-auto"
-                style={{ filter: "brightness(0) invert(1)" }}
+                
               />
             </div>
             <p className="text-base leading-relaxed text-white/50">
