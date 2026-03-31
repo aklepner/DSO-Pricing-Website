@@ -40,7 +40,7 @@ export default function Navbar() {
 
         {/* CENTERED LOGO */}
         <Link href="/" className="flex items-center justify-center px-10" data-testid="link-logo">
-          <img src={logo} alt="DSO Pricing" className="h-24 w-auto"  />
+          <img src={logo} alt="DSO Pricing" className="h-24 w-auto" style={{ paddingTop: "10px" }} />
         </Link>
 
         {/* RIGHT LINKS */}
