@@ -36,8 +36,17 @@ export default function BuiltDifferent() {
       <Navbar />
 
       {/* HERO */}
-      <section className="pt-40 pb-20 px-6 relative overflow-hidden" style={{ backgroundColor: NAVY }}>
-        <div className="max-w-6xl mx-auto relative">
+      <section
+        className="relative overflow-hidden"
+        style={{
+          backgroundImage: `url(${import.meta.env.BASE_URL}built-different-bg.jpg)`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+        }}
+      >
+        <div className="absolute inset-0" style={{ backgroundColor: "rgba(10,10,10,0.78)" }} />
+        <div className="relative z-10 pt-52 pb-20 px-6 max-w-6xl mx-auto">
           <p className="text-sm font-black uppercase tracking-widest mb-5" style={{ color: ORANGE }}>Built Different</p>
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-white leading-[1.05] mb-6 uppercase" style={{ fontFamily: "'Outfit', sans-serif", letterSpacing: "-0.02em" }}>
             Independent.<br />Strategic.<br />
