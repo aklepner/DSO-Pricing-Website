@@ -20,7 +20,7 @@ export default function Navbar() {
   const [location] = useLocation();
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50" style={{ backgroundColor: "#0F0F0F", borderBottom: "2px solid #DD042A" }}>
+    <header className="fixed top-0 left-0 right-0 z-50" style={{ backgroundColor: "#000000", borderBottom: "2px solid #DD042A" }}>
       {/* DESKTOP */}
       <div className="hidden md:grid max-w-6xl mx-auto px-6 h-28" style={{ gridTemplateColumns: "1fr auto 1fr" }}>
         {/* LEFT LINKS */}
@@ -75,7 +75,7 @@ export default function Navbar() {
       </div>
 
       {open && (
-        <div className="md:hidden border-t-2 border-white/10 px-6 py-4 flex flex-col gap-1" style={{ backgroundColor: "#0F0F0F" }} data-testid="nav-mobile">
+        <div className="md:hidden border-t-2 border-white/10 px-6 py-4 flex flex-col gap-1" style={{ backgroundColor: "#000000" }} data-testid="nav-mobile">
           {allLinks.map((link) => (
             <Link
               key={link.href}
