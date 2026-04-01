@@ -29,6 +29,8 @@ type ContactForm = z.infer<typeof contactSchema>;
 
 export default function Contact() {
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
 
   const form = useForm<ContactForm>({
     resolver: zodResolver(contactSchema),
@@ -42,8 +44,25 @@ export default function Contact() {
     },
   });
 
-  function onSubmit(_data: ContactForm) {
-    setSubmitted(true);
+  async function onSubmit(data: ContactForm) {
+    setSubmitting(true);
+    setSubmitError(null);
+    try {
+      const res = await fetch(`${import.meta.env.BASE_URL}../api/contact`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+      if (!res.ok) {
+        const json = await res.json().catch(() => ({})) as { error?: string };
+        throw new Error(json.error ?? "Something went wrong. Please try again.");
+      }
+      setSubmitted(true);
+    } catch (err) {
+      setSubmitError(err instanceof Error ? err.message : "Something went wrong. Please try again.");
+    } finally {
+      setSubmitting(false);
+    }
   }
 
   return (
@@ -234,8 +253,11 @@ export default function Contact() {
                           </FormItem>
                         )}
                       />
-                      <Button type="submit" size="lg" className="w-full h-14 text-lg text-white font-bold" style={{ backgroundColor: ORANGE }} data-testid="button-submit">
-                        Submit Inquiry <ArrowRight className="ml-2 w-5 h-5" />
+                      {submitError && (
+                        <p className="text-red-400 text-sm text-center">{submitError}</p>
+                      )}
+                      <Button type="submit" size="lg" className="w-full h-14 text-lg text-white font-bold" style={{ backgroundColor: ORANGE }} disabled={submitting} data-testid="button-submit">
+                        {submitting ? "Submitting..." : <><span>Submit Inquiry</span><ArrowRight className="ml-2 w-5 h-5" /></>}
                       </Button>
                     </form>
                   </Form>
