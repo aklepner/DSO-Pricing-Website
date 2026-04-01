@@ -151,7 +151,7 @@ export default function Home() {
               <Link href="/pricing">Join DSO Pricing Now</Link>
             </Button>
             <p className="text-white/45 text-sm italic">Book a Concierge Call with Janelle →{" "}
-              <Link href="/contact" className="underline underline-offset-2 hover:text-white/70 transition-colors" data-testid="button-book-hero">Schedule here</Link>
+              <a href="https://link.elijahdesmond.com/widget/booking/qRepUNdAesl5YtZoT17b" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 hover:text-white/70 transition-colors" data-testid="button-book-hero">Schedule here</a>
             </p>
           </div>
         </div>
@@ -411,7 +411,7 @@ export default function Home() {
               <Link href="/pricing">Join DSO Pricing Now <ArrowRight className="ml-2 w-5 h-5" /></Link>
             </Button>
             <Button asChild size="lg" variant="outline" className="border-white/40 text-white hover:bg-white/15 bg-transparent text-base font-semibold px-10 h-14" data-testid="button-book-final">
-              <Link href="/contact">Book a Concierge Call with Janelle</Link>
+              <a href="https://link.elijahdesmond.com/widget/booking/qRepUNdAesl5YtZoT17b" target="_blank" rel="noopener noreferrer">Book a Concierge Call with Janelle</a>
             </Button>
           </div>
         </div>

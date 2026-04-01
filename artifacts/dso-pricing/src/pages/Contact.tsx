@@ -91,7 +91,7 @@ export default function Contact() {
                   If you're actively growing and want to understand how DSO Pricing fits your next stage:
                 </p>
                 <Button asChild size="lg" className="w-full text-white font-bold" style={{ backgroundColor: ORANGE }} data-testid="button-book-fast">
-                  <a href="https://calendly.com" target="_blank" rel="noopener noreferrer">
+                  <a href="https://link.elijahdesmond.com/widget/booking/qRepUNdAesl5YtZoT17b" target="_blank" rel="noopener noreferrer">
                     Book a Concierge Call with Janelle <ArrowRight className="ml-2 w-4 h-4" />
                   </a>
                 </Button>

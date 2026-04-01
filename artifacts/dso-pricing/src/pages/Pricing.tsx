@@ -58,7 +58,7 @@ export default function Pricing() {
               <Link href="/contact">Join DSO Pricing Now</Link>
             </Button>
             <Button asChild size="lg" variant="outline" className="border-white/25 text-white hover:bg-white/10 bg-transparent h-14 px-10 font-semibold">
-              <Link href="/contact">Book a Concierge Call with Janelle</Link>
+              <a href="https://link.elijahdesmond.com/widget/booking/qRepUNdAesl5YtZoT17b" target="_blank" rel="noopener noreferrer">Book a Concierge Call with Janelle</a>
             </Button>
           </div>
         </div>
@@ -209,7 +209,7 @@ export default function Pricing() {
               <Link href="/contact">Join DSO Pricing Now <ArrowRight className="ml-2 w-5 h-5" /></Link>
             </Button>
             <Button asChild size="lg" variant="outline" className="border-white/40 text-white hover:bg-white/15 bg-transparent text-base font-semibold px-10 h-14">
-              <Link href="/contact">Book a Concierge Call with Janelle</Link>
+              <a href="https://link.elijahdesmond.com/widget/booking/qRepUNdAesl5YtZoT17b" target="_blank" rel="noopener noreferrer">Book a Concierge Call with Janelle</a>
             </Button>
           </div>
           <p className="text-white/40 text-xs font-black uppercase tracking-widest mt-10">Independent. Strategic. Leveraged.</p>
