@@ -60,9 +60,10 @@ export default function Navbar() {
       </div>
 
       {/* MOBILE */}
-      <div className="md:hidden flex items-center justify-between px-6 h-20">
-        <Link href="/" className="flex items-center" data-testid="link-logo-mobile">
-          <img src={logo} alt="DSO Pricing" className="h-16 w-auto"  />
+      <div className="md:hidden flex items-center justify-between px-6 h-20 relative">
+        <div className="w-10" />
+        <Link href="/" className="flex items-center justify-center" data-testid="link-logo-mobile">
+          <img src={logo} alt="DSO Pricing" className="h-16 w-auto" />
         </Link>
         <button
           className="text-white p-2"
