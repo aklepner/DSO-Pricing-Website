@@ -60,18 +60,17 @@ export default function Navbar() {
       </div>
 
       {/* MOBILE */}
-      <div className="md:hidden flex items-center justify-between px-6 h-20 relative">
-        <div className="w-10" />
+      <div className="md:hidden flex flex-col items-center justify-center py-3 gap-2">
         <Link href="/" className="flex items-center justify-center" data-testid="link-logo-mobile">
           <img src={logo} alt="DSO Pricing" className="h-16 w-auto" />
         </Link>
         <button
-          className="text-white p-2"
+          className="text-white p-1"
           onClick={() => setOpen(!open)}
           data-testid="button-mobile-menu"
           aria-label="Toggle menu"
         >
-          {open ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+          {open ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
         </button>
       </div>
 
