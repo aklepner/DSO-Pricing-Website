@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link, useLocation } from "wouter";
 import { Menu, X } from "lucide-react";
-import logo from "@assets/image_1774973076070.png";
+const logo = `${import.meta.env.BASE_URL}dso-pricing-logo.png`;
 
 const leftLinks = [
   { href: "/", label: "Home" },

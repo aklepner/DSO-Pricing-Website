@@ -1,5 +1,5 @@
 import { Link } from "wouter";
-import logo from "@assets/image_1774973076070.png";
+const logo = `${import.meta.env.BASE_URL}dso-pricing-logo.png`;
 
 const NAVY = "#000000";
 const ORANGE = "#DD042A";
