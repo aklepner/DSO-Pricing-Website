@@ -7,6 +7,7 @@ import Home from "@/pages/Home";
 import BuiltDifferent from "@/pages/BuiltDifferent";
 import Pricing from "@/pages/Pricing";
 import Contact from "@/pages/Contact";
+import Calculator from "@/pages/Calculator";
 
 const queryClient = new QueryClient();
 
@@ -17,6 +18,7 @@ function Router() {
       <Route path="/built-different" component={BuiltDifferent} />
       <Route path="/pricing" component={Pricing} />
       <Route path="/contact" component={Contact} />
+      <Route path="/calculator" component={Calculator} />
       <Route component={NotFound} />
     </Switch>
   );
