@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
@@ -37,6 +37,12 @@ function fmt(n: number) {
 }
 
 export default function Calculator() {
+  useEffect(() => {
+    const prev = document.title;
+    document.title = "Cost Savings Calculator | DSO Pricing";
+    return () => { document.title = prev; };
+  }, []);
+
   const [rows, setRows] = useState<Record<string, RowState>>(getDefaults());
 
   function update(id: string, field: "qty" | "price", value: string) {
