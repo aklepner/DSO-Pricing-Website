@@ -112,62 +112,85 @@ export default function Calculator() {
                       borderColor: hasSavings ? "rgba(221,4,42,0.25)" : "rgba(255,255,255,0.08)",
                     }}
                   >
-                    <div className="grid grid-cols-1 md:grid-cols-12 gap-4 items-center px-6 py-5">
-                      {/* Product name */}
-                      <div className="md:col-span-4">
+                    {/* DESKTOP layout */}
+                    <div className="hidden md:grid md:grid-cols-12 gap-4 items-center px-6 py-5">
+                      <div className="col-span-4">
                         <p className="font-black text-white text-sm uppercase tracking-wide leading-snug">{product.name}</p>
                         <p className="text-white/35 text-xs mt-0.5 font-medium">{product.unit}</p>
                       </div>
-
-                      {/* Qty */}
-                      <div className="md:col-span-2 flex md:justify-center items-center gap-3 md:gap-0">
-                        <p className="md:hidden text-white/40 text-xs font-black uppercase tracking-widest w-28 shrink-0">Qty / Month</p>
+                      <div className="col-span-2 flex justify-center">
                         <input
-                          type="number"
-                          min="0"
+                          type="number" min="0"
                           value={rows[product.id].qty}
                           onChange={(e) => update(product.id, "qty", e.target.value)}
                           className="w-20 h-11 text-center rounded-lg text-white font-black text-base focus:outline-none focus:ring-2 focus:ring-red-500"
                           style={{ backgroundColor: "rgba(255,255,255,0.08)", border: "1.5px solid rgba(255,255,255,0.12)" }}
                         />
                       </div>
+                      <div className="col-span-2 flex justify-center items-center gap-1">
+                        <span className="text-white/40 text-sm font-bold">$</span>
+                        <input
+                          type="number" min="0" step="0.01"
+                          value={rows[product.id].price}
+                          onChange={(e) => update(product.id, "price", e.target.value)}
+                          className="w-24 h-11 text-center rounded-lg text-white font-black text-base focus:outline-none focus:ring-2 focus:ring-red-500"
+                          style={{ backgroundColor: "rgba(255,255,255,0.08)", border: "1.5px solid rgba(255,255,255,0.12)" }}
+                        />
+                      </div>
+                      <div className="col-span-2 text-center">
+                        <p className={`font-black text-lg ${hasSavings ? "text-white" : "text-white/25"}`}>{fmt(c.savingsPerUnit * c.qty)}</p>
+                        <p className="text-xs font-bold mt-0.5" style={hasSavings ? { color: ORANGE } : { color: "rgba(255,255,255,0.2)" }}>{Math.round(c.pctSavings * 100)}% savings</p>
+                      </div>
+                      <div className="col-span-2 text-center">
+                        <p className={`font-black text-lg ${hasSavings ? "" : "text-white/20"}`} style={hasSavings ? { color: ORANGE } : {}}>{fmt(c.annualized)}</p>
+                      </div>
+                    </div>
 
-                      {/* Price */}
-                      <div className="md:col-span-2 flex md:justify-center items-center gap-3 md:gap-0">
-                        <p className="md:hidden text-white/40 text-xs font-black uppercase tracking-widest w-28 shrink-0">Your Price</p>
-                        <div className="flex items-center gap-1">
-                          <span className="text-white/40 text-sm font-bold">$</span>
+                    {/* MOBILE layout */}
+                    <div className="md:hidden px-4 py-4">
+                      {/* Product name row */}
+                      <div className="mb-3">
+                        <p className="font-black text-white text-sm uppercase tracking-wide leading-snug">{product.name}</p>
+                        <p className="text-white/35 text-xs mt-0.5">{product.unit}</p>
+                      </div>
+                      {/* Inputs + outputs in a 2x2 grid */}
+                      <div className="grid grid-cols-2 gap-3">
+                        {/* Qty */}
+                        <div>
+                          <p className="text-white/40 text-xs font-black uppercase tracking-widest mb-1.5">Qty / Mo</p>
                           <input
-                            type="number"
-                            min="0"
-                            step="0.01"
-                            value={rows[product.id].price}
-                            onChange={(e) => update(product.id, "price", e.target.value)}
-                            className="w-24 h-11 text-center rounded-lg text-white font-black text-base focus:outline-none focus:ring-2 focus:ring-red-500"
+                            type="number" min="0"
+                            value={rows[product.id].qty}
+                            onChange={(e) => update(product.id, "qty", e.target.value)}
+                            className="w-full h-10 text-center rounded-lg text-white font-black text-base focus:outline-none focus:ring-2 focus:ring-red-500"
                             style={{ backgroundColor: "rgba(255,255,255,0.08)", border: "1.5px solid rgba(255,255,255,0.12)" }}
                           />
                         </div>
-                      </div>
-
-                      {/* Monthly savings */}
-                      <div className="md:col-span-2 flex md:justify-center items-center gap-3 md:gap-0">
-                        <p className="md:hidden text-white/40 text-xs font-black uppercase tracking-widest w-28 shrink-0">Monthly</p>
-                        <div className="text-center">
-                          <p className={`font-black text-lg ${hasSavings ? "text-white" : "text-white/25"}`}>
-                            {fmt(c.savingsPerUnit * c.qty)}
-                          </p>
-                          <p className={`text-xs font-bold mt-0.5 ${hasSavings ? "" : "text-white/20"}`} style={hasSavings ? { color: ORANGE } : {}}>
-                            {Math.round(c.pctSavings * 100)}% savings
-                          </p>
+                        {/* Price */}
+                        <div>
+                          <p className="text-white/40 text-xs font-black uppercase tracking-widest mb-1.5">Your Price</p>
+                          <div className="flex items-center gap-1">
+                            <span className="text-white/40 text-sm font-bold">$</span>
+                            <input
+                              type="number" min="0" step="0.01"
+                              value={rows[product.id].price}
+                              onChange={(e) => update(product.id, "price", e.target.value)}
+                              className="flex-1 h-10 text-center rounded-lg text-white font-black text-base focus:outline-none focus:ring-2 focus:ring-red-500"
+                              style={{ backgroundColor: "rgba(255,255,255,0.08)", border: "1.5px solid rgba(255,255,255,0.12)" }}
+                            />
+                          </div>
                         </div>
-                      </div>
-
-                      {/* Annual savings */}
-                      <div className="md:col-span-2 flex md:justify-center items-center gap-3 md:gap-0">
-                        <p className="md:hidden text-white/40 text-xs font-black uppercase tracking-widest w-28 shrink-0">Annual</p>
-                        <p className={`font-black text-lg ${hasSavings ? "" : "text-white/20"}`} style={hasSavings ? { color: ORANGE } : {}}>
-                          {fmt(c.annualized)}
-                        </p>
+                        {/* Monthly savings */}
+                        <div className="rounded-lg px-3 py-2" style={{ backgroundColor: "rgba(255,255,255,0.03)" }}>
+                          <p className="text-white/40 text-xs font-black uppercase tracking-widest mb-1">Monthly</p>
+                          <p className={`font-black text-base ${hasSavings ? "text-white" : "text-white/25"}`}>{fmt(c.savingsPerUnit * c.qty)}</p>
+                          <p className="text-xs font-bold" style={hasSavings ? { color: ORANGE } : { color: "rgba(255,255,255,0.2)" }}>{Math.round(c.pctSavings * 100)}% off</p>
+                        </div>
+                        {/* Annual savings */}
+                        <div className="rounded-lg px-3 py-2" style={{ backgroundColor: "rgba(255,255,255,0.03)" }}>
+                          <p className="text-white/40 text-xs font-black uppercase tracking-widest mb-1">Annual</p>
+                          <p className={`font-black text-base ${hasSavings ? "" : "text-white/20"}`} style={hasSavings ? { color: ORANGE } : {}}>{fmt(c.annualized)}</p>
+                        </div>
                       </div>
                     </div>
                   </div>
