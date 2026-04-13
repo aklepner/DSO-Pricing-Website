@@ -1,7 +1,4 @@
 import { useState } from "react";
-import { Link } from "wouter";
-import { Button } from "@/components/ui/button";
-import { RotateCcw } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
@@ -20,24 +17,19 @@ interface Product {
 const PRODUCTS: Product[] = [
   { id: "nitrile", name: "Nitrile Gloves", unit: "Box of 100", dsoPrice: 2.80, defaultQty: 8, defaultPrice: 12 },
   { id: "mask", name: "ASTM Level 3 Disposable Face Mask", unit: "Box of 50", dsoPrice: 4.80, defaultQty: 7, defaultPrice: 10 },
-  { id: "pouch", name: "Self-Sealing Sterilization Pouch, 3.5\" x 9\"", unit: "Box of 200", dsoPrice: 5.04, defaultQty: 3, defaultPrice: 30 },
+  { id: "pouch", name: 'Self-Sealing Sterilization Pouch, 3.5" x 9"', unit: "Box of 200", dsoPrice: 5.04, defaultQty: 3, defaultPrice: 30 },
   { id: "ejector", name: "Disposable Saliva Ejector, One Size", unit: "Box of 100", dsoPrice: 2.16, defaultQty: 5, defaultPrice: 7 },
-  { id: "crown", name: "Full Zirconia Crown", unit: "", dsoPrice: 58, defaultQty: 12, defaultPrice: 150 },
-  { id: "itero", name: "iTero Subscription", unit: "", dsoPrice: 180, defaultQty: 1, defaultPrice: 360 },
-  { id: "invisalign", name: "Invisalign Comprehensive 3x3", unit: "", dsoPrice: 1424.50, defaultQty: 5, defaultPrice: 1925 },
+  { id: "crown", name: "Full Zirconia Crown", unit: "Per unit", dsoPrice: 58, defaultQty: 12, defaultPrice: 150 },
+  { id: "itero", name: "iTero Subscription", unit: "Per month", dsoPrice: 180, defaultQty: 1, defaultPrice: 360 },
+  { id: "invisalign", name: "Invisalign Comprehensive 3x3", unit: "Per case", dsoPrice: 1424.50, defaultQty: 5, defaultPrice: 1925 },
 ];
 
-interface RowState {
-  qty: string;
-  price: string;
-}
+interface RowState { qty: string; price: string; }
 
 function getDefaults(): Record<string, RowState> {
-  const defaults: Record<string, RowState> = {};
-  PRODUCTS.forEach((p) => {
-    defaults[p.id] = { qty: String(p.defaultQty), price: String(p.defaultPrice) };
-  });
-  return defaults;
+  const d: Record<string, RowState> = {};
+  PRODUCTS.forEach((p) => { d[p.id] = { qty: String(p.defaultQty), price: String(p.defaultPrice) }; });
+  return d;
 }
 
 function fmt(n: number) {
@@ -51,9 +43,7 @@ export default function Calculator() {
     setRows((prev) => ({ ...prev, [id]: { ...prev[id], [field]: value } }));
   }
 
-  function reset() {
-    setRows(getDefaults());
-  }
+  function reset() { setRows(getDefaults()); }
 
   const calcs = PRODUCTS.map((p) => {
     const qty = Math.max(0, parseFloat(rows[p.id].qty) || 0);
@@ -68,127 +58,174 @@ export default function Calculator() {
   const totalAnnual = calcs.reduce((sum, c) => sum + c.annualized, 0);
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col" style={{ backgroundColor: NAVY }}>
       <Navbar />
 
       {/* HERO */}
-      <section className="pt-40 pb-16 px-6" style={{ backgroundColor: NAVY }}>
+      <section className="pt-44 pb-10 px-6" style={{ backgroundColor: "#000000" }}>
         <div className="max-w-6xl mx-auto">
-          <p className="text-sm font-black uppercase tracking-widest mb-4" style={{ color: ORANGE }}>See Your Savings</p>
-          <h1 className="text-4xl md:text-6xl font-black text-white uppercase leading-tight mb-4" style={{ fontFamily: "'Outfit', sans-serif", letterSpacing: "-0.02em" }}>
+          <p className="text-xs font-black uppercase tracking-widest mb-3" style={{ color: ORANGE }}>See Your Savings</p>
+          <h1 className="text-5xl md:text-7xl font-black text-white uppercase leading-none mb-4" style={{ fontFamily: "'Outfit', sans-serif", letterSpacing: "-0.02em" }}>
             Cost Savings<br /><span style={{ color: ORANGE }}>Calculator</span>
           </h1>
-          <p className="text-white/60 text-lg max-w-2xl">
-            Enter your monthly quantities and current prices to see how much DSO Pricing could save your practice.
+          <p className="text-white/50 text-base max-w-xl">
+            Enter your monthly quantities and what you currently pay. See your savings instantly.
           </p>
         </div>
       </section>
 
-      {/* CALCULATOR */}
-      <section className="py-12 px-4 md:px-6 bg-white flex-1">
+      {/* MAIN */}
+      <section className="flex-1 py-10 px-6" style={{ backgroundColor: NAVY }}>
         <div className="max-w-6xl mx-auto">
-          <div className="flex flex-col lg:flex-row gap-8 items-start">
+          <div className="flex flex-col xl:flex-row gap-8 items-start">
 
-            {/* TABLE */}
-            <div className="flex-1 w-full overflow-x-auto">
-              <table className="w-full border-collapse" style={{ minWidth: 640 }}>
-                <thead>
-                  <tr className="border-b-2 border-gray-200">
-                    <th className="text-left py-3 pr-4 text-sm font-bold text-gray-900 w-48">Product</th>
-                    <th className="text-center py-3 px-3 text-sm font-bold w-28" style={{ color: ORANGE }}>Monthly<br />Quantity</th>
-                    <th className="text-center py-3 px-3 text-sm font-bold w-32" style={{ color: ORANGE }}>Your Price</th>
-                    <th className="text-center py-3 px-3 text-sm font-bold w-28" style={{ color: ORANGE }}>Monthly $<br />Savings</th>
-                    <th className="text-center py-3 px-3 text-sm font-bold w-28" style={{ color: ORANGE }}>Monthly %<br />Savings</th>
-                    <th className="text-center py-3 px-3 text-sm font-bold w-32" style={{ color: ORANGE }}>Annualized<br />Savings</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {PRODUCTS.map((product, i) => {
-                    const c = calcs[i];
-                    return (
-                      <tr key={product.id} className="border-b border-gray-100">
-                        <td className="py-5 pr-4">
-                          <p className="font-semibold text-gray-900 text-sm leading-snug">{product.name}</p>
-                          {product.unit && <p className="text-gray-400 text-xs mt-0.5">{product.unit}</p>}
-                        </td>
-                        <td className="py-5 px-3 text-center">
+            {/* PRODUCT CARDS */}
+            <div className="flex-1 w-full space-y-3">
+              {/* Column headers */}
+              <div className="hidden md:grid grid-cols-12 gap-4 px-6 pb-2">
+                <div className="col-span-4">
+                  <p className="text-xs font-black uppercase tracking-widest text-white/30">Product</p>
+                </div>
+                <div className="col-span-2 text-center">
+                  <p className="text-xs font-black uppercase tracking-widest text-white/30">Qty / Month</p>
+                </div>
+                <div className="col-span-2 text-center">
+                  <p className="text-xs font-black uppercase tracking-widest text-white/30">Your Price</p>
+                </div>
+                <div className="col-span-2 text-center">
+                  <p className="text-xs font-black uppercase tracking-widest text-white/30">Monthly Savings</p>
+                </div>
+                <div className="col-span-2 text-center">
+                  <p className="text-xs font-black uppercase tracking-widest text-white/30">Annual Savings</p>
+                </div>
+              </div>
+
+              {PRODUCTS.map((product, i) => {
+                const c = calcs[i];
+                const hasSavings = c.savingsPerUnit > 0;
+                return (
+                  <div
+                    key={product.id}
+                    className="rounded-xl border transition-all duration-200"
+                    style={{
+                      backgroundColor: "rgba(255,255,255,0.04)",
+                      borderColor: hasSavings ? "rgba(221,4,42,0.25)" : "rgba(255,255,255,0.08)",
+                    }}
+                  >
+                    <div className="grid grid-cols-1 md:grid-cols-12 gap-4 items-center px-6 py-5">
+                      {/* Product name */}
+                      <div className="md:col-span-4">
+                        <p className="font-black text-white text-sm uppercase tracking-wide leading-snug">{product.name}</p>
+                        <p className="text-white/35 text-xs mt-0.5 font-medium">{product.unit}</p>
+                      </div>
+
+                      {/* Qty */}
+                      <div className="md:col-span-2 flex md:justify-center items-center gap-3 md:gap-0">
+                        <p className="md:hidden text-white/40 text-xs font-black uppercase tracking-widest w-28 shrink-0">Qty / Month</p>
+                        <input
+                          type="number"
+                          min="0"
+                          value={rows[product.id].qty}
+                          onChange={(e) => update(product.id, "qty", e.target.value)}
+                          className="w-20 h-11 text-center rounded-lg text-white font-black text-base focus:outline-none focus:ring-2 focus:ring-red-500"
+                          style={{ backgroundColor: "rgba(255,255,255,0.08)", border: "1.5px solid rgba(255,255,255,0.12)" }}
+                        />
+                      </div>
+
+                      {/* Price */}
+                      <div className="md:col-span-2 flex md:justify-center items-center gap-3 md:gap-0">
+                        <p className="md:hidden text-white/40 text-xs font-black uppercase tracking-widest w-28 shrink-0">Your Price</p>
+                        <div className="flex items-center gap-1">
+                          <span className="text-white/40 text-sm font-bold">$</span>
                           <input
                             type="number"
                             min="0"
-                            value={rows[product.id].qty}
-                            onChange={(e) => update(product.id, "qty", e.target.value)}
-                            className="w-20 h-10 text-center border-2 border-gray-200 rounded-md text-gray-900 font-medium text-sm focus:border-red-400 focus:outline-none"
+                            step="0.01"
+                            value={rows[product.id].price}
+                            onChange={(e) => update(product.id, "price", e.target.value)}
+                            className="w-24 h-11 text-center rounded-lg text-white font-black text-base focus:outline-none focus:ring-2 focus:ring-red-500"
+                            style={{ backgroundColor: "rgba(255,255,255,0.08)", border: "1.5px solid rgba(255,255,255,0.12)" }}
                           />
-                        </td>
-                        <td className="py-5 px-3 text-center">
-                          <div className="flex items-center justify-center gap-1">
-                            <span className="text-gray-500 text-sm font-medium">$</span>
-                            <input
-                              type="number"
-                              min="0"
-                              step="0.01"
-                              value={rows[product.id].price}
-                              onChange={(e) => update(product.id, "price", e.target.value)}
-                              className="w-24 h-10 text-center border-2 border-gray-200 rounded-md text-gray-900 font-medium text-sm focus:border-red-400 focus:outline-none"
-                            />
-                          </div>
-                        </td>
-                        <td className="py-5 px-3 text-center">
-                          <span className="font-bold text-gray-900 text-sm">{fmt(c.savingsPerUnit)}</span>
-                        </td>
-                        <td className="py-5 px-3 text-center">
-                          <span className="font-bold text-gray-900 text-sm">{Math.round(c.pctSavings * 100)}%</span>
-                        </td>
-                        <td className="py-5 px-3 text-center">
-                          <span className="font-black text-sm" style={{ color: ORANGE }}>{fmt(c.annualized)}</span>
-                        </td>
-                      </tr>
-                    );
-                  })}
-                </tbody>
-              </table>
+                        </div>
+                      </div>
 
-              {/* RESET */}
-              <div className="flex justify-end mt-4">
+                      {/* Monthly savings */}
+                      <div className="md:col-span-2 flex md:justify-center items-center gap-3 md:gap-0">
+                        <p className="md:hidden text-white/40 text-xs font-black uppercase tracking-widest w-28 shrink-0">Monthly</p>
+                        <div className="text-center">
+                          <p className={`font-black text-lg ${hasSavings ? "text-white" : "text-white/25"}`}>
+                            {fmt(c.savingsPerUnit * c.qty)}
+                          </p>
+                          <p className={`text-xs font-bold mt-0.5 ${hasSavings ? "" : "text-white/20"}`} style={hasSavings ? { color: ORANGE } : {}}>
+                            {Math.round(c.pctSavings * 100)}% savings
+                          </p>
+                        </div>
+                      </div>
+
+                      {/* Annual savings */}
+                      <div className="md:col-span-2 flex md:justify-center items-center gap-3 md:gap-0">
+                        <p className="md:hidden text-white/40 text-xs font-black uppercase tracking-widest w-28 shrink-0">Annual</p>
+                        <p className={`font-black text-lg ${hasSavings ? "" : "text-white/20"}`} style={hasSavings ? { color: ORANGE } : {}}>
+                          {fmt(c.annualized)}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                );
+              })}
+
+              {/* Reset */}
+              <div className="flex justify-end pt-2">
                 <button
                   onClick={reset}
-                  className="flex items-center gap-2 px-4 py-2 text-sm font-semibold text-white rounded-lg transition-opacity hover:opacity-80"
-                  style={{ backgroundColor: NAVY }}
+                  className="text-white/40 hover:text-white/70 text-xs font-black uppercase tracking-widest transition-colors flex items-center gap-2"
                 >
-                  <RotateCcw className="w-3.5 h-3.5" />
-                  Reset
+                  ↺ Reset to defaults
                 </button>
               </div>
+
+              {/* Disclaimer */}
+              <p className="text-white/25 text-xs leading-relaxed italic pt-4 border-t border-white/10">
+                * This estimate represents a limited sample of potential savings and is provided for illustrative purposes only. Actual savings will vary and are not guaranteed. Results depend on vendor usage, purchasing volume, participation, and other factors. Pricing and discounts are subject to change and may vary by vendor.
+              </p>
             </div>
 
             {/* SAVINGS SUMMARY */}
-            <div className="lg:w-56 w-full shrink-0">
-              <div className="rounded-2xl p-6 border-2 sticky top-36" style={{ borderColor: ORANGE, backgroundColor: "#fff8f8" }}>
-                <p className="font-black text-gray-900 text-base uppercase tracking-wide mb-4">Savings Summary</p>
+            <div className="xl:w-64 w-full shrink-0">
+              <div className="rounded-2xl p-7 sticky top-36" style={{ backgroundColor: "#000000", border: `2px solid ${ORANGE}` }}>
+                <p className="text-xs font-black uppercase tracking-widest text-white/50 mb-6">Savings Summary</p>
 
-                <p className="text-xs font-bold uppercase tracking-widest text-gray-500 mb-1">Total Monthly Savings</p>
-                <p className="font-black text-3xl mb-5" style={{ color: ORANGE }}>{fmt(totalMonthly)}</p>
+                <div className="mb-6 pb-6 border-b border-white/10">
+                  <p className="text-xs font-black uppercase tracking-widest mb-2" style={{ color: ORANGE }}>Total Monthly Savings</p>
+                  <p className="font-black text-white leading-none" style={{ fontSize: "2.25rem" }}>
+                    {fmt(totalMonthly)}
+                  </p>
+                </div>
 
-                <p className="text-xs font-bold uppercase tracking-widest text-gray-500 mb-1">Total Annual Savings</p>
-                <p className="font-black text-3xl mb-5" style={{ color: ORANGE }}>{fmt(totalAnnual)}</p>
+                <div className="mb-6 pb-6 border-b border-white/10">
+                  <p className="text-xs font-black uppercase tracking-widest mb-2" style={{ color: ORANGE }}>Total Annual Savings</p>
+                  <p className="font-black text-white leading-none" style={{ fontSize: "2.25rem" }}>
+                    {fmt(totalAnnual)}
+                  </p>
+                </div>
 
-                <p className="text-gray-600 text-sm leading-snug mb-5">
+                <p className="text-white/45 text-sm leading-relaxed mb-6">
                   Imagine the savings across your entire supply list.
                 </p>
 
-                <Button asChild size="lg" className="w-full text-white font-bold text-sm" style={{ backgroundColor: NAVY }}>
-                  <a href="https://link.elijahdesmond.com/widget/booking/qRepUNdAesl5YtZoT17b" target="_blank" rel="noopener noreferrer">
-                    Book a Call
-                  </a>
-                </Button>
+                <a
+                  href="https://link.elijahdesmond.com/widget/booking/qRepUNdAesl5YtZoT17b"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block w-full text-center text-white font-black text-sm uppercase tracking-widest py-4 rounded-xl transition-opacity hover:opacity-80"
+                  style={{ backgroundColor: ORANGE }}
+                >
+                  Book a Call
+                </a>
               </div>
             </div>
-          </div>
 
-          {/* DISCLAIMER */}
-          <p className="mt-8 text-gray-400 text-xs leading-relaxed italic">
-            * This estimate represents a limited sample of potential savings and is provided for illustrative purposes only. Actual savings will vary and are not guaranteed. Results depend on vendor usage, purchasing volume, participation, and other factors. Pricing and discounts are subject to change and may vary by vendor.
-          </p>
+          </div>
         </div>
       </section>
 
