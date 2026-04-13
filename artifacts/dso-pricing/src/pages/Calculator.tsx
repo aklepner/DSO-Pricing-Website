@@ -162,7 +162,7 @@ export default function Calculator() {
                             type="number" min="0"
                             value={rows[product.id].qty}
                             onChange={(e) => update(product.id, "qty", e.target.value)}
-                            className="w-full h-10 text-center rounded-lg text-white font-black text-base focus:outline-none focus:ring-2 focus:ring-red-500"
+                            className="w-20 h-10 text-center rounded-lg text-white font-black text-base focus:outline-none focus:ring-2 focus:ring-red-500"
                             style={{ backgroundColor: "rgba(255,255,255,0.08)", border: "1.5px solid rgba(255,255,255,0.12)" }}
                           />
                         </div>
@@ -175,7 +175,7 @@ export default function Calculator() {
                               type="number" min="0" step="0.01"
                               value={rows[product.id].price}
                               onChange={(e) => update(product.id, "price", e.target.value)}
-                              className="flex-1 h-10 text-center rounded-lg text-white font-black text-base focus:outline-none focus:ring-2 focus:ring-red-500"
+                              className="w-20 h-10 text-center rounded-lg text-white font-black text-base focus:outline-none focus:ring-2 focus:ring-red-500"
                               style={{ backgroundColor: "rgba(255,255,255,0.08)", border: "1.5px solid rgba(255,255,255,0.12)" }}
                             />
                           </div>
