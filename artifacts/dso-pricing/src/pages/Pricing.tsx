@@ -139,7 +139,7 @@ export default function Pricing() {
             <div className="text-center py-6 border-t border-white/10">
               <p className="text-white/50 text-base mb-2">That's</p>
               <p className="font-black text-white mb-2" style={{ fontSize: "3.5rem", fontFamily: "'Outfit', sans-serif", color: ORANGE }}>$1,100/mo</p>
-              <p className="font-black text-white uppercase" style={{ fontSize: "7rem", fontFamily: "'Outfit', sans-serif", lineHeight: 1 }}>BACK IN YOUR PRACTICE</p>
+              <p className="font-black text-white uppercase" style={{ fontSize: "28px", fontFamily: "'Outfit', sans-serif" }}>BACK IN YOUR PRACTICE</p>
               <p className="text-white/40 text-sm mt-3 italic">And that's just one vendor.</p>
             </div>
           </div>
