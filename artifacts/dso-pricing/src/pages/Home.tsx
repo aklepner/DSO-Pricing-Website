@@ -1,6 +1,6 @@
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
-import { CheckCircle2, ArrowRight, Star, ChevronDown, ChevronUp, DollarSign, Users, TrendingUp, Shield, Zap, BarChart3, Package, Cpu, ShoppingCart, Network, Lightbulb, HeartHandshake, Award, Target } from "lucide-react";
+import { CheckCircle2, ArrowRight, Star, ChevronDown, ChevronUp, DollarSign, Users, TrendingUp, Shield, Zap, BarChart3, Package, Network, Lightbulb, HeartHandshake, Award, Target } from "lucide-react";
 import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -59,12 +59,54 @@ const testimonials = [
 ];
 
 const faqs = [
-  { q: "Who is DSO Pricing for?", a: "DSO Pricing is built for independent dental practices doing $1M+ in revenue, multi-associate groups, and emerging multi-location practices that want to scale intelligently without giving up control." },
-  { q: "How soon can I expect results?", a: "Most members see measurable margin improvement within the first 30–60 days. Even small improvements of 1–2% can translate into $40K–$80K+ annually depending on practice size." },
-  { q: "Is there a long-term contract?", a: "No. Your membership is month-to-month. Stay because it delivers value, not because you're locked in." },
-  { q: "What kinds of vendors and partners are included?", a: "Partners span supplies, technology, lab services, HR, financing, marketing, and more — all curated for quality and alignment with growth-focused practices." },
-  { q: "Can I keep my current vendors?", a: "Absolutely. DSO Pricing works alongside your existing vendor relationships. We simply give you better pricing, better terms, and better access where it actually matters." },
-  { q: "How is DSO Pricing different from a GPO?", a: "DSO Pricing goes far beyond a buying group. Beyond pricing leverage, you get access to curated partners, strategic support, AI-driven procurement tools, and direct connection to experts who have scaled real practices." },
+  {
+    q: "Does DSO Pricing actually pay for itself?",
+    a: "Yes. Most members cover the cost with one change.\n\nFor example, many practices save around $50 per crown. At approximately 30 crowns per month, that's $1,500 per month in savings.\n\nWith a $399 monthly membership, that's $1,100 per month back in your practice from one vendor alone — and that's before we look at aligners, implants, or supplies.",
+  },
+  {
+    q: "How much can I realistically save on overhead?",
+    a: "It depends on your current vendors and volume, but most practices see savings across labs (crowns, implants), aligners, supplies, and merchant services. Even small improvements across multiple categories can add up to thousands per month in reduced overhead.",
+  },
+  {
+    q: "Is this just a dental buying group?",
+    a: "No. Most buying groups focus on discounts. DSO Pricing goes further by helping you choose the right vendors, implement changes that improve margins, and get guidance from operators who have scaled practices.",
+  },
+  {
+    q: "How is DSO Pricing different from Smile Source or other groups?",
+    a: "Traditional groups focus on negotiated pricing and vendor access. DSO Pricing focuses on profitability, hands-on guidance, and helping you think and operate like a high-performing group. We also partner with Seattle Study Club, so you can gain CE. Most groups give you options. We help you make the right decisions.",
+  },
+  {
+    q: "What does \"DSO-level pricing\" actually mean?",
+    a: "DSOs get better pricing because they have higher volume, stronger vendor relationships, and more negotiation leverage. DSO Pricing gives independent dentists access to similar pricing structures, preferred partners, and group-level advantages — so you can compete without selling your practice.",
+  },
+  {
+    q: "Who is DSO Pricing best for?",
+    a: "DSO Pricing is best for practices doing $1M or more, growth-focused dentists, multi-associate or multi-location practices, and owners looking to increase profitability and EBITDA. If you are trying to grow or prepare for an eventual exit, this is built for you.",
+  },
+  {
+    q: "How quickly can I start seeing savings?",
+    a: "In many cases, immediately. Once you switch to preferred vendors, you can begin reducing costs right away — especially in high-volume categories like labs or aligners. Many practices see meaningful savings within the first 30 to 60 days.",
+  },
+  {
+    q: "Do I have to switch all my vendors?",
+    a: "No. Most members start with one or two high-impact changes, such as labs or aligners, and expand from there. You stay in control. We help you prioritize what will actually move the needle.",
+  },
+  {
+    q: "Are there long-term contracts or commitments?",
+    a: "No long-term, restrictive contracts. You are not locked into multi-year agreements. The goal is to deliver enough value that staying is an easy decision.",
+  },
+  {
+    q: "How does this help me grow my practice, not just save money?",
+    a: "Saving money is just the starting point. Inside DSO Pricing, you also get strategic guidance from experienced operators, help identifying growth opportunities, and support improving efficiency and profitability. This is why most dentists join for savings, but stay for growth.",
+  },
+  {
+    q: "What is the biggest mistake dentists make with overhead?",
+    a: "Focusing on small savings instead of big opportunities. Many dentists try to save small amounts here and there while missing opportunities worth thousands per month. The real leverage comes from choosing the right vendors, improving efficiency, and making better strategic decisions.",
+  },
+  {
+    q: "How can independent dentists compete with DSOs?",
+    a: "By operating smarter, not just working harder. DSOs win because of better pricing, stronger vendor relationships, and more structured decision-making. DSO Pricing helps you access those same advantages while staying independent and in control.",
+  },
 ];
 
 function FAQItem({ q, a }: { q: string; a: string }) {
@@ -75,48 +117,15 @@ function FAQItem({ q, a }: { q: string; a: string }) {
         <p className="text-white font-bold text-base leading-snug">{q}</p>
         {open ? <ChevronUp className="w-5 h-5 text-white/60 shrink-0 mt-0.5" /> : <ChevronDown className="w-5 h-5 text-white/60 shrink-0 mt-0.5" />}
       </div>
-      {open && <p className="text-white/60 mt-4 leading-relaxed text-sm">{a}</p>}
+      {open && <p className="text-white/60 mt-4 leading-relaxed text-sm whitespace-pre-line">{a}</p>}
     </div>
   );
 }
 
-const solutions = [
-  {
-    icon: DollarSign,
-    title: "Pricing Leverage",
-    desc: "Stop paying retail. Get DSO-level pricing on the supplies and products you already use.",
-    bullets: ["10%+ preferred pricing with select partners", "Exclusive member-only offers and bonuses", "Immediate savings from day one"],
-  },
-  {
-    icon: Network,
-    title: "Partner Network",
-    desc: "Access a curated ecosystem of service providers, consultants, and experts built for growth-focused practices.",
-    bullets: ["Pre-vetted, high-impact partners only", "No noise — every partner is curated", "Direct access, no middlemen"],
-  },
-  {
-    icon: Package,
-    title: "Smart Procurement",
-    desc: "Centralize all your vendors and purchasing decisions in one place with real-time visibility.",
-    bullets: ["All vendors centralized in one platform", "Real-time pricing and availability", "Streamlined ordering and cost control"],
-  },
-  {
-    icon: TrendingUp,
-    title: "Growth Support",
-    desc: "Move from reactive to proactive with strategic guidance built for scaling operators.",
-    bullets: ["Structured frameworks for expansion", "Margin protection at every stage", "Support that scales with you"],
-  },
-  {
-    icon: Cpu,
-    title: "AI-Powered Tools",
-    desc: "Smarter buying decisions powered by AI-driven inventory management and analytics.",
-    bullets: ["AI-driven inventory management", "Spend analytics and forecasting", "Smarter reordering, less waste"],
-  },
-  {
-    icon: Users,
-    title: "Operator Community",
-    desc: "Connect directly with operators, founders, and experts who have built and scaled real practices.",
-    bullets: ["Operators actively scaling practices", "Founders who've built and exited", "Real answers to real problems"],
-  },
+const vendorCategories = [
+  "Labs & Crowns", "Aligners", "Implants", "Supplies", "Merchant Services",
+  "Seattle Study Club", "HR & Staffing", "Financing", "Marketing", "Technology",
+  "Sterilization", "X-Ray & Imaging", "Endodontics", "Periodontics", "Insurance",
 ];
 
 export default function Home() {
@@ -134,24 +143,22 @@ export default function Home() {
           backgroundRepeat: "no-repeat",
         }}
       >
-        {/* Dark overlay */}
         <div className="absolute inset-0" style={{ backgroundColor: "rgba(10,10,10,0.78)" }} />
-
-        {/* Content */}
         <div className="relative z-10 pt-48 pb-16 px-6 text-center max-w-5xl mx-auto">
+          <p className="text-xs font-black uppercase tracking-widest mb-4" style={{ color: ORANGE }}>Powered By The Backstage Pass</p>
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-white leading-[1.05] mb-6 uppercase" style={{ fontFamily: "'Outfit', sans-serif", letterSpacing: "-0.02em" }}>
-            Same Products.<br />Better Pricing.<br />
-            <span style={{ color: ORANGE }}>Smarter Partners.</span>
+            Get DSO-Level Pricing…<br />
+            <span style={{ color: ORANGE }}>Without Becoming a DSO</span>
           </h1>
           <p className="text-white/70 text-xl leading-relaxed max-w-2xl mx-auto mb-10">
-            DSO Pricing gives independent practices the pricing power, partners, and strategic leverage of a large group — without giving up control.
+            Most dentists overpay for overhead. DSO Pricing fixes that and helps you operate like a high-performing group.
           </p>
           <div className="flex flex-col items-center gap-3">
             <Button asChild size="lg" className="text-white font-black text-sm uppercase tracking-widest h-14 px-12" style={{ backgroundColor: ORANGE }} data-testid="button-join-hero">
-              <Link href="/pricing">Join DSO Pricing Now</Link>
+              <Link href="/pricing">Lock In $399/mo</Link>
             </Button>
-            <p className="text-white/45 text-sm italic">Book a Concierge Call with Janelle →{" "}
-              <a href="https://link.elijahdesmond.com/widget/booking/qRepUNdAesl5YtZoT17b" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 hover:text-white/70 transition-colors" data-testid="button-book-hero">Schedule here</a>
+            <p className="text-white/45 text-sm italic">100 practices only. Then $499/mo. →{" "}
+              <a href="https://link.elijahdesmond.com/widget/booking/qRepUNdAesl5YtZoT17b" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 hover:text-white/70 transition-colors" data-testid="button-book-hero">Book a concierge call with Janelle</a>
             </p>
           </div>
         </div>
@@ -161,7 +168,7 @@ export default function Home() {
           {[
             { icon: Award, label: "Driven by Values", sub: "Kindness. Integrity. Results." },
             { icon: Shield, label: "Built for Dentists", sub: "By operators, for operators." },
-            { icon: Target, label: "Proven Results", sub: "$80K+ avg. annual savings." },
+            { icon: Target, label: "Proven Results", sub: "$1,100+/mo back in your practice." },
           ].map((item, i) => (
             <div key={i} className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 px-6 py-7">
               <item.icon className="w-8 h-8 shrink-0" style={{ color: ORANGE }} />
@@ -174,174 +181,183 @@ export default function Home() {
         </div>
       </section>
 
-      {/* WHY DSO PRICING EXISTS */}
-      <section className="py-20 px-6 bg-white">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-16 items-start">
-            <div>
-              <p className="text-sm font-black uppercase tracking-widest mb-4" style={{ color: ORANGE }}>Why DSO Pricing Exists</p>
-              <h2 className="text-4xl md:text-5xl font-black text-gray-900 leading-tight mb-6 uppercase" style={{ fontFamily: "'Outfit', sans-serif" }}>
-                Growth Is Being<br />Done Wrong.
-              </h2>
-              <p className="text-gray-600 text-lg leading-relaxed mb-6">
-                Most practices aren't failing — they're just not built for pressure. Margins are tighter than they should be, costs keep rising, and decisions get made without full visibility.
-              </p>
-              <p className="text-gray-500 text-base leading-relaxed border-l-4 pl-5 italic" style={{ borderColor: ORANGE }}>
-                DSO Pricing exists for operators who refuse to accept either path — scale and lose margin, or stay small and fall behind.
-              </p>
-            </div>
-            <div className="space-y-4">
-              {[
-                { label: "Scale fast and lose control", icon: TrendingUp, bad: true, desc: "Growth without structure leads to fragmented systems and margin erosion." },
-                { label: "Stay small and fall behind", icon: Shield, bad: true, desc: "Staying put while the market moves forward is its own form of risk." },
-                { label: "Build with structure and win", icon: Zap, bad: false, desc: "The practices that win build with intentional systems and better leverage." },
-              ].map((item, i) => (
-                <div key={i} className={`rounded-xl p-6 border-2 flex items-start gap-5 ${item.bad ? "border-gray-200 bg-gray-50" : "bg-white"}`} style={!item.bad ? { borderColor: ORANGE } : {}}>
-                  <div className={`w-11 h-11 rounded-full flex items-center justify-center shrink-0 ${item.bad ? "bg-gray-100" : ""}`} style={!item.bad ? { backgroundColor: ORANGE } : {}}>
-                    <item.icon className={`w-5 h-5 ${item.bad ? "text-gray-400" : "text-white"}`} />
-                  </div>
-                  <div>
-                    <p className={`font-bold text-base mb-1 ${item.bad ? "text-gray-500 line-through" : "text-gray-900"}`}>{item.label}</p>
-                    <p className="text-gray-500 text-sm leading-relaxed">{item.desc}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* DARK BAND */}
+      {/* VENDOR BAND */}
       <section className="py-16 px-6" style={{ backgroundColor: NAVY2 }}>
-        <div className="max-w-4xl mx-auto text-center">
-          <p className="text-white/40 text-sm font-black uppercase tracking-widest mb-4">Introducing DSO Pricing</p>
-          <h2 className="text-3xl md:text-5xl font-black text-white leading-tight uppercase" style={{ fontFamily: "'Outfit', sans-serif", letterSpacing: "-0.01em" }}>
-            And Here's How We Solve It:
+        <div className="max-w-6xl mx-auto text-center">
+          <p className="text-sm font-black uppercase tracking-widest mb-3" style={{ color: ORANGE }}>Our Network</p>
+          <h2 className="text-3xl md:text-5xl font-black text-white mb-10 uppercase" style={{ fontFamily: "'Outfit', sans-serif" }}>
+            700 Vendors. Real Savings Across<br />Your Entire Practice.
           </h2>
-          <p className="text-white/50 text-lg mt-6 max-w-2xl mx-auto">
-            A growth leverage platform that gives independent practices the buying power, partners, and structure of a large group — without the loss of control.
-          </p>
+          <div className="flex flex-wrap justify-center gap-3">
+            {vendorCategories.map((v, i) => (
+              <span
+                key={i}
+                className={`px-4 py-2 rounded-full text-sm font-bold uppercase tracking-wide border ${v === "Seattle Study Club" ? "text-white border-transparent" : "text-white/60 border-white/15"}`}
+                style={v === "Seattle Study Club" ? { backgroundColor: ORANGE, borderColor: ORANGE } : { backgroundColor: "rgba(255,255,255,0.05)" }}
+              >
+                {v}
+              </span>
+            ))}
+            <span className="px-4 py-2 rounded-full text-sm font-bold uppercase tracking-wide text-white/30 border border-white/10" style={{ backgroundColor: "rgba(255,255,255,0.03)" }}>
+              + 685 more
+            </span>
+          </div>
         </div>
       </section>
 
-      {/* OUR SOLUTIONS */}
+      {/* SAVE / GROW / SUPPORT */}
       <section className="py-20 px-6 bg-white">
         <div className="max-w-6xl mx-auto">
-          <div className="mb-14">
-            <p className="text-sm font-black uppercase tracking-widest mb-3" style={{ color: ORANGE }}>Our Solutions</p>
+          <div className="text-center mb-14">
+            <p className="text-sm font-black uppercase tracking-widest mb-3" style={{ color: ORANGE }}>Why Members Stay</p>
             <h2 className="text-4xl md:text-5xl font-black text-gray-900 uppercase leading-tight" style={{ fontFamily: "'Outfit', sans-serif" }}>
-              Choose The Problem<br />You Need Solved.
+              Most Dentists Join for Savings.<br />They Stay Because We Help Them Grow.
             </h2>
-            <p className="text-gray-500 text-lg mt-4 max-w-2xl">Start where it matters most. Every solution is curated, proven, and built for dental operators scaling with intention.</p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {solutions.map((s, i) => (
-              <div key={i} className="border-2 border-gray-100 rounded-xl p-7 flex flex-col gap-4 hover:border-gray-200 transition-colors bg-white">
-                <div className="w-12 h-12 rounded-lg flex items-center justify-center" style={{ backgroundColor: ORANGE }}>
-                  <s.icon className="w-6 h-6 text-white" />
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              {
+                label: "Save",
+                color: ORANGE,
+                icon: DollarSign,
+                bullets: [
+                  "$1,000+/month saved on crowns alone",
+                  "Access to 700 vendors across labs, aligners, implants, and more",
+                ],
+              },
+              {
+                label: "Grow",
+                color: ORANGE,
+                icon: TrendingUp,
+                bullets: [
+                  "Hands-on guidance from operators who've scaled multi-location practices",
+                  "Proven strategies to solve real growth bottlenecks",
+                  "Advisors focused on increasing your profitability and EBITDA",
+                ],
+              },
+              {
+                label: "Support",
+                color: ORANGE,
+                icon: Users,
+                bullets: [
+                  "CE through Seattle Study Club",
+                  "Network with growth-focused, like-minded dentists",
+                ],
+              },
+            ].map((col, i) => (
+              <div key={i} className="rounded-2xl p-8 border-2 border-gray-100 bg-white flex flex-col gap-5">
+                <div className="flex items-center gap-3">
+                  <div className="w-11 h-11 rounded-lg flex items-center justify-center" style={{ backgroundColor: ORANGE }}>
+                    <col.icon className="w-6 h-6 text-white" />
+                  </div>
+                  <p className="font-black text-2xl text-gray-900 uppercase" style={{ fontFamily: "'Outfit', sans-serif" }}>{col.label}</p>
                 </div>
-                <div>
-                  <h3 className="font-black text-gray-900 text-xl mb-2 uppercase" style={{ fontFamily: "'Outfit', sans-serif" }}>{s.title}</h3>
-                  <p className="text-gray-500 text-sm leading-relaxed mb-4">{s.desc}</p>
-                </div>
-                <ul className="space-y-2 mb-5">
-                  {s.bullets.map((b, j) => (
+                <ul className="space-y-3">
+                  {col.bullets.map((b, j) => (
                     <li key={j} className="flex items-start gap-2.5 text-sm text-gray-700">
                       <CheckCircle2 className="w-4 h-4 shrink-0 mt-0.5" style={{ color: ORANGE }} />
                       <span>{b}</span>
                     </li>
                   ))}
                 </ul>
-                <Button asChild size="sm" className="mt-auto text-white font-bold uppercase tracking-wide text-xs h-10 px-5 w-fit" style={{ backgroundColor: ORANGE }}>
-                  <Link href="/pricing">Learn More <ArrowRight className="ml-1.5 w-3.5 h-3.5" /></Link>
-                </Button>
               </div>
             ))}
+          </div>
+          <div className="flex justify-center mt-10">
+            <Button asChild size="lg" className="text-white font-bold uppercase tracking-wide h-14 px-10" style={{ backgroundColor: ORANGE }}>
+              <Link href="/pricing">Join DSO Pricing <ArrowRight className="ml-2 w-4 h-4" /></Link>
+            </Button>
           </div>
         </div>
       </section>
 
-      {/* ALREADY HAVE VENDORS? */}
-      <section className="py-16 px-6" style={{ backgroundColor: NAVY }}>
+      {/* WHAT IS DSO PRICING */}
+      <section className="py-20 px-6" style={{ backgroundColor: NAVY }}>
         <div className="max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-10 items-center">
+          <div className="grid md:grid-cols-2 gap-16 items-start">
             <div>
-              <h2 className="text-4xl md:text-5xl font-black text-white uppercase leading-tight mb-4" style={{ fontFamily: "'Outfit', sans-serif" }}>
-                Already Have<br />Vendors?
+              <p className="text-sm font-black uppercase tracking-widest mb-4" style={{ color: ORANGE }}>What Is DSO Pricing</p>
+              <h2 className="text-4xl md:text-5xl font-black text-white leading-tight mb-6 uppercase" style={{ fontFamily: "'Outfit', sans-serif" }}>
+                Get the Same Pricing, Partners, and Strategic Support Top-Performing Groups Use to Grow.
               </h2>
-              <p className="text-white/60 text-lg leading-relaxed">
-                Perfect. Keep working with the partners you trust. DSO Pricing simply gives you more — better pricing, better terms, better access.
-              </p>
             </div>
-            <div className="space-y-4">
-              {["Better pricing", "Better terms", "Better access"].map((item, i) => (
-                <div key={i} className="flex items-center gap-4 rounded-xl p-5 border border-white/10" style={{ backgroundColor: "rgba(255,255,255,0.05)" }}>
-                  <CheckCircle2 className="w-6 h-6 shrink-0" style={{ color: ORANGE }} />
-                  <p className="text-white font-bold text-xl">{item}</p>
+            <div className="space-y-8">
+              <div>
+                <p className="text-white font-black text-lg uppercase mb-4" style={{ fontFamily: "'Outfit', sans-serif" }}>Inside, you get:</p>
+                <ul className="space-y-3">
+                  {[
+                    "DSO-level pricing across labs, aligners, implants, and more",
+                    "Proven vendors selected for one reason: improving your margins",
+                    "Hands-on guidance from operators who've scaled multi-location practices",
+                  ].map((item, i) => (
+                    <li key={i} className="flex items-start gap-3 text-white/70 text-base">
+                      <CheckCircle2 className="w-5 h-5 shrink-0 mt-0.5" style={{ color: ORANGE }} />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div>
+                <p className="text-white font-black text-lg uppercase mb-4" style={{ fontFamily: "'Outfit', sans-serif" }}>So you can:</p>
+                <ul className="space-y-3">
+                  {[
+                    "Keep more profit from every patient",
+                    "Make confident, high-impact decisions",
+                    "Build a practice that scales — without guesswork",
+                  ].map((item, i) => (
+                    <li key={i} className="flex items-start gap-3 text-white/70 text-base">
+                      <CheckCircle2 className="w-5 h-5 shrink-0 mt-0.5" style={{ color: ORANGE }} />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* THIS PAYS FOR ITSELF */}
+      <section className="py-20 px-6" style={{ backgroundColor: NAVY2 }}>
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-12">
+            <p className="text-sm font-black uppercase tracking-widest mb-4" style={{ color: ORANGE }}>The Math</p>
+            <h2 className="text-4xl md:text-5xl font-black text-white uppercase leading-tight" style={{ fontFamily: "'Outfit', sans-serif" }}>
+              This Pays For Itself… Fast
+            </h2>
+            <p className="text-white/55 text-lg mt-4">Most practices cover the cost with one change.</p>
+          </div>
+          <div className="rounded-2xl border-2 border-white/15 p-10 mb-8" style={{ backgroundColor: "rgba(255,255,255,0.05)" }}>
+            <div className="space-y-4 mb-8">
+              {[
+                { label: "Save ~$50 per crown", detail: "At ~30 crowns/month = ~$1,500/month saved" },
+                { label: "Membership: $399/mo", detail: null },
+              ].map((row, i) => (
+                <div key={i} className="flex items-start gap-4 p-5 rounded-xl border border-white/10" style={{ backgroundColor: "rgba(255,255,255,0.04)" }}>
+                  <CheckCircle2 className="w-5 h-5 mt-0.5 shrink-0" style={{ color: ORANGE }} />
+                  <div>
+                    <p className="text-white font-bold text-lg">{row.label}</p>
+                    {row.detail && <p className="text-white/50 text-sm mt-0.5">{row.detail}</p>}
+                  </div>
                 </div>
               ))}
-              <p className="text-white/40 text-sm pl-2 italic">Where it actually matters.</p>
+            </div>
+            <div className="text-center py-6 border-t border-white/10">
+              <p className="text-white/50 text-base mb-2">That's</p>
+              <p className="font-black text-white mb-2" style={{ fontSize: "3.5rem", fontFamily: "'Outfit', sans-serif", color: ORANGE }}>$1,100/mo</p>
+              <p className="text-white/70 text-lg font-bold">back in your practice</p>
+              <p className="text-white/40 text-sm mt-3 italic">And that's just one vendor.</p>
+            </div>
+            <div className="mt-6 rounded-xl p-6 text-center border border-white/10" style={{ backgroundColor: "rgba(255,255,255,0.03)" }}>
+              <p className="text-white font-black text-xl uppercase mb-1" style={{ fontFamily: "'Outfit', sans-serif" }}>If one decision makes you $1,100/mo…</p>
+              <p className="text-white/50 text-base">What happens when you optimize the rest?</p>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* STATS BAR */}
-      <section className="py-14 px-6" style={{ backgroundColor: ORANGE }}>
-        <div className="max-w-6xl mx-auto">
-          <p className="text-white/80 text-center text-xs font-black uppercase tracking-widest mb-10">Making An Impact For Practices Like Yours</p>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {[
-              { value: "$80K+", label: "Average Annual Savings for $4M Practice" },
-              { value: "60 Days", label: "Avg. Time to See Margin Improvement" },
-              { value: "2–3%", label: "Typical EBITDA Improvement" },
-              { value: "1,200+", label: "Practices Benefiting" },
-            ].map((s, i) => (
-              <div key={i} className="text-center">
-                <p className="text-4xl md:text-5xl font-black text-white mb-2" style={{ fontFamily: "'Outfit', sans-serif" }}>{s.value}</p>
-                <p className="text-white/75 text-sm font-medium leading-snug">{s.label}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* GROW SMARTER SPLIT */}
-      <section className="py-20 px-6 bg-gray-50">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-16 items-center">
-            <div className="rounded-2xl overflow-hidden border-4 border-gray-200 aspect-video flex items-center justify-center" style={{ backgroundColor: NAVY2 }}>
-              <div className="text-center px-8">
-                <p className="text-white font-black text-3xl uppercase mb-3" style={{ fontFamily: "'Outfit', sans-serif" }}>The Real Outcome</p>
-                <p className="text-white/50 text-base">This isn't about pricing.</p>
-                <p className="font-bold text-lg mt-2" style={{ color: ORANGE }}>It's about building from strength.</p>
-              </div>
-            </div>
-            <div>
-              <p className="text-sm font-black uppercase tracking-widest mb-4" style={{ color: ORANGE }}>Grow Smarter. Lead With Strength.</p>
-              <h2 className="text-4xl font-black text-gray-900 uppercase leading-tight mb-6" style={{ fontFamily: "'Outfit', sans-serif" }}>
-                Whether You're At<br />1 Location Or 5.
-              </h2>
-              <p className="text-gray-600 text-base leading-relaxed mb-8">
-                So whether you add locations, expand your team, increase income, or prepare for a transition — you're building from strength, not guesswork.
-              </p>
-              <div className="space-y-3 mb-8">
-                {[
-                  { label: "Stronger margins", icon: DollarSign },
-                  { label: "Smarter decisions", icon: Lightbulb },
-                  { label: "Better partners", icon: HeartHandshake },
-                  { label: "Real structure", icon: BarChart3 },
-                ].map((item, i) => (
-                  <div key={i} className="flex items-center gap-3">
-                    <CheckCircle2 className="w-5 h-5 shrink-0" style={{ color: ORANGE }} />
-                    <p className="text-gray-800 font-semibold">{item.label}</p>
-                  </div>
-                ))}
-              </div>
-              <Button asChild size="lg" className="text-white font-bold uppercase tracking-wide h-13 px-8" style={{ backgroundColor: ORANGE }}>
-                <Link href="/pricing">Join DSO Pricing Now <ArrowRight className="ml-2 w-4 h-4" /></Link>
-              </Button>
-            </div>
+          <div className="text-center">
+            <Button asChild size="lg" className="text-white font-black uppercase tracking-widest h-14 px-12" style={{ backgroundColor: ORANGE }}>
+              <Link href="/pricing">Lock In $399/Mo <ArrowRight className="ml-2 w-4 h-4" /></Link>
+            </Button>
+            <p className="text-white/30 text-sm mt-3">100 practices only. Then $499/mo.</p>
           </div>
         </div>
       </section>
@@ -379,6 +395,25 @@ export default function Home() {
         </div>
       </section>
 
+      {/* GET IN BEFORE PRICING INCREASES */}
+      <section className="py-20 px-6" style={{ backgroundColor: ORANGE }}>
+        <div className="max-w-4xl mx-auto text-center">
+          <p className="text-white/80 text-xs font-black uppercase tracking-widest mb-4">Founding Member Pricing</p>
+          <h2 className="text-4xl md:text-6xl font-black text-white mb-6 uppercase leading-tight" style={{ fontFamily: "'Outfit', sans-serif" }}>
+            Get In Before<br />Pricing Increases
+          </h2>
+          <div className="flex items-center justify-center gap-6 mb-4">
+            <p className="font-black text-white" style={{ fontSize: "3rem", fontFamily: "'Outfit', sans-serif" }}>$399<span className="text-2xl font-normal opacity-70">/mo</span></p>
+            <p className="text-white/50 text-2xl font-black line-through">$499/mo</p>
+          </div>
+          <p className="text-white/80 text-base font-semibold mb-8">Limited only to 100 practices.</p>
+          <Button asChild size="lg" className="bg-white font-black text-sm uppercase tracking-widest h-14 px-12" style={{ color: ORANGE }}>
+            <Link href="/pricing">Lock In $399/Mo</Link>
+          </Button>
+          <p className="text-white/60 text-sm mt-4 italic">Most members cover the cost with one change.</p>
+        </div>
+      </section>
+
       {/* FAQ */}
       <section className="py-20 px-6" style={{ backgroundColor: NAVY2 }}>
         <div className="max-w-6xl mx-auto">
@@ -397,7 +432,7 @@ export default function Home() {
       </section>
 
       {/* FINAL CTA */}
-      <section className="py-20 px-6" style={{ backgroundColor: ORANGE }}>
+      <section className="py-20 px-6" style={{ backgroundColor: NAVY }}>
         <div className="max-w-4xl mx-auto text-center">
           <div className="flex justify-center mb-6">
             <StarRating count={5} size={24} />
@@ -408,7 +443,7 @@ export default function Home() {
           <p className="text-white/75 text-lg mb-10">On your terms. Independent. Strategic. Leveraged.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button asChild size="lg" className="bg-white font-bold text-lg uppercase tracking-wide px-10 h-14" style={{ color: ORANGE }} data-testid="button-join-final">
-              <Link href="/pricing">Join DSO Pricing Now <ArrowRight className="ml-2 w-5 h-5" /></Link>
+              <Link href="/pricing">Lock In $399/Mo <ArrowRight className="ml-2 w-5 h-5" /></Link>
             </Button>
             <Button asChild size="lg" variant="outline" className="border-white/40 text-white hover:bg-white/15 bg-transparent text-base font-semibold px-10 h-14" data-testid="button-book-final">
               <a href="https://link.elijahdesmond.com/widget/booking/qRepUNdAesl5YtZoT17b" target="_blank" rel="noopener noreferrer">Book a Concierge Call with Janelle</a>
