@@ -122,11 +122,6 @@ function FAQItem({ q, a }: { q: string; a: string }) {
   );
 }
 
-const vendorCategories = [
-  "Labs & Crowns", "Aligners", "Implants", "Supplies", "Merchant Services",
-  "Seattle Study Club", "HR & Staffing", "Financing", "Marketing", "Technology",
-  "Sterilization", "X-Ray & Imaging", "Endodontics", "Periodontics", "Insurance",
-];
 
 export default function Home() {
   return (
@@ -188,20 +183,6 @@ export default function Home() {
           <h2 className="text-3xl md:text-5xl font-black text-white mb-10 uppercase" style={{ fontFamily: "'Outfit', sans-serif" }}>
             700 Vendors. Real Savings Across<br />Your Entire Practice.
           </h2>
-          <div className="flex flex-wrap justify-center gap-3">
-            {vendorCategories.map((v, i) => (
-              <span
-                key={i}
-                className={`px-4 py-2 rounded-full text-sm font-bold uppercase tracking-wide border ${v === "Seattle Study Club" ? "text-white border-transparent" : "text-white/60 border-white/15"}`}
-                style={v === "Seattle Study Club" ? { backgroundColor: ORANGE, borderColor: ORANGE } : { backgroundColor: "rgba(255,255,255,0.05)" }}
-              >
-                {v}
-              </span>
-            ))}
-            <span className="px-4 py-2 rounded-full text-sm font-bold uppercase tracking-wide text-white/30 border border-white/10" style={{ backgroundColor: "rgba(255,255,255,0.03)" }}>
-              + 685 more
-            </span>
-          </div>
         </div>
       </section>
 
