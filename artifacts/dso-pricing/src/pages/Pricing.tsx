@@ -55,7 +55,7 @@ export default function Pricing() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button asChild size="lg" className="text-white font-bold text-base uppercase tracking-wide h-14 px-10" style={{ backgroundColor: ORANGE }} data-testid="button-join-hero">
-              <a href="https://order.dsopricing.com/order-page" target="_blank" rel="noopener noreferrer">Lock In Your Savings</a>
+              <a href="https://order.dsopricing.com/order-page?am_id=<<affiliate_id>>" target="_blank" rel="noopener noreferrer">Lock In Your Savings</a>
             </Button>
             <Button asChild size="lg" variant="outline" className="border-white/25 text-white hover:bg-white/10 bg-transparent h-14 px-10 font-semibold">
               <a href="https://link.elijahdesmond.com/widget/booking/qRepUNdAesl5YtZoT17b" target="_blank" rel="noopener noreferrer">Book a Concierge Call with Janelle</a>
@@ -79,7 +79,7 @@ export default function Pricing() {
             <p className="text-white/40 text-lg font-bold line-through mb-6">$499/month</p>
             <p className="text-white/40 mb-8 text-sm font-semibold uppercase tracking-wide">No long-term contracts.</p>
             <Button asChild size="lg" className="w-full text-white font-bold text-lg uppercase tracking-wide h-14" style={{ backgroundColor: ORANGE }} data-testid="button-join-price">
-              <a href="https://order.dsopricing.com/order-page" target="_blank" rel="noopener noreferrer">Lock In Your Savings <ArrowRight className="ml-2 w-5 h-5" /></a>
+              <a href="https://order.dsopricing.com/order-page?am_id=<<affiliate_id>>" target="_blank" rel="noopener noreferrer">Lock In Your Savings <ArrowRight className="ml-2 w-5 h-5" /></a>
             </Button>
           </div>
         </div>
@@ -145,7 +145,7 @@ export default function Pricing() {
           </div>
           <div className="text-center">
             <Button asChild size="lg" className="text-white font-bold text-lg uppercase tracking-wide px-10 h-14" style={{ backgroundColor: ORANGE }} data-testid="button-join-math">
-              <a href="https://order.dsopricing.com/order-page" target="_blank" rel="noopener noreferrer">Lock In Your Savings <ArrowRight className="ml-2 w-5 h-5" /></a>
+              <a href="https://order.dsopricing.com/order-page?am_id=<<affiliate_id>>" target="_blank" rel="noopener noreferrer">Lock In Your Savings <ArrowRight className="ml-2 w-5 h-5" /></a>
             </Button>
           </div>
         </div>
@@ -188,7 +188,7 @@ export default function Pricing() {
           <p className="text-white/80 font-semibold mb-8">Limited only to 100 practices.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mt-10">
             <Button asChild size="lg" className="bg-white font-bold text-lg uppercase tracking-wide px-10 h-14" style={{ color: ORANGE }} data-testid="button-join-final">
-              <a href="https://order.dsopricing.com/order-page" target="_blank" rel="noopener noreferrer">Lock In Your Savings <ArrowRight className="ml-2 w-5 h-5" /></a>
+              <a href="https://order.dsopricing.com/order-page?am_id=<<affiliate_id>>" target="_blank" rel="noopener noreferrer">Lock In Your Savings <ArrowRight className="ml-2 w-5 h-5" /></a>
             </Button>
             <Button asChild size="lg" variant="outline" className="border-white/40 text-white hover:bg-white/15 bg-transparent text-base font-semibold px-10 h-14">
               <a href="https://link.elijahdesmond.com/widget/booking/qRepUNdAesl5YtZoT17b" target="_blank" rel="noopener noreferrer">Book a Concierge Call with Janelle</a>
