@@ -211,7 +211,7 @@ export default function BuiltDifferent() {
           <p className="text-white/80 text-base font-semibold mb-8">Limited only to 100 practices.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button asChild size="lg" className="bg-white font-bold text-lg uppercase tracking-wide px-10 h-14" style={{ color: ORANGE }} data-testid="button-join-cta">
-              <Link href="/pricing">Lock In $399/Mo <ArrowRight className="ml-2 w-5 h-5" /></Link>
+              <a href="https://order.dsopricing.com/order-page?am_id=<<affiliate_id>>" target="_blank" rel="noopener noreferrer">Lock In $399/Mo <ArrowRight className="ml-2 w-5 h-5" /></a>
             </Button>
             <Button asChild size="lg" variant="outline" className="border-white/40 text-white hover:bg-white/15 bg-transparent text-base font-semibold px-10 h-14" data-testid="button-book-cta">
               <a href="https://link.elijahdesmond.com/widget/booking/qRepUNdAesl5YtZoT17b" target="_blank" rel="noopener noreferrer">Book a Concierge Call with Janelle</a>
