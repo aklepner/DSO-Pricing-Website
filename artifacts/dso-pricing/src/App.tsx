@@ -11,6 +11,8 @@ import Pricing from "@/pages/Pricing";
 import Contact from "@/pages/Contact";
 import Calculator from "@/pages/Calculator";
 import ThankYou from "@/pages/ThankYou";
+import OnboardingCall from "@/pages/OnboardingCall";
+import BookingConfirmed from "@/pages/BookingConfirmed";
 
 const queryClient = new QueryClient();
 
@@ -33,6 +35,8 @@ function Router() {
         <Route path="/contact" component={Contact} />
         <Route path="/calculator" component={Calculator} />
         <Route path="/thank-you" component={ThankYou} />
+        <Route path="/onboarding-call" component={OnboardingCall} />
+        <Route path="/booking-confirmed" component={BookingConfirmed} />
         <Route component={NotFound} />
       </Switch>
     </>

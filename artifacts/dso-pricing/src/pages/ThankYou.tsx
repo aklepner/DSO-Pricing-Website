@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { CheckCircle2, Mail, CalendarCheck, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "wouter";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
@@ -63,9 +64,9 @@ export default function ThankYou() {
                   Schedule your onboarding call to get set up, meet your team, and start unlocking savings right away.
                 </p>
                 <Button asChild size="lg" className="text-white font-bold uppercase tracking-wide h-12 px-8 text-sm" style={{ backgroundColor: ORANGE }}>
-                  <a href="https://link.elijahdesmond.com/widget/booking/qRepUNdAesl5YtZoT17b" target="_blank" rel="noopener noreferrer">
+                  <Link href="/onboarding-call">
                     Book Your Onboarding Call <ArrowRight className="ml-2 w-4 h-4" />
-                  </a>
+                  </Link>
                 </Button>
               </div>
             </div>
