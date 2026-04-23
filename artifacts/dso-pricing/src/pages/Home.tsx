@@ -4,6 +4,7 @@ import { CheckCircle2, ArrowRight, Star, ChevronDown, ChevronUp, DollarSign, Use
 import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { useOrderUrl } from "@/contexts/AffiliateContext";
 
 const NAVY = "#0F0F0F";
 const NAVY2 = "#000000";
@@ -124,6 +125,7 @@ function FAQItem({ q, a }: { q: string; a: string }) {
 
 
 export default function Home() {
+  const orderUrl = useOrderUrl();
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
@@ -150,7 +152,7 @@ export default function Home() {
           </p>
           <div className="flex flex-col items-center gap-3">
             <Button asChild size="lg" className="text-white font-black text-sm uppercase tracking-widest h-14 px-12" style={{ backgroundColor: ORANGE }} data-testid="button-join-hero">
-              <a href="https://order.dsopricing.com/order-page?am_id=<<affiliate_id>>" target="_blank" rel="noopener noreferrer">Lock In $399/mo</a>
+              <a href={orderUrl} target="_blank" rel="noopener noreferrer">Lock In $399/mo</a>
             </Button>
             <p className="text-white/45 text-sm italic">100 practices only. Then $499/mo. →{" "}
               <a href="https://link.elijahdesmond.com/widget/booking/qRepUNdAesl5YtZoT17b" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 hover:text-white/70 transition-colors" data-testid="button-book-hero">Book a concierge call with Janelle</a>
@@ -246,7 +248,7 @@ export default function Home() {
           </div>
           <div className="flex justify-center mt-10">
             <Button asChild size="lg" className="text-white font-bold uppercase tracking-wide h-14 px-10" style={{ backgroundColor: ORANGE }}>
-              <a href="https://order.dsopricing.com/order-page?am_id=<<affiliate_id>>" target="_blank" rel="noopener noreferrer">Join DSO Pricing <ArrowRight className="ml-2 w-4 h-4" /></a>
+              <a href={orderUrl} target="_blank" rel="noopener noreferrer">Join DSO Pricing <ArrowRight className="ml-2 w-4 h-4" /></a>
             </Button>
           </div>
         </div>
@@ -336,7 +338,7 @@ export default function Home() {
           </div>
           <div className="text-center">
             <Button asChild size="lg" className="text-white font-black uppercase tracking-widest h-14 px-12" style={{ backgroundColor: ORANGE }}>
-              <a href="https://order.dsopricing.com/order-page?am_id=<<affiliate_id>>" target="_blank" rel="noopener noreferrer">Lock In $399/Mo <ArrowRight className="ml-2 w-4 h-4" /></a>
+              <a href={orderUrl} target="_blank" rel="noopener noreferrer">Lock In $399/Mo <ArrowRight className="ml-2 w-4 h-4" /></a>
             </Button>
             <p className="text-white/30 text-sm mt-3">100 practices only. Then $499/mo.</p>
           </div>
@@ -389,7 +391,7 @@ export default function Home() {
           </div>
           <p className="text-white/80 text-base font-semibold mb-8">Limited only to 100 practices.</p>
           <Button asChild size="lg" className="bg-white font-black text-sm uppercase tracking-widest h-14 px-12" style={{ color: ORANGE }}>
-            <a href="https://order.dsopricing.com/order-page?am_id=<<affiliate_id>>" target="_blank" rel="noopener noreferrer">Lock In $399/Mo</a>
+            <a href={orderUrl} target="_blank" rel="noopener noreferrer">Lock In $399/Mo</a>
           </Button>
           <p className="text-white/60 text-sm mt-4 italic">Most members cover the cost with one change.</p>
         </div>
@@ -424,7 +426,7 @@ export default function Home() {
           <p className="text-white/75 text-lg mb-10">On your terms. Independent. Strategic. Leveraged.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button asChild size="lg" className="bg-white font-bold text-lg uppercase tracking-wide px-10 h-14" style={{ color: ORANGE }} data-testid="button-join-final">
-              <a href="https://order.dsopricing.com/order-page?am_id=<<affiliate_id>>" target="_blank" rel="noopener noreferrer">Lock In $399/Mo <ArrowRight className="ml-2 w-5 h-5" /></a>
+              <a href={orderUrl} target="_blank" rel="noopener noreferrer">Lock In $399/Mo <ArrowRight className="ml-2 w-5 h-5" /></a>
             </Button>
             <Button asChild size="lg" variant="outline" className="border-white/40 text-white hover:bg-white/15 bg-transparent text-base font-semibold px-10 h-14" data-testid="button-book-final">
               <a href="https://link.elijahdesmond.com/widget/booking/qRepUNdAesl5YtZoT17b" target="_blank" rel="noopener noreferrer">Book a Concierge Call with Janelle</a>
