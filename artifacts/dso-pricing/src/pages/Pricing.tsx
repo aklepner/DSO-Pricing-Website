@@ -26,7 +26,7 @@ const membershipBenefits = [
   { label: "Access to trusted service providers, consultants, and coaches", icon: Users },
   { label: "Consolidate all your procurement processes and vendors in one place", icon: Package },
   { label: "A centralized way to source products, services, and growth support", icon: Network },
-  { label: "CE with Seattle Study Club", icon: BookOpen },
+  { label: "CE with DentalFlix", icon: BookOpen },
 ];
 
 const audiences = [

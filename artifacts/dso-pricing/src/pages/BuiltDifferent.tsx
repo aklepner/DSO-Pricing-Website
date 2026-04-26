@@ -159,7 +159,7 @@ export default function BuiltDifferent() {
               {
                 icon: BookOpen,
                 title: "CE Credits",
-                desc: "CE through Seattle Study Club",
+                desc: "CE through DentalFlix",
               },
               {
                 icon: HeartHandshake,

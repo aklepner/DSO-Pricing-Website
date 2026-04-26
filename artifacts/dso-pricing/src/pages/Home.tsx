@@ -74,7 +74,7 @@ const faqs = [
   },
   {
     q: "How is DSO Pricing different from Smile Source or other groups?",
-    a: "Traditional groups focus on negotiated pricing and vendor access. DSO Pricing focuses on profitability, hands-on guidance, and helping you think and operate like a high-performing group. We also partner with Seattle Study Club, so you can gain CE. Most groups give you options. We help you make the right decisions.",
+    a: "Traditional groups focus on negotiated pricing and vendor access. DSO Pricing focuses on profitability, hands-on guidance, and helping you think and operate like a high-performing group. We also partner with DentalFlix, so you can gain CE. Most groups give you options. We help you make the right decisions.",
   },
   {
     q: "What does \"DSO-level pricing\" actually mean?",
@@ -223,7 +223,7 @@ export default function Home() {
                 color: ORANGE,
                 icon: Users,
                 bullets: [
-                  "CE through Seattle Study Club",
+                  "CE through DentalFlix",
                   "Network with growth-focused, like-minded dentists",
                 ],
               },
