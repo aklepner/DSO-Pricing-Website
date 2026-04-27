@@ -183,7 +183,7 @@ export default function Home() {
         <div className="max-w-6xl mx-auto text-center">
           <p className="text-sm font-black uppercase tracking-widest mb-3" style={{ color: ORANGE }}>Our Network</p>
           <h2 className="text-3xl md:text-5xl font-black text-white mb-10 uppercase" style={{ fontFamily: "'Outfit', sans-serif" }}>
-            700 Vendors. Real Savings Across<br />Your Entire Practice.
+            700+ Vendors. Real Savings Across<br />Your Entire Practice.
           </h2>
         </div>
       </section>
@@ -205,7 +205,7 @@ export default function Home() {
                 icon: DollarSign,
                 bullets: [
                   "$1,000+/month saved on crowns alone",
-                  "Access to 700 vendors across labs, aligners, implants, and more",
+                  "Access to 700+ vendors across labs, aligners, implants, and more",
                 ],
               },
               {
