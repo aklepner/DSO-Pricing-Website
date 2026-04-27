@@ -75,7 +75,7 @@ export default function Pricing() {
             <p className="text-white/30 text-sm font-semibold mb-4">Limited to the first 100 practices</p>
             <div className="flex items-start justify-center gap-1 mb-2">
               <span className="text-3xl font-bold text-white mt-3">$</span>
-              <span className="font-black text-white leading-none" style={{ fontSize: "6rem", fontFamily: "'Outfit', sans-serif" }}>399</span>
+              <span className="font-black text-white leading-none" style={{ fontSize: "6rem", fontFamily: "'Outfit', sans-serif" }}>397</span>
               <span className="text-xl text-white/50 mt-9">/mo</span>
             </div>
             <p className="text-white/40 text-lg font-bold line-through mb-6">$499/month</p>
@@ -127,7 +127,7 @@ export default function Pricing() {
             <div className="space-y-4 mb-8">
               {[
                 { label: "Save ~$50 per crown", detail: "At ~30 crowns/month = ~$1,500/month saved" },
-                { label: "Membership: $399/mo", detail: null },
+                { label: "Membership: $397/mo", detail: null },
               ].map((row, i) => (
                 <div key={i} className="flex items-start gap-4 p-5 rounded-xl border border-white/10" style={{ backgroundColor: "rgba(255,255,255,0.04)" }}>
                   <CheckCircle2 className="w-5 h-5 mt-0.5 shrink-0" style={{ color: ORANGE }} />
@@ -184,7 +184,7 @@ export default function Pricing() {
             Get In Before<br />Pricing Increases
           </h2>
           <div className="flex items-center justify-center gap-6 mb-4">
-            <p className="font-black text-white" style={{ fontSize: "3rem", fontFamily: "'Outfit', sans-serif" }}>$399<span className="text-2xl font-normal opacity-70">/mo</span></p>
+            <p className="font-black text-white" style={{ fontSize: "3rem", fontFamily: "'Outfit', sans-serif" }}>$397<span className="text-2xl font-normal opacity-70">/mo</span></p>
             <p className="text-white/50 text-2xl font-black line-through">$499/mo</p>
           </div>
           <p className="text-white/80 font-semibold mb-8">Limited only to 100 practices.</p>
