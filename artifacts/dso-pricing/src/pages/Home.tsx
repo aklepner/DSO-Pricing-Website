@@ -142,7 +142,6 @@ export default function Home() {
       >
         <div className="absolute inset-0" style={{ backgroundColor: "rgba(10,10,10,0.78)" }} />
         <div className="relative z-10 pt-48 pb-16 px-6 text-center max-w-5xl mx-auto">
-          <p className="text-xs font-black uppercase tracking-widest mb-4" style={{ color: ORANGE }}>Powered By The Backstage Pass</p>
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-white leading-[1.05] mb-6 uppercase" style={{ fontFamily: "'Outfit', sans-serif", letterSpacing: "-0.02em" }}>
             Get DSO-Level Pricing…<br />
             <span style={{ color: ORANGE }}>Without Becoming a DSO</span>
@@ -154,8 +153,8 @@ export default function Home() {
             <Button asChild size="lg" className="text-white font-black text-sm uppercase tracking-widest h-14 px-12" style={{ backgroundColor: ORANGE }} data-testid="button-join-hero">
               <a href={orderUrl} target="_blank" rel="noopener noreferrer">Lock In $397/mo</a>
             </Button>
-            <p className="text-white/45 text-sm italic">100 practices only. Then $499/mo. →{" "}
-              <a href="https://link.elijahdesmond.com/widget/booking/qRepUNdAesl5YtZoT17b" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 hover:text-white/70 transition-colors" data-testid="button-book-hero">Book a concierge call with Janelle</a>
+            <p className="text-white/45 text-sm italic">Limited to the first 100 practices. Then $499/mo. →{" "}
+              <a href="https://link.elijahdesmond.com/widget/booking/qRepUNdAesl5YtZoT17b" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 hover:text-white/70 transition-colors" data-testid="button-book-hero">Book a Business Advisor Profitability Call</a>
             </p>
           </div>
         </div>
@@ -340,7 +339,7 @@ export default function Home() {
             <Button asChild size="lg" className="text-white font-black uppercase tracking-widest h-14 px-12" style={{ backgroundColor: ORANGE }}>
               <a href={orderUrl} target="_blank" rel="noopener noreferrer">Lock In $397/Mo <ArrowRight className="ml-2 w-4 h-4" /></a>
             </Button>
-            <p className="text-white/30 text-sm mt-3">100 practices only. Then $499/mo.</p>
+            <p className="text-white/30 text-sm mt-3">Limited to the first 100 practices. Then $499/mo.</p>
           </div>
         </div>
       </section>
@@ -429,7 +428,7 @@ export default function Home() {
               <a href={orderUrl} target="_blank" rel="noopener noreferrer">Lock In $397/Mo <ArrowRight className="ml-2 w-5 h-5" /></a>
             </Button>
             <Button asChild size="lg" variant="outline" className="border-white/40 text-white hover:bg-white/15 bg-transparent text-base font-semibold px-10 h-14" data-testid="button-book-final">
-              <a href="https://link.elijahdesmond.com/widget/booking/qRepUNdAesl5YtZoT17b" target="_blank" rel="noopener noreferrer">Book a Concierge Call with Janelle</a>
+              <a href="https://link.elijahdesmond.com/widget/booking/qRepUNdAesl5YtZoT17b" target="_blank" rel="noopener noreferrer">Book a Business Advisor Profitability Call</a>
             </Button>
           </div>
         </div>

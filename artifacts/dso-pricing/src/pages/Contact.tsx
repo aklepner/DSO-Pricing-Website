@@ -111,7 +111,7 @@ export default function Contact() {
                 </p>
                 <Button asChild size="lg" className="w-full text-white font-bold" style={{ backgroundColor: ORANGE }} data-testid="button-book-fast">
                   <a href="https://link.elijahdesmond.com/widget/booking/qRepUNdAesl5YtZoT17b" target="_blank" rel="noopener noreferrer">
-                    Book a Concierge Call with Janelle <ArrowRight className="ml-2 w-4 h-4" />
+                    Book a Business Advisor Profitability Call <ArrowRight className="ml-2 w-4 h-4" />
                   </a>
                 </Button>
               </div>
