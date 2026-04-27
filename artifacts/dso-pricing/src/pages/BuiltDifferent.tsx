@@ -210,7 +210,7 @@ export default function BuiltDifferent() {
             <p className="font-black text-white" style={{ fontSize: "3rem", fontFamily: "'Outfit', sans-serif" }}>$397<span className="text-2xl font-normal opacity-70">/mo</span></p>
             <p className="text-white/50 text-2xl font-black line-through">$499/mo</p>
           </div>
-          <p className="text-white/80 text-base font-semibold mb-8">Limited only to 100 practices.</p>
+          <p className="text-white/80 text-base font-semibold mb-8">Limited to the first 100 practices.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button asChild size="lg" className="bg-white font-bold text-lg uppercase tracking-wide px-10 h-14" style={{ color: ORANGE }} data-testid="button-join-cta">
               <a href={orderUrl} target="_blank" rel="noopener noreferrer">Lock In $397/Mo <ArrowRight className="ml-2 w-5 h-5" /></a>
