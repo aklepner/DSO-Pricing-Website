@@ -15,13 +15,16 @@ interface Product {
 }
 
 const PRODUCTS: Product[] = [
-  { id: "nitrile", name: "Nitrile Gloves", unit: "Box of 100", dsoPrice: 2.80, defaultQty: 8, defaultPrice: 12 },
-  { id: "mask", name: "ASTM Level 3 Disposable Face Mask", unit: "Box of 50", dsoPrice: 4.80, defaultQty: 7, defaultPrice: 10 },
-  { id: "pouch", name: 'Self-Sealing Sterilization Pouch, 3.5" x 9"', unit: "Box of 200", dsoPrice: 5.04, defaultQty: 3, defaultPrice: 30 },
-  { id: "ejector", name: "Disposable Saliva Ejector, One Size", unit: "Box of 100", dsoPrice: 2.16, defaultQty: 5, defaultPrice: 7 },
-  { id: "crown", name: "Full Zirconia Crown", unit: "Per unit", dsoPrice: 58, defaultQty: 12, defaultPrice: 150 },
-  { id: "itero", name: "iTero Subscription", unit: "Per month", dsoPrice: 180, defaultQty: 1, defaultPrice: 360 },
-  { id: "invisalign", name: "Invisalign Comprehensive 3x3", unit: "Per case", dsoPrice: 1424.50, defaultQty: 5, defaultPrice: 1925 },
+  { id: "alginate", name: "Alginate Substitute", unit: "Per unit", dsoPrice: 42.14, defaultQty: 3, defaultPrice: 98 },
+  { id: "collagen", name: "Surgical Esthetics Collagen Plugs", unit: "Per unit", dsoPrice: 94.30, defaultQty: 3, defaultPrice: 129 },
+  { id: "pouches", name: 'Sterilization Pouches 3.5"x9"', unit: "Per box", dsoPrice: 4.81, defaultQty: 5, defaultPrice: 13 },
+  { id: "coldsterile", name: "Cold Sterile Gallon", unit: "Per gallon", dsoPrice: 17.60, defaultQty: 2, defaultPrice: 40 },
+  { id: "tartar", name: "Tartar & Stain Remover", unit: "Per unit", dsoPrice: 12.42, defaultQty: 2, defaultPrice: 23 },
+  { id: "luxatemp", name: "DMG Luxatemp", unit: "Per unit", dsoPrice: 250.80, defaultQty: 2, defaultPrice: 330 },
+  { id: "mixingtips", name: "Hexa Aqua Mixing Tips", unit: "Per box", dsoPrice: 22.50, defaultQty: 4, defaultPrice: 45 },
+  { id: "omnichroma", name: "Tokuyama Omni Chroma PLTs", unit: "Per unit", dsoPrice: 97.15, defaultQty: 2, defaultPrice: 145 },
+  { id: "syringetips", name: "House Brand Syringe Tips", unit: "Per box", dsoPrice: 7.70, defaultQty: 5, defaultPrice: 35 },
+  { id: "gloves", name: "3D Dental Nitrile Gloves (300ct)", unit: "Per box", dsoPrice: 11.66, defaultQty: 4, defaultPrice: 22 },
 ];
 
 interface RowState { qty: string; price: string; }
