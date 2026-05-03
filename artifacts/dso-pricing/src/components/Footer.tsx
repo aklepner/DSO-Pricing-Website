@@ -30,6 +30,7 @@ export default function Footer() {
                 { href: "/built-different", label: "Built Different" },
                 { href: "/pricing", label: "Pricing" },
                 { href: "/contact", label: "Contact" },
+                { href: "/calculator", label: "Savings Calculator" },
               ].map((link) => (
                 <li key={link.href}>
                   <Link href={link.href} className="text-white/50 hover:text-white transition-colors" data-testid={`footer-link-${link.label.toLowerCase().replace(" ", "-")}`}>
