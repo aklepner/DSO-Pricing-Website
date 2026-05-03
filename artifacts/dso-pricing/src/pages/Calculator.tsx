@@ -54,9 +54,14 @@ export default function Calculator() {
 
   function reset() { setRows(getDefaults()); }
 
+  function rowFor(p: Product): RowState {
+    return rows[p.id] ?? { qty: String(p.defaultQty), price: String(p.defaultPrice) };
+  }
+
   const calcs = PRODUCTS.map((p) => {
-    const qty = Math.max(0, parseFloat(rows[p.id].qty) || 0);
-    const price = Math.max(0, parseFloat(rows[p.id].price) || 0);
+    const row = rowFor(p);
+    const qty = Math.max(0, parseFloat(row.qty) || 0);
+    const price = Math.max(0, parseFloat(row.price) || 0);
     const savingsPerUnit = Math.max(0, price - p.dsoPrice);
     const pctSavings = price > 0 ? savingsPerUnit / price : 0;
     const annualized = savingsPerUnit * qty * 12;
@@ -130,7 +135,7 @@ export default function Calculator() {
                       <div className="col-span-2 flex justify-center">
                         <input
                           type="number" min="0"
-                          value={rows[product.id].qty}
+                          value={rowFor(product).qty}
                           onChange={(e) => update(product.id, "qty", e.target.value)}
                           className="w-20 h-11 text-center rounded-lg text-white font-black text-base focus:outline-none focus:ring-2 focus:ring-red-500"
                           style={{ backgroundColor: "rgba(255,255,255,0.08)", border: "1.5px solid rgba(255,255,255,0.12)" }}
@@ -140,7 +145,7 @@ export default function Calculator() {
                         <span className="text-white/40 text-sm font-bold">$</span>
                         <input
                           type="number" min="0" step="0.01"
-                          value={rows[product.id].price}
+                          value={rowFor(product).price}
                           onChange={(e) => update(product.id, "price", e.target.value)}
                           className="w-24 h-11 text-center rounded-lg text-white font-black text-base focus:outline-none focus:ring-2 focus:ring-red-500"
                           style={{ backgroundColor: "rgba(255,255,255,0.08)", border: "1.5px solid rgba(255,255,255,0.12)" }}
@@ -169,7 +174,7 @@ export default function Calculator() {
                           <p className="text-white/40 text-xs font-black uppercase tracking-widest mb-1.5">Qty / Mo</p>
                           <input
                             type="number" min="0"
-                            value={rows[product.id].qty}
+                            value={rowFor(product).qty}
                             onChange={(e) => update(product.id, "qty", e.target.value)}
                             className="w-20 h-10 text-center rounded-lg text-white font-black text-base focus:outline-none focus:ring-2 focus:ring-red-500"
                             style={{ backgroundColor: "rgba(255,255,255,0.08)", border: "1.5px solid rgba(255,255,255,0.12)" }}
@@ -182,7 +187,7 @@ export default function Calculator() {
                             <span className="text-white/40 text-sm font-bold">$</span>
                             <input
                               type="number" min="0" step="0.01"
-                              value={rows[product.id].price}
+                              value={rowFor(product).price}
                               onChange={(e) => update(product.id, "price", e.target.value)}
                               className="w-20 h-10 text-center rounded-lg text-white font-black text-base focus:outline-none focus:ring-2 focus:ring-red-500"
                               style={{ backgroundColor: "rgba(255,255,255,0.08)", border: "1.5px solid rgba(255,255,255,0.12)" }}
