@@ -30,11 +30,15 @@ export default function Vendors() {
         ]);
         if (vErr) throw vErr;
         if (cErr) throw cErr;
-        const seen = new Set<string>();
+        const seenTitles = new Set<string>();
+        const seenLogos = new Set<string>();
         const unique = (vendorData || []).filter((v) => {
-          const key = v.title.trim().toLowerCase();
-          if (seen.has(key)) return false;
-          seen.add(key);
+          const titleKey = v.title.trim().toLowerCase();
+          const logoKey = v.logo?.trim() || "";
+          if (seenTitles.has(titleKey)) return false;
+          if (logoKey && seenLogos.has(logoKey)) return false;
+          seenTitles.add(titleKey);
+          if (logoKey) seenLogos.add(logoKey);
           return true;
         });
         setVendors(unique);
