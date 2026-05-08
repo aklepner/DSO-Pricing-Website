@@ -27,7 +27,7 @@ export default function Footer() {
             <ul className="space-y-2 text-base">
               {[
                 { href: "/", label: "Home" },
-                { href: "/built-different", label: "Built Different" },
+                { href: "/built-different", label: "How It Works" },
                 { href: "/pricing", label: "Pricing" },
                 { href: "/calculator", label: "Savings Calculator" },
                 { href: "/contact", label: "Contact" },

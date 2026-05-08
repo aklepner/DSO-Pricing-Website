@@ -5,7 +5,7 @@ const logo = `${import.meta.env.BASE_URL}dso-pricing-logo.png`;
 
 const leftLinks = [
   { href: "/", label: "Home" },
-  { href: "/built-different", label: "Built Different" },
+  { href: "/built-different", label: "How It Works" },
 ];
 
 const rightLinks = [
