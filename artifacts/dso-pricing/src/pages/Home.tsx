@@ -153,10 +153,10 @@ export default function Home() {
             <Button asChild size="lg" className="text-white font-black text-sm uppercase tracking-widest h-14 px-12" style={{ backgroundColor: ORANGE }} data-testid="button-join-hero">
               <a href={orderUrl} target="_blank" rel="noopener noreferrer">Lock In $397/mo</a>
             </Button>
-            <div className="text-center">
+            <div className="flex flex-col items-center gap-0.5 text-center">
               <p className="font-bold text-white" style={{ fontSize: "15px" }}>Limited Summer Special...Normally $497</p>
-              <p className="font-bold" style={{ fontSize: "15px" }}>→{" "}
-                <a href="https://link.elijahdesmond.com/widget/booking/qRepUNdAesl5YtZoT17b" target="_blank" rel="noopener noreferrer" className="text-white underline underline-offset-2 hover:text-white/70 transition-colors" data-testid="button-book-hero">Book a Business Advisor Profitability Call</a>
+              <p className="font-bold text-white" style={{ fontSize: "15px" }}>
+                <a href="https://link.elijahdesmond.com/widget/booking/qRepUNdAesl5YtZoT17b" target="_blank" rel="noopener noreferrer" className="text-white underline underline-offset-2 hover:text-white/70 transition-colors" data-testid="button-book-hero">→ Book a Business Advisor Profitability Call</a>
               </p>
             </div>
           </div>
