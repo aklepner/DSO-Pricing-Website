@@ -40,7 +40,7 @@ export default function VendorCarousel() {
         .marquee-track {
           display: flex;
           width: max-content;
-          animation: marquee 40s linear infinite;
+          animation: marquee 80s linear infinite;
         }
         .marquee-track:hover {
           animation-play-state: paused;

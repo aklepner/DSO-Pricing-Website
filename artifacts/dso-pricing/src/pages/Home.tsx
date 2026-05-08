@@ -181,6 +181,8 @@ export default function Home() {
         </div>
       </section>
 
+      <VendorCarousel />
+
       {/* VENDOR BAND */}
       <section className="pt-16 pb-10 px-6" style={{ backgroundColor: NAVY2 }}>
         <div className="max-w-6xl mx-auto text-center">
@@ -193,7 +195,6 @@ export default function Home() {
           </Button>
         </div>
       </section>
-      <VendorCarousel />
 
       {/* SAVE / GROW / SUPPORT */}
       <section className="py-20 px-6 bg-white">
