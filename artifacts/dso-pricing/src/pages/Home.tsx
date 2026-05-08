@@ -153,7 +153,7 @@ export default function Home() {
             <Button asChild size="lg" className="text-white font-black text-sm uppercase tracking-widest h-14 px-12" style={{ backgroundColor: ORANGE }} data-testid="button-join-hero">
               <a href={orderUrl} target="_blank" rel="noopener noreferrer">Lock In $397/mo</a>
             </Button>
-            <p className="text-white/45 text-sm italic">Limited to the first 100 practices. Then $499/mo. →{" "}
+            <p className="text-white/45 text-sm italic">Limited Summer Special...Normally $497 →{" "}
               <a href="https://link.elijahdesmond.com/widget/booking/qRepUNdAesl5YtZoT17b" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 hover:text-white/70 transition-colors" data-testid="button-book-hero">Book a Business Advisor Profitability Call</a>
             </p>
           </div>
@@ -342,7 +342,7 @@ export default function Home() {
             <Button asChild size="lg" className="text-white font-black uppercase tracking-widest h-14 px-12" style={{ backgroundColor: ORANGE }}>
               <a href={orderUrl} target="_blank" rel="noopener noreferrer">Lock In $397/Mo <ArrowRight className="ml-2 w-4 h-4" /></a>
             </Button>
-            <p className="text-white/30 text-sm mt-3">Limited to the first 100 practices. Then $499/mo.</p>
+            <p className="text-white/30 text-sm mt-3">Limited Summer Special...Normally $497</p>
           </div>
         </div>
       </section>
