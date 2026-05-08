@@ -81,39 +81,6 @@ export default function Vendors() {
         </div>
       </section>
 
-      {/* CATEGORY FILTER */}
-      {!loading && !error && (
-        <section className="px-6 pb-8 sticky top-[72px] z-10" style={{ backgroundColor: NAVY2 }}>
-          <div className="max-w-7xl mx-auto">
-            <div className="flex flex-wrap gap-2 justify-center border-b border-white/10 pb-6">
-              <button
-                onClick={() => setActiveCategory("all")}
-                className="px-4 py-2 rounded-full text-xs font-black uppercase tracking-wide transition-all"
-                style={activeCategory === "all"
-                  ? { backgroundColor: ORANGE, color: "#fff" }
-                  : { backgroundColor: "rgba(255,255,255,0.07)", color: "rgba(255,255,255,0.55)" }}
-              >
-                All ({vendors.length})
-              </button>
-              {usedCategories.map((cat) => {
-                const count = vendors.filter((v) => v.categoryIds?.includes(cat.id)).length;
-                return (
-                  <button
-                    key={cat.id}
-                    onClick={() => setActiveCategory(cat.id)}
-                    className="px-4 py-2 rounded-full text-xs font-black uppercase tracking-wide transition-all"
-                    style={activeCategory === cat.id
-                      ? { backgroundColor: ORANGE, color: "#fff" }
-                      : { backgroundColor: "rgba(255,255,255,0.07)", color: "rgba(255,255,255,0.55)" }}
-                  >
-                    {cat.name} ({count})
-                  </button>
-                );
-              })}
-            </div>
-          </div>
-        </section>
-      )}
 
       {/* VENDOR GRID */}
       <section className="flex-1 px-6 pb-20" style={{ backgroundColor: NAVY }}>
