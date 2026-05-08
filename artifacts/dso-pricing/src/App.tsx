@@ -11,6 +11,7 @@ import Pricing from "@/pages/Pricing";
 import Contact from "@/pages/Contact";
 import Calculator from "@/pages/Calculator";
 import ThankYou from "@/pages/ThankYou";
+import Vendors from "@/pages/Vendors";
 import OnboardingCall from "@/pages/OnboardingCall";
 import BookingConfirmed from "@/pages/BookingConfirmed";
 
@@ -31,6 +32,7 @@ function Router() {
       <Switch>
         <Route path="/" component={Home} />
         <Route path="/built-different" component={BuiltDifferent} />
+        <Route path="/built-different/vendors" component={Vendors} />
         <Route path="/pricing" component={Pricing} />
         <Route path="/contact" component={Contact} />
         <Route path="/calculator" component={Calculator} />
