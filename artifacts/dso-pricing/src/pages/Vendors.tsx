@@ -138,19 +138,6 @@ function VendorCard({ vendor }: { vendor: Vendor }) {
       <p className="text-white text-xs font-black text-center uppercase leading-tight tracking-wide">
         {vendor.title.trim()}
       </p>
-      {href && (
-        <a
-          href={href}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="absolute inset-0 rounded-2xl flex items-end justify-end p-2 opacity-0 group-hover:opacity-100 transition-opacity"
-          aria-label={`Visit ${vendor.title.trim()}`}
-        >
-          <span className="rounded-full p-1" style={{ backgroundColor: ORANGE }}>
-            <ExternalLink className="w-3 h-3 text-white" />
-          </span>
-        </a>
-      )}
     </div>
   );
 }
