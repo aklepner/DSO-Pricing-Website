@@ -122,12 +122,14 @@ function VendorCard({ vendor }: { vendor: Vendor }) {
       style={{ backgroundColor: "rgba(255,255,255,0.04)", minHeight: "140px" }}
     >
       {vendor.logo ? (
-        <img
-          src={vendor.logo}
-          alt={vendor.title.trim()}
-          className="w-full h-16 object-contain mb-3"
-          onError={(e) => { (e.target as HTMLImageElement).style.display = "none"; }}
-        />
+        <div className="w-full h-16 mb-3 rounded-lg flex items-center justify-center p-2" style={{ backgroundColor: "#ffffff" }}>
+          <img
+            src={vendor.logo}
+            alt={vendor.title.trim()}
+            className="w-full h-full object-contain"
+            onError={(e) => { (e.target as HTMLImageElement).parentElement!.style.display = "none"; }}
+          />
+        </div>
       ) : (
         <div className="w-16 h-16 rounded-xl flex items-center justify-center mb-3" style={{ backgroundColor: "rgba(221,4,42,0.15)" }}>
           <span className="text-white font-black text-lg">{vendor.title.trim().charAt(0)}</span>
