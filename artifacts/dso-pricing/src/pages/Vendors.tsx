@@ -30,7 +30,14 @@ export default function Vendors() {
         ]);
         if (vErr) throw vErr;
         if (cErr) throw cErr;
-        setVendors(vendorData || []);
+        const seen = new Set<string>();
+        const unique = (vendorData || []).filter((v) => {
+          const key = v.title.trim().toLowerCase();
+          if (seen.has(key)) return false;
+          seen.add(key);
+          return true;
+        });
+        setVendors(unique);
         setCategories(catData || []);
       } catch (e: any) {
         setError(e.message || "Failed to load vendors");
