@@ -74,7 +74,7 @@ const faqs = [
     a: "No. Most buying groups focus on discounts. DSO Pricing goes further by helping you choose the right vendors, implement changes that improve margins, and get guidance from operators who have scaled practices.",
   },
   {
-    q: "How is DSO Pricing different from Smile Source or other groups?",
+    q: "How is DSO Pricing different from other groups?",
     a: "Traditional groups focus on negotiated pricing and vendor access. DSO Pricing focuses on profitability, hands-on guidance, and helping you think and operate like a high-performing group. We also partner with DentalFlix, so you can gain CE. Most groups give you options. We help you make the right decisions.",
   },
   {
