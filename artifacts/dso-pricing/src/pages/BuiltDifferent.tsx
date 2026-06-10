@@ -207,13 +207,13 @@ export default function BuiltDifferent() {
             Get In Before<br />Pricing Increases
           </h2>
           <div className="flex items-center justify-center gap-6 mb-4">
-            <p className="font-black text-white" style={{ fontSize: "3rem", fontFamily: "'Outfit', sans-serif" }}>$397<span className="text-2xl font-normal opacity-70">/mo</span></p>
-            <p className="text-white/50 text-2xl font-black line-through">$499/mo</p>
+            <p className="font-black text-white" style={{ fontSize: "3rem", fontFamily: "'Outfit', sans-serif" }}>$297<span className="text-2xl font-normal opacity-70">/mo</span></p>
+            <p className="text-white/50 text-2xl font-black line-through">$797/mo</p>
           </div>
           <p className="text-white/80 text-base font-semibold mb-8">Limited to the first 100 practices.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button asChild size="lg" className="bg-white font-bold text-lg uppercase tracking-wide px-10 h-14" style={{ color: ORANGE }} data-testid="button-join-cta">
-              <a href={orderUrl} target="_blank" rel="noopener noreferrer">Lock In $397/Mo <ArrowRight className="ml-2 w-5 h-5" /></a>
+              <a href={orderUrl} target="_blank" rel="noopener noreferrer">Lock In $297/Mo <ArrowRight className="ml-2 w-5 h-5" /></a>
             </Button>
             <Button asChild size="lg" variant="outline" className="border-white/40 text-white hover:bg-white/15 bg-transparent text-base font-semibold px-10 h-14" data-testid="button-book-cta">
               <a href="https://link.elijahdesmond.com/widget/booking/qRepUNdAesl5YtZoT17b" target="_blank" rel="noopener noreferrer">Book a Business Advisor Profitability Call</a>
