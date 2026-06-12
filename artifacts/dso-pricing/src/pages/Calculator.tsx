@@ -251,7 +251,7 @@ export default function Calculator() {
                 </p>
 
                 <a
-                  href="https://link.elijahdesmond.com/widget/booking/qRepUNdAesl5YtZoT17b"
+                  href="https://link.backstagedentistry.com/widget/bookings/dso-pricing-calendar"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block w-full text-center text-white font-black text-sm uppercase tracking-widest py-4 rounded-xl transition-opacity hover:opacity-80"

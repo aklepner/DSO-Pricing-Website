@@ -60,7 +60,7 @@ export default function Pricing() {
               <a href={orderUrl} target="_blank" rel="noopener noreferrer">Lock In Your Savings</a>
             </Button>
             <Button asChild size="lg" variant="outline" className="border-white/25 text-white hover:bg-white/10 bg-transparent h-14 px-10 font-semibold">
-              <a href="https://link.elijahdesmond.com/widget/booking/qRepUNdAesl5YtZoT17b" target="_blank" rel="noopener noreferrer">Book a Business Advisor Profitability Call</a>
+              <a href="https://link.backstagedentistry.com/widget/bookings/dso-pricing-calendar" target="_blank" rel="noopener noreferrer">Book a Business Advisor Profitability Call</a>
             </Button>
           </div>
         </div>
@@ -193,7 +193,7 @@ export default function Pricing() {
               <a href={orderUrl} target="_blank" rel="noopener noreferrer">Lock In Your Savings <ArrowRight className="ml-2 w-5 h-5" /></a>
             </Button>
             <Button asChild size="lg" variant="outline" className="border-white/40 text-white hover:bg-white/15 bg-transparent text-base font-semibold px-10 h-14">
-              <a href="https://link.elijahdesmond.com/widget/booking/qRepUNdAesl5YtZoT17b" target="_blank" rel="noopener noreferrer">Book a Business Advisor Profitability Call</a>
+              <a href="https://link.backstagedentistry.com/widget/bookings/dso-pricing-calendar" target="_blank" rel="noopener noreferrer">Book a Business Advisor Profitability Call</a>
             </Button>
           </div>
           <p className="text-white/60 text-sm mt-5 italic">Most members cover the cost with one change.</p>

@@ -216,7 +216,7 @@ export default function BuiltDifferent() {
               <a href={orderUrl} target="_blank" rel="noopener noreferrer">Lock In $297/Mo <ArrowRight className="ml-2 w-5 h-5" /></a>
             </Button>
             <Button asChild size="lg" variant="outline" className="border-white/40 text-white hover:bg-white/15 bg-transparent text-base font-semibold px-10 h-14" data-testid="button-book-cta">
-              <a href="https://link.elijahdesmond.com/widget/booking/qRepUNdAesl5YtZoT17b" target="_blank" rel="noopener noreferrer">Book a Business Advisor Profitability Call</a>
+              <a href="https://link.backstagedentistry.com/widget/bookings/dso-pricing-calendar" target="_blank" rel="noopener noreferrer">Book a Business Advisor Profitability Call</a>
             </Button>
           </div>
           <p className="text-white/60 text-sm mt-5 italic">Most members cover the cost with one change.</p>
