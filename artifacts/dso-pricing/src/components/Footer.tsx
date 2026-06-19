@@ -65,23 +65,9 @@ export default function Footer() {
                 className="h-20 w-auto"
               />
             </div>
-            <p className="text-base leading-relaxed text-white/50 mb-6">
+            <p className="text-base leading-relaxed text-white/50">
               A growth leverage platform for dental practices. Built to protect margins and scale smarter.
             </p>
-            <div className="flex items-center gap-4">
-              {socials.map((s) => (
-                <a
-                  key={s.label}
-                  href={s.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={s.label}
-                  className="text-white/50 hover:text-white transition-colors"
-                >
-                  {s.icon}
-                </a>
-              ))}
-            </div>
           </div>
           <div>
             <p className="text-white/90 font-semibold text-sm mb-4 uppercase tracking-wider">Navigation</p>
@@ -104,12 +90,25 @@ export default function Footer() {
           </div>
           <div>
             <p className="text-white/90 font-semibold text-sm mb-4 uppercase tracking-wider">Contact</p>
-            <p className="text-base">
+            <p className="text-base mb-4">
               <a href="mailto:hello@dsopricing.com" className="text-white/50 hover:text-white transition-colors" data-testid="footer-email">
                 hello@dsopricing.com
               </a>
             </p>
-            <p className="text-sm mt-1 text-white/40">Response within 1–2 business days</p>
+            <div className="flex items-center gap-4">
+              {socials.map((s) => (
+                <a
+                  key={s.label}
+                  href={s.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={s.label}
+                  className="text-white/50 hover:text-white transition-colors"
+                >
+                  {s.icon}
+                </a>
+              ))}
+            </div>
           </div>
         </div>
         <div className="border-t border-white/10 pt-6 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-white/40">
