@@ -95,7 +95,7 @@ export default function Footer() {
                 hello@dsopricing.com
               </a>
             </p>
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-4 mb-4">
               {socials.map((s) => (
                 <a
                   key={s.label}
@@ -109,6 +109,15 @@ export default function Footer() {
                 </a>
               ))}
             </div>
+            <a
+              href="https://www.dentira.com/login"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block px-5 py-2 rounded-lg text-white text-sm font-black uppercase tracking-wide transition-opacity hover:opacity-80"
+              style={{ backgroundColor: ORANGE }}
+            >
+              Login to DSO Pricing
+            </a>
           </div>
         </div>
         <div className="border-t border-white/10 pt-6 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-white/40">
