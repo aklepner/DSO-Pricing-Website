@@ -160,6 +160,7 @@ export default function Home() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center h-14 px-8 rounded-lg text-white text-sm font-black uppercase tracking-widest border-2 border-white/40 hover:border-white transition-colors"
+                style={{ backgroundColor: "rgba(0,0,0,0.8)" }}
               >
                 Login to DSO Pricing
               </a>
