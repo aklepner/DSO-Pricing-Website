@@ -12,6 +12,7 @@ const leftLinks = [
     label: "How It Works",
     children: [
       { href: "/built-different/vendors", label: "Vendors" },
+      { href: "/blog", label: "Blog" },
     ],
   },
 ];
@@ -25,6 +26,7 @@ const allLinks = [
   { href: "/", label: "Home" },
   { href: "/built-different", label: "How It Works" },
   { href: "/built-different/vendors", label: "Vendors" },
+  { href: "/blog", label: "Blog" },
   { href: "/pricing", label: "Pricing" },
   { href: "/contact", label: "Contact" },
 ];

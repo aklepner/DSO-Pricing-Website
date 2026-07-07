@@ -28,3 +28,16 @@ export interface Category {
   id: string;
   name: string;
 }
+
+export interface BlogPost {
+  id: string;
+  title: string;
+  slug: string;
+  excerpt: string | null;
+  content: string | null;
+  cover_image: string | null;
+  author: string | null;
+  published_at: string;
+  created_at: string;
+  published: boolean;
+}

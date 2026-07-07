@@ -76,6 +76,7 @@ export default function Footer() {
                 { href: "/", label: "Home" },
                 { href: "/built-different", label: "How It Works" },
                 { href: "/built-different/vendors", label: "Vendors" },
+                { href: "/blog", label: "Blog" },
                 { href: "/pricing", label: "Pricing" },
                 { href: "/calculator", label: "Savings Calculator" },
                 { href: "/contact", label: "Contact" },
