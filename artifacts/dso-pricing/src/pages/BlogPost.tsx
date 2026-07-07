@@ -28,6 +28,7 @@ export default function BlogPost() {
           .select("*")
           .eq("slug", slug)
           .eq("published", true)
+          .lte("published_at", new Date().toISOString())
           .single();
         if (error || !data) { setNotFound(true); return; }
         setPost(data);

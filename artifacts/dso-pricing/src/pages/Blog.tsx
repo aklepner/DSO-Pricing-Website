@@ -24,6 +24,7 @@ export default function Blog() {
           .from("posts")
           .select("id,title,slug,excerpt,cover_image,author,published_at")
           .eq("published", true)
+          .lte("published_at", new Date().toISOString())
           .order("published_at", { ascending: false });
         if (err) throw err;
         setPosts(data || []);
