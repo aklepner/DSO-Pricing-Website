@@ -24,6 +24,7 @@ export default function OnboardingCall() {
   return (
     <div className="min-h-screen flex flex-col" style={{ backgroundColor: NAVY2 }}>
       <Navbar />
+
       {/* HEADER */}
       <section className="pt-40 pb-12 px-6 text-center" style={{ backgroundColor: NAVY2 }}>
         <div className="max-w-3xl mx-auto">
@@ -31,27 +32,29 @@ export default function OnboardingCall() {
             You're Almost There
           </p>
           <h1
-            className="md:text-6xl font-black text-white uppercase mb-5 text-[30px]"
+            className="text-5xl md:text-6xl font-black text-white uppercase leading-[1.05] mb-5"
             style={{ fontFamily: "'Outfit', sans-serif", letterSpacing: "-0.02em" }}
           >
             Book Your <span style={{ color: ORANGE }}>Onboarding Call</span>
           </h1>
-          <p className="text-white/60 text-[18px]">
-            Please fill out the form below and book a time that works within your schedule.
+          <p className="text-white/60 text-xl leading-relaxed">
+            Pick a time that works for you. We'll get you set up, walk you through the platform, and start unlocking your savings.
           </p>
         </div>
       </section>
+
       {/* CALENDAR EMBED */}
       <section className="flex-1 px-6 pb-20" style={{ backgroundColor: NAVY2 }}>
         <div className="max-w-4xl mx-auto rounded-2xl overflow-hidden border border-white/10" style={{ backgroundColor: "rgba(255,255,255,0.03)" }}>
           <iframe
-            src="https://go.dsopricing.com/widget/booking/ON0vOBuxWcGIF263CqMH"
+            src="https://go.dsopricing.com/widget/booking/qRepUNdAesl5YtZoT17b"
             style={{ width: "100%", border: "none", overflow: "hidden", minHeight: "700px" }}
             scrolling="no"
-            id="ON0vOBuxWcGIF263CqMH_1784805859632"
+            id="qRepUNdAesl5YtZoT17b_1776980425527"
           />
         </div>
       </section>
+
       <Footer />
     </div>
   );

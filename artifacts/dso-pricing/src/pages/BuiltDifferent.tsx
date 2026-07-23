@@ -35,7 +35,7 @@ export default function BuiltDifferent() {
       >
         <div className="absolute inset-0" style={{ backgroundColor: "rgba(10,10,10,0.78)" }} />
         <div className="relative z-10 pt-52 pb-20 px-6 max-w-6xl mx-auto">
-          <p className="text-sm font-black uppercase tracking-widest mb-5" style={{ color: ORANGE }}>How It Works</p>
+          <p className="text-sm font-black uppercase tracking-widest mb-5" style={{ color: ORANGE }}>Built Different</p>
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-white leading-[1.05] mb-6 uppercase" style={{ fontFamily: "'Outfit', sans-serif", letterSpacing: "-0.02em" }}>
             Why DSO Pricing<br />
             <span style={{ color: ORANGE }}>Is Different</span>
@@ -159,7 +159,7 @@ export default function BuiltDifferent() {
               {
                 icon: BookOpen,
                 title: "CE Credits",
-                desc: "CE through DentalFlix",
+                desc: "CE through Seattle Study Club",
               },
               {
                 icon: HeartHandshake,
@@ -207,16 +207,16 @@ export default function BuiltDifferent() {
             Get In Before<br />Pricing Increases
           </h2>
           <div className="flex items-center justify-center gap-6 mb-4">
-            <p className="font-black text-white" style={{ fontSize: "3rem", fontFamily: "'Outfit', sans-serif" }}>$297<span className="text-2xl font-normal opacity-70">/mo</span></p>
-            <p className="text-white/50 text-2xl font-black line-through">$797/mo</p>
+            <p className="font-black text-white" style={{ fontSize: "3rem", fontFamily: "'Outfit', sans-serif" }}>$399<span className="text-2xl font-normal opacity-70">/mo</span></p>
+            <p className="text-white/50 text-2xl font-black line-through">$499/mo</p>
           </div>
-          <p className="text-white/80 text-base font-semibold mb-8">Limited to the first 100 practices.</p>
+          <p className="text-white/80 text-base font-semibold mb-8">Limited only to 100 practices.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button asChild size="lg" className="bg-white font-bold text-lg uppercase tracking-wide px-10 h-14" style={{ color: ORANGE }} data-testid="button-join-cta">
-              <a href={orderUrl} target="_blank" rel="noopener noreferrer">Lock In $297/Mo <ArrowRight className="ml-2 w-5 h-5" /></a>
+              <a href={orderUrl} target="_blank" rel="noopener noreferrer">Lock In $399/Mo <ArrowRight className="ml-2 w-5 h-5" /></a>
             </Button>
             <Button asChild size="lg" variant="outline" className="border-white/40 text-white hover:bg-white/15 bg-transparent text-base font-semibold px-10 h-14" data-testid="button-book-cta">
-              <a href="https://link.backstagedentistry.com/widget/bookings/dso-pricing-calendar" target="_blank" rel="noopener noreferrer">Book a Business Advisor Profitability Call</a>
+              <a href="https://link.elijahdesmond.com/widget/booking/qRepUNdAesl5YtZoT17b" target="_blank" rel="noopener noreferrer">Book a Concierge Call with Janelle</a>
             </Button>
           </div>
           <p className="text-white/60 text-sm mt-5 italic">Most members cover the cost with one change.</p>

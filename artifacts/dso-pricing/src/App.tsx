@@ -11,12 +11,8 @@ import Pricing from "@/pages/Pricing";
 import Contact from "@/pages/Contact";
 import Calculator from "@/pages/Calculator";
 import ThankYou from "@/pages/ThankYou";
-import Vendors from "@/pages/Vendors";
 import OnboardingCall from "@/pages/OnboardingCall";
 import BookingConfirmed from "@/pages/BookingConfirmed";
-import OnboardingCallConfirmed from "@/pages/OnboardingCallConfirmed";
-import Blog from "@/pages/Blog";
-import BlogPost from "@/pages/BlogPost";
 
 const queryClient = new QueryClient();
 
@@ -35,16 +31,12 @@ function Router() {
       <Switch>
         <Route path="/" component={Home} />
         <Route path="/built-different" component={BuiltDifferent} />
-        <Route path="/built-different/vendors" component={Vendors} />
         <Route path="/pricing" component={Pricing} />
         <Route path="/contact" component={Contact} />
         <Route path="/calculator" component={Calculator} />
         <Route path="/thank-you" component={ThankYou} />
         <Route path="/onboarding-call" component={OnboardingCall} />
         <Route path="/booking-confirmed" component={BookingConfirmed} />
-        <Route path="/onboarding-call-confirmed" component={OnboardingCallConfirmed} />
-        <Route path="/blog" component={Blog} />
-        <Route path="/blog/:slug" component={BlogPost} />
         <Route component={NotFound} />
       </Switch>
     </>

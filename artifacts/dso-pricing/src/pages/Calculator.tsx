@@ -15,16 +15,13 @@ interface Product {
 }
 
 const PRODUCTS: Product[] = [
-  { id: "alginate", name: "Alginate Substitute", unit: "Per unit", dsoPrice: 42.14, defaultQty: 3, defaultPrice: 98 },
-  { id: "collagen", name: "Surgical Esthetics Collagen Plugs", unit: "Per unit", dsoPrice: 94.30, defaultQty: 3, defaultPrice: 129 },
-  { id: "pouches", name: 'Sterilization Pouches 3.5"x9"', unit: "Per box", dsoPrice: 4.81, defaultQty: 5, defaultPrice: 13 },
-  { id: "coldsterile", name: "Cold Sterile Gallon", unit: "Per gallon", dsoPrice: 17.60, defaultQty: 2, defaultPrice: 40 },
-  { id: "tartar", name: "Tartar & Stain Remover", unit: "Per unit", dsoPrice: 12.42, defaultQty: 2, defaultPrice: 23 },
-  { id: "luxatemp", name: "DMG Luxatemp", unit: "Per unit", dsoPrice: 250.80, defaultQty: 2, defaultPrice: 330 },
-  { id: "mixingtips", name: "Hexa Aqua Mixing Tips", unit: "Per box", dsoPrice: 22.50, defaultQty: 4, defaultPrice: 45 },
-  { id: "omnichroma", name: "Tokuyama Omni Chroma PLTs", unit: "Per unit", dsoPrice: 97.15, defaultQty: 2, defaultPrice: 145 },
-  { id: "syringetips", name: "House Brand Syringe Tips", unit: "Per box", dsoPrice: 7.70, defaultQty: 5, defaultPrice: 35 },
-  { id: "gloves", name: "3D Dental Nitrile Gloves (300ct)", unit: "Per box", dsoPrice: 11.66, defaultQty: 4, defaultPrice: 22 },
+  { id: "nitrile", name: "Nitrile Gloves", unit: "Box of 100", dsoPrice: 2.80, defaultQty: 8, defaultPrice: 12 },
+  { id: "mask", name: "ASTM Level 3 Disposable Face Mask", unit: "Box of 50", dsoPrice: 4.80, defaultQty: 7, defaultPrice: 10 },
+  { id: "pouch", name: 'Self-Sealing Sterilization Pouch, 3.5" x 9"', unit: "Box of 200", dsoPrice: 5.04, defaultQty: 3, defaultPrice: 30 },
+  { id: "ejector", name: "Disposable Saliva Ejector, One Size", unit: "Box of 100", dsoPrice: 2.16, defaultQty: 5, defaultPrice: 7 },
+  { id: "crown", name: "Full Zirconia Crown", unit: "Per unit", dsoPrice: 58, defaultQty: 12, defaultPrice: 150 },
+  { id: "itero", name: "iTero Subscription", unit: "Per month", dsoPrice: 180, defaultQty: 1, defaultPrice: 360 },
+  { id: "invisalign", name: "Invisalign Comprehensive 3x3", unit: "Per case", dsoPrice: 1424.50, defaultQty: 5, defaultPrice: 1925 },
 ];
 
 interface RowState { qty: string; price: string; }
@@ -54,14 +51,9 @@ export default function Calculator() {
 
   function reset() { setRows(getDefaults()); }
 
-  function rowFor(p: Product): RowState {
-    return rows[p.id] ?? { qty: String(p.defaultQty), price: String(p.defaultPrice) };
-  }
-
   const calcs = PRODUCTS.map((p) => {
-    const row = rowFor(p);
-    const qty = Math.max(0, parseFloat(row.qty) || 0);
-    const price = Math.max(0, parseFloat(row.price) || 0);
+    const qty = Math.max(0, parseFloat(rows[p.id].qty) || 0);
+    const price = Math.max(0, parseFloat(rows[p.id].price) || 0);
     const savingsPerUnit = Math.max(0, price - p.dsoPrice);
     const pctSavings = price > 0 ? savingsPerUnit / price : 0;
     const annualized = savingsPerUnit * qty * 12;
@@ -135,7 +127,7 @@ export default function Calculator() {
                       <div className="col-span-2 flex justify-center">
                         <input
                           type="number" min="0"
-                          value={rowFor(product).qty}
+                          value={rows[product.id].qty}
                           onChange={(e) => update(product.id, "qty", e.target.value)}
                           className="w-20 h-11 text-center rounded-lg text-white font-black text-base focus:outline-none focus:ring-2 focus:ring-red-500"
                           style={{ backgroundColor: "rgba(255,255,255,0.08)", border: "1.5px solid rgba(255,255,255,0.12)" }}
@@ -145,7 +137,7 @@ export default function Calculator() {
                         <span className="text-white/40 text-sm font-bold">$</span>
                         <input
                           type="number" min="0" step="0.01"
-                          value={rowFor(product).price}
+                          value={rows[product.id].price}
                           onChange={(e) => update(product.id, "price", e.target.value)}
                           className="w-24 h-11 text-center rounded-lg text-white font-black text-base focus:outline-none focus:ring-2 focus:ring-red-500"
                           style={{ backgroundColor: "rgba(255,255,255,0.08)", border: "1.5px solid rgba(255,255,255,0.12)" }}
@@ -174,7 +166,7 @@ export default function Calculator() {
                           <p className="text-white/40 text-xs font-black uppercase tracking-widest mb-1.5">Qty / Mo</p>
                           <input
                             type="number" min="0"
-                            value={rowFor(product).qty}
+                            value={rows[product.id].qty}
                             onChange={(e) => update(product.id, "qty", e.target.value)}
                             className="w-20 h-10 text-center rounded-lg text-white font-black text-base focus:outline-none focus:ring-2 focus:ring-red-500"
                             style={{ backgroundColor: "rgba(255,255,255,0.08)", border: "1.5px solid rgba(255,255,255,0.12)" }}
@@ -187,7 +179,7 @@ export default function Calculator() {
                             <span className="text-white/40 text-sm font-bold">$</span>
                             <input
                               type="number" min="0" step="0.01"
-                              value={rowFor(product).price}
+                              value={rows[product.id].price}
                               onChange={(e) => update(product.id, "price", e.target.value)}
                               className="w-20 h-10 text-center rounded-lg text-white font-black text-base focus:outline-none focus:ring-2 focus:ring-red-500"
                               style={{ backgroundColor: "rgba(255,255,255,0.08)", border: "1.5px solid rgba(255,255,255,0.12)" }}
@@ -251,7 +243,7 @@ export default function Calculator() {
                 </p>
 
                 <a
-                  href="https://link.backstagedentistry.com/widget/bookings/dso-pricing-calendar"
+                  href="https://link.elijahdesmond.com/widget/booking/qRepUNdAesl5YtZoT17b"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block w-full text-center text-white font-black text-sm uppercase tracking-widest py-4 rounded-xl transition-opacity hover:opacity-80"
