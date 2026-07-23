@@ -1,4 +1,5 @@
 import { Link } from "wouter";
+import VendorCarousel from "@/components/VendorCarousel";
 import { Button } from "@/components/ui/button";
 import { CheckCircle2, ArrowRight, Star, ChevronDown, ChevronUp, DollarSign, Users, TrendingUp, Shield, Zap, BarChart3, Package, Network, Lightbulb, HeartHandshake, Award, Target } from "lucide-react";
 import { useState } from "react";
@@ -62,7 +63,7 @@ const testimonials = [
 const faqs = [
   {
     q: "Does DSO Pricing actually pay for itself?",
-    a: "Yes. Most members cover the cost with one change.\n\nFor example, many practices save around $50 per crown. At approximately 30 crowns per month, that's $1,500 per month in savings.\n\nWith a $399 monthly membership, that's $1,100 per month back in your practice from one vendor alone — and that's before we look at aligners, implants, or supplies.",
+    a: "Yes. Most members cover the cost with one change.\n\nFor example, many practices save around $50 per crown. At approximately 30 crowns per month, that's $1,500 per month in savings.\n\nWith a $297 monthly membership, that's $1,200 per month back in your practice from one vendor alone — and that's before we look at aligners, implants, or supplies.",
   },
   {
     q: "How much can I realistically save on overhead?",
@@ -73,8 +74,8 @@ const faqs = [
     a: "No. Most buying groups focus on discounts. DSO Pricing goes further by helping you choose the right vendors, implement changes that improve margins, and get guidance from operators who have scaled practices.",
   },
   {
-    q: "How is DSO Pricing different from Smile Source or other groups?",
-    a: "Traditional groups focus on negotiated pricing and vendor access. DSO Pricing focuses on profitability, hands-on guidance, and helping you think and operate like a high-performing group. We also partner with Seattle Study Club, so you can gain CE. Most groups give you options. We help you make the right decisions.",
+    q: "How is DSO Pricing different from other groups?",
+    a: "Traditional groups focus on negotiated pricing and vendor access. DSO Pricing focuses on profitability, hands-on guidance, and helping you think and operate like a high-performing group. We also partner with DentalFlix, so you can gain CE. Most groups give you options. We help you make the right decisions.",
   },
   {
     q: "What does \"DSO-level pricing\" actually mean?",
@@ -142,7 +143,6 @@ export default function Home() {
       >
         <div className="absolute inset-0" style={{ backgroundColor: "rgba(10,10,10,0.78)" }} />
         <div className="relative z-10 pt-48 pb-16 px-6 text-center max-w-5xl mx-auto">
-          <p className="text-xs font-black uppercase tracking-widest mb-4" style={{ color: ORANGE }}>Powered By The Backstage Pass</p>
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-white leading-[1.05] mb-6 uppercase" style={{ fontFamily: "'Outfit', sans-serif", letterSpacing: "-0.02em" }}>
             Get DSO-Level Pricing…<br />
             <span style={{ color: ORANGE }}>Without Becoming a DSO</span>
@@ -151,12 +151,26 @@ export default function Home() {
             Most dentists overpay for overhead. DSO Pricing fixes that and helps you operate like a high-performing group.
           </p>
           <div className="flex flex-col items-center gap-3">
-            <Button asChild size="lg" className="text-white font-black text-sm uppercase tracking-widest h-14 px-12" style={{ backgroundColor: ORANGE }} data-testid="button-join-hero">
-              <a href={orderUrl} target="_blank" rel="noopener noreferrer">Lock In $399/mo</a>
-            </Button>
-            <p className="text-white/45 text-sm italic">100 practices only. Then $499/mo. →{" "}
-              <a href="https://link.elijahdesmond.com/widget/booking/qRepUNdAesl5YtZoT17b" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 hover:text-white/70 transition-colors" data-testid="button-book-hero">Book a concierge call with Janelle</a>
-            </p>
+            <div className="flex flex-col sm:flex-row items-center gap-3">
+              <Button asChild size="lg" className="text-white font-black text-sm uppercase tracking-widest h-14 px-12" style={{ backgroundColor: ORANGE }} data-testid="button-join-hero">
+                <a href={orderUrl} target="_blank" rel="noopener noreferrer">Lock In $297/mo</a>
+              </Button>
+              <a
+                href="https://www.dentira.com/login"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center h-14 px-8 rounded-lg text-white text-sm font-black uppercase tracking-widest border-2 border-white/40 hover:border-white transition-colors"
+                style={{ backgroundColor: "rgba(0,0,0,0.8)" }}
+              >
+                Login to DSO Pricing
+              </a>
+            </div>
+            <div className="flex flex-col items-center gap-0.5 text-center">
+              <p className="font-bold text-white" style={{ fontSize: "15px" }}>Limited Summer Special...Normally $797</p>
+              <p className="font-bold text-white" style={{ fontSize: "15px" }}>
+                <a href="https://link.backstagedentistry.com/widget/bookings/dso-pricing-calendar" target="_blank" rel="noopener noreferrer" className="text-white underline underline-offset-2 hover:text-white/70 transition-colors" data-testid="button-book-hero">→ Book a Business Advisor Profitability Call</a>
+              </p>
+            </div>
           </div>
         </div>
 
@@ -178,13 +192,18 @@ export default function Home() {
         </div>
       </section>
 
+      <VendorCarousel />
+
       {/* VENDOR BAND */}
-      <section className="py-16 px-6" style={{ backgroundColor: NAVY2 }}>
+      <section className="pt-16 pb-10 px-6" style={{ backgroundColor: NAVY2 }}>
         <div className="max-w-6xl mx-auto text-center">
           <p className="text-sm font-black uppercase tracking-widest mb-3" style={{ color: ORANGE }}>Our Network</p>
-          <h2 className="text-3xl md:text-5xl font-black text-white mb-10 uppercase" style={{ fontFamily: "'Outfit', sans-serif" }}>
-            700 Vendors. Real Savings Across<br />Your Entire Practice.
+          <h2 className="text-3xl md:text-5xl font-black text-white mb-8 uppercase" style={{ fontFamily: "'Outfit', sans-serif" }}>
+            More Than a Buying Group.<br />Vetted Vendors. Strategic Guidance.<br />Profitable Growth.
           </h2>
+          <Button asChild size="lg" className="text-white font-black text-sm uppercase tracking-widest h-14 px-10" style={{ backgroundColor: ORANGE }}>
+            <Link href="/calculator">Calculate Your Savings <ArrowRight className="ml-2 w-4 h-4" /></Link>
+          </Button>
         </div>
       </section>
 
@@ -205,7 +224,7 @@ export default function Home() {
                 icon: DollarSign,
                 bullets: [
                   "$1,000+/month saved on crowns alone",
-                  "Access to 700 vendors across labs, aligners, implants, and more",
+                  "Access to 700+ vendors across labs, aligners, implants, and more",
                 ],
               },
               {
@@ -223,7 +242,7 @@ export default function Home() {
                 color: ORANGE,
                 icon: Users,
                 bullets: [
-                  "CE through Seattle Study Club",
+                  "CE through DentalFlix",
                   "Network with growth-focused, like-minded dentists",
                 ],
               },
@@ -314,7 +333,7 @@ export default function Home() {
             <div className="space-y-4 mb-8">
               {[
                 { label: "Save ~$50 per crown", detail: "At ~30 crowns/month = ~$1,500/month saved" },
-                { label: "Membership: $399/mo", detail: null },
+                { label: "Membership: $297/mo", detail: null },
               ].map((row, i) => (
                 <div key={i} className="flex items-start gap-4 p-5 rounded-xl border border-white/10" style={{ backgroundColor: "rgba(255,255,255,0.04)" }}>
                   <CheckCircle2 className="w-5 h-5 mt-0.5 shrink-0" style={{ color: ORANGE }} />
@@ -338,9 +357,9 @@ export default function Home() {
           </div>
           <div className="text-center">
             <Button asChild size="lg" className="text-white font-black uppercase tracking-widest h-14 px-12" style={{ backgroundColor: ORANGE }}>
-              <a href={orderUrl} target="_blank" rel="noopener noreferrer">Lock In $399/Mo <ArrowRight className="ml-2 w-4 h-4" /></a>
+              <a href={orderUrl} target="_blank" rel="noopener noreferrer">Lock In $297/Mo <ArrowRight className="ml-2 w-4 h-4" /></a>
             </Button>
-            <p className="text-white/30 text-sm mt-3">100 practices only. Then $499/mo.</p>
+            <p className="text-white/30 text-sm mt-3">Limited Summer Special...Normally $797</p>
           </div>
         </div>
       </section>
@@ -386,12 +405,12 @@ export default function Home() {
             Get In Before<br />Pricing Increases
           </h2>
           <div className="flex items-center justify-center gap-6 mb-4">
-            <p className="font-black text-white" style={{ fontSize: "3rem", fontFamily: "'Outfit', sans-serif" }}>$399<span className="text-2xl font-normal opacity-70">/mo</span></p>
-            <p className="text-white/50 text-2xl font-black line-through">$499/mo</p>
+            <p className="font-black text-white" style={{ fontSize: "3rem", fontFamily: "'Outfit', sans-serif" }}>$297<span className="text-2xl font-normal opacity-70">/mo</span></p>
+            <p className="text-white/50 text-2xl font-black line-through">$797/mo</p>
           </div>
-          <p className="text-white/80 text-base font-semibold mb-8">Limited only to 100 practices.</p>
+          <p className="text-white/80 text-base font-semibold mb-8">Limited to the first 100 practices.</p>
           <Button asChild size="lg" className="bg-white font-black text-sm uppercase tracking-widest h-14 px-12" style={{ color: ORANGE }}>
-            <a href={orderUrl} target="_blank" rel="noopener noreferrer">Lock In $399/Mo</a>
+            <a href={orderUrl} target="_blank" rel="noopener noreferrer">Lock In $297/Mo</a>
           </Button>
           <p className="text-white/60 text-sm mt-4 italic">Most members cover the cost with one change.</p>
         </div>
@@ -426,10 +445,10 @@ export default function Home() {
           <p className="text-white/75 text-lg mb-10">On your terms. Independent. Strategic. Leveraged.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button asChild size="lg" className="bg-white font-bold text-lg uppercase tracking-wide px-10 h-14" style={{ color: ORANGE }} data-testid="button-join-final">
-              <a href={orderUrl} target="_blank" rel="noopener noreferrer">Lock In $399/Mo <ArrowRight className="ml-2 w-5 h-5" /></a>
+              <a href={orderUrl} target="_blank" rel="noopener noreferrer">Lock In $297/Mo <ArrowRight className="ml-2 w-5 h-5" /></a>
             </Button>
             <Button asChild size="lg" variant="outline" className="border-white/40 text-white hover:bg-white/15 bg-transparent text-base font-semibold px-10 h-14" data-testid="button-book-final">
-              <a href="https://link.elijahdesmond.com/widget/booking/qRepUNdAesl5YtZoT17b" target="_blank" rel="noopener noreferrer">Book a Concierge Call with Janelle</a>
+              <a href="https://link.backstagedentistry.com/widget/bookings/dso-pricing-calendar" target="_blank" rel="noopener noreferrer">Book a Business Advisor Profitability Call</a>
             </Button>
           </div>
         </div>
