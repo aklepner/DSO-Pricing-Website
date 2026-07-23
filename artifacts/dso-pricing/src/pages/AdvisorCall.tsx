@@ -43,7 +43,7 @@ export default function AdvisorCall() {
       </section>
       {/* CALENDAR EMBED */}
       <section className="flex-1 px-6 pb-20" style={{ backgroundColor: NAVY2 }}>
-        <div className="max-w-4xl mx-auto rounded-2xl overflow-hidden border border-white/10" style={{ backgroundColor: "rgba(255,255,255,0.03)" }}>
+        <div className="max-w-7xl mx-auto rounded-2xl overflow-hidden border border-white/10" style={{ backgroundColor: "rgba(255,255,255,0.03)" }}>
           <iframe
             src="https://go.dsopricing.com/widget/booking/nhiroB1yPqYywgQ327BH"
             style={{ width: "100%", border: "none", overflow: "hidden", minHeight: "700px" }}
