@@ -35,7 +35,7 @@ export default function OnboardingCallConfirmed() {
             You're All Set
           </p>
           <h1
-            className="md:text-6xl font-black text-white uppercase mb-6 text-[30px]"
+            className="md:text-6xl font-black text-white uppercase mb-6 text-[40px]"
             style={{ fontFamily: "'Outfit', sans-serif", letterSpacing: "-0.02em" }}
           >
             Thank You for Booking<br />Your <span style={{ color: ORANGE }}>Onboarding Call</span>
