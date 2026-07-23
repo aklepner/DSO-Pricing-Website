@@ -31,7 +31,7 @@ export default function OnboardingCall() {
             You're Almost There
           </p>
           <h1
-            className="md:text-6xl font-black text-white uppercase mb-5 text-[30px]"
+            className="md:text-6xl font-black text-white uppercase mb-5 text-[40px]"
             style={{ fontFamily: "'Outfit', sans-serif", letterSpacing: "-0.02em" }}
           >
             Book Your <span style={{ color: ORANGE }}>Onboarding Call</span>
