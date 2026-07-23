@@ -31,7 +31,7 @@ export default function AdvisorCall() {
             Let's Talk Profitability
           </p>
           <h1
-            className="md:text-6xl font-black text-white uppercase mb-5 text-[30px]"
+            className="md:text-6xl font-black text-white uppercase mb-5 text-[40px]"
             style={{ fontFamily: "'Outfit', sans-serif", letterSpacing: "-0.02em" }}
           >
             Book a <span style={{ color: ORANGE }}>Business Advisor</span> Profitability Call
