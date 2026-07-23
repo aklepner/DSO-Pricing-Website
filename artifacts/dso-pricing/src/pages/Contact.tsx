@@ -110,9 +110,9 @@ export default function Contact() {
                   If you're actively growing and want to understand how DSO Pricing fits your next stage:
                 </p>
                 <Button asChild size="lg" className="w-full text-white font-bold" style={{ backgroundColor: ORANGE }} data-testid="button-book-fast">
-                  <a href="https://link.backstagedentistry.com/widget/bookings/dso-pricing-calendar" target="_blank" rel="noopener noreferrer">
+                  <Link href="/profitability-call">
                     Book a Business Advisor Profitability Call <ArrowRight className="ml-2 w-4 h-4" />
-                  </a>
+                  </Link>
                 </Button>
               </div>
             </div>

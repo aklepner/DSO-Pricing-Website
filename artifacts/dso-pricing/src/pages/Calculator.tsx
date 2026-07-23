@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "wouter";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
@@ -244,15 +245,13 @@ export default function Calculator() {
                   Imagine the savings across your entire supply list.
                 </p>
 
-                <a
-                  href="https://link.backstagedentistry.com/widget/bookings/dso-pricing-calendar"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <Link
+                  href="/profitability-call"
                   className="block w-full text-center text-white font-black text-sm uppercase tracking-widest py-4 rounded-xl transition-opacity hover:opacity-80"
                   style={{ backgroundColor: ORANGE }}
                 >
                   Book a Call
-                </a>
+                </Link>
               </div>
             </div>
 

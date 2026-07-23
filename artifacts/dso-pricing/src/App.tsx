@@ -17,6 +17,8 @@ import BookingConfirmed from "@/pages/BookingConfirmed";
 import OnboardingCallConfirmed from "@/pages/OnboardingCallConfirmed";
 import Blog from "@/pages/Blog";
 import BlogPost from "@/pages/BlogPost";
+import AdvisorCall from "@/pages/AdvisorCall";
+import AdvisorCallConfirmed from "@/pages/AdvisorCallConfirmed";
 
 const queryClient = new QueryClient();
 
@@ -43,6 +45,8 @@ function Router() {
         <Route path="/onboarding-call" component={OnboardingCall} />
         <Route path="/booking-confirmed" component={BookingConfirmed} />
         <Route path="/onboarding-call-confirmed" component={OnboardingCallConfirmed} />
+        <Route path="/profitability-call" component={AdvisorCall} />
+        <Route path="/profitability-call-confirmed" component={AdvisorCallConfirmed} />
         <Route path="/blog" component={Blog} />
         <Route path="/blog/:slug" component={BlogPost} />
         <Route component={NotFound} />
