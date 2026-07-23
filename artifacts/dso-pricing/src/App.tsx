@@ -14,6 +14,7 @@ import ThankYou from "@/pages/ThankYou";
 import Vendors from "@/pages/Vendors";
 import OnboardingCall from "@/pages/OnboardingCall";
 import BookingConfirmed from "@/pages/BookingConfirmed";
+import OnboardingCallConfirmed from "@/pages/OnboardingCallConfirmed";
 import Blog from "@/pages/Blog";
 import BlogPost from "@/pages/BlogPost";
 
@@ -41,6 +42,7 @@ function Router() {
         <Route path="/thank-you" component={ThankYou} />
         <Route path="/onboarding-call" component={OnboardingCall} />
         <Route path="/booking-confirmed" component={BookingConfirmed} />
+        <Route path="/onboarding-call-confirmed" component={OnboardingCallConfirmed} />
         <Route path="/blog" component={Blog} />
         <Route path="/blog/:slug" component={BlogPost} />
         <Route component={NotFound} />
