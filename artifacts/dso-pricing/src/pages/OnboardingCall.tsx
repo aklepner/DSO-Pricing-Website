@@ -47,10 +47,10 @@ export default function OnboardingCall() {
       <section className="flex-1 px-6 pb-20" style={{ backgroundColor: NAVY2 }}>
         <div className="max-w-4xl mx-auto rounded-2xl overflow-hidden border border-white/10" style={{ backgroundColor: "rgba(255,255,255,0.03)" }}>
           <iframe
-            src="https://link.backstagedentistry.com/widget/bookings/dso-pricing-calendar"
+            src="https://go.dsopricing.com/widget/booking/ON0vOBuxWcGIF263CqMH"
             style={{ width: "100%", border: "none", overflow: "hidden", minHeight: "700px" }}
             scrolling="no"
-            id="qRepUNdAesl5YtZoT17b_1776980425527"
+            id="ON0vOBuxWcGIF263CqMH_1784805859632"
           />
         </div>
       </section>
