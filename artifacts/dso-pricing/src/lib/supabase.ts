@@ -4,10 +4,14 @@ let _client: SupabaseClient | null = null;
 
 export function getSupabase(): SupabaseClient {
   if (!_client) {
-    const url = import.meta.env.VITE_SUPABASE_URL as string;
+    let url = import.meta.env.VITE_SUPABASE_URL as string;
     const key = import.meta.env.VITE_SUPABASE_ANON_KEY as string;
     if (!url || !key) {
       throw new Error("Supabase environment variables are not configured.");
+    }
+    const dashboardMatch = url.match(/supabase\.com\/dashboard\/project\/([a-z0-9]+)/i);
+    if (dashboardMatch) {
+      url = `https://${dashboardMatch[1]}.supabase.co`;
     }
     _client = createClient(url, key);
   }

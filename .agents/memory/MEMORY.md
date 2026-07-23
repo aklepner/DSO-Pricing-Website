@@ -1,0 +1,1 @@
+- [Deployment secret staleness](deployment-secret-staleness.md) — live builds can bake in stale secret values; verify by grepping the served bundle and normalize config at runtime.
