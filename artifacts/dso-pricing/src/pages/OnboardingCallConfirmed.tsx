@@ -18,7 +18,6 @@ export default function OnboardingCallConfirmed() {
   return (
     <div className="min-h-screen flex flex-col" style={{ backgroundColor: NAVY2 }}>
       <Navbar />
-
       <section className="flex-1 flex items-center justify-center py-32 px-6">
         <div className="max-w-2xl mx-auto text-center">
 
@@ -36,14 +35,18 @@ export default function OnboardingCallConfirmed() {
             You're All Set
           </p>
           <h1
-            className="text-5xl md:text-6xl font-black text-white uppercase leading-[1.05] mb-6"
+            className="md:text-6xl font-black text-white uppercase mb-6 text-[30px]"
             style={{ fontFamily: "'Outfit', sans-serif", letterSpacing: "-0.02em" }}
           >
             Thank You for Booking<br />Your <span style={{ color: ORANGE }}>Onboarding Call</span>
           </h1>
-          <p className="text-white/60 text-lg leading-relaxed mb-12">
-            A confirmation has been sent to your email. We're looking forward to connecting with you and getting you set up with everything you need to start saving.
-          </p>
+          <p className="text-white/60 mb-12 text-[16px]">A confirmation email with your appointment details is on its way. You'll also receive a calendar invite you can add directly to your calendar.
+
+          Can't find the confirmation email? 
+
+          Check your spam or junk folder and look for an email from DSO Pricing. If it's not there, reach out to us and we'll get it sorted.
+
+          support@dsopricing.com</p>
 
           {/* What to expect */}
           <div className="rounded-2xl p-8 border border-white/10 text-left mb-10" style={{ backgroundColor: "rgba(255,255,255,0.04)" }}>
@@ -81,7 +84,6 @@ export default function OnboardingCallConfirmed() {
 
         </div>
       </section>
-
       <Footer />
     </div>
   );
