@@ -153,7 +153,7 @@ export default function Home() {
           <div className="flex flex-col items-center gap-3">
             <div className="flex flex-col sm:flex-row items-center gap-3">
               <Button asChild size="lg" className="text-white font-black text-sm uppercase tracking-widest h-14 px-12" style={{ backgroundColor: ORANGE }} data-testid="button-join-hero">
-                <a href={orderUrl} target="_blank" rel="noopener noreferrer">Lock In $297/mo</a>
+                <a href={orderUrl} target="_blank" rel="noopener noreferrer">Sign Up $297/mo</a>
               </Button>
               <a
                 href="https://www.dentira.com/login"
@@ -357,7 +357,7 @@ export default function Home() {
           </div>
           <div className="text-center">
             <Button asChild size="lg" className="text-white font-black uppercase tracking-widest h-14 px-12" style={{ backgroundColor: ORANGE }}>
-              <a href={orderUrl} target="_blank" rel="noopener noreferrer">Lock In $297/Mo <ArrowRight className="ml-2 w-4 h-4" /></a>
+              <a href={orderUrl} target="_blank" rel="noopener noreferrer">Sign Up $297/Mo <ArrowRight className="ml-2 w-4 h-4" /></a>
             </Button>
             <p className="text-white/30 text-sm mt-3">Limited Summer Special...Normally $797</p>
           </div>
@@ -410,7 +410,7 @@ export default function Home() {
           </div>
           <p className="text-white/80 text-base font-semibold mb-8">Limited to the first 100 practices.</p>
           <Button asChild size="lg" className="bg-white font-black text-sm uppercase tracking-widest h-14 px-12" style={{ color: ORANGE }}>
-            <a href={orderUrl} target="_blank" rel="noopener noreferrer">Lock In $297/Mo</a>
+            <a href={orderUrl} target="_blank" rel="noopener noreferrer">Sign Up $297/Mo</a>
           </Button>
           <p className="text-white/60 text-sm mt-4 italic">Most members cover the cost with one change.</p>
         </div>
@@ -445,7 +445,7 @@ export default function Home() {
           <p className="text-white/75 text-lg mb-10">On your terms. Independent. Strategic. Leveraged.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button asChild size="lg" className="bg-white font-bold text-lg uppercase tracking-wide px-10 h-14" style={{ color: ORANGE }} data-testid="button-join-final">
-              <a href={orderUrl} target="_blank" rel="noopener noreferrer">Lock In $297/Mo <ArrowRight className="ml-2 w-5 h-5" /></a>
+              <a href={orderUrl} target="_blank" rel="noopener noreferrer">Sign Up $297/Mo <ArrowRight className="ml-2 w-5 h-5" /></a>
             </Button>
             <Button asChild size="lg" variant="outline" className="border-white/40 text-white hover:bg-white/15 bg-transparent text-base font-semibold px-10 h-14" data-testid="button-book-final">
               <Link href="/profitability-call">Book a Business Advisor Profitability Call</Link>
