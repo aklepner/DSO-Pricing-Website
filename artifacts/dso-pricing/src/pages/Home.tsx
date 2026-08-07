@@ -1,5 +1,4 @@
 import { Link } from "wouter";
-import VendorCarousel from "@/components/VendorCarousel";
 import { Button } from "@/components/ui/button";
 import { CheckCircle2, ArrowRight, Star, ChevronDown, ChevronUp, DollarSign, Users, TrendingUp, Shield, Zap, BarChart3, Package, Network, Lightbulb, HeartHandshake, Award, Target } from "lucide-react";
 import { useState } from "react";
@@ -192,7 +191,6 @@ export default function Home() {
         </div>
       </section>
 
-      <VendorCarousel />
 
       {/* VENDOR BAND */}
       <section className="pt-16 pb-10 px-6" style={{ backgroundColor: NAVY2 }}>
