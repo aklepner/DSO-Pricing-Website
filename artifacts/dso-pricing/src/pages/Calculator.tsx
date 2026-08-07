@@ -80,7 +80,7 @@ export default function Calculator() {
       <section className="pt-44 pb-10 px-6" style={{ backgroundColor: "#000000" }}>
         <div className="max-w-6xl mx-auto">
           <p className="text-xs font-black uppercase tracking-widest mb-3" style={{ color: ORANGE }}>See Your Savings</p>
-          <h1 className="text-5xl md:text-7xl font-black text-white uppercase leading-none mb-4" style={{ fontFamily: "'Outfit', sans-serif", letterSpacing: "-0.02em" }}>
+          <h1 className="text-[40px] sm:text-5xl md:text-7xl font-black text-white uppercase leading-none mb-4" style={{ fontFamily: "'Outfit', sans-serif", letterSpacing: "-0.02em" }}>
             Cost Savings<br /><span style={{ color: ORANGE }}>Calculator</span>
           </h1>
           <p className="text-white/50 text-base max-w-xl">

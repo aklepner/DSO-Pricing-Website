@@ -36,7 +36,7 @@ export default function AdvisorCallConfirmed() {
             You're Confirmed
           </p>
           <h1
-            className="text-5xl md:text-6xl font-black text-white uppercase leading-[1.05] mb-6"
+            className="text-[40px] sm:text-5xl md:text-6xl font-black text-white uppercase leading-[1.05] mb-6"
             style={{ fontFamily: "'Outfit', sans-serif", letterSpacing: "-0.02em" }}
           >
             Your Call Is <span style={{ color: ORANGE }}>Booked</span>

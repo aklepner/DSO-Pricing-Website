@@ -83,7 +83,7 @@ export default function VendorCategory() {
             <ArrowLeft className="w-4 h-4" /> All Categories
           </Link>
           <h1
-            className="text-4xl md:text-6xl font-black text-white uppercase leading-[1.05] mb-5"
+            className="text-[40px] sm:text-4xl md:text-6xl font-black text-white uppercase leading-[1.05] mb-5"
             style={{ fontFamily: "'Outfit', sans-serif", letterSpacing: "-0.02em" }}
           >
             {title}

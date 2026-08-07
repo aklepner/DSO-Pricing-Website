@@ -93,7 +93,7 @@ export default function BlogPost() {
               </div>
 
               {/* TITLE */}
-              <h1 className="text-3xl md:text-5xl font-black text-white uppercase leading-tight mb-6" style={{ fontFamily: "'Outfit', sans-serif" }}>
+              <h1 className="text-[40px] sm:text-3xl md:text-5xl font-black text-white uppercase leading-tight mb-6" style={{ fontFamily: "'Outfit', sans-serif" }}>
                 {post.title}
               </h1>
 

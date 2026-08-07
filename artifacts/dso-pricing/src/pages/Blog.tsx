@@ -46,7 +46,7 @@ export default function Blog() {
       {/* HERO */}
       <section className="pt-40 pb-16 px-6 text-center" style={{ backgroundColor: NAVY2 }}>
         <p className="text-sm font-black uppercase tracking-widest mb-3" style={{ color: ORANGE }}>Insights & Strategy</p>
-        <h1 className="text-4xl md:text-6xl font-black text-white uppercase leading-tight mb-4" style={{ fontFamily: "'Outfit', sans-serif" }}>
+        <h1 className="text-[40px] sm:text-4xl md:text-6xl font-black text-white uppercase leading-tight mb-4" style={{ fontFamily: "'Outfit', sans-serif" }}>
           The DSO Pricing Blog
         </h1>
         <p className="text-white/60 text-lg max-w-2xl mx-auto">

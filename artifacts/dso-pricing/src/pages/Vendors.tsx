@@ -50,7 +50,7 @@ export default function Vendors() {
             Our Network
           </p>
           <h1
-            className="text-5xl md:text-6xl font-black text-white uppercase leading-[1.05] mb-5"
+            className="text-[40px] sm:text-5xl md:text-6xl font-black text-white uppercase leading-[1.05] mb-5"
             style={{ fontFamily: "'Outfit', sans-serif", letterSpacing: "-0.02em" }}
           >
             <span style={{ color: ORANGE }}>Vetted</span> Vendors at<br />DSO-Level Pricing

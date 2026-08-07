@@ -74,7 +74,7 @@ export default function Contact() {
         <div className="absolute inset-0 pointer-events-none" style={{ background: "radial-gradient(ellipse at 70% 40%, rgba(221,4,42,0.10) 0%, transparent 60%)" }} />
         <div className="max-w-4xl mx-auto text-center relative">
           <p className="text-sm font-bold uppercase tracking-widest mb-4" style={{ color: ORANGE }}>Contact</p>
-          <h1 className="text-4xl md:text-6xl font-extrabold text-white leading-tight mb-6" style={{ fontFamily: "'Outfit', sans-serif" }}>
+          <h1 className="text-[40px] sm:text-4xl md:text-6xl font-extrabold text-white leading-tight mb-6" style={{ fontFamily: "'Outfit', sans-serif" }}>
             Let's Connect.
           </h1>
           <p className="text-white/70 text-xl leading-relaxed max-w-2xl mx-auto">

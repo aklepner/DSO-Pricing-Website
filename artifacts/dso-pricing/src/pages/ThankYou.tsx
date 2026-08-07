@@ -32,7 +32,7 @@ export default function ThankYou() {
           </div>
 
           <p className="text-sm font-black uppercase tracking-widest mb-4" style={{ color: ORANGE }}>You're In</p>
-          <h1 className="text-5xl md:text-6xl font-black text-white uppercase leading-[1.05] mb-6" style={{ fontFamily: "'Outfit', sans-serif", letterSpacing: "-0.02em" }}>
+          <h1 className="text-[40px] sm:text-5xl md:text-6xl font-black text-white uppercase leading-[1.05] mb-6" style={{ fontFamily: "'Outfit', sans-serif", letterSpacing: "-0.02em" }}>
             Thank You For<br />
             <span style={{ color: ORANGE }}>Signing Up</span>
           </h1>
