@@ -71,7 +71,7 @@ export default function Vendors() {
           )}
           {error && <p className="text-center text-white/50 py-20">{error}</p>}
           {!loading && !error && (
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6">
               {categories.map((cat) => (
                 <CategoryCard key={cat.id} category={cat} />
               ))}
@@ -90,12 +90,12 @@ function CategoryCard({ category }: { category: Category }) {
   return (
     <Link
       href={`/built-different/vendors/${category.id}`}
-      className="group relative flex flex-col items-center rounded-2xl px-6 pt-10 pb-8 border border-white/8 transition-all duration-200 hover:border-white/25 hover:scale-[1.02] overflow-hidden"
+      className="group relative flex flex-row items-center gap-3 px-4 py-4 sm:flex-col sm:gap-0 sm:px-6 sm:pt-10 sm:pb-8 rounded-2xl border border-white/8 transition-all duration-200 hover:border-white/25 hover:scale-[1.02] overflow-hidden"
       style={{ backgroundColor: "rgba(255,255,255,0.04)" }}
       data-testid={`card-category-${category.id}`}
     >
-      <div className="absolute top-0 left-0 right-0 h-1.5" style={{ backgroundColor: ORANGE }} />
-      <div className="w-24 h-24 flex items-center justify-center mb-6">
+      <div className="hidden sm:block absolute top-0 left-0 right-0 h-1.5" style={{ backgroundColor: ORANGE }} />
+      <div className="w-10 h-10 sm:w-24 sm:h-24 flex items-center justify-center shrink-0 sm:mb-6">
         {category.icon ? (
           <img
             src={category.icon}
@@ -104,21 +104,21 @@ function CategoryCard({ category }: { category: Category }) {
             onError={(e) => { (e.target as HTMLImageElement).style.display = "none"; }}
           />
         ) : (
-          <div className="w-20 h-20 rounded-xl flex items-center justify-center" style={{ backgroundColor: "rgba(221,4,42,0.15)" }}>
-            <span className="text-white font-black text-2xl">{category.name.charAt(0)}</span>
+          <div className="w-10 h-10 sm:w-20 sm:h-20 rounded-xl flex items-center justify-center" style={{ backgroundColor: "rgba(221,4,42,0.15)" }}>
+            <span className="text-white font-black text-lg sm:text-2xl">{category.name.charAt(0)}</span>
           </div>
         )}
       </div>
       <h3
-        className="text-white text-lg font-black text-center leading-snug mb-2 flex-1"
+        className="text-white text-sm sm:text-lg font-black text-left sm:text-center leading-snug sm:mb-2 sm:flex-1"
         style={{ fontFamily: "'Outfit', sans-serif" }}
       >
         {category.name}
       </h3>
       {category.description && (
-        <p className="text-white/50 text-sm text-center mb-2">{category.description}</p>
+        <p className="hidden sm:block text-white/50 text-sm text-center mb-2">{category.description}</p>
       )}
-      <span className="text-white/60 text-xs font-black uppercase tracking-widest border-t border-white/15 pt-3 mt-2 px-4 group-hover:text-white transition-colors">
+      <span className="hidden sm:block text-white/60 text-xs font-black uppercase tracking-widest border-t border-white/15 pt-3 mt-2 px-4 group-hover:text-white transition-colors">
         View Category
       </span>
     </Link>
@@ -129,18 +129,18 @@ function AllVendorsCard() {
   return (
     <Link
       href="/built-different/vendors/all"
-      className="group relative flex flex-col items-center rounded-2xl px-6 pt-10 pb-8 border border-white/8 transition-all duration-200 hover:border-white/25 hover:scale-[1.02] overflow-hidden"
+      className="group relative flex flex-row items-center gap-3 px-4 py-4 sm:flex-col sm:gap-0 sm:px-6 sm:pt-10 sm:pb-8 rounded-2xl border border-white/8 transition-all duration-200 hover:border-white/25 hover:scale-[1.02] overflow-hidden"
       style={{ backgroundColor: "rgba(255,255,255,0.04)" }}
       data-testid="card-category-all"
     >
-      <div className="absolute top-0 left-0 right-0 h-1.5" style={{ backgroundColor: ORANGE }} />
-      <div className="w-24 h-24 flex items-center justify-center mb-6">
+      <div className="hidden sm:block absolute top-0 left-0 right-0 h-1.5" style={{ backgroundColor: ORANGE }} />
+      <div className="w-10 h-10 sm:w-24 sm:h-24 flex items-center justify-center shrink-0 sm:mb-6">
         <img src="/dso-pricing-logo.png" alt="All Vendors" className="w-full h-full object-contain" />
       </div>
-      <h3 className="text-white text-lg font-black text-center leading-snug mb-2 flex-1" style={{ fontFamily: "'Outfit', sans-serif" }}>
+      <h3 className="text-white text-sm sm:text-lg font-black text-left sm:text-center leading-snug sm:mb-2 sm:flex-1" style={{ fontFamily: "'Outfit', sans-serif" }}>
         All Vendors
       </h3>
-      <span className="text-white/60 text-xs font-black uppercase tracking-widest border-t border-white/15 pt-3 mt-2 px-4 group-hover:text-white transition-colors">
+      <span className="hidden sm:block text-white/60 text-xs font-black uppercase tracking-widest border-t border-white/15 pt-3 mt-2 px-4 group-hover:text-white transition-colors">
         View All
       </span>
     </Link>
