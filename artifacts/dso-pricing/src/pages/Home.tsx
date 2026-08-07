@@ -52,6 +52,17 @@ function CategoryMiniGrid() {
           </span>
         </Link>
       ))}
+      <Link
+        href="/built-different/vendors/all"
+        className="group flex items-center gap-3 rounded-xl px-4 py-3 border border-white/8 transition-all duration-200 hover:border-white/25 text-left"
+        style={{ backgroundColor: "rgba(255,255,255,0.04)" }}
+        data-testid="link-home-category-all"
+      >
+        <img src="/dso-pricing-logo.png" alt="" className="w-8 h-8 object-contain shrink-0" />
+        <span className="text-white/80 group-hover:text-white text-xs font-bold leading-snug transition-colors">
+          All Vendors
+        </span>
+      </Link>
     </div>
   );
 }
