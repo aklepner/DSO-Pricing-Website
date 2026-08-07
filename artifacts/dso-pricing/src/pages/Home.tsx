@@ -198,7 +198,7 @@ export default function Home() {
       >
         <div className="absolute inset-0" style={{ backgroundColor: "rgba(10,10,10,0.78)" }} />
         <div className="relative z-10 pt-48 pb-16 px-6 text-center max-w-5xl mx-auto">
-          <h1 className="text-[20px] sm:text-5xl md:text-6xl lg:text-7xl font-black text-white leading-[1.05] mb-6 uppercase" style={{ fontFamily: "'Outfit', sans-serif", letterSpacing: "-0.02em" }}>
+          <h1 className="text-[50px] sm:text-5xl md:text-6xl lg:text-7xl font-black text-white leading-[1.05] mb-6 uppercase" style={{ fontFamily: "'Outfit', sans-serif", letterSpacing: "-0.02em" }}>
             Get DSO-Level Pricing…<br />
             <span style={{ color: ORANGE }}>Without Becoming a DSO</span>
           </h1>
