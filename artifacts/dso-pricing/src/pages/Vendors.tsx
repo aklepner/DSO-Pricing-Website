@@ -53,7 +53,7 @@ export default function Vendors() {
             className="text-5xl md:text-6xl font-black text-white uppercase leading-[1.05] mb-5"
             style={{ fontFamily: "'Outfit', sans-serif", letterSpacing: "-0.02em" }}
           >
-            700+ <span style={{ color: ORANGE }}>Vendors</span> at<br />DSO-Level Pricing
+            <span style={{ color: ORANGE }}>Vetted</span> Vendors at<br />DSO-Level Pricing
           </h1>
           <p className="text-white/60 text-xl leading-relaxed">
             Every vendor has been vetted and negotiated for members. Pick a category to find savings across your entire practice.
