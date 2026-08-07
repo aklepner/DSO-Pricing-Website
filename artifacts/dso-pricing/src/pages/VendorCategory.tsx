@@ -13,7 +13,7 @@ export default function VendorCategory() {
   const { categoryId } = useParams<{ categoryId: string }>();
   const isAll = categoryId === "all";
   const [vendors, setVendors] = useState<Vendor[]>([]);
-  const [category, setCategory] = useState<Category | null>(null);
+  const [categories, setCategories] = useState<Category[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
@@ -29,14 +29,12 @@ export default function VendorCategory() {
       try {
         const { getSupabase } = await import("@/lib/supabase");
         const client = getSupabase();
-        const [{ data: vendorData, error: vErr }, catResult] = await Promise.all([
+        const [{ data: vendorData, error: vErr }, { data: catData, error: cErr }] = await Promise.all([
           client.from("businesses").select("*").order("title"),
-          isAll
-            ? Promise.resolve({ data: null, error: null })
-            : client.from("categories").select("*").eq("id", categoryId).maybeSingle(),
+          client.from("categories").select("*"),
         ]);
         if (vErr) throw vErr;
-        if (catResult.error) throw catResult.error;
+        if (cErr) throw cErr;
         if (cancelled) return;
 
         const seenTitles = new Set<string>();
@@ -51,9 +49,11 @@ export default function VendorCategory() {
           return true;
         });
         setVendors(isAll ? unique : unique.filter((v: Vendor) => v.categoryIds?.includes(categoryId)));
-        const cat = (catResult.data as Category | null) || null;
-        setCategory(cat);
-        if (cat) document.title = `${cat.name} | DSO Pricing`;
+        setCategories((catData as Category[]) || []);
+        if (!isAll) {
+          const cat = (catData as Category[] | null)?.find((c) => c.id === categoryId);
+          if (cat) document.title = `${cat.name} | DSO Pricing`;
+        }
       } catch (e: any) {
         if (!cancelled) setError(e.message || "Failed to load vendors");
       } finally {
@@ -64,6 +64,8 @@ export default function VendorCategory() {
     return () => { cancelled = true; };
   }, [categoryId, isAll]);
 
+  const categoryById = new Map(categories.map((c) => [c.id, c]));
+  const category = isAll ? null : categoryById.get(categoryId) || null;
   const title = isAll ? "All Vendors" : category?.name || "Vendors";
 
   return (
@@ -105,9 +107,16 @@ export default function VendorCategory() {
             <p className="text-center text-white/40 py-20">No vendors in this category yet.</p>
           )}
           {!loading && !error && vendors.length > 0 && (
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
               {vendors.map((vendor) => (
-                <VendorCard key={vendor.id} vendor={vendor} />
+                <VendorCard
+                  key={vendor.id}
+                  vendor={vendor}
+                  categoryLabel={
+                    (!isAll && category?.name) ||
+                    (vendor.categoryIds || []).map((id) => categoryById.get(id)?.name).filter(Boolean).join(", ")
+                  }
+                />
               ))}
             </div>
           )}
@@ -119,29 +128,51 @@ export default function VendorCategory() {
   );
 }
 
-function VendorCard({ vendor }: { vendor: Vendor }) {
+function stripHtml(html: string): string {
+  const doc = new DOMParser().parseFromString(html, "text/html");
+  return (doc.body.textContent || "").replace(/\s+/g, " ").trim();
+}
+
+function VendorCard({ vendor, categoryLabel }: { vendor: Vendor; categoryLabel: string }) {
   return (
     <div
-      className="group relative flex flex-col items-center justify-center rounded-2xl p-5 border border-white/8 transition-all duration-200 hover:border-white/20 hover:scale-[1.03]"
-      style={{ backgroundColor: "rgba(255,255,255,0.04)", minHeight: "140px" }}
+      className="group flex flex-col rounded-2xl overflow-hidden border border-white/8 transition-all duration-200 hover:border-white/25 hover:scale-[1.02]"
+      style={{ backgroundColor: "#161616" }}
+      data-testid={`card-vendor-${vendor.id}`}
     >
-      {vendor.logo ? (
-        <div className="w-full h-16 mb-3 rounded-lg flex items-center justify-center p-2" style={{ backgroundColor: "#ffffff" }}>
+      {/* LOGO AREA */}
+      <div className="h-48 flex items-center justify-center p-8" style={{ backgroundColor: "#ffffff" }}>
+        {vendor.logo ? (
           <img
             src={vendor.logo}
             alt={vendor.title.trim()}
-            className="w-full h-full object-contain"
-            onError={(e) => { (e.target as HTMLImageElement).parentElement!.style.display = "none"; }}
+            className="max-w-full max-h-full object-contain"
+            onError={(e) => { (e.target as HTMLImageElement).style.display = "none"; }}
           />
-        </div>
-      ) : (
-        <div className="w-16 h-16 rounded-xl flex items-center justify-center mb-3" style={{ backgroundColor: "rgba(221,4,42,0.15)" }}>
-          <span className="text-white font-black text-lg">{vendor.title.trim().charAt(0)}</span>
-        </div>
-      )}
-      <p className="text-white text-xs font-black text-center uppercase leading-tight tracking-wide">
-        {vendor.title.trim()}
-      </p>
+        ) : (
+          <span className="font-black text-5xl" style={{ color: NAVY }}>{vendor.title.trim().charAt(0)}</span>
+        )}
+      </div>
+
+      {/* INFO AREA */}
+      <div className="flex flex-col flex-1 p-6">
+        {categoryLabel && (
+          <p className="text-xs font-black uppercase tracking-widest mb-3" style={{ color: ORANGE }}>
+            {categoryLabel}
+          </p>
+        )}
+        <h3 className="text-white text-xl font-black leading-snug mb-2" style={{ fontFamily: "'Outfit', sans-serif" }}>
+          {vendor.title.trim()}
+        </h3>
+        {vendor.description && (
+          <p
+            className="text-white/60 text-sm leading-relaxed"
+            style={{ display: "-webkit-box", WebkitLineClamp: 3, WebkitBoxOrient: "vertical", overflow: "hidden" }}
+          >
+            {stripHtml(vendor.description)}
+          </p>
+        )}
+      </div>
     </div>
   );
 }
