@@ -1,7 +1,8 @@
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { CheckCircle2, ArrowRight, Star, ChevronDown, ChevronUp, DollarSign, Users, TrendingUp, Shield, Zap, BarChart3, Package, Network, Lightbulb, HeartHandshake, Award, Target } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { Category } from "@/lib/supabase";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { useOrderUrl } from "@/contexts/AffiliateContext";
@@ -10,6 +11,50 @@ const NAVY = "#0F0F0F";
 const NAVY2 = "#000000";
 const ORANGE = "#DD042A";
 const ORANGE_LIGHT = "#FF1A3D";
+
+function CategoryMiniGrid() {
+  const [categories, setCategories] = useState<Category[]>([]);
+
+  useEffect(() => {
+    async function fetchCategories() {
+      try {
+        const { getSupabase } = await import("@/lib/supabase");
+        const { data } = await getSupabase().from("categories").select("*").order("name");
+        setCategories(data || []);
+      } catch {
+        // silently omit the grid if categories can't load
+      }
+    }
+    fetchCategories();
+  }, []);
+
+  if (categories.length === 0) return null;
+
+  return (
+    <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 mt-10 max-w-5xl mx-auto">
+      {categories.map((cat) => (
+        <Link
+          key={cat.id}
+          href={`/built-different/vendors/${cat.id}`}
+          className="group flex items-center gap-3 rounded-xl px-4 py-3 border border-white/8 transition-all duration-200 hover:border-white/25 text-left"
+          style={{ backgroundColor: "rgba(255,255,255,0.04)" }}
+          data-testid={`link-home-category-${cat.id}`}
+        >
+          {cat.icon ? (
+            <img src={cat.icon} alt="" className="w-8 h-8 object-contain shrink-0" />
+          ) : (
+            <div className="w-8 h-8 rounded-lg flex items-center justify-center shrink-0" style={{ backgroundColor: "rgba(221,4,42,0.15)" }}>
+              <span className="text-white font-black text-xs">{cat.name.charAt(0)}</span>
+            </div>
+          )}
+          <span className="text-white/80 group-hover:text-white text-xs font-bold leading-snug transition-colors">
+            {cat.name}
+          </span>
+        </Link>
+      ))}
+    </div>
+  );
+}
 
 function StarRating({ count = 5, size = 16 }: { count?: number; size?: number }) {
   return (
@@ -207,6 +252,7 @@ export default function Home() {
               <Link href="/calculator">Calculate Your Savings <ArrowRight className="ml-2 w-4 h-4" /></Link>
             </Button>
           </div>
+          <CategoryMiniGrid />
         </div>
       </section>
 
