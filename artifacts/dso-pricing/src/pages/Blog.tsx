@@ -29,7 +29,7 @@ export default function Blog() {
           .lte("published_at", new Date().toISOString())
           .order("published_at", { ascending: false });
         if (err) throw err;
-        setPosts(data || []);
+        setPosts((data || []) as BlogPost[]);
       } catch (e: any) {
         setError(e.message || "Failed to load posts");
       } finally {

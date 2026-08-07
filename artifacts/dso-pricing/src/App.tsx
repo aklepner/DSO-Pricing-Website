@@ -12,6 +12,7 @@ import Contact from "@/pages/Contact";
 import Calculator from "@/pages/Calculator";
 import ThankYou from "@/pages/ThankYou";
 import Vendors from "@/pages/Vendors";
+import VendorCategory from "@/pages/VendorCategory";
 import OnboardingCall from "@/pages/OnboardingCall";
 import BookingConfirmed from "@/pages/BookingConfirmed";
 import OnboardingCallConfirmed from "@/pages/OnboardingCallConfirmed";
@@ -38,6 +39,7 @@ function Router() {
         <Route path="/" component={Home} />
         <Route path="/built-different" component={BuiltDifferent} />
         <Route path="/built-different/vendors" component={Vendors} />
+        <Route path="/built-different/vendors/:categoryId" component={VendorCategory} />
         <Route path="/pricing" component={Pricing} />
         <Route path="/contact" component={Contact} />
         <Route path="/calculator" component={Calculator} />

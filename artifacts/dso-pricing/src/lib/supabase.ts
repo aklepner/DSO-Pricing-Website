@@ -46,6 +46,8 @@ export interface Vendor {
 export interface Category {
   id: string;
   name: string;
+  description: string | null;
+  icon: string | null;
 }
 
 export interface BlogPost {
