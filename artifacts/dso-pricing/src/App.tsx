@@ -20,6 +20,8 @@ import Blog from "@/pages/Blog";
 import BlogPost from "@/pages/BlogPost";
 import AdvisorCall from "@/pages/AdvisorCall";
 import AdvisorCallConfirmed from "@/pages/AdvisorCallConfirmed";
+import Privacy from "@/pages/Privacy";
+import Terms from "@/pages/Terms";
 
 const queryClient = new QueryClient();
 
@@ -51,6 +53,8 @@ function Router() {
         <Route path="/profitability-call-confirmed" component={AdvisorCallConfirmed} />
         <Route path="/blog" component={Blog} />
         <Route path="/blog/:slug" component={BlogPost} />
+        <Route path="/privacy" component={Privacy} />
+        <Route path="/terms" component={Terms} />
         <Route component={NotFound} />
       </Switch>
     </>

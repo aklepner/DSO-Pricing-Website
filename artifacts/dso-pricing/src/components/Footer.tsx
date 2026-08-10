@@ -119,6 +119,10 @@ export default function Footer() {
         </div>
         <div className="border-t border-white/10 pt-6 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-white/40">
           <p>&copy; {new Date().getFullYear()} DSO Pricing. All rights reserved.</p>
+          <div className="flex gap-6">
+            <Link href="/privacy" className="hover:text-white transition-colors" data-testid="link-footer-privacy">Privacy Policy</Link>
+            <Link href="/terms" className="hover:text-white transition-colors" data-testid="link-footer-terms">Terms &amp; Conditions</Link>
+          </div>
           <p>Build a Stronger, More Scalable Dental Business — On Your Terms.</p>
         </div>
       </div>
