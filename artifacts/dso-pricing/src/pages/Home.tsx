@@ -251,6 +251,9 @@ export default function Home() {
       {/* VENDOR BAND */}
       <section className="pt-16 pb-10 px-6" style={{ backgroundColor: NAVY2 }}>
         <div className="max-w-6xl mx-auto text-center">
+          <p className="text-white/70 text-base md:text-lg leading-relaxed max-w-3xl mx-auto mb-8" data-testid="text-gpo-description">
+            DSO Pricing is a group purchasing organization for dental practices. Members get DSO-level pricing from a vetted network of product and service vendors, and sign in at login to reach their member benefits and ordering platform.
+          </p>
           <p className="text-sm font-black uppercase tracking-widest mb-3" style={{ color: ORANGE }}>Our Network</p>
           <h2 className="text-3xl md:text-5xl font-black text-white mb-8 uppercase" style={{ fontFamily: "'Outfit', sans-serif" }}>
             More Than a Buying Group.<br />Vetted Vendors. Strategic Guidance.<br />Profitable Growth.
