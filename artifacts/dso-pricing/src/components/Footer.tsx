@@ -62,7 +62,7 @@ export default function Footer() {
               <img src={logo} alt="DSO Pricing" className="h-20 w-auto" />
             </div>
             <p className="text-base leading-relaxed text-white/50">
-              A growth leverage platform for dental practices. Built to protect margins and scale smarter.
+              DSO Pricing is a group purchasing organization for dental practices. Members get DSO-level pricing from a vetted network of product and service vendors, and sign in here to reach their member benefits and ordering platform.
             </p>
           </div>
           <div>
