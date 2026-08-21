@@ -124,7 +124,7 @@ export default function Navbar() {
             </Link>
           ))}
           <a
-            href="https://www.dentira.com/login"
+            href="https://app.dsopricing.com"
             target="_blank"
             rel="noopener noreferrer"
             className="px-4 py-2 rounded-lg text-white text-xs font-black uppercase tracking-wide transition-opacity hover:opacity-80"
@@ -168,7 +168,7 @@ export default function Navbar() {
             </Link>
           ))}
           <a
-            href="https://www.dentira.com/login"
+            href="https://app.dsopricing.com"
             target="_blank"
             rel="noopener noreferrer"
             className="mx-4 mt-2 block text-center py-3 rounded-lg text-white text-sm font-black uppercase tracking-wide transition-opacity hover:opacity-80"

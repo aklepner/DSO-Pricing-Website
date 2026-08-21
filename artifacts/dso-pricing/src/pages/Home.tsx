@@ -211,7 +211,7 @@ export default function Home() {
                 <a href={orderUrl} target="_blank" rel="noopener noreferrer">Sign Up $297/mo</a>
               </Button>
               <a
-                href="https://www.dentira.com/login"
+                href="https://app.dsopricing.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center h-14 px-8 rounded-lg text-white text-sm font-black uppercase tracking-widest border-2 border-white/40 hover:border-white transition-colors"

@@ -107,7 +107,7 @@ export default function Footer() {
               ))}
             </div>
             <a
-              href="https://www.dentira.com/login"
+              href="https://app.dsopricing.com"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block px-5 py-2 rounded-lg text-white text-sm font-black uppercase tracking-wide transition-opacity hover:opacity-80"
