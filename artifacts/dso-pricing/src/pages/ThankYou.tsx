@@ -49,7 +49,7 @@ export default function ThankYou() {
               <div>
                 <p className="text-white font-black text-lg uppercase mb-1" style={{ fontFamily: "'Outfit', sans-serif" }}>Check Your Inbox</p>
                 <p className="text-white/55 text-base leading-relaxed">
-                  You'll receive a welcome email shortly with your next steps and everything you need to get started.
+                  You'll receive a welcome email shortly with your next steps and everything you need to get started. If you do not see the email within the next ten minutes, please check your SPAM folder.
                 </p>
               </div>
             </div>
