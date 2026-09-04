@@ -238,6 +238,50 @@ export default function Home() {
         </div>
       </section>
 
+      {/* THIS PAYS FOR ITSELF */}
+      <section className="py-20 px-6" style={{ backgroundColor: NAVY2 }}>
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-12">
+            <p className="text-sm font-black uppercase tracking-widest mb-4" style={{ color: ORANGE }}>The Math</p>
+            <h2 className="text-4xl md:text-5xl font-black text-white uppercase leading-tight" style={{ fontFamily: "'Outfit', sans-serif" }}>
+              This Pays For Itself… Fast
+            </h2>
+            <p className="text-white/55 text-lg mt-4">Most practices cover the cost with one change.</p>
+          </div>
+          <div className="rounded-2xl border-2 border-white/15 p-10 mb-8" style={{ backgroundColor: "rgba(255,255,255,0.05)" }}>
+            <div className="space-y-4 mb-8">
+              {[
+                { label: "Save ~$50 per crown", detail: "At ~30 crowns/month = ~$1,500/month saved" },
+                { label: "Membership: $297/mo", detail: null },
+              ].map((row, i) => (
+                <div key={i} className="flex items-start gap-4 p-5 rounded-xl border border-white/10" style={{ backgroundColor: "rgba(255,255,255,0.04)" }}>
+                  <CheckCircle2 className="w-5 h-5 mt-0.5 shrink-0" style={{ color: ORANGE }} />
+                  <div>
+                    <p className="text-white font-bold text-lg">{row.label}</p>
+                    {row.detail && <p className="text-white/50 text-sm mt-0.5">{row.detail}</p>}
+                  </div>
+                </div>
+              ))}
+            </div>
+            <div className="text-center py-6 border-t border-white/10">
+              <p className="text-white/50 text-base mb-2">That's</p>
+              <p className="font-black text-white mb-2" style={{ fontSize: "3.5rem", fontFamily: "'Outfit', sans-serif", color: ORANGE }}>$1,100/mo</p>
+              <p className="font-black text-white uppercase" style={{ fontSize: "28px", fontFamily: "'Outfit', sans-serif" }}>BACK IN YOUR PRACTICE</p>
+              <p className="text-white/40 text-sm mt-3 italic">And that's just one vendor.</p>
+            </div>
+            <div className="mt-6 rounded-xl p-6 text-center border border-white/10" style={{ backgroundColor: "rgba(255,255,255,0.03)" }}>
+              <p className="text-white font-black text-xl uppercase mb-1" style={{ fontFamily: "'Outfit', sans-serif" }}>If one decision makes you $1,100/mo…</p>
+              <p className="text-white/50 text-base">What happens when you optimize the rest?</p>
+            </div>
+          </div>
+          <div className="text-center">
+            <Button asChild size="lg" className="text-white font-black uppercase tracking-widest h-14 px-12" style={{ backgroundColor: ORANGE }}>
+              <a href={orderUrl} target="_blank" rel="noopener noreferrer">Sign Up $297/Mo <ArrowRight className="ml-2 w-4 h-4" /></a>
+            </Button>
+          </div>
+        </div>
+      </section>
+
 
       {/* VENDOR BAND */}
       <section className="pt-16 pb-10 px-6" style={{ backgroundColor: NAVY2 }}>
@@ -314,50 +358,6 @@ export default function Home() {
                 </ul>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* THIS PAYS FOR ITSELF */}
-      <section className="py-20 px-6" style={{ backgroundColor: NAVY2 }}>
-        <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-12">
-            <p className="text-sm font-black uppercase tracking-widest mb-4" style={{ color: ORANGE }}>The Math</p>
-            <h2 className="text-4xl md:text-5xl font-black text-white uppercase leading-tight" style={{ fontFamily: "'Outfit', sans-serif" }}>
-              This Pays For Itself… Fast
-            </h2>
-            <p className="text-white/55 text-lg mt-4">Most practices cover the cost with one change.</p>
-          </div>
-          <div className="rounded-2xl border-2 border-white/15 p-10 mb-8" style={{ backgroundColor: "rgba(255,255,255,0.05)" }}>
-            <div className="space-y-4 mb-8">
-              {[
-                { label: "Save ~$50 per crown", detail: "At ~30 crowns/month = ~$1,500/month saved" },
-                { label: "Membership: $297/mo", detail: null },
-              ].map((row, i) => (
-                <div key={i} className="flex items-start gap-4 p-5 rounded-xl border border-white/10" style={{ backgroundColor: "rgba(255,255,255,0.04)" }}>
-                  <CheckCircle2 className="w-5 h-5 mt-0.5 shrink-0" style={{ color: ORANGE }} />
-                  <div>
-                    <p className="text-white font-bold text-lg">{row.label}</p>
-                    {row.detail && <p className="text-white/50 text-sm mt-0.5">{row.detail}</p>}
-                  </div>
-                </div>
-              ))}
-            </div>
-            <div className="text-center py-6 border-t border-white/10">
-              <p className="text-white/50 text-base mb-2">That's</p>
-              <p className="font-black text-white mb-2" style={{ fontSize: "3.5rem", fontFamily: "'Outfit', sans-serif", color: ORANGE }}>$1,100/mo</p>
-              <p className="font-black text-white uppercase" style={{ fontSize: "28px", fontFamily: "'Outfit', sans-serif" }}>BACK IN YOUR PRACTICE</p>
-              <p className="text-white/40 text-sm mt-3 italic">And that's just one vendor.</p>
-            </div>
-            <div className="mt-6 rounded-xl p-6 text-center border border-white/10" style={{ backgroundColor: "rgba(255,255,255,0.03)" }}>
-              <p className="text-white font-black text-xl uppercase mb-1" style={{ fontFamily: "'Outfit', sans-serif" }}>If one decision makes you $1,100/mo…</p>
-              <p className="text-white/50 text-base">What happens when you optimize the rest?</p>
-            </div>
-          </div>
-          <div className="text-center">
-            <Button asChild size="lg" className="text-white font-black uppercase tracking-widest h-14 px-12" style={{ backgroundColor: ORANGE }}>
-              <a href={orderUrl} target="_blank" rel="noopener noreferrer">Sign Up $297/Mo <ArrowRight className="ml-2 w-4 h-4" /></a>
-            </Button>
           </div>
         </div>
       </section>
