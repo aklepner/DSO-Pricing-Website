@@ -414,7 +414,6 @@ export default function Home() {
             <Button asChild size="lg" className="text-white font-black uppercase tracking-widest h-14 px-12" style={{ backgroundColor: ORANGE }}>
               <a href={orderUrl} target="_blank" rel="noopener noreferrer">Sign Up $297/Mo <ArrowRight className="ml-2 w-4 h-4" /></a>
             </Button>
-            <p className="text-white/30 text-sm mt-3">Limited Summer Special...Normally $797</p>
           </div>
         </div>
       </section>
@@ -461,7 +460,6 @@ export default function Home() {
           </h2>
           <div className="flex items-center justify-center gap-6 mb-4">
             <p className="font-black text-white" style={{ fontSize: "3rem", fontFamily: "'Outfit', sans-serif" }}>$297<span className="text-2xl font-normal opacity-70">/mo</span></p>
-            <p className="text-white/50 text-2xl font-black line-through">$797/mo</p>
           </div>
           <p className="text-white/80 text-base font-semibold mb-8">Limited to the first 100 practices.</p>
           <Button asChild size="lg" className="bg-white font-black text-sm uppercase tracking-widest h-14 px-12" style={{ color: ORANGE }}>
