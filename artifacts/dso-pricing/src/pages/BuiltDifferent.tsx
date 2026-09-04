@@ -1,6 +1,6 @@
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
-import { CheckCircle2, TrendingUp, Shield, Target, Users, DollarSign, BookOpen, ArrowRight, HeartHandshake } from "lucide-react";
+import { CheckCircle2, TrendingUp, Shield, Target, ArrowRight, HeartHandshake } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { useOrderUrl } from "@/contexts/AffiliateContext";
@@ -81,50 +81,6 @@ export default function BuiltDifferent() {
               ))}
               <p className="text-gray-400 text-sm italic pl-2">…without having to figure it out yourself.</p>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* MORE THAN JUST SAVINGS */}
-      <section className="py-20 px-6" style={{ backgroundColor: NAVY2 }}>
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-14">
-            <p className="text-sm font-black uppercase tracking-widest mb-3" style={{ color: ORANGE }}>More Than Just Savings</p>
-            <h2 className="text-4xl md:text-5xl font-black text-white uppercase leading-tight" style={{ fontFamily: "'Outfit', sans-serif" }}>
-              You Become Part of a Community<br />Focused on Your Growth.
-            </h2>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[
-              {
-                icon: DollarSign,
-                title: "DSO-Level Pricing",
-                desc: "DSO-level pricing across labs, aligners, implants, and supplies",
-              },
-              {
-                icon: Users,
-                title: "Operator Guidance",
-                desc: "Guidance from operators who've scaled multi-location practices",
-              },
-              {
-                icon: BookOpen,
-                title: "CE Credits",
-                desc: "CE through DentalFlix",
-              },
-              {
-                icon: HeartHandshake,
-                title: "Peer Network",
-                desc: "A network of growth-focused dentists",
-              },
-            ].map((item, i) => (
-              <div key={i} className="rounded-2xl p-8 border border-white/10 flex flex-col gap-5 text-center" style={{ backgroundColor: "rgba(255,255,255,0.04)" }}>
-                <div className="w-14 h-14 rounded-xl flex items-center justify-center mx-auto" style={{ backgroundColor: ORANGE }}>
-                  <item.icon className="w-7 h-7 text-white" />
-                </div>
-                <p className="font-black text-white text-lg uppercase" style={{ fontFamily: "'Outfit', sans-serif" }}>{item.title}</p>
-                <p className="text-white/50 text-sm leading-relaxed">{item.desc}</p>
-              </div>
-            ))}
           </div>
         </div>
       </section>
