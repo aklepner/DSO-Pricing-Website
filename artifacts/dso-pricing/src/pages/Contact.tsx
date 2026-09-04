@@ -111,7 +111,7 @@ export default function Contact() {
                 </p>
                 <Button asChild size="lg" className="w-full text-white font-bold" style={{ backgroundColor: ORANGE }} data-testid="button-book-fast">
                   <Link href="/profitability-call">
-                    Book a Business Advisor Profitability Call <ArrowRight className="ml-2 w-4 h-4" />
+                    Click here to speak to our friendly AI agent Ava. <ArrowRight className="ml-2 w-4 h-4" />
                   </Link>
                 </Button>
               </div>
