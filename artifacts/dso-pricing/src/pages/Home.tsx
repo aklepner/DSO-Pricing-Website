@@ -331,7 +331,7 @@ export default function Home() {
             <div>
               <p className="text-sm font-black uppercase tracking-widest mb-4" style={{ color: ORANGE }}>What Is DSO Pricing?</p>
               <h2 className="text-4xl md:text-5xl font-black text-white leading-tight mb-6 uppercase" style={{ fontFamily: "'Outfit', sans-serif" }}>
-                Get the Same Pricing, Partners, and Strategic Support Top-Performing Groups Use to Grow.
+                Get the Same Pricing, Partners, and Strategic Support That Top Performing Groups Use to Grow.
               </h2>
             </div>
             <div className="space-y-8">
