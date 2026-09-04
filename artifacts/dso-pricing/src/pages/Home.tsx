@@ -1,6 +1,6 @@
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
-import { CheckCircle2, ArrowRight, Star, ChevronDown, ChevronUp, DollarSign, Users, TrendingUp, Shield, Zap, BarChart3, Package, Network, Lightbulb, HeartHandshake, Award, Target } from "lucide-react";
+import { CheckCircle2, ArrowRight, Star, ChevronDown, ChevronUp, Shield, Zap, BarChart3, Package, Network, Lightbulb, HeartHandshake, Award, Target } from "lucide-react";
 import { useState, useEffect } from "react";
 import { Category } from "@/lib/supabase";
 import Navbar from "@/components/Navbar";
@@ -266,55 +266,6 @@ export default function Home() {
             <h2 className="text-4xl md:text-5xl font-black text-gray-900 uppercase leading-tight" style={{ fontFamily: "'Outfit', sans-serif" }}>
               Most Dentists Join for Savings.<br />They Stay Because We Help Them Grow.
             </h2>
-          </div>
-          <div className="grid md:grid-cols-3 gap-8">
-            {[
-              {
-                label: "Save",
-                color: ORANGE,
-                icon: DollarSign,
-                bullets: [
-                  "$1,000+/month saved on crowns alone",
-                  "Access to 700+ vendors across labs, aligners, implants, and more",
-                ],
-              },
-              {
-                label: "Grow",
-                color: ORANGE,
-                icon: TrendingUp,
-                bullets: [
-                  "Hands-on guidance from operators who've scaled multi-location practices",
-                  "Proven strategies to solve real growth bottlenecks",
-                  "Advisors focused on increasing your profitability and EBITDA",
-                ],
-              },
-              {
-                label: "Support",
-                color: ORANGE,
-                icon: Users,
-                bullets: [
-                  "CE through DentalFlix",
-                  "Network with growth-focused, like-minded dentists",
-                ],
-              },
-            ].map((col, i) => (
-              <div key={i} className="rounded-2xl p-8 border-2 border-gray-100 bg-white flex flex-col gap-5">
-                <div className="flex items-center gap-3">
-                  <div className="w-11 h-11 rounded-lg flex items-center justify-center" style={{ backgroundColor: ORANGE }}>
-                    <col.icon className="w-6 h-6 text-white" />
-                  </div>
-                  <p className="font-black text-2xl text-gray-900 uppercase" style={{ fontFamily: "'Outfit', sans-serif" }}>{col.label}</p>
-                </div>
-                <ul className="space-y-3">
-                  {col.bullets.map((b, j) => (
-                    <li key={j} className="flex items-start gap-2.5 text-sm text-gray-700">
-                      <CheckCircle2 className="w-4 h-4 shrink-0 mt-0.5" style={{ color: ORANGE }} />
-                      <span>{b}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
           </div>
           <div className="flex justify-center mt-10">
             <Button asChild size="lg" className="text-white font-bold uppercase tracking-wide h-14 px-10" style={{ backgroundColor: ORANGE }}>
