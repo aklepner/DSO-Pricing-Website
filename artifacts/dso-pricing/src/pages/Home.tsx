@@ -218,7 +218,10 @@ export default function Home() {
           <div className="flex flex-col items-center gap-3">
             <div className="flex items-center">
               <Button asChild size="lg" className="animate-gentle-wobble text-white font-black text-sm uppercase tracking-widest min-h-14 h-auto px-6 sm:px-12 py-4" style={{ backgroundColor: ORANGE }} data-testid="button-join-hero">
-                <a href={orderUrl} target="_blank" rel="noopener noreferrer">Start saving now for $297/month.</a>
+                <a href={orderUrl} target="_blank" rel="noopener noreferrer" className="flex flex-col items-center leading-tight">
+                  <span>Start saving now for $297/month</span>
+                  <span className="mt-1 normal-case">per practice</span>
+                </a>
               </Button>
             </div>
             <p className="text-base italic text-white/70">Simple month-to-month membership</p>
