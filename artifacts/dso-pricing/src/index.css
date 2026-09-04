@@ -20,10 +20,24 @@
   }
 }
 
-/* Keep section-intro statements prominent and consistent sitewide. */
-p.text-sm.font-black.uppercase.tracking-widest {
+/* Keep all website copy readable, including utility text and labels. */
+body {
   font-size: 1.125rem;
   line-height: 1.75rem;
+}
+
+:where(.text-xs, .text-sm, .text-base, [class~="text-[16px]"]) {
+  font-size: 1.125rem !important;
+  line-height: 1.75rem !important;
+}
+
+/* Raise low-opacity white copy to a readable contrast level. */
+:where(p, span, a, li, button)[class~="text-white/20"],
+:where(p, span, a, li, button)[class~="text-white/30"],
+:where(p, span, a, li, button)[class~="text-white/40"],
+:where(p, span, a, li, button)[class~="text-white/50"],
+:where(p, span, a, li, button)[class~="text-white/60"] {
+  color: rgba(255, 255, 255, 0.82) !important;
 }
 @plugin "@tailwindcss/typography";
 

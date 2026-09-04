@@ -60,8 +60,7 @@ export default function Pricing() {
         <div className="max-w-xl mx-auto">
           <div className="rounded-2xl border-2 border-white/15 p-12 relative overflow-hidden text-center" style={{ backgroundColor: "rgba(255,255,255,0.05)" }}>
             <div className="absolute top-0 left-0 right-0 h-2 rounded-t-2xl" style={{ backgroundColor: ORANGE }} />
-            <p className="text-white/50 font-black uppercase tracking-widest text-xs mb-2">Member Pricing</p>
-            <p className="text-white/30 text-sm font-semibold mb-4">Limited to the first 100 practices</p>
+            <p className="text-white font-black uppercase tracking-widest text-xl mb-4">Member Pricing</p>
             <div className="flex items-start justify-center gap-1 mb-2">
               <span className="text-3xl font-bold text-white mt-3">$</span>
               <span className="font-black text-white leading-none" style={{ fontSize: "6rem", fontFamily: "'Outfit', sans-serif" }}>297</span>

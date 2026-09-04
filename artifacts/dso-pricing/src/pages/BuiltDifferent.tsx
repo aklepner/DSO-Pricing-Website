@@ -108,9 +108,9 @@ export default function BuiltDifferent() {
       {/* FINAL CTA */}
       <section className="py-20 px-6" style={{ backgroundColor: ORANGE }}>
         <div className="max-w-4xl mx-auto text-center">
-          <p className="text-white/80 text-xs font-black uppercase tracking-widest mb-4">Member Pricing</p>
+          <p className="text-white text-xl font-black uppercase tracking-widest mb-4">Member Pricing</p>
           <h2 className="text-4xl md:text-6xl font-black text-white mb-6 uppercase leading-tight" style={{ fontFamily: "'Outfit', sans-serif" }}>
-            Start Saving Now
+            Start Saving &amp; Growing Now
           </h2>
           <div className="flex items-center justify-center gap-6 mb-4">
             <p className="font-black text-white" style={{ fontSize: "3rem", fontFamily: "'Outfit', sans-serif" }}>$297<span className="text-2xl font-normal opacity-70">/mo</span></p>
@@ -120,7 +120,7 @@ export default function BuiltDifferent() {
               <a href={orderUrl} target="_blank" rel="noopener noreferrer">Sign Up $297/Mo <ArrowRight className="ml-2 w-5 h-5" /></a>
             </Button>
           </div>
-          <p className="text-white/60 text-sm mt-5 italic">Most members cover the cost with one change.</p>
+          <p className="text-white/90 text-lg mt-5 italic">Most members cover the cost with one change.</p>
         </div>
       </section>
 
