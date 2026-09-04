@@ -205,7 +205,7 @@ export default function Home() {
             The Ultimate Toolbox to Reduce Your Expenses and Grow Your Revenue
           </p>
           <div
-            className="max-w-3xl mx-auto mb-6 rounded-lg px-5 py-3 text-base sm:text-lg font-black leading-snug"
+            className="max-w-4xl mx-auto mb-6 rounded-xl px-6 sm:px-8 py-5 sm:py-6 text-xl sm:text-2xl font-black leading-snug"
             style={{ backgroundColor: "#FFD700", color: ORANGE }}
             data-testid="text-aligner-savings-callout"
           >
