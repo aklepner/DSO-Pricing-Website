@@ -49,6 +49,7 @@ export default function Pricing() {
               <a href={orderUrl} target="_blank" rel="noopener noreferrer">Lock In Your Savings</a>
             </Button>
           </div>
+          <p className="mt-4 text-base italic text-white/70">Simple month-to-month membership</p>
         </div>
       </section>
 
@@ -63,7 +64,6 @@ export default function Pricing() {
               <span className="font-black text-white leading-none" style={{ fontSize: "6rem", fontFamily: "'Outfit', sans-serif" }}>297</span>
               <span className="text-xl text-white/50 mt-9">/mo</span>
             </div>
-            <p className="text-white/40 mb-8 text-sm font-semibold uppercase tracking-wide">Simple month-to-month membership</p>
             <Button asChild size="lg" className="w-full text-white font-bold text-lg uppercase tracking-wide h-14" style={{ backgroundColor: ORANGE }} data-testid="button-join-price">
               <a href={orderUrl} target="_blank" rel="noopener noreferrer">Lock In Your Savings <ArrowRight className="ml-2 w-5 h-5" /></a>
             </Button>
