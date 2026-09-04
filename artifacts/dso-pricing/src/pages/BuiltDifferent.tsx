@@ -210,12 +210,9 @@ export default function BuiltDifferent() {
             <p className="font-black text-white" style={{ fontSize: "3rem", fontFamily: "'Outfit', sans-serif" }}>$297<span className="text-2xl font-normal opacity-70">/mo</span></p>
           </div>
           <p className="text-white/80 text-base font-semibold mb-8">Limited to the first 100 practices.</p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex justify-center">
             <Button asChild size="lg" className="bg-white font-bold text-lg uppercase tracking-wide px-10 h-14" style={{ color: ORANGE }} data-testid="button-join-cta">
               <a href={orderUrl} target="_blank" rel="noopener noreferrer">Sign Up $297/Mo <ArrowRight className="ml-2 w-5 h-5" /></a>
-            </Button>
-            <Button asChild size="lg" variant="outline" className="border-white/40 text-white hover:bg-white/15 bg-transparent text-base font-semibold px-10 h-14" data-testid="button-book-cta">
-              <Link href="/profitability-call">Book a Business Advisor Profitability Call</Link>
             </Button>
           </div>
           <p className="text-white/60 text-sm mt-5 italic">Most members cover the cost with one change.</p>

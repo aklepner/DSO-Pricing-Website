@@ -55,12 +55,9 @@ export default function Pricing() {
           <p className="text-white/60 text-xl leading-relaxed max-w-2xl mx-auto mb-10">
             Limited to the first 100 practices. Lock in your savings before pricing increases.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex justify-center">
             <Button asChild size="lg" className="text-white font-bold text-base uppercase tracking-wide h-14 px-10" style={{ backgroundColor: ORANGE }} data-testid="button-join-hero">
               <a href={orderUrl} target="_blank" rel="noopener noreferrer">Lock In Your Savings</a>
-            </Button>
-            <Button asChild size="lg" variant="outline" className="border-white/25 text-white hover:bg-white/10 bg-transparent h-14 px-10 font-semibold">
-              <Link href="/profitability-call">Book a Business Advisor Profitability Call</Link>
             </Button>
           </div>
         </div>
@@ -186,12 +183,9 @@ export default function Pricing() {
             <p className="font-black text-white" style={{ fontSize: "3rem", fontFamily: "'Outfit', sans-serif" }}>$297<span className="text-2xl font-normal opacity-70">/mo</span></p>
           </div>
           <p className="text-white/80 font-semibold mb-8">Limited to the first 100 practices.</p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mt-10">
+          <div className="flex justify-center mt-10">
             <Button asChild size="lg" className="bg-white font-bold text-lg uppercase tracking-wide px-10 h-14" style={{ color: ORANGE }} data-testid="button-join-final">
               <a href={orderUrl} target="_blank" rel="noopener noreferrer">Lock In Your Savings <ArrowRight className="ml-2 w-5 h-5" /></a>
-            </Button>
-            <Button asChild size="lg" variant="outline" className="border-white/40 text-white hover:bg-white/15 bg-transparent text-base font-semibold px-10 h-14">
-              <Link href="/profitability-call">Book a Business Advisor Profitability Call</Link>
             </Button>
           </div>
           <p className="text-white/60 text-sm mt-5 italic">Most members cover the cost with one change.</p>

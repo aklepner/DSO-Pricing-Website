@@ -8,7 +8,7 @@ const ORANGE = "#DD042A";
 export default function AdvisorCall() {
   useEffect(() => {
     const prev = document.title;
-    document.title = "Book a Business Advisor Profitability Call | DSO Pricing";
+    document.title = "Schedule Your Call | DSO Pricing";
 
     const script = document.createElement("script");
     script.src = "https://go.dsopricing.com/js/form_embed.js";
@@ -34,7 +34,7 @@ export default function AdvisorCall() {
             className="md:text-6xl font-black text-white uppercase mb-5 text-[40px]"
             style={{ fontFamily: "'Outfit', sans-serif", letterSpacing: "-0.02em" }}
           >
-            Book a <span style={{ color: ORANGE }}>Business Advisor</span> Profitability Call
+            Schedule Your <span style={{ color: ORANGE }}>Profitability Call</span>
           </h1>
           <p className="text-white/60 text-[18px]">
             Pick a time that works for you and we'll show you exactly where your practice can save.

@@ -440,12 +440,9 @@ export default function Home() {
             Build A Stronger,<br />More Scalable<br />Dental Business.
           </h2>
           <p className="text-white/75 text-lg mb-10">On your terms. Independent. Strategic. Leveraged.</p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex justify-center">
             <Button asChild size="lg" className="bg-white font-bold text-lg uppercase tracking-wide px-10 h-14" style={{ color: ORANGE }} data-testid="button-join-final">
               <a href={orderUrl} target="_blank" rel="noopener noreferrer">Sign Up $297/Mo <ArrowRight className="ml-2 w-5 h-5" /></a>
-            </Button>
-            <Button asChild size="lg" variant="outline" className="border-white/40 text-white hover:bg-white/15 bg-transparent text-base font-semibold px-10 h-14" data-testid="button-book-final">
-              <Link href="/profitability-call">Book a Business Advisor Profitability Call</Link>
             </Button>
           </div>
         </div>
