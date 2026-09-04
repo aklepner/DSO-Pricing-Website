@@ -256,8 +256,8 @@ export default function Home() {
           <div className="rounded-2xl border-2 border-white/15 p-10 mb-8" style={{ backgroundColor: "rgba(255,255,255,0.05)" }}>
             <div className="space-y-4 mb-8">
               {[
-                { label: "Save $400 on Every Clear Aligner Case", detail: "At ~4 aligners/month = $1,600/month saved" },
-                { label: "Save ~$50 per crown", detail: "At ~30 crowns/month = ~$1,500/month saved" },
+                { label: "Save $400 on Every Clear Aligner Case", detail: "At 4 aligners/month = $1,600/month saved" },
+                { label: "Save $50 per crown", detail: "At 30 crowns/month = $1,500/month saved" },
                 { label: "Membership: $297/mo", detail: null },
               ].map((row, i) => (
                 <div key={i} className="flex items-start gap-4 p-5 rounded-xl border border-white/10" style={{ backgroundColor: "rgba(255,255,255,0.04)" }}>
