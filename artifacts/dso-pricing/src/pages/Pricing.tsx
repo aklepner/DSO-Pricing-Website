@@ -44,9 +44,6 @@ export default function Pricing() {
             Members<br />
             <span style={{ color: ORANGE }}>Pricing</span>
           </h1>
-          <p className="text-white/60 text-xl leading-relaxed max-w-2xl mx-auto mb-10">
-            Lock in your savings before pricing increases.
-          </p>
           <div className="flex justify-center">
             <Button asChild size="lg" className="text-white font-bold text-base uppercase tracking-wide h-14 px-10" style={{ backgroundColor: ORANGE }} data-testid="button-join-hero">
               <a href={orderUrl} target="_blank" rel="noopener noreferrer">Lock In Your Savings</a>
