@@ -47,9 +47,8 @@ export default function Pricing() {
           <div className="flex justify-center mb-6">
             <StarRating count={5} size={20} />
           </div>
-          <p className="text-white/50 text-base font-black uppercase tracking-widest mb-4">Member Pricing</p>
           <h1 className="text-[40px] sm:text-5xl md:text-6xl lg:text-7xl font-black text-white leading-[1.05] mb-6 uppercase" style={{ fontFamily: "'Outfit', sans-serif", letterSpacing: "-0.02em" }}>
-            Founders<br />
+            Members<br />
             <span style={{ color: ORANGE }}>Pricing</span>
           </h1>
           <p className="text-white/60 text-xl leading-relaxed max-w-2xl mx-auto mb-10">
