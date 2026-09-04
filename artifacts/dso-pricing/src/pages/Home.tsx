@@ -329,7 +329,7 @@ export default function Home() {
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-16 items-start">
             <div>
-              <p className="text-sm font-black uppercase tracking-widest mb-4" style={{ color: ORANGE }}>What Is DSO Pricing</p>
+              <p className="text-sm font-black uppercase tracking-widest mb-4" style={{ color: ORANGE }}>What Is DSO Pricing?</p>
               <h2 className="text-4xl md:text-5xl font-black text-white leading-tight mb-6 uppercase" style={{ fontFamily: "'Outfit', sans-serif" }}>
                 Get the Same Pricing, Partners, and Strategic Support Top-Performing Groups Use to Grow.
               </h2>
