@@ -63,7 +63,8 @@ export default function Pricing() {
               <span className="font-black text-white leading-none" style={{ fontSize: "6rem", fontFamily: "'Outfit', sans-serif" }}>297</span>
               <span className="text-xl text-white/50 mt-9">/mo</span>
             </div>
-            <p className="text-white/40 mb-8 text-sm font-semibold uppercase tracking-wide">Simple month-to-month membership</p>
+            <p className="text-white/70 mb-2 text-base font-semibold">per practice.</p>
+            <p className="mb-8 text-base font-black tracking-wide" style={{ color: "#FFD700" }}>Simple Month-to-Month Membership</p>
             <Button asChild size="lg" className="w-full text-white font-bold text-lg uppercase tracking-wide h-14" style={{ backgroundColor: ORANGE }} data-testid="button-join-price">
               <a href={orderUrl} target="_blank" rel="noopener noreferrer">Lock In Your Savings <ArrowRight className="ml-2 w-5 h-5" /></a>
             </Button>
