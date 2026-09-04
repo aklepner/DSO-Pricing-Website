@@ -117,7 +117,6 @@ export default function Pricing() {
             <h2 className="text-4xl md:text-5xl font-black text-white uppercase leading-tight" style={{ fontFamily: "'Outfit', sans-serif" }}>
               This Pays For Itself… Fast
             </h2>
-            <p className="text-white/55 text-lg mt-4">Most practices cover the cost with one change.</p>
             <div className="flex justify-center mt-8">
               <Button asChild size="lg" className="text-white font-black text-sm uppercase tracking-widest h-14 px-10" style={{ backgroundColor: ORANGE }}>
                 <Link href="/calculator">Calculate Your Savings <ArrowRight className="ml-2 w-4 h-4" /></Link>
