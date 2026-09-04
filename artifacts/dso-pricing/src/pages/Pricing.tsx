@@ -45,7 +45,7 @@ export default function Pricing() {
             <span style={{ color: ORANGE }}>Pricing</span>
           </h1>
           <p className="text-white/60 text-xl leading-relaxed max-w-2xl mx-auto mb-10">
-            Limited to the first 100 practices. Lock in your savings before pricing increases.
+            Lock in your savings before pricing increases.
           </p>
           <div className="flex justify-center">
             <Button asChild size="lg" className="text-white font-bold text-base uppercase tracking-wide h-14 px-10" style={{ backgroundColor: ORANGE }} data-testid="button-join-hero">
