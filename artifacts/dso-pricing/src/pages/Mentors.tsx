@@ -53,7 +53,7 @@ export default function Mentors() {
             Meet The <span style={{ color: ORANGE }}>Mentors</span>
           </h1>
           <p className="text-white/70 text-xl leading-relaxed max-w-2xl mx-auto font-medium">
-            Gain exclusive access to the minds shaping the future of dentistry. Our expert mentors provide the actionable growth guidance practice owners need to scale profitably.
+            Gain exclusive access to dentistry’s leading experts and the strategies you need to scale profitably
           </p>
         </div>
       </section>
