@@ -212,19 +212,10 @@ export default function Home() {
             Save $400 on Every Clear Aligner Case with Your DSO Pricing Membership
           </div>
           <div className="flex flex-col items-center gap-3">
-            <div className="flex flex-col sm:flex-row items-center gap-3">
+            <div className="flex items-center">
               <Button asChild size="lg" className="text-white font-black text-sm uppercase tracking-widest h-14 px-12" style={{ backgroundColor: ORANGE }} data-testid="button-join-hero">
-                <a href={orderUrl} target="_blank" rel="noopener noreferrer">Sign Up $297/mo</a>
+                <a href={orderUrl} target="_blank" rel="noopener noreferrer">Start Saving Now</a>
               </Button>
-              <a
-                href="https://app.dsopricing.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center h-14 px-8 rounded-lg text-white text-sm font-black uppercase tracking-widest border-2 border-white/40 hover:border-white transition-colors"
-                style={{ backgroundColor: "rgba(0,0,0,0.8)" }}
-              >
-                Login to DSO Pricing
-              </a>
             </div>
             <div className="flex flex-col items-center gap-0.5 text-center">
               <p className="font-bold text-white" style={{ fontSize: "15px" }}>Limited Summer Special...Normally $797</p>
