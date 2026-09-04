@@ -209,7 +209,7 @@ export default function Home() {
             style={{ backgroundColor: "#FFD700", color: ORANGE }}
             data-testid="text-aligner-savings-callout"
           >
-            Save $400 on Every Clear Aligner Case with Your DSO Pricing Membership
+            Save $300 on Every Clear Aligner Case with Your DSO Pricing Membership
           </div>
           <div className="flex flex-col items-center gap-3">
             <div className="flex items-center">
@@ -255,7 +255,7 @@ export default function Home() {
           <div className="rounded-2xl border-2 border-white/15 p-10 mb-8" style={{ backgroundColor: "rgba(255,255,255,0.05)" }}>
             <div className="space-y-4 mb-8">
               {[
-                { label: "Save $400 on Every Clear Aligner Case", detail: "At 4 aligners/month = $1,600/month saved" },
+                { label: "Save $300 on Every Clear Aligner Case", detail: "At 4 aligners/month = $1,200/month saved" },
                 { label: "Save $50 per crown", detail: "At 30 crowns/month = $1,500/month saved" },
                 { label: "Subtract your Membership: $297/mo", detail: null },
               ].map((row, i) => (
@@ -270,11 +270,11 @@ export default function Home() {
             </div>
             <div className="text-center py-6 border-t border-white/10">
               <p className="text-white/50 text-base mb-2">That's</p>
-              <p className="font-black text-[38px] sm:text-[56px] leading-none whitespace-nowrap mb-4" style={{ fontFamily: "'Outfit', sans-serif", color: ORANGE }}>$2,800/month</p>
+              <p className="font-black text-[38px] sm:text-[56px] leading-none whitespace-nowrap mb-4" style={{ fontFamily: "'Outfit', sans-serif", color: ORANGE }}>$2,400/month</p>
               <p className="font-black text-white uppercase" style={{ fontSize: "28px", fontFamily: "'Outfit', sans-serif" }}>BACK IN YOUR PRACTICE</p>
             </div>
             <div className="mt-6 rounded-xl p-6 text-center border border-white/10" style={{ backgroundColor: "rgba(255,255,255,0.03)" }}>
-              <p className="text-white font-black text-xl uppercase mb-1" style={{ fontFamily: "'Outfit', sans-serif" }}>If two decisions makes you $2,800/month…</p>
+              <p className="text-white font-black text-xl uppercase mb-1" style={{ fontFamily: "'Outfit', sans-serif" }}>If two decisions makes you $2,400/month…</p>
               <p className="text-white text-base font-bold underline underline-offset-4">What happens when you optimize the rest?</p>
             </div>
           </div>
