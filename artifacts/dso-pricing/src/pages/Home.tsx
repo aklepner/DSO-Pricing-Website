@@ -322,7 +322,7 @@ export default function Home() {
       </section>
 
       {/* WHAT IS DSO PRICING */}
-      <section className="py-20 px-6" style={{ backgroundColor: NAVY }}>
+      <section className="py-20 px-6" style={{ backgroundColor: NAVY2 }}>
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-16 items-start">
             <div>
