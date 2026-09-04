@@ -86,19 +86,19 @@ export default function BuiltDifferent() {
       </section>
 
       {/* OUR VALUES */}
-      <section className="py-20 px-6 bg-white">
+      <section className="py-20 px-6 bg-black">
         <div className="max-w-4xl mx-auto text-center">
           <p className="text-sm font-black uppercase tracking-widest mb-4" style={{ color: ORANGE }}>Our Values</p>
-          <h2 className="text-4xl md:text-5xl font-black text-gray-900 uppercase leading-tight mb-14" style={{ fontFamily: "'Outfit', sans-serif" }}>
+          <h2 className="text-4xl md:text-5xl font-black text-white uppercase leading-tight mb-14" style={{ fontFamily: "'Outfit', sans-serif" }}>
             What We Stand For
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {values.map((item, i) => (
-              <div key={i} className="rounded-2xl p-8 border-2 border-gray-100 flex flex-col items-center gap-4">
+              <div key={i} className="rounded-2xl p-8 border-2 border-white/15 flex flex-col items-center gap-4">
                 <div className="w-14 h-14 rounded-xl flex items-center justify-center" style={{ backgroundColor: ORANGE }}>
                   <item.icon className="w-7 h-7 text-white" />
                 </div>
-                <p className="font-black text-gray-900 text-lg uppercase" style={{ fontFamily: "'Outfit', sans-serif" }}>{item.label}</p>
+                <p className="font-black text-white text-lg uppercase" style={{ fontFamily: "'Outfit', sans-serif" }}>{item.label}</p>
               </div>
             ))}
           </div>
