@@ -273,11 +273,10 @@ export default function Home() {
               <p className="text-white/50 text-base mb-2">That's</p>
               <p className="font-black text-white mb-2" style={{ fontSize: "3.5rem", fontFamily: "'Outfit', sans-serif", color: ORANGE }}>$2,800/month</p>
               <p className="font-black text-white uppercase" style={{ fontSize: "28px", fontFamily: "'Outfit', sans-serif" }}>BACK IN YOUR PRACTICE</p>
-              <p className="text-white/40 text-sm mt-3 italic">And that's just one vendor.</p>
             </div>
             <div className="mt-6 rounded-xl p-6 text-center border border-white/10" style={{ backgroundColor: "rgba(255,255,255,0.03)" }}>
-              <p className="text-white font-black text-xl uppercase mb-1" style={{ fontFamily: "'Outfit', sans-serif" }}>If one decision makes you $2,800/month…</p>
-              <p className="text-white/50 text-base">What happens when you optimize the rest?</p>
+              <p className="text-white font-black text-xl uppercase mb-1" style={{ fontFamily: "'Outfit', sans-serif" }}>If two decisions makes you $2,800/month…</p>
+              <p className="text-white text-base font-bold underline underline-offset-4">What happens when you optimize the rest?</p>
             </div>
           </div>
           <div className="text-center">
