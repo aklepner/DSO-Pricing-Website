@@ -270,7 +270,7 @@ export default function Home() {
             </div>
             <div className="text-center py-6 border-t border-white/10">
               <p className="text-white/50 text-base mb-2">That's</p>
-              <p className="font-black text-white mb-2" style={{ fontSize: "3.5rem", fontFamily: "'Outfit', sans-serif", color: ORANGE }}>$2,800/month</p>
+              <p className="font-black text-[38px] sm:text-[56px] leading-none whitespace-nowrap mb-4" style={{ fontFamily: "'Outfit', sans-serif", color: ORANGE }}>$2,800/month</p>
               <p className="font-black text-white uppercase" style={{ fontSize: "28px", fontFamily: "'Outfit', sans-serif" }}>BACK IN YOUR PRACTICE</p>
             </div>
             <div className="mt-6 rounded-xl p-6 text-center border border-white/10" style={{ backgroundColor: "rgba(255,255,255,0.03)" }}>
