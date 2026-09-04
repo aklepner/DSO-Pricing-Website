@@ -19,6 +19,12 @@
     animation: none;
   }
 }
+
+/* Keep section-intro statements prominent and consistent sitewide. */
+p.text-sm.font-black.uppercase.tracking-widest {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
 @plugin "@tailwindcss/typography";
 
 h1, h2, h3, h4, h5, h6 {
