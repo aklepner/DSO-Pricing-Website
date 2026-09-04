@@ -418,7 +418,7 @@ export default function Home() {
       </section>
 
       {/* FAQ */}
-      <section className="py-20 px-6" style={{ backgroundColor: NAVY2 }}>
+      <section className="py-20 px-6" style={{ backgroundColor: "#0F0F0F" }}>
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-14">
             <p className="text-sm font-black uppercase tracking-widest mb-3" style={{ color: ORANGE }}>Got Questions?</p>
