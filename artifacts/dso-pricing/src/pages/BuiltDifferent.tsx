@@ -53,7 +53,7 @@ export default function BuiltDifferent() {
             <div>
               <p className="text-sm font-black uppercase tracking-widest mb-4" style={{ color: ORANGE }}>The Real Opportunity</p>
               <h2 className="text-4xl md:text-5xl font-black text-gray-900 uppercase leading-tight mb-6" style={{ fontFamily: "'Outfit', sans-serif" }}>
-                Cut Overhead Costs While Growing Your Practice
+                Lower your expenses while growing your revenue
               </h2>
               <p className="text-gray-600 text-lg leading-relaxed mb-6">
                 Most dentists focus on saving $10 here and there. That's not what grows your practice.
