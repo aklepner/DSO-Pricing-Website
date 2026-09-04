@@ -205,11 +205,11 @@ export default function Home() {
             The Ultimate Toolbox to Reduce Your Expenses and Grow Your Revenue
           </p>
           <div
-            className="max-w-4xl mx-auto mb-6 rounded-xl px-6 sm:px-8 py-5 sm:py-6 text-xl sm:text-2xl font-black leading-snug"
+            className="w-fit max-w-full mx-auto mb-6 rounded-xl px-6 sm:px-8 py-5 sm:py-6 text-xl sm:text-2xl font-black leading-snug"
             style={{ backgroundColor: "#FFD700", color: ORANGE }}
             data-testid="text-aligner-savings-callout"
           >
-            Save $300 on <span className="underline">Every</span> Clear Aligner Case
+            Save $300 on <span className="underline">EVERY</span> Clear Aligner Case
             <br />
             with Your DSO Pricing Membership
           </div>
