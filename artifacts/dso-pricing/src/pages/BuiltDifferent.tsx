@@ -1,6 +1,6 @@
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
-import { CheckCircle2, X, TrendingUp, Shield, Target, Users, DollarSign, BookOpen, ArrowRight, HeartHandshake } from "lucide-react";
+import { CheckCircle2, TrendingUp, Shield, Target, Users, DollarSign, BookOpen, ArrowRight, HeartHandshake } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { useOrderUrl } from "@/contexts/AffiliateContext";
@@ -80,56 +80,6 @@ export default function BuiltDifferent() {
                 </div>
               ))}
               <p className="text-gray-400 text-sm italic pl-2">…without having to figure it out yourself.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* TRADITIONAL vs DSO PRICING */}
-      <section className="py-20 px-6 bg-gray-50">
-        <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-14">
-            <p className="text-sm font-black uppercase tracking-widest mb-3" style={{ color: ORANGE }}>The Difference</p>
-            <h2 className="text-4xl md:text-5xl font-black text-gray-900 uppercase leading-tight" style={{ fontFamily: "'Outfit', sans-serif" }}>
-              Most Groups Give You Access.<br />We Give You Direction.
-            </h2>
-          </div>
-          <div className="grid md:grid-cols-2 gap-8">
-            {/* Traditional */}
-            <div className="rounded-xl p-10 bg-white border-2 border-gray-200 relative overflow-hidden">
-              <div className="absolute top-0 left-0 right-0 h-1.5 bg-gray-300 rounded-t-xl" />
-              <div className="flex items-center gap-4 mb-8">
-                <div className="w-11 h-11 rounded-full bg-gray-100 flex items-center justify-center">
-                  <X className="w-5 h-5 text-gray-400" />
-                </div>
-                <h3 className="text-2xl font-black text-gray-500 uppercase" style={{ fontFamily: "'Outfit', sans-serif" }}>Traditional Buying Groups</h3>
-              </div>
-              <ul className="space-y-4">
-                {["Vendor lists", "Discounts", "You figure it out"].map((item, i) => (
-                  <li key={i} className="flex items-start gap-3">
-                    <span className="text-gray-300 font-bold shrink-0 mt-0.5 text-lg">✕</span>
-                    <span className="text-gray-400 text-base">{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            {/* DSO Pricing */}
-            <div className="rounded-xl p-10 bg-white border-2 relative overflow-hidden" style={{ borderColor: ORANGE }}>
-              <div className="absolute top-0 left-0 right-0 h-1.5 rounded-t-xl" style={{ backgroundColor: ORANGE }} />
-              <div className="flex items-center gap-4 mb-8">
-                <div className="w-11 h-11 rounded-full flex items-center justify-center" style={{ backgroundColor: "#fff0f3" }}>
-                  <CheckCircle2 className="w-5 h-5" style={{ color: ORANGE }} />
-                </div>
-                <h3 className="text-2xl font-black text-gray-900 uppercase" style={{ fontFamily: "'Outfit', sans-serif" }}>DSO Pricing</h3>
-              </div>
-              <ul className="space-y-4">
-                {["High-impact vendors", "Hands-on guidance", "Clear direction on what to change"].map((item, i) => (
-                  <li key={i} className="flex items-start gap-3">
-                    <CheckCircle2 className="w-5 h-5 shrink-0 mt-0.5" style={{ color: ORANGE }} />
-                    <span className="text-gray-700 font-semibold text-base">{item}</span>
-                  </li>
-                ))}
-              </ul>
             </div>
           </div>
         </div>
