@@ -215,7 +215,7 @@ export default function Home() {
           </div>
           <div className="flex flex-col items-center gap-3">
             <div className="flex items-center">
-              <Button asChild size="lg" className="text-white font-black text-sm uppercase tracking-widest min-h-14 h-auto px-6 sm:px-12 py-4" style={{ backgroundColor: ORANGE }} data-testid="button-join-hero">
+              <Button asChild size="lg" className="animate-gentle-wobble text-white font-black text-sm uppercase tracking-widest min-h-14 h-auto px-6 sm:px-12 py-4" style={{ backgroundColor: ORANGE }} data-testid="button-join-hero">
                 <a href={orderUrl} target="_blank" rel="noopener noreferrer">Start saving now for $297/month.</a>
               </Button>
             </div>

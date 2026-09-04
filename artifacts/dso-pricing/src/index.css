@@ -1,5 +1,24 @@
 @import "tailwindcss";
 @import "tw-animate-css";
+
+@keyframes gentle-vertical-wobble {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+.animate-gentle-wobble {
+  animation: gentle-vertical-wobble 1.8s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-gentle-wobble {
+    animation: none;
+  }
+}
 @plugin "@tailwindcss/typography";
 
 h1, h2, h3, h4, h5, h6 {
