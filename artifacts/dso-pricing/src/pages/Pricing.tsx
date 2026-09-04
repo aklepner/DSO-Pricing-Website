@@ -133,13 +133,13 @@ export default function Pricing() {
               <p className="font-black text-white uppercase" style={{ fontSize: "28px", fontFamily: "'Outfit', sans-serif" }}>BACK IN YOUR PRACTICE</p>
             </div>
             <div className="mt-6 rounded-xl p-6 text-center border border-white/10" style={{ backgroundColor: "rgba(255,255,255,0.03)" }}>
-              <p className="text-white font-black text-xl uppercase mb-1" style={{ fontFamily: "'Outfit', sans-serif" }}>If two decisions makes you $2,400/month…</p>
-              <p className="text-white text-base font-bold underline underline-offset-4">What happens when you optimize the rest?</p>
+              <p className="text-white font-black text-xl uppercase mb-1 md:whitespace-nowrap" style={{ fontFamily: "'Outfit', sans-serif" }}>If two decisions makes you an extra $2,400/month</p>
+              <p className="text-xl font-bold" style={{ color: "#FFD700" }}>What happens when you optimize the rest?</p>
             </div>
           </div>
           <div className="text-center">
             <Button asChild size="lg" className="text-white font-black uppercase tracking-widest h-14 px-12" style={{ backgroundColor: ORANGE }}>
-              <a href={orderUrl} target="_blank" rel="noopener noreferrer">Sign Up $297/Mo <ArrowRight className="ml-2 w-4 h-4" /></a>
+              <a href={orderUrl} target="_blank" rel="noopener noreferrer">Unlock your savings <ArrowRight className="ml-2 w-4 h-4" /></a>
             </Button>
           </div>
         </div>
