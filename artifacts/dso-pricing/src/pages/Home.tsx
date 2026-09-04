@@ -201,26 +201,8 @@ export default function Home() {
           <h1 className="text-[40px] sm:text-5xl md:text-6xl lg:text-7xl font-black text-white leading-[1.05] mb-6 uppercase" style={{ fontFamily: "'Outfit', sans-serif", letterSpacing: "-0.02em" }}>
             DSO Level Pricing for Everyone
           </h1>
-          <p
-            className="inline-block rounded-xl px-5 py-3 text-xl font-black leading-relaxed mb-5"
-            style={{
-              color: ORANGE,
-              backgroundColor: "rgba(255,255,255,0.96)",
-              boxShadow: "0 0 24px rgba(255,255,255,0.75)",
-            }}
-          >
+          <p className="text-white/70 text-xl leading-relaxed max-w-2xl mx-auto mb-10">
             The Ultimate Toolbox to Reduce Your Expenses and Grow Your Revenue
-          </p>
-          <p
-            className="max-w-3xl mx-auto rounded-xl px-5 py-3 mb-6 text-base sm:text-lg font-black leading-snug"
-            style={{
-              color: ORANGE,
-              backgroundColor: "#B9FF66",
-              boxShadow: "0 0 18px rgba(185,255,102,0.35)",
-            }}
-            data-testid="text-aligner-savings"
-          >
-            Save $400 on Every Clear Aligner Case with Your DSO Pricing Membership
           </p>
           <div className="flex flex-col items-center gap-3">
             <div className="flex flex-col sm:flex-row items-center gap-3">
