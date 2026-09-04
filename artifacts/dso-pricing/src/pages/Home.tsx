@@ -247,6 +247,11 @@ export default function Home() {
               This Pays For Itself… Fast
             </h2>
             <p className="text-white/55 text-lg mt-4">Most practices cover the cost with one change.</p>
+            <div className="flex justify-center mt-8">
+              <Button asChild size="lg" className="text-white font-black text-sm uppercase tracking-widest h-14 px-10" style={{ backgroundColor: ORANGE }}>
+                <Link href="/calculator">Calculate Your Savings <ArrowRight className="ml-2 w-4 h-4" /></Link>
+              </Button>
+            </div>
           </div>
           <div className="rounded-2xl border-2 border-white/15 p-10 mb-8" style={{ backgroundColor: "rgba(255,255,255,0.05)" }}>
             <div className="space-y-4 mb-8">
