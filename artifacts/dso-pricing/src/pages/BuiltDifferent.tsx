@@ -202,7 +202,7 @@ export default function BuiltDifferent() {
       {/* FINAL CTA */}
       <section className="py-20 px-6" style={{ backgroundColor: ORANGE }}>
         <div className="max-w-4xl mx-auto text-center">
-          <p className="text-white/80 text-xs font-black uppercase tracking-widest mb-4">Founding Member Pricing</p>
+          <p className="text-white/80 text-xs font-black uppercase tracking-widest mb-4">Member Pricing</p>
           <h2 className="text-4xl md:text-6xl font-black text-white mb-6 uppercase leading-tight" style={{ fontFamily: "'Outfit', sans-serif" }}>
             Get In Before<br />Pricing Increases
           </h2>

@@ -47,7 +47,7 @@ export default function Pricing() {
           <div className="flex justify-center mb-6">
             <StarRating count={5} size={20} />
           </div>
-          <p className="text-white/50 text-base font-black uppercase tracking-widest mb-4">Founding Member Pricing</p>
+          <p className="text-white/50 text-base font-black uppercase tracking-widest mb-4">Member Pricing</p>
           <h1 className="text-[40px] sm:text-5xl md:text-6xl lg:text-7xl font-black text-white leading-[1.05] mb-6 uppercase" style={{ fontFamily: "'Outfit', sans-serif", letterSpacing: "-0.02em" }}>
             Founders<br />
             <span style={{ color: ORANGE }}>Pricing</span>
@@ -71,7 +71,7 @@ export default function Pricing() {
         <div className="max-w-xl mx-auto">
           <div className="rounded-2xl border-2 border-white/15 p-12 relative overflow-hidden text-center" style={{ backgroundColor: "rgba(255,255,255,0.05)" }}>
             <div className="absolute top-0 left-0 right-0 h-2 rounded-t-2xl" style={{ backgroundColor: ORANGE }} />
-            <p className="text-white/50 font-black uppercase tracking-widest text-xs mb-2">Founding Member Pricing</p>
+            <p className="text-white/50 font-black uppercase tracking-widest text-xs mb-2">Member Pricing</p>
             <p className="text-white/30 text-sm font-semibold mb-4">Limited to the first 100 practices</p>
             <div className="flex items-start justify-center gap-1 mb-2">
               <span className="text-3xl font-bold text-white mt-3">$</span>
@@ -178,7 +178,7 @@ export default function Pricing() {
           <div className="flex justify-center mb-6">
             <StarRating count={5} size={22} />
           </div>
-          <p className="text-white/80 text-xs font-black uppercase tracking-widest mb-4">Founding Member Pricing</p>
+          <p className="text-white/80 text-xs font-black uppercase tracking-widest mb-4">Member Pricing</p>
           <h2 className="text-4xl md:text-6xl font-black text-white mb-6 uppercase leading-tight" style={{ fontFamily: "'Outfit', sans-serif" }}>
             Get In Before<br />Pricing Increases
           </h2>
