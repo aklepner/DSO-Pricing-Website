@@ -209,9 +209,9 @@ export default function Home() {
             style={{ backgroundColor: "#FFD700", color: ORANGE }}
             data-testid="text-aligner-savings-callout"
           >
-            Save $300 on <span className="underline">EVERY</span> Clear Aligner Case
+            Save $300 On <span className="underline">EVERY</span> Clear Aligner Case
             <br />
-            purchased with Your DSO Pricing Membership
+            Purchased With Your DSO Pricing Membership
           </div>
           <div className="flex flex-col items-center gap-3">
             <div className="flex items-center">
