@@ -278,7 +278,7 @@ export default function Home() {
               <p className="font-black text-white uppercase" style={{ fontSize: "28px", fontFamily: "'Outfit', sans-serif" }}>BACK IN YOUR PRACTICE</p>
             </div>
             <div className="mt-6 rounded-xl p-6 text-center border border-white/10" style={{ backgroundColor: "rgba(255,255,255,0.03)" }}>
-              <p className="text-white font-black text-xl uppercase mb-1 md:whitespace-nowrap" style={{ fontFamily: "'Outfit', sans-serif" }}>If two decisions makes you an extra $2,400/month…</p>
+              <p className="text-white font-black text-xl uppercase mb-1 md:whitespace-nowrap" style={{ fontFamily: "'Outfit', sans-serif" }}>If two decisions makes you an extra $2,400/month</p>
               <p className="text-xl font-bold" style={{ color: "#FFD700" }}>What happens when you optimize the rest?</p>
             </div>
           </div>
