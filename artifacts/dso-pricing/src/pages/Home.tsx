@@ -227,7 +227,7 @@ export default function Home() {
           {[
             { icon: Award, label: "Driven by Values", sub: "Kindness. Integrity. Results." },
             { icon: Shield, label: "Built for Dentists", sub: "By operators, for operators." },
-            { icon: Target, label: "Proven Results", sub: "$1,100+/mo back in your practice." },
+            { icon: Target, label: "Proven Results", sub: "$2,400+/mo back in your practice." },
           ].map((item, i) => (
             <div key={i} className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 px-6 py-7">
               <item.icon className="w-8 h-8 shrink-0" style={{ color: ORANGE }} />
