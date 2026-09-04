@@ -239,7 +239,7 @@ export default function Home() {
       </section>
 
       {/* THIS PAYS FOR ITSELF */}
-      <section className="py-20 px-6" style={{ backgroundColor: NAVY2 }}>
+      <section className="py-20 px-6 border-t border-white" style={{ backgroundColor: NAVY2 }}>
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
             <p className="text-sm font-black uppercase tracking-widest mb-4" style={{ color: ORANGE }}>The Math</p>
