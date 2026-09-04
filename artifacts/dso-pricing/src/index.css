@@ -22,13 +22,13 @@
 
 /* Keep all website copy readable, including utility text and labels. */
 body {
-  font-size: 1.125rem;
-  line-height: 1.75rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
 }
 
 :where(.text-xs, .text-sm, .text-base, [class~="text-[16px]"]) {
-  font-size: 1.125rem !important;
-  line-height: 1.75rem !important;
+  font-size: 1rem !important;
+  line-height: 1.5rem !important;
 }
 
 /* Raise low-opacity white copy to a readable contrast level. */
