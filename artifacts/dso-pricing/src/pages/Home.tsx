@@ -287,6 +287,23 @@ export default function Home() {
         </div>
       </section>
 
+      {/* WHY MEMBERS STAY */}
+      <section className="py-20 px-6 bg-white">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-14">
+            <p className="text-sm font-black uppercase tracking-widest mb-3" style={{ color: ORANGE }}>Why Members Stay</p>
+            <h2 className="text-4xl md:text-5xl font-black text-gray-900 uppercase leading-tight" style={{ fontFamily: "'Outfit', sans-serif" }}>
+              Most Dentists Join for Savings.<br />They Stay Because We Help Them Grow.
+            </h2>
+          </div>
+          <div className="flex justify-center mt-10">
+            <Button asChild size="lg" className="text-white font-bold uppercase tracking-wide h-14 px-10" style={{ backgroundColor: ORANGE }}>
+              <a href={orderUrl} target="_blank" rel="noopener noreferrer">Join DSO Pricing <ArrowRight className="ml-2 w-4 h-4" /></a>
+            </Button>
+          </div>
+        </div>
+      </section>
+
 
       {/* VENDOR BAND */}
       <section className="pt-16 pb-10 px-6" style={{ backgroundColor: NAVY2 }}>
@@ -301,23 +318,6 @@ export default function Home() {
             </Button>
           </div>
           <CategoryMiniGrid />
-        </div>
-      </section>
-
-      {/* SAVE / GROW / SUPPORT */}
-      <section className="py-20 px-6 bg-white">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-14">
-            <p className="text-sm font-black uppercase tracking-widest mb-3" style={{ color: ORANGE }}>Why Members Stay</p>
-            <h2 className="text-4xl md:text-5xl font-black text-gray-900 uppercase leading-tight" style={{ fontFamily: "'Outfit', sans-serif" }}>
-              Most Dentists Join for Savings.<br />They Stay Because We Help Them Grow.
-            </h2>
-          </div>
-          <div className="flex justify-center mt-10">
-            <Button asChild size="lg" className="text-white font-bold uppercase tracking-wide h-14 px-10" style={{ backgroundColor: ORANGE }}>
-              <a href={orderUrl} target="_blank" rel="noopener noreferrer">Join DSO Pricing <ArrowRight className="ml-2 w-4 h-4" /></a>
-            </Button>
-          </div>
         </div>
       </section>
 
