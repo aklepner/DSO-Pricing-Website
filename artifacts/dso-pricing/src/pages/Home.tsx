@@ -258,7 +258,7 @@ export default function Home() {
               {[
                 { label: "Save $400 on Every Clear Aligner Case", detail: "At 4 aligners/month = $1,600/month saved" },
                 { label: "Save $50 per crown", detail: "At 30 crowns/month = $1,500/month saved" },
-                { label: "Membership: $297/mo", detail: null },
+                { label: "Subtract your Membership: $297/mo", detail: null },
               ].map((row, i) => (
                 <div key={i} className="flex items-start gap-4 p-5 rounded-xl border border-white/10" style={{ backgroundColor: "rgba(255,255,255,0.04)" }}>
                   <CheckCircle2 className="w-5 h-5 mt-0.5 shrink-0" style={{ color: ORANGE }} />
