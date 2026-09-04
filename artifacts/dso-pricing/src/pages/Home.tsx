@@ -399,6 +399,24 @@ export default function Home() {
         </div>
       </section>
 
+      {/* FINAL CTA */}
+      <section className="py-20 px-6" style={{ backgroundColor: ORANGE }}>
+        <div className="max-w-4xl mx-auto text-center">
+          <div className="flex justify-center mb-6">
+            <StarRating count={5} size={24} />
+          </div>
+          <h2 className="text-4xl md:text-6xl font-black text-white mb-6 uppercase leading-tight" style={{ fontFamily: "'Outfit', sans-serif" }}>
+            Build A Stronger,<br />More Scalable<br />Dental Business.
+          </h2>
+          <p className="text-white/75 text-lg mb-10">On your terms. Independent. Strategic. Leveraged.</p>
+          <div className="flex justify-center">
+            <Button asChild size="lg" className="bg-white font-bold text-lg uppercase tracking-wide px-10 h-14" style={{ color: ORANGE }} data-testid="button-join-final">
+              <a href={orderUrl} target="_blank" rel="noopener noreferrer">Sign Up $297/Mo <ArrowRight className="ml-2 w-5 h-5" /></a>
+            </Button>
+          </div>
+        </div>
+      </section>
+
       {/* FAQ */}
       <section className="py-20 px-6" style={{ backgroundColor: NAVY2 }}>
         <div className="max-w-6xl mx-auto">
@@ -412,24 +430,6 @@ export default function Home() {
             {faqs.map((faq, i) => (
               <FAQItem key={i} q={faq.q} a={faq.a} />
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* FINAL CTA */}
-      <section className="py-20 px-6" style={{ backgroundColor: NAVY }}>
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="flex justify-center mb-6">
-            <StarRating count={5} size={24} />
-          </div>
-          <h2 className="text-4xl md:text-6xl font-black text-white mb-6 uppercase leading-tight" style={{ fontFamily: "'Outfit', sans-serif" }}>
-            Build A Stronger,<br />More Scalable<br />Dental Business.
-          </h2>
-          <p className="text-white/75 text-lg mb-10">On your terms. Independent. Strategic. Leveraged.</p>
-          <div className="flex justify-center">
-            <Button asChild size="lg" className="bg-white font-bold text-lg uppercase tracking-wide px-10 h-14" style={{ color: ORANGE }} data-testid="button-join-final">
-              <a href={orderUrl} target="_blank" rel="noopener noreferrer">Sign Up $297/Mo <ArrowRight className="ml-2 w-5 h-5" /></a>
-            </Button>
           </div>
         </div>
       </section>
