@@ -67,7 +67,7 @@ export default function BuiltDifferent() {
               {[
                 { label: "Choose the right vendors", icon: Target, desc: "Stop guessing. We've already vetted the vendors that actually move the needle." },
                 { label: "Improve efficiency", icon: Shield, desc: "Better systems and smarter decisions — not just cheaper products." },
-                { label: "Make better growth decisions", icon: TrendingUp, desc: "With guidance from operators who've actually scaled practices like yours." },
+                { label: "Make better growth decisions", icon: TrendingUp, desc: "Make confident growth decisions with guidance from industry experts" },
               ].map((item, i) => (
                 <div key={i} className="rounded-xl p-6 border-2 border-gray-100 flex items-start gap-4 bg-white hover:border-gray-200 transition-colors">
                   <div className="w-11 h-11 rounded-lg flex items-center justify-center shrink-0" style={{ backgroundColor: ORANGE }}>
