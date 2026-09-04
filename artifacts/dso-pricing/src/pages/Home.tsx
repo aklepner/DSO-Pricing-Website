@@ -202,7 +202,7 @@ export default function Home() {
             DSO Level Pricing for Everyone
           </h1>
           <p className="text-white/70 text-xl leading-relaxed max-w-2xl mx-auto mb-10">
-            Most dentists overpay for overhead. DSO Pricing fixes that and helps you operate like a high-performing group.
+            The Ultimate Toolbox to Reduce Your Expenses and Grow Your Revenue
           </p>
           <div className="flex flex-col items-center gap-3">
             <div className="flex flex-col sm:flex-row items-center gap-3">
