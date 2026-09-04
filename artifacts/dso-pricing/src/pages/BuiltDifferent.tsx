@@ -110,7 +110,7 @@ export default function BuiltDifferent() {
         <div className="max-w-4xl mx-auto text-center">
           <p className="text-white/80 text-xs font-black uppercase tracking-widest mb-4">Member Pricing</p>
           <h2 className="text-4xl md:text-6xl font-black text-white mb-6 uppercase leading-tight" style={{ fontFamily: "'Outfit', sans-serif" }}>
-            Get In Before<br />Pricing Increases
+            Start Saving Now
           </h2>
           <div className="flex items-center justify-center gap-6 mb-4">
             <p className="font-black text-white" style={{ fontSize: "3rem", fontFamily: "'Outfit', sans-serif" }}>$297<span className="text-2xl font-normal opacity-70">/mo</span></p>
