@@ -284,7 +284,7 @@ export default function Home() {
           </div>
           <div className="text-center">
             <Button asChild size="lg" className="text-white font-black uppercase tracking-widest h-14 px-12" style={{ backgroundColor: ORANGE }}>
-              <a href={orderUrl} target="_blank" rel="noopener noreferrer">Sign Up $297/Mo <ArrowRight className="ml-2 w-4 h-4" /></a>
+              <a href={orderUrl} target="_blank" rel="noopener noreferrer">Unlock your savings. <ArrowRight className="ml-2 w-4 h-4" /></a>
             </Button>
           </div>
         </div>
