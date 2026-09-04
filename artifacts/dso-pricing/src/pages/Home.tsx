@@ -221,7 +221,7 @@ export default function Home() {
         </div>
 
         {/* TRUST BADGES */}
-        <div className="relative z-10 border-t border-white/15 grid grid-cols-3 divide-x divide-white/15 max-w-full" style={{ backgroundColor: "rgba(0,0,0,0.55)" }}>
+        <div className="relative z-10 border-t border-white/15 grid grid-cols-3 divide-x divide-white/15 max-w-full" style={{ backgroundColor: "#000000" }}>
           {[
             { icon: Award, label: "Driven by Values", sub: "Kindness. Integrity. Results." },
             { icon: Shield, label: "Built for Dentists", sub: "By operators, for operators." },
