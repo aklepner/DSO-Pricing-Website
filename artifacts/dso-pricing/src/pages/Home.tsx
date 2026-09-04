@@ -211,7 +211,7 @@ export default function Home() {
           >
             Save $300 on <span className="underline">EVERY</span> Clear Aligner Case
             <br />
-            with Your DSO Pricing Membership
+            purchased with Your DSO Pricing Membership
           </div>
           <div className="flex flex-col items-center gap-3">
             <div className="flex items-center">
