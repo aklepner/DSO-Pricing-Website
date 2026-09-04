@@ -221,6 +221,7 @@ export default function Home() {
                 <a href={orderUrl} target="_blank" rel="noopener noreferrer">Start saving now for $297/month.</a>
               </Button>
             </div>
+            <p className="text-base italic text-white/70">Simple month-to-month membership</p>
           </div>
         </div>
 
