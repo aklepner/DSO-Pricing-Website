@@ -246,10 +246,7 @@ export default function Home() {
           <h2 className="text-3xl md:text-5xl font-black text-white mb-8 uppercase" style={{ fontFamily: "'Outfit', sans-serif" }}>
             More Than a Buying Group.<br />Vetted Vendors. Strategic Guidance.<br />Profitable Growth.
           </h2>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Button asChild size="lg" className="text-white font-black text-sm uppercase tracking-widest h-14 px-10 border-2 border-white/30 hover:border-white bg-transparent hover:bg-white/10" data-testid="button-our-vendors">
-              <Link href="/built-different/vendors">Our Vendors</Link>
-            </Button>
+          <div className="flex items-center justify-center">
             <Button asChild size="lg" className="text-white font-black text-sm uppercase tracking-widest h-14 px-10" style={{ backgroundColor: ORANGE }}>
               <Link href="/calculator">Calculate Your Savings <ArrowRight className="ml-2 w-4 h-4" /></Link>
             </Button>
