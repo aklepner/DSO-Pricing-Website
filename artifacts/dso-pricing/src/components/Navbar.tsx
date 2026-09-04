@@ -11,9 +11,9 @@ const leftLinks = [
     href: "/built-different",
     label: "How It Works",
     children: [
-      { href: "/built-different/mentors", label: "Meet the Mentors" },
       { href: "/built-different/vendors", label: "Vendors" },
       { href: "/blog", label: "Blog" },
+      { href: "/built-different/mentors", label: "Meet the Mentors" },
     ],
   },
 ];
@@ -26,9 +26,9 @@ const rightLinks = [
 const allLinks = [
   { href: "/", label: "Home" },
   { href: "/built-different", label: "How It Works" },
-  { href: "/built-different/mentors", label: "Meet the Mentors" },
   { href: "/built-different/vendors", label: "Vendors" },
   { href: "/blog", label: "Blog" },
+  { href: "/built-different/mentors", label: "Meet the Mentors" },
   { href: "/pricing", label: "Pricing" },
   { href: "/contact", label: "Contact" },
 ];
