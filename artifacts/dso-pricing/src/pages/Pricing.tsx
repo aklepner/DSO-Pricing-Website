@@ -1,6 +1,6 @@
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
-import { CheckCircle2, ArrowRight, Star, DollarSign, Users, Package, Network, HeartHandshake, BookOpen } from "lucide-react";
+import { CheckCircle2, ArrowRight, Star, DollarSign, Users, Package, Network, HeartHandshake } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { useOrderUrl } from "@/contexts/AffiliateContext";
@@ -26,7 +26,6 @@ const membershipBenefits = [
   { label: "Access to trusted service providers, consultants, and coaches", icon: Users },
   { label: "Consolidate all your procurement processes and vendors in one place", icon: Package },
   { label: "A centralized way to source products, services, and growth support", icon: Network },
-  { label: "CE with DentalFlix", icon: BookOpen },
 ];
 
 const audiences = [
