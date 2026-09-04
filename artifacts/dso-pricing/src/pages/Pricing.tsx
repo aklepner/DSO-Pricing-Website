@@ -21,7 +21,7 @@ function StarRating({ count = 5, size = 16 }: { count?: number; size?: number })
 }
 
 const membershipBenefits = [
-  { label: "10%+ preferred pricing with select partners", icon: DollarSign },
+  { label: "Big group buying power with savings of up to 20%", icon: DollarSign },
   { label: "Exclusive offers, bonuses, and reduced fees", icon: HeartHandshake },
   { label: "Access to trusted service providers, consultants, and coaches", icon: Users },
   { label: "Consolidate all your procurement processes and vendors in one place", icon: Package },
