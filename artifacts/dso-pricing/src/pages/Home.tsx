@@ -201,9 +201,16 @@ export default function Home() {
           <h1 className="text-[40px] sm:text-5xl md:text-6xl lg:text-7xl font-black text-white leading-[1.05] mb-6 uppercase" style={{ fontFamily: "'Outfit', sans-serif", letterSpacing: "-0.02em" }}>
             DSO Level Pricing for Everyone
           </h1>
-          <p className="text-white/70 text-xl leading-relaxed max-w-2xl mx-auto mb-10">
+          <p className="text-xl font-black leading-relaxed max-w-2xl mx-auto mb-6" style={{ color: ORANGE }}>
             The Ultimate Toolbox to Reduce Your Expenses and Grow Your Revenue
           </p>
+          <div
+            className="max-w-3xl mx-auto mb-6 rounded-lg px-5 py-3 text-base sm:text-lg font-black leading-snug"
+            style={{ backgroundColor: "#FFD700", color: ORANGE }}
+            data-testid="text-aligner-savings-callout"
+          >
+            Save $400 on Every Clear Aligner Case with Your DSO Pricing Membership
+          </div>
           <div className="flex flex-col items-center gap-3">
             <div className="flex flex-col sm:flex-row items-center gap-3">
               <Button asChild size="lg" className="text-white font-black text-sm uppercase tracking-widest h-14 px-12" style={{ backgroundColor: ORANGE }} data-testid="button-join-hero">
