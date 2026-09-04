@@ -113,7 +113,7 @@ export default function Footer() {
               className="inline-block px-5 py-2 rounded-lg text-white text-sm font-black uppercase tracking-wide transition-opacity hover:opacity-80"
               style={{ backgroundColor: ORANGE }}
             >
-              Login to DSO Pricing
+              Member Login
             </a>
           </div>
         </div>
