@@ -399,24 +399,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* GET IN BEFORE PRICING INCREASES */}
-      <section className="py-20 px-6" style={{ backgroundColor: ORANGE }}>
-        <div className="max-w-4xl mx-auto text-center">
-          <p className="text-white/80 text-xs font-black uppercase tracking-widest mb-4">Member Pricing</p>
-          <h2 className="text-4xl md:text-6xl font-black text-white mb-6 uppercase leading-tight" style={{ fontFamily: "'Outfit', sans-serif" }}>
-            Get In Before<br />Pricing Increases
-          </h2>
-          <div className="flex items-center justify-center gap-6 mb-4">
-            <p className="font-black text-white" style={{ fontSize: "3rem", fontFamily: "'Outfit', sans-serif" }}>$297<span className="text-2xl font-normal opacity-70">/mo</span></p>
-          </div>
-          <p className="text-white/80 text-base font-semibold mb-8">Limited to the first 100 practices.</p>
-          <Button asChild size="lg" className="bg-white font-black text-sm uppercase tracking-widest h-14 px-12" style={{ color: ORANGE }}>
-            <a href={orderUrl} target="_blank" rel="noopener noreferrer">Sign Up $297/Mo</a>
-          </Button>
-          <p className="text-white/60 text-sm mt-4 italic">Most members cover the cost with one change.</p>
-        </div>
-      </section>
-
       {/* FAQ */}
       <section className="py-20 px-6" style={{ backgroundColor: NAVY2 }}>
         <div className="max-w-6xl mx-auto">
