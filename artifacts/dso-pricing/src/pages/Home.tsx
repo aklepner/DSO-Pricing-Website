@@ -196,7 +196,7 @@ export default function Home() {
           backgroundRepeat: "no-repeat",
         }}
       >
-        <div className="absolute inset-0" style={{ backgroundColor: "rgba(10,10,10,0.78)" }} />
+        <div className="absolute inset-0" style={{ backgroundColor: "rgba(10,10,10,0.90)" }} />
         <div className="relative z-10 pt-48 pb-16 px-6 text-center max-w-5xl mx-auto">
           <h1 className="text-[40px] sm:text-5xl md:text-6xl lg:text-7xl font-black text-white leading-[1.05] mb-6 uppercase" style={{ fontFamily: "'Outfit', sans-serif", letterSpacing: "-0.02em" }}>
             DSO Level Pricing for Everyone
