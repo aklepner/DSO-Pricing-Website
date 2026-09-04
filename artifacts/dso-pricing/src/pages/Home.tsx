@@ -217,12 +217,6 @@ export default function Home() {
                 <a href={orderUrl} target="_blank" rel="noopener noreferrer">Start Saving Now</a>
               </Button>
             </div>
-            <div className="flex flex-col items-center gap-0.5 text-center">
-              <p className="font-bold text-white" style={{ fontSize: "15px" }}>Limited Summer Special...Normally $797</p>
-              <p className="font-bold text-white" style={{ fontSize: "15px" }}>
-                <Link href="/profitability-call" className="text-white underline underline-offset-2 hover:text-white/70 transition-colors" data-testid="button-book-hero">→ Book a Business Advisor Profitability Call</Link>
-              </p>
-            </div>
           </div>
         </div>
 
