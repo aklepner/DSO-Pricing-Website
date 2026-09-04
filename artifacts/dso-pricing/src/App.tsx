@@ -11,6 +11,7 @@ import Pricing from "@/pages/Pricing";
 import Contact from "@/pages/Contact";
 import Calculator from "@/pages/Calculator";
 import ThankYou from "@/pages/ThankYou";
+import Mentors from "@/pages/Mentors";
 import Vendors from "@/pages/Vendors";
 import VendorCategory from "@/pages/VendorCategory";
 import OnboardingCall from "@/pages/OnboardingCall";
@@ -40,6 +41,7 @@ function Router() {
       <Switch>
         <Route path="/" component={Home} />
         <Route path="/built-different" component={BuiltDifferent} />
+        <Route path="/built-different/mentors" component={Mentors} />
         <Route path="/built-different/vendors" component={Vendors} />
         <Route path="/built-different/vendors/:categoryId" component={VendorCategory} />
         <Route path="/pricing" component={Pricing} />
