@@ -28,12 +28,6 @@ const membershipBenefits = [
   { label: "A centralized way to source products, services, and growth support", icon: Network },
 ];
 
-const audiences = [
-  "Private practices doing $1M+",
-  "Growing groups scaling to multiple locations",
-  "Operators serious about margin and structure",
-];
-
 export default function Pricing() {
   const orderUrl = useOrderUrl();
   return (
@@ -152,49 +146,6 @@ export default function Pricing() {
               <a href={orderUrl} target="_blank" rel="noopener noreferrer">Sign Up $297/Mo <ArrowRight className="ml-2 w-4 h-4" /></a>
             </Button>
           </div>
-        </div>
-      </section>
-
-      {/* WHO THIS IS FOR */}
-      <section className="py-20 px-6 bg-gray-50">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-14">
-            <p className="text-sm font-black uppercase tracking-widest mb-3" style={{ color: ORANGE }}>Who This Is For</p>
-            <h2 className="text-4xl md:text-5xl font-black text-gray-900 uppercase leading-tight" style={{ fontFamily: "'Outfit', sans-serif" }}>
-              Built For<br />Growth-Focused Operators
-            </h2>
-          </div>
-          <div className="grid md:grid-cols-3 gap-6">
-            {audiences.map((item, i) => (
-              <div key={i} className="flex items-center gap-4 rounded-xl p-7 border-2 border-gray-200 bg-white hover:border-gray-300 transition-colors" data-testid={`item-whofor-${i}`}>
-                <CheckCircle2 className="w-7 h-7 shrink-0" style={{ color: ORANGE }} />
-                <p className="text-gray-800 font-bold text-lg leading-snug">{item}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* FINAL CTA */}
-      <section className="py-20 px-6" style={{ backgroundColor: ORANGE }}>
-        <div className="max-w-3xl mx-auto text-center">
-          <div className="flex justify-center mb-6">
-            <StarRating count={5} size={22} />
-          </div>
-          <p className="text-white/80 text-xs font-black uppercase tracking-widest mb-4">Member Pricing</p>
-          <h2 className="text-4xl md:text-6xl font-black text-white mb-6 uppercase leading-tight" style={{ fontFamily: "'Outfit', sans-serif" }}>
-            Get In Before<br />Pricing Increases
-          </h2>
-          <div className="flex items-center justify-center gap-6 mb-4">
-            <p className="font-black text-white" style={{ fontSize: "3rem", fontFamily: "'Outfit', sans-serif" }}>$297<span className="text-2xl font-normal opacity-70">/mo</span></p>
-          </div>
-          <p className="text-white/80 font-semibold mb-8">Limited to the first 100 practices.</p>
-          <div className="flex justify-center mt-10">
-            <Button asChild size="lg" className="bg-white font-bold text-lg uppercase tracking-wide px-10 h-14" style={{ color: ORANGE }} data-testid="button-join-final">
-              <a href={orderUrl} target="_blank" rel="noopener noreferrer">Lock In Your Savings <ArrowRight className="ml-2 w-5 h-5" /></a>
-            </Button>
-          </div>
-          <p className="text-white/60 text-sm mt-5 italic">Most members cover the cost with one change.</p>
         </div>
       </section>
 
