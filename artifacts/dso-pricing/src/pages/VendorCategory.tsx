@@ -8,11 +8,12 @@ import { Vendor, Category } from "@/lib/supabase";
 const NAVY2 = "#000000";
 const NAVY = "#0F0F0F";
 const ORANGE = "#DD042A";
+type PublicVendor = Pick<Vendor, "id" | "title" | "description" | "logo" | "categoryIds">;
 
 export default function VendorCategory() {
   const { categoryId } = useParams<{ categoryId: string }>();
   const isAll = categoryId === "all";
-  const [vendors, setVendors] = useState<Vendor[]>([]);
+  const [vendors, setVendors] = useState<PublicVendor[]>([]);
   const [categories, setCategories] = useState<Category[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -30,7 +31,7 @@ export default function VendorCategory() {
         const { getSupabase } = await import("@/lib/supabase");
         const client = getSupabase();
         const [{ data: vendorData, error: vErr }, { data: catData, error: cErr }] = await Promise.all([
-          client.from("businesses").select("*").order("title"),
+          client.from("businesses").select("id,title,description,logo,categoryIds").order("title"),
           client.from("categories").select("*"),
         ]);
         if (vErr) throw vErr;
@@ -48,7 +49,7 @@ export default function VendorCategory() {
           if (logoKey) seenLogos.add(logoKey);
           return true;
         });
-        setVendors(isAll ? unique : unique.filter((v: Vendor) => v.categoryIds?.includes(categoryId)));
+        setVendors(isAll ? unique : unique.filter((v: PublicVendor) => v.categoryIds?.includes(categoryId)));
         setCategories((catData as Category[]) || []);
         if (!isAll) {
           const cat = (catData as Category[] | null)?.find((c) => c.id === categoryId);
@@ -133,7 +134,7 @@ function stripHtml(html: string): string {
   return (doc.body.textContent || "").replace(/\s+/g, " ").trim();
 }
 
-function VendorCard({ vendor, categoryLabel }: { vendor: Vendor; categoryLabel: string }) {
+function VendorCard({ vendor, categoryLabel }: { vendor: PublicVendor; categoryLabel: string }) {
   return (
     <div
       className="group flex flex-col rounded-2xl overflow-hidden border border-white/8 transition-all duration-200 hover:border-white/25 hover:scale-[1.02]"
