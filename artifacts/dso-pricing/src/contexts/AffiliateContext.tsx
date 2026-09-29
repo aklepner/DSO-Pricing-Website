@@ -1,6 +1,6 @@
 import { createContext, useContext, ReactNode } from "react";
 
-const ORDER_BASE = "https://go.dsopricing.com/widget/form/k4KVpSCdzmU7Q4qrg3Bt";
+const ORDER_BASE = "https://order.dsopricing.com/order-page";
 
 const AffiliateContext = createContext<string>("");
 
