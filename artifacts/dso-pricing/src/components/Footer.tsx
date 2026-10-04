@@ -79,7 +79,7 @@ export default function Footer() {
               ].map((link) => (
                 <li key={link.href}>
                   {link.href.startsWith("https://") ? (
-                    <a href={link.href} className="text-white/50 hover:text-white transition-colors" data-testid={`footer-link-${link.label.toLowerCase().replace(" ", "-")}`}>
+                    <a href={link.href} target="_blank" rel="noopener noreferrer" className="text-white/50 hover:text-white transition-colors" data-testid={`footer-link-${link.label.toLowerCase().replace(" ", "-")}`}>
                       {link.label}
                     </a>
                   ) : (

@@ -106,7 +106,7 @@ export default function Pricing() {
             </h2>
             <div className="flex justify-center mt-8">
               <Button asChild size="lg" className="text-white font-black text-sm uppercase tracking-widest h-14 px-10" style={{ backgroundColor: ORANGE }}>
-                <a href="https://uniodental.com/gpo/dso_pricing/diagnostic">Calculate Your Savings <ArrowRight className="ml-2 w-4 h-4" /></a>
+                <a href="https://uniodental.com/gpo/dso_pricing/diagnostic" target="_blank" rel="noopener noreferrer">Calculate Your Savings <ArrowRight className="ml-2 w-4 h-4" /></a>
               </Button>
             </div>
           </div>
