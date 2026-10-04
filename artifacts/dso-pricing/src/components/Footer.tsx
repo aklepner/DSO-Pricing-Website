@@ -74,13 +74,19 @@ export default function Footer() {
                 { href: "/built-different/vendors", label: "Vendors" },
                 { href: "/blog", label: "Blog" },
                 { href: "/pricing", label: "Pricing" },
-                { href: "/calculator", label: "Savings Calculator" },
+                { href: "https://uniodental.com/gpo/dso_pricing/diagnostic", label: "Savings Calculator" },
                 { href: "/contact", label: "Contact" },
               ].map((link) => (
                 <li key={link.href}>
-                  <Link href={link.href} className="text-white/50 hover:text-white transition-colors" data-testid={`footer-link-${link.label.toLowerCase().replace(" ", "-")}`}>
+                  {link.href.startsWith("https://") ? (
+                    <a href={link.href} className="text-white/50 hover:text-white transition-colors" data-testid={`footer-link-${link.label.toLowerCase().replace(" ", "-")}`}>
+                      {link.label}
+                    </a>
+                  ) : (
+                    <Link href={link.href} className="text-white/50 hover:text-white transition-colors" data-testid={`footer-link-${link.label.toLowerCase().replace(" ", "-")}`}>
                     {link.label}
-                  </Link>
+                    </Link>
+                  )}
                 </li>
               ))}
             </ul>
